@@ -22,31 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-});
-new Swiper(".hero-swiper", {
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  speed: 800,
-  effect: 'fade',
-});
-ddocument.addEventListener("DOMContentLoaded", function() {
-  var scrollBtn = document.getElementById('scrollTop');
-  if (scrollBtn) {
-    window.addEventListener('scroll', function () {
-      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    scrollBtn.onclick = function() {
-      window.scrollTo({top:0, behavior:'smooth'});
-    };
-  }
+
 });
