@@ -1,50 +1,65 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
   <div class="container-fluid px-3">
     <!-- LOGO -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo.webp" alt="NASA Teknik Logo" width="40" height="40" class="me-2 rounded-2" style="background:#fff;" />
-      <span data-i18n="brand">NASA Teknik</span>
+      <img src="images/logo.webp" alt="NASA Teknik Logo" width="44" height="44" class="me-2 rounded-circle border border-2 border-warning bg-white" />
+      <span class="fw-bold fs-5" data-i18n="brand">NASA Teknik</span>
     </a>
 
-    <!-- Mobile hamburger button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+    <!-- Hamburger -->
+    <button class="navbar-toggler rounded-2 border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
+    <!-- Menü ve sağ taraf -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+      <!-- Sol Menü -->
+      <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-lg-2">
         <li class="nav-item">
-          <a class="nav-link" href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+          <a class="nav-link fw-semibold" href="index.html" data-i18n="nav.home"><i class="fas fa-home me-1"></i> <span class="d-lg-inline d-none">Ana Sayfa</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html" data-i18n="nav.about">Hakkımızda</a>
+          <a class="nav-link fw-semibold" href="about.html" data-i18n="nav.about"><i class="fas fa-users me-1"></i> <span class="d-lg-inline d-none">Hakkımızda</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="products.html" data-i18n="nav.products">Ürünler</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html" data-i18n="nav.contact">İletişim</a>
+          <a class="nav-link fw-semibold" href="products.html" data-i18n="nav.products"><i class="fas fa-cogs me-1"></i> <span class="d-lg-inline d-none">Ürünler</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="faq.html" data-i18n="nav.faq">SSS</a>
+          <a class="nav-link fw-semibold" href="contact.html" data-i18n="nav.contact"><i class="fas fa-envelope me-1"></i> <span class="d-lg-inline d-none">İletişim</span></a>
         </li>
-        <!-- Dil Butonları -->
-        <li class="nav-item d-flex align-items-center ms-2">
-          <button id="btn-tr" class="btn btn-sm btn-outline-light me-1 lang-btn">TR</button>
-          <button id="btn-en" class="btn btn-sm btn-outline-light lang-btn">EN</button>
-           <!-- WhatsApp ve Teklif Al Butonları -->
-          <a class="btn btn-success me-2 d-flex align-items-center py-1 px-2" href="https://wa.me/905316250694">
-            <i class="fab fa-whatsapp me-1"></i><span data-i18n="btn.whatsapp">WhatsApp</span>
-          </a>
-          <a class="btn btn-primary py-1 px-3" href="contact.html"><span data-i18n="btn.quote">Teklif Al</span></a>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="faq.html" data-i18n="nav.faq"><i class="fas fa-question-circle me-1"></i> <span class="d-lg-inline d-none">SSS</span></a>
         </li>
       </ul>
+      <!-- Sağ Butonlar -->
+      <div class="d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+        <!-- Dil -->
+        <button id="btn-tr" class="btn btn-outline-light btn-sm rounded-pill px-3 lang-btn">TR</button>
+        <button id="btn-en" class="btn btn-outline-light btn-sm rounded-pill px-3 lang-btn">EN</button>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/905316250694" target="_blank" class="btn btn-success btn-sm rounded-pill px-3 d-flex align-items-center shadow-sm" style="font-weight: 600;">
+          <i class="fab fa-whatsapp me-1"></i> <span data-i18n="btn.whatsapp">WhatsApp</span>
+        </a>
+        <!-- Teklif Al -->
+        <a href="contact.html" class="btn btn-warning btn-sm rounded-pill px-3 d-flex align-items-center shadow-sm" style="font-weight: 600;">
+          <i class="fas fa-file-signature me-1"></i> <span data-i18n="btn.quote">Teklif Al</span>
+        </a>
+      </div>
     </div>
   </div>
 </nav>
 
-<!-- Sticky navbar için padding -->
-
+<!-- Küçük stil dokunuşları -->
+<style>
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    background: rgba(255,255,255,0.05);
+    border-radius: .75rem;
+    transition: all 0.2s;
+  }
+  .navbar-brand img {
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  }
+</style>
