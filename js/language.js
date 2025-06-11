@@ -70,7 +70,7 @@ function applyTranslation() {
     if (el.tagName === "IMG" && value != null) {
       el.alt = value;
     } else if (value != null) {
-      el.textContent = value;
+      el.innerHTML = value;
     }
   });
 
