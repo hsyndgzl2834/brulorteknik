@@ -54,4 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Çeviri dosyası yüklenirken hata:', err);
     }
   })();
+   // Butonlar yüklendiğinde tekrar seçiliyor!
+  document.getElementById('btn-tr')?.addEventListener('click', function() {
+    setLanguage('tr');
+  });
+  document.getElementById('btn-en')?.addEventListener('click', function() {
+    setLanguage('en');
+  });
 });
