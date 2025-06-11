@@ -2,165 +2,131 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monoblok Brülör | NASA Teknik Hizmetler</title>
-  <!-- SEO Kısmı -->
-  <meta name="description" content="Monoblok brülörün teknik özellikleri, avantajları ve kullanım alanlarını öğrenin. NASA Teknik Hizmetler'in yüksek verimli ve kompakt monoblok brülör modeli MB100 hakkında detaylı bilgi için tıklayın." />
-  <meta name="keywords" content="Monoblok Brülör, MB100, Kompakt Brülör, Endüstriyel Yakma Sistemi, NASA Teknik" />
-  <link rel="canonical" href="https://www.nasa-teknik.com/monoblok.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Monoblok Brülör | NASA Teknik Hizmetler" />
-  <meta property="og:description" content="Monoblok brülörün teknik özellikleri, avantajları ve kullanım alanlarını öğrenin." />
-  <meta property="og:url" content="https://www.nasa-teknik.com/monoblok.html" />
-  <meta property="og:image" content="https://www.nasa-teknik.com/images/product1.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Monoblok Brülör - NASA Teknik Hizmetler" />
+  <meta name="keywords" content="Monoblok Brülör, Endüstriyel Brülör, Kompakt Brülör, Teknik Brülör" />
+  <meta name="author" content="NASA Teknik Hizmetler" />
+  <title data-i18n="product.monoblok.pageTitle">Monoblok Brülör | NASA Teknik Hizmetler</title>
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <style>
-    .section-title { margin-top: 40px; margin-bottom: 20px; }
-    .hero-bg { background-color: #6c757d; }
-    .product-image { max-width: 100%; height: auto; margin-bottom: 20px; }
-    .feature-list i { color: #28a745; margin-right: 8px; }
-  </style>
 </head>
 <body>
-
-  <!-- NAVBAR (Index ile aynı) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fas fa-fire-alt me-2"></i>NASA Teknik</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fas fa-fire-alt me-2"></i><span data-i18n="brand">NASA Teknik</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Ürünler</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
-        <div class="d-flex">
-          <a class="btn btn-success me-2" href="https://wa.me/905316250694"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
-          <a class="btn btn-primary" href="contact.html">Teklif Al</a>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-success me-2" href="https://wa.me/905316250694">
+            <i class="fab fa-whatsapp me-1"></i><span data-i18n="btn.whatsapp">WhatsApp</span>
+          </a>
+          <a class="btn btn-primary" href="contact.html"><span data-i18n="btn.quote">Teklif Al</span></a>
         </div>
       </div>
     </div>
   </nav>
+  <!-- /NAVBAR -->
 
-  <!-- GERİ DÖN BUTONU -->
-  <div class="container mt-4">
-    <a href="products.html" class="btn btn-primary"><i class="fas fa-arrow-left me-1"></i>Ürünlere Geri Dön</a>
-  </div>
-
-  <!-- HERO SECTION -->
-  <section class="hero-bg text-light py-5 mt-3">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-8">
-          <h1 class="display-5">Monoblok Brülör</h1>
-          <p class="lead">Kompakt tasarım, yüksek verim ve kolay bakım özelliklerine sahip endüstriyel brülör.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT -->
+  <!-- PRODUCT DETAIL -->
   <main class="container py-5">
-    <!-- Ürün Görsel ve Kısa Açıklama -->
-    <div class="text-center mb-5">
-      <img src="images/product1.webp" alt="Monoblok Brülör" class="product-image" loading="lazy" width="800" height="600">
-      <p>
-        Monoblok Brülör, küçük ve orta ölçekli endüstriyel kazan/ısıtma sistemleri için ideal çözümdür. Tüm yanma bileşenleri tek gövdede olduğu için kurulum ve bakım kolaylığı sağlar.
+    <!-- Başlık ve Kısa Açıklama -->
+    <div class="text-center mb-4">
+      <h1 data-i18n="product.monoblok.name">Monoblok Brülör</h1>
+      <p class="text-muted" data-i18n="product.monoblok.desc">
+        Kompakt tasarım, tüm bileşenler tek gövdede.
       </p>
     </div>
 
-    <!-- Özellikler -->
-    <div class="mb-5">
-      <h2 class="h4 fw-bold section-title">Temel Özellikler</h2>
-      <ul class="feature-list list-unstyled">
-        <li><i class="fas fa-check-circle"></i>IZ0/IZ1 güvenlik standartlarına uygun</li>
-        <li><i class="fas fa-check-circle"></i>1:10 modülasyon oranı</li>
-        <li><i class="fas fa-check-circle"></i>Elektrikli ateşleme sistemi</li>
-        <li><i class="fas fa-check-circle"></i>Paslanmaz çelik gövde</li>
-        <li><i class="fas fa-check-circle"></i>Kolay bakım için hızlı bağlantılar</li>
-        <li><i class="fas fa-check-circle"></i>75 kW’a kadar güç seçenekleri</li>
-      </ul>
-    </div>
-
-    <!-- Teknik Veri Tablosu -->
-    <div class="mb-5">
-      <h2 class="h4 fw-bold section-title">Teknik Veriler</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th scope="row">Model</th>
-              <td>MB100</td>
-            </tr>
-            <tr>
-              <th scope="row">Güç Aralığı</th>
-              <td>10 – 75 kW</td>
-            </tr>
-            <tr>
-              <th scope="row">Enerji Türü</th>
-              <td>Doğalgaz / LPG</td>
-            </tr>
-            <tr>
-              <th scope="row">Modülasyon</th>
-              <td>1:10</td>
-            </tr>
-            <tr>
-              <th scope="row">Kontrol</th>
-              <td>PID kontrol, dijital ayar paneli</td>
-            </tr>
-            <tr>
-              <th scope="row">Ateşleme</th>
-              <td>Elektrikli ateşleme</td>
-            </tr>
-            <tr>
-              <th scope="row">Elektrik Besleme</th>
-              <td>230V AC, 50Hz</td>
-            </tr>
-            <tr>
-              <th scope="row">Koruma Sınıfı</th>
-              <td>IP44</td>
-            </tr>
-            <tr>
-              <th scope="row">Çalışma Sıcaklığı</th>
-              <td>-20°C … +60°C</td>
-            </tr>
-            <tr>
-              <th scope="row">Boyutlar</th>
-              <td>600 x 300 x 400 mm (W x H x D)</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Ürün Görseli ve Özellikler -->
+    <div class="row mb-5">
+      <div class="col-lg-6 mb-4">
+        <img src="images/product1.webp" class="img-fluid rounded shadow-sm" alt="Monoblok Brülör" loading="lazy" />
+      </div>
+      <div class="col-lg-6">
+        <h3 data-i18n="product.monoblok.featuresTitle">Özellikler</h3>
+        <ul>
+          <li data-i18n="product.monoblok.feature1">Tüm bileşenler tek muhafazada</li>
+          <li data-i18n="product.monoblok.feature2">Kolay bakım ve hızlı kurulum</li>
+          <li data-i18n="product.monoblok.feature3">Yüksek yanma verimliliği</li>
+          <li data-i18n="product.monoblok.feature4">Dayanıklı malzeme ve uzun ömür</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Kullanım Alanları -->
-    <div class="mb-5">
-      <h2 class="h4 fw-bold section-title">Kullanım Alanları</h2>
-      <ul class="list-unstyled">
-        <li><i class="fas fa-check-circle"></i>Kazan daireleri</li>
-        <li><i class="fas fa-check-circle"></i>Isıtma santralleri</li>
-        <li><i class="fas fa-check-circle"></i>Fabrikasyon prosesleri</li>
-        <li><i class="fas fa-check-circle"></i>Yanma optimizasyon sistemleri</li>
-      </ul>
-    </div>
+    <!-- Ürün Özeti -->
+    <section class="mb-5">
+      <h2 data-i18n="product.monoblok.overviewTitle">Ürün Özeti</h2>
+      <p data-i18n="product.monoblok.overviewDesc">
+        Monoblok Brülör, endüstriyel tesislerde yüksek verimli yakma çözümleri sunmak üzere tasarlanmıştır. 
+        Özel seramik kaplamalı yanma odası ve entegre kontrol paneli sayesinde maksimum performans sağlar. 
+        Kompakt yapısı ile hem küçük hem de orta ölçekli kazanlarda kolaylıkla kullanılabilir.
+      </p>
+    </section>
 
+    <!-- Teknik Özellikler -->
+    <section class="mb-5">
+      <h2 data-i18n="product.monoblok.specsTitle">Teknik Özellikler</h2>
+      <ul>
+        <li data-i18n="product.monoblok.spec1">Güç Aralığı: 100 kW – 500 kW</li>
+        <li data-i18n="product.monoblok.spec2">Yakıt Türü: Doğalgaz / LPG</li>
+        <li data-i18n="product.monoblok.spec3">Verimlilik: %92 üzeri</li>
+        <li data-i18n="product.monoblok.spec4">Kontrol: PID Kontrollü Entegre Panel</li>
+        <li data-i18n="product.monoblok.spec5">Çalışma Basıncı: 0.1 – 0.3 bar</li>
+        <li data-i18n="product.monoblok.spec6">Boyutlar: 600 x 400 x 450 mm (LxGxY)</li>
+        <li data-i18n="product.monoblok.spec7">Ağırlık: 45 kg</li>
+      </ul>
+    </section>
+
+    <!-- Uygulama Alanları -->
+    <section class="mb-5">
+      <h2 data-i18n="product.monoblok.applicationsTitle">Uygulama Alanları</h2>
+      <ul>
+        <li data-i18n="product.monoblok.app1">Kazan Dairesi Endüstriyel Tesisler</li>
+        <li data-i18n="product.monoblok.app2">Kimya ve Petrokimya Sanayii</li>
+        <li data-i18n="product.monoblok.app3">Gıda ve İçecek İşletmeleri</li>
+        <li data-i18n="product.monoblok.app4">Isıtma Sistemleri ve Enerji Santralleri</li>
+      </ul>
+    </section>
+
+    <!-- Avantajlar -->
+    <section class="mb-5">
+      <h2 data-i18n="product.monoblok.benefitsTitle">Avantajlar</h2>
+      <ul>
+        <li data-i18n="product.monoblok.benefit1">Düşük yakıt tüketimi ve çevre dostu emisyon değerleri</li>
+        <li data-i18n="product.monoblok.benefit2">Kompakt tasarım sayesinde yer tasarrufu</li>
+        <li data-i18n="product.monoblok.benefit3">Entegre otomasyon sistemi ile kolay kontrol</li>
+        <li data-i18n="product.monoblok.benefit4">Hızlı bakım ve uzun ömürlü komponentler</li>
+      </ul>
+
+      <div class="mt-4">
+        <a class="btn btn-outline-primary" href="contact.html" data-i18n="product.monoblok.button">Detaylı Bilgi</a>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-dark text-light text-center py-3 mt-5">
     <div class="container">
-      <p class="mb-0">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</p>
+      <p class="mb-0"><span data-i18n="footer.copy">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</span></p>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- JS Kütüphaneleri -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/language.js"></script>
 </body>
 </html>

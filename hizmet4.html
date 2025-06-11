@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -7,104 +6,149 @@
   <meta name="description" content="NASA Teknik Hizmetler - Enerji Verimliliği" />
   <meta name="keywords" content="Enerji Verimliliği, Endüstriyel Danışmanlık, Yakıt Tasarrufu, Enerji Analizi" />
   <meta name="author" content="NASA Teknik Hizmetler" />
-  <title>Enerji Verimliliği Danışmanlığı - NASA Teknik Hizmetler</title>
+  <title data-i18n="service4.energy.pageTitle">Enerji Verimliliği - NASA Teknik Hizmetler</title>
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-  
+
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fas fa-fire-alt me-2"></i>NASA Teknik</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fas fa-fire-alt me-2"></i><span data-i18n="brand">NASA Teknik</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Ürünler</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
-        <div class="d-flex">
-          <a class="btn btn-success me-2" href="https://wa.me/905316250694"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
-          <a class="btn btn-primary" href="contact.html">Teklif Al</a>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-success me-2 d-flex align-items-center py-1 px-2" href="https://wa.me/905316250694">
+            <i class="fab fa-whatsapp me-1"></i><span data-i18n="btn.whatsapp">WhatsApp</span>
+          </a>
+          <a class="btn btn-primary py-1 px-3" href="contact.html"><span data-i18n="btn.quote">Teklif Al</span></a>
         </div>
       </div>
     </div>
   </nav>
+  <!-- /NAVBAR -->
 
 
+  <!-- PAGE HEADER -->
   <section class="bg-secondary text-light py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
-          <h1 class="display-5">Enerji Verimliliği Danışmanlığı</h1>
-          <p class="lead">Tesisinizin enerji tüketimini analiz ederek daha sürdürülebilir ve düşük maliyetli bir işletme modeli sunuyoruz.</p>
+          <h1 class="display-5" data-i18n="service4.energy.pageHeading">Enerji Verimliliği</h1>
+          <p class="lead" data-i18n="service4.energy.subtitle">Sistemlerinizi analiz ederek enerji tasarrufunu maksimize ediyoruz.</p>
         </div>
         <div class="col-md-4 text-md-end">
-          <a href="index.html" class="btn btn-light"><i class="fas fa-chevron-left me-2"></i>Geri Dön</a>
+          <a href="index.html" class="btn btn-light">
+            <i class="fas fa-chevron-left me-2"></i><span data-i18n="service4.energy.backButton">Geri Dön</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CONTENT -->
   <section class="py-5">
     <div class="container">
       <div class="row">
+        <!-- Yan Menü / Özet Kart -->
         <div class="col-lg-4 mb-4">
           <div class="card border-0 shadow-sm">
             <div class="card-body">
-              <h4 class="card-title">Hizmet Özeti</h4>
+              <h4 class="card-title" data-i18n="service4.energy.summaryTitle">Hizmet Özeti</h4>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Enerji Analizi ve Raporlama</li>
-                <li class="list-group-item">Tesis Keşfi ve Optimizasyon Planı</li>
-                <li class="list-group-item">Yakıt Kullanımı ve Emisyon İncelemesi</li>
-                <li class="list-group-item">Enerji Tasarruf Önerileri</li>
-                <li class="list-group-item">Uygulama Desteği</li>
+                <li class="list-group-item" data-i18n="service4.energy.summary.item1">Enerji Denetimi</li>
+                <li class="list-group-item" data-i18n="service4.energy.summary.item2">Verimlilik Analizi</li>
+                <li class="list-group-item" data-i18n="service4.energy.summary.item3">Optimizasyon Önerileri</li>
+                <li class="list-group-item" data-i18n="service4.energy.summary.item4">Yatırım Geri Dönüş Analizi</li>
+                <li class="list-group-item" data-i18n="service4.energy.summary.item5">Uygulama ve Eğitim</li>
               </ul>
             </div>
           </div>
         </div>
+        <!-- Detay İçerik -->
         <div class="col-lg-8">
           <div class="mb-4">
             <img src="images/hizmet4.webp" class="img-fluid rounded shadow-sm" alt="Enerji Verimliliği" loading="lazy" />
           </div>
           <div>
-            <h2>Hizmet İçeriği</h2>
-            <p>Enerji verimliliği danışmanlığımız, tesisinizdeki enerji tüketim kalıplarını analiz ederek tasarruf fırsatlarını belirler. Detaylı ölçüm ve değerlendirme raporları ile sürdürülebilir üretime katkı sağlıyoruz.</p>
-            <h3>Adım Adım Süreç:</h3>
+            <h2 data-i18n="service4.energy.contentTitle">Hizmet İçeriği</h2>
+            <p data-i18n="service4.energy.contentDesc">
+              Uzman ekibimiz, tesisinizde kapsamlı bir enerji denetimi yapar; elde edilen veriler ışığında verimlilik analizleri ve optimizasyon planları geliştirir.
+            </p>
+
+            <h3 data-i18n="service4.energy.processTitle">Adım Adım Süreç:</h3>
             <ol>
-              <li><strong>Keşif ve Analiz:</strong> Mevcut sistemlerin enerji tüketimi ölçülür</li>
-              <li><strong>Raporlama:</strong> Veriler analiz edilerek iyileştirme alanları belirlenir</li>
-              <li><strong>Optimizasyon:</strong> Enerji tasarrufu sağlayacak çözümler önerilir</li>
-              <li><strong>Uygulama:</strong> Gerekli ekipmanlar ve ayarlar önerilere göre yapılır</li>
-              <li><strong>İzleme:</strong> Süreç sonrası performans izlenir ve geri bildirim sağlanır</li>
+              <li>
+                <strong data-i18n="service4.energy.process.step1.title">Enerji Denetimi:</strong>
+                <span data-i18n="service4.energy.process.step1.desc">Tesisinizin enerji tüketim profillerinin ölçülmesi ve raporlanması.</span>
+              </li>
+              <li>
+                <strong data-i18n="service4.energy.process.step2.title">Verimlilik Analizi:</strong>
+                <span data-i18n="service4.energy.process.step2.desc">Toplanan verilerle sistemlerin performans ve verimlilik değerlendirmesi.</span>
+              </li>
+              <li>
+                <strong data-i18n="service4.energy.process.step3.title">Optimizasyon:</strong>
+                <span data-i18n="service4.energy.process.step3.desc">İyileştirme önerileri, ekipman güncellemeleri ve yazılım ayarlamaları.</span>
+              </li>
+              <li>
+                <strong data-i18n="service4.energy.process.step4.title">Yatırım İncelemesi:</strong>
+                <span data-i18n="service4.energy.process.step4.desc">Önerilen yatırımların geri dönüş süreleri ve maliyet-fayda analizleri.</span>
+              </li>
+              <li>
+                <strong data-i18n="service4.energy.process.step5.title">Eğitim & Uygulama:</strong>
+                <span data-i18n="service4.energy.process.step5.desc">Personel eğitimi ve önerilen aksiyonların sahada uygulanması.</span>
+              </li>
             </ol>
-            <h3>Faydalar:</h3>
+
+            <h3 data-i18n="service4.energy.benefitsTitle">Faydalar:</h3>
             <ul>
-              <li>Düşük enerji maliyetleri</li>
-              <li>Çevresel etkilerin azaltılması</li>
-              <li>Verimli ve sürdürülebilir üretim</li>
+              <li data-i18n="service4.energy.benefit1">Azaltılmış enerji maliyetleri</li>
+              <li data-i18n="service4.energy.benefit2">İyileştirilmiş proses verimliliği</li>
+              <li data-i18n="service4.energy.benefit3">Daha düşük karbon ayak izi</li>
+              <li data-i18n="service4.energy.benefit4">Yüksek yatırım geri dönüşü</li>
             </ul>
-            <h3>Teklif Al</h3>
-            <p>Enerji danışmanlığı hizmetimiz hakkında detaylı bilgi almak için <a href="contact.html" class="text-decoration-none">iletişim</a> sayfamızdan bizimle iletişime geçebilirsiniz.</p>
+
+            <h3 data-i18n="service4.energy.quoteTitle">Teklif Al</h3>
+            <p>
+              <span data-i18n="service4.energy.quoteText1">Enerji verimliliği analiz raporu ve teklif için </span>
+              <a href="contact.html" class="text-decoration-none" data-i18n="service4.energy.quoteLink">iletişim</a>
+              <span data-i18n="service4.energy.quoteText2"> sayfamızdan bize ulaşabilirsiniz. Uzman ekibimiz en kısa sürede dönüş yapacaktır.</span>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  
+  <!-- FOOTER -->
   <footer class="bg-dark text-light text-center py-3 mt-5">
     <div class="container">
-      <p class="mb-0">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</p>
+      <p class="mb-0"><span data-i18n="footer.copy">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</span></p>
     </div>
   </footer>
 
-
+  <!-- JS Kütüphaneleri -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <!-- Dil Değiştirme Betiği -->
+  <script src="js/language.js"></script>
 </body>
 </html>

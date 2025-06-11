@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -7,7 +6,8 @@
   <meta name="description" content="NASA Teknik Hizmetler - Brülör Kurulumu" />
   <meta name="keywords" content="Brülör Kurulumu, Endüstriyel Brülör, Yakma Sistemleri, Enerji, Gaz Brülörü, Sıvı Yakıt" />
   <meta name="author" content="NASA Teknik Hizmetler" />
-  <title>Endüstriyel Brülör Kurulumu - NASA Teknik Hizmetler</title>
+  <title data-i18n="service2.installation.pageTitle">Endüstriyel Brülör Kurulumu - NASA Teknik Hizmetler</title>
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -16,27 +16,31 @@
 <body>
 
   <!-- NAVBAR -->
-  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fas fa-fire-alt me-2"></i>NASA Teknik</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fas fa-fire-alt me-2"></i><span data-i18n="brand">NASA Teknik</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Ürünler</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
-        <div class="d-flex">
-          <a class="btn btn-success me-2" href="https://wa.me/905316250694"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
-          <a class="btn btn-primary" href="contact.html">Teklif Al</a>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-success me-2 d-flex align-items-center py-1 px-2" href="https://wa.me/905316250694">
+            <i class="fab fa-whatsapp me-1"></i><span data-i18n="btn.whatsapp">WhatsApp</span>
+          </a>
+          <a class="btn btn-primary py-1 px-3" href="contact.html"><span data-i18n="btn.quote">Teklif Al</span></a>
         </div>
       </div>
     </div>
   </nav>
+  <!-- /NAVBAR -->
 
 
   <!-- PAGE HEADER -->
@@ -44,11 +48,13 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
-          <h1 class="display-5">Endüstriyel Brülör Kurulumu</h1>
-          <p class="lead">Verimli ve güvenli yakma sistemleri için profesyonel brülör kurulum hizmeti.</p>
+          <h1 class="display-5" data-i18n="service2.installation.pageHeading">Endüstriyel Brülör Kurulumu</h1>
+          <p class="lead" data-i18n="service2.installation.subtitle">Verimli ve güvenli yakma sistemleri için profesyonel brülör kurulum hizmeti.</p>
         </div>
         <div class="col-md-4 text-md-end">
-          <a href="index.html" class="btn btn-light"><i class="fas fa-chevron-left me-2"></i>Geri Dön</a>
+          <a href="index.html" class="btn btn-light">
+            <i class="fas fa-chevron-left me-2"></i><span data-i18n="service2.installation.backButton">Geri Dön</span>
+          </a>
         </div>
       </div>
     </div>
@@ -62,13 +68,13 @@
         <div class="col-lg-4 mb-4">
           <div class="card border-0 shadow-sm">
             <div class="card-body">
-              <h4 class="card-title">Hizmet Özeti</h4>
+              <h4 class="card-title" data-i18n="service2.installation.summaryTitle">Hizmet Özeti</h4>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Brülör Seçimi ve Uygunluk Kontrolü</li>
-                <li class="list-group-item">Saha Keşfi ve Montaj Planlaması</li>
-                <li class="list-group-item">Kurulum ve Devreye Alma</li>
-                <li class="list-group-item">Yakıt Ayarları ve Emniyet Testleri</li>
-                <li class="list-group-item">Eğitim ve Raporlama</li>
+                <li class="list-group-item" data-i18n="service2.installation.summary.item1">Brülör Seçimi ve Uygunluk Kontrolü</li>
+                <li class="list-group-item" data-i18n="service2.installation.summary.item2">Saha Keşfi ve Montaj Planlaması</li>
+                <li class="list-group-item" data-i18n="service2.installation.summary.item3">Kurulum ve Devreye Alma</li>
+                <li class="list-group-item" data-i18n="service2.installation.summary.item4">Yakıt Ayarları ve Emniyet Testleri</li>
+                <li class="list-group-item" data-i18n="service2.installation.summary.item5">Eğitim ve Raporlama</li>
               </ul>
             </div>
           </div>
@@ -76,28 +82,52 @@
         <!-- Detay İçerik -->
         <div class="col-lg-8">
           <div class="mb-4">
-            <img src="images/hizmet3.webp" class="img-fluid rounded shadow-sm" alt="Brülör Kurulumu" loading="lazy" />
+            <img src="images/hizmet2.webp" class="img-fluid rounded shadow-sm" alt="Brülör Kurulumu" loading="lazy" />
           </div>
           <div>
-            <h2>Hizmet İçeriği</h2>
-            <p>NASA Teknik Hizmetler olarak, endüstriyel tesislerde yüksek güvenlik ve enerji verimliliği sağlayan brülör sistemlerinin kurulumunu gerçekleştiriyoruz. Kurulum öncesi saha keşfi ile başlayan süreç, brülörün uygun şekilde montajı ve devreye alınmasıyla tamamlanır.</p>
-            <h3>Adım Adım Süreç:</h3>
+            <h2 data-i18n="service2.installation.contentTitle">Hizmet İçeriği</h2>
+            <p data-i18n="service2.installation.contentDesc">
+              NASA Teknik Hizmetler olarak, endüstriyel tesislerde yüksek güvenlik ve enerji verimliliği sağlayan brülör sistemlerinin kurulumunu gerçekleştiriyoruz. Kurulum öncesi saha keşfi ile başlayan süreç, brülörün uygun şekilde montajı ve devreye alınmasıyla tamamlanır.
+            </p>
+
+            <h3 data-i18n="service2.installation.processTitle">Adım Adım Süreç:</h3>
             <ol>
-              <li><strong>Brülör Seçimi:</strong> Yakıt tipine, kapasiteye ve tesis yapısına göre brülör belirlenmesi</li>
-              <li><strong>Saha Keşfi:</strong> Montaj alanının kontrolü ve ihtiyaç duyulan hazırlıkların tespiti</li>
-              <li><strong>Montaj:</strong> Mekanik montaj, elektrik bağlantıları ve sistem entegrasyonu</li>
-              <li><strong>Devreye Alma:</strong> İlk ateşleme, yanma ayarları ve emniyet sistemlerinin kontrolü</li>
-              <li><strong>Eğitim:</strong> Kullanıcıya sistemin doğru kullanımı ve bakım süreçleri hakkında bilgilendirme</li>
+              <li>
+                <strong data-i18n="service2.installation.process.step1.title">Brülör Seçimi:</strong>
+                <span data-i18n="service2.installation.process.step1.desc">Yakıt tipine, kapasiteye ve tesis yapısına göre brülör belirlenmesi</span>
+              </li>
+              <li>
+                <strong data-i18n="service2.installation.process.step2.title">Saha Keşfi:</strong>
+                <span data-i18n="service2.installation.process.step2.desc">Montaj alanının kontrolü ve ihtiyaç duyulan hazırlıkların tespiti</span>
+              </li>
+              <li>
+                <strong data-i18n="service2.installation.process.step3.title">Montaj:</strong>
+                <span data-i18n="service2.installation.process.step3.desc">Mekanik montaj, elektrik bağlantıları ve sistem entegrasyonu</span>
+              </li>
+              <li>
+                <strong data-i18n="service2.installation.process.step4.title">Devreye Alma:</strong>
+                <span data-i18n="service2.installation.process.step4.desc">İlk ateşleme, yanma ayarları ve emniyet sistemlerinin kontrolü</span>
+              </li>
+              <li>
+                <strong data-i18n="service2.installation.process.step5.title">Eğitim:</strong>
+                <span data-i18n="service2.installation.process.step5.desc">Kullanıcıya sistemin doğru kullanımı ve bakım süreçleri hakkında bilgilendirme</span>
+              </li>
             </ol>
-            <h3>Faydalar:</h3>
+
+            <h3 data-i18n="service2.installation.benefitsTitle">Faydalar:</h3>
             <ul>
-              <li>Yüksek enerji verimliliği ve yakıt tasarrufu</li>
-              <li>Standartlara uygunluk ve uzun ömürlü kullanım</li>
-              <li>Arıza risklerini azaltan güvenli yapı</li>
-              <li>İleri düzey teknik destek ve belge sunumu</li>
+              <li data-i18n="service2.installation.benefit1">Yüksek enerji verimliliği ve yakıt tasarrufu</li>
+              <li data-i18n="service2.installation.benefit2">Standartlara uygunluk ve uzun ömürlü kullanım</li>
+              <li data-i18n="service2.installation.benefit3">Arıza risklerini azaltan güvenli yapı</li>
+              <li data-i18n="service2.installation.benefit4">İleri düzey teknik destek ve belge sunumu</li>
             </ul>
-            <h3>Teklif Al</h3>
-            <p>Tesisinize özel brülör kurulumu hizmeti hakkında detaylı bilgi almak için <a href="contact.html" class="text-decoration-none">iletişim</a> sayfamızdan bizimle iletişime geçebilirsiniz.</p>
+
+            <h3 data-i18n="service2.installation.quoteTitle">Teklif Al</h3>
+            <p>
+              <span data-i18n="service2.installation.quoteText1">Tesisinize özel brülör kurulumu hizmeti hakkında detaylı bilgi almak için </span>
+              <a href="contact.html" class="text-decoration-none" data-i18n="service2.installation.quoteLink">iletişim</a>
+              <span data-i18n="service2.installation.quoteText2"> sayfamızdan bizimle iletişime geçebilirsiniz.</span>
+            </p>
           </div>
         </div>
       </div>
@@ -105,14 +135,19 @@
   </section>
 
   <!-- FOOTER -->
-  
   <footer class="bg-dark text-light text-center py-3 mt-5">
     <div class="container">
-      <p class="mb-0">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</p>
+      <p class="mb-0"><span data-i18n="footer.copy">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</span></p>
     </div>
   </footer>
 
-
+  <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <!-- Dil Değiştirme Betiği -->
+  <script src="js/language.js"></script>
 </body>
 </html>

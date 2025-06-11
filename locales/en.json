@@ -11,7 +11,12 @@
   "hero": {
     "title": "Expert Service in Industrial Burner Systems",
     "subtitle": "Reliable installation, maintenance, and spare parts across Turkey",
-    "btnVisit": "Explore"
+    "btnVisit": "Explore",
+    "energyTitle":"Energy Efficiency",
+    "energyDesc":"High performance system solutions",
+    "supportTitle":"Expert Technical Support",
+    "supportDesc":"Service and maintenance services throughout Turkey"
+ 
   },
   "services": {
     "title": "Our Services",
@@ -179,5 +184,353 @@
       "question": "Do you provide training or user education?",
       "answer": "Yes, we offer certified training services for burner operation and maintenance. Contact us for schedule and curriculum details."
     }
+  },
+  "service1": {
+    "maintenance": {
+      "pageTitle": "Annual Periodic Maintenance - NASA Technical Services",
+      "pageHeading": "Annual Periodic Maintenance",
+      "subtitle": "For maximum safety and efficiency, our expert team performs comprehensive annual maintenance, cleaning, and flue gas analysis.",
+      "backButton": "Go Back",
+
+      "summaryTitle": "Service Overview",
+      "summary": {
+        "item1": "Pre-Inspection",
+        "item2": "Cleaning & Maintenance",
+        "item3": "Safety Checks",
+        "item4": "Combustion Performance & Flue Gas Analysis",
+        "item5": "Reporting & Recommendations"
+      },
+
+      "contentTitle": "Service Details",
+      "contentDesc": "During our annual periodic maintenance, our expert team covers all critical points of your burner system. We prioritize flue gas analysis to ensure optimal performance and safety.",
+
+      "processTitle": "Step-by-Step Process:",
+      "process": {
+        "step1": {
+          "title": "Pre-Inspection:",
+          "desc": "Assessment of current condition by analyzing facility records and previous maintenance reports."
+        },
+        "step2": {
+          "title": "Cleaning & Maintenance:",
+          "desc": "Cleaning burner components, replacing filters and nozzles, and performing mechanical maintenance."
+        },
+        "step3": {
+          "title": "Safety Checks:",
+          "desc": "Testing and verifying safety valves, pressure switches, sensors, and safety systems."
+        },
+        "step4": {
+          "title": "Combustion Performance & Flue Gas Analysis:",
+          "desc": "Optimizing fuel-air settings, conducting emission measurements, and evaluating performance with a flue gas analyzer."
+        },
+        "step5": {
+          "title": "Reporting:",
+          "desc": "Providing a report with performed tasks, measurement results, recommendations, and scheduling the next maintenance."
+        }
+      },
+
+      "benefitsTitle": "Benefits:",
+      "benefit1": "Reduced fuel consumption and increased energy efficiency",
+      "benefit2": "Lower emissions through accurate optimization based on flue gas analysis",
+      "benefit3": "Preventing costs and downtime by detecting potential failures early",
+      "benefit4": "Long-term system durability and extended equipment lifespan",
+      "benefit5": "Compliance with current regulations and safety standards",
+
+      "quoteTitle": "Get a Quote",
+      "quoteText1": "To receive a service fee estimate and detailed quote, please visit our ",
+      "quoteLink": "contact",
+      "quoteText2": " page and get in touch with us. Our professional team will respond promptly."
+    }
+  },
+   "service2": {
+    "installation": {
+      "pageTitle": "Industrial Burner Installation - NASA Technical Services",
+      "pageHeading": "Industrial Burner Installation",
+      "subtitle": "Professional burner installation service for efficient and safe combustion systems.",
+      "backButton": "Go Back",
+
+      "summaryTitle": "Service Overview",
+      "summary": {
+        "item1": "Burner Selection & Compatibility Check",
+        "item2": "Site Survey & Installation Planning",
+        "item3": "Assembly & Commissioning",
+        "item4": "Fuel Tuning & Safety Tests",
+        "item5": "Training & Reporting"
+      },
+
+      "contentTitle": "Service Details",
+      "contentDesc": "At NASA Technical Services, we install burner systems in industrial facilities to ensure high safety and energy efficiency. The process begins with a site survey and completes with proper burner assembly and commissioning.",
+
+      "processTitle": "Step-by-Step Process:",
+      "process": {
+        "step1": {
+          "title": "Burner Selection:",
+          "desc": "Determining the appropriate burner based on fuel type, capacity, and facility layout."
+        },
+        "step2": {
+          "title": "Site Survey:",
+          "desc": "Inspecting the installation area and identifying necessary preparations."
+        },
+        "step3": {
+          "title": "Assembly:",
+          "desc": "Mechanical installation, electrical connections, and system integration."
+        },
+        "step4": {
+          "title": "Commissioning:",
+          "desc": "Initial ignition, combustion tuning, and safety system checks."
+        },
+        "step5": {
+          "title": "Training:",
+          "desc": "Training the end-user on correct operation and maintenance procedures."
+        }
+      },
+
+      "benefitsTitle": "Benefits:",
+      "benefit1": "High energy efficiency and fuel savings",
+      "benefit2": "Compliance with standards and long-lasting performance",
+      "benefit3": "Safe design that minimizes breakdown risks",
+      "benefit4": "Advanced technical support and documentation",
+
+      "quoteTitle": "Get a Quote",
+      "quoteText1": "For detailed information about our custom burner installation service, please visit our ",
+      "quoteLink": "contact",
+      "quoteText2": " page and get in touch with us."
+    }
+  },
+  
+  "service3": {
+    "automation": {
+      "pageTitle": "Automation & Control Systems - NASA Technical Services",
+      "pageHeading": "Automation & Control Systems",
+      "subtitle": "Increase your production efficiency with modern automation solutions that optimize industrial processes.",
+      "backButton": "Go Back",
+
+      "summaryTitle": "Service Overview",
+      "summary": {
+        "item1": "Site Survey & System Analysis",
+        "item2": "PLC & SCADA Integration",
+        "item3": "Remote Monitoring & Control",
+        "item4": "Energy Efficiency Optimization",
+        "item5": "Process Automation & Reporting"
+      },
+
+      "contentTitle": "Service Details",
+      "contentDesc": "At NASA Technical Services, we develop intelligent automation solutions to enhance production, safety, and energy efficiency in industrial facilities. By integrating PLC, HMI, and SCADA systems, we make your processes remotely monitorable and controllable.",
+
+      "processTitle": "Step-by-Step Process:",
+      "process": {
+        "step1": {
+          "title": "Survey:",
+          "desc": "Analysis of existing system and identifying requirements."
+        },
+        "step2": {
+          "title": "Design:",
+          "desc": "Creating an appropriate automation architecture."
+        },
+        "step3": {
+          "title": "Installation:",
+          "desc": "Hardware assembly, wiring, and system configuration."
+        },
+        "step4": {
+          "title": "Software & Testing:",
+          "desc": "PLC programming, SCADA screen design and commissioning tests."
+        },
+        "step5": {
+          "title": "Documentation & Training:",
+          "desc": "Providing user training and technical documentation."
+        }
+      },
+
+      "benefitsTitle": "Benefits:",
+      "benefit1": "Real-time data tracking and traceability",
+      "benefit2": "Early detection of faults and rapid intervention",
+      "benefit3": "Energy savings and process optimization",
+      "benefit4": "High safety and compliance",
+
+      "quoteTitle": "Get a Quote",
+      "quoteText1": "For tailored automation solutions for your facility, please visit our ",
+      "quoteLink": "contact",
+      "quoteText2": " page and get in touch with us."
+    }
+  },
+  
+  "service4": {
+    "energy": {
+      "pageTitle": "Energy Efficiency - NASA Technical Services",
+      "pageHeading": "Energy Efficiency",
+      "subtitle": "We maximize energy savings by analyzing your systems.",
+      "backButton": "Go Back",
+
+      "summaryTitle": "Service Overview",
+      "summary": {
+        "item1": "Energy Audit",
+        "item2": "Efficiency Analysis",
+        "item3": "Optimization Recommendations",
+        "item4": "Investment ROI Analysis",
+        "item5": "Implementation & Training"
+      },
+
+      "contentTitle": "Service Details",
+      "contentDesc": "Our expert team conducts a comprehensive energy audit of your facility; based on the collected data, we develop efficiency analyses and optimization plans.",
+
+      "processTitle": "Step-by-Step Process:",
+      "process": {
+        "step1": {
+          "title": "Energy Audit:",
+          "desc": "Measuring and reporting your facility’s energy consumption profiles."
+        },
+        "step2": {
+          "title": "Efficiency Analysis:",
+          "desc": "Evaluating system performance and efficiency based on collected data."
+        },
+        "step3": {
+          "title": "Optimization:",
+          "desc": "Improvement recommendations, equipment upgrades, and software adjustments."
+        },
+        "step4": {
+          "title": "Investment Review:",
+          "desc": "Conducting cost-benefit analyses and ROI timelines for proposed investments."
+        },
+        "step5": {
+          "title": "Training & Implementation:",
+          "desc": "Training staff and applying recommended actions on-site."
+        }
+      },
+
+      "benefitsTitle": "Benefits:",
+      "benefit1": "Reduced energy costs",
+      "benefit2": "Improved process efficiency",
+      "benefit3": "Lower carbon footprint",
+      "benefit4": "High return on investment",
+
+      "quoteTitle": "Get a Quote",
+      "quoteText1": "For an energy efficiency audit report and quote, please visit our ",
+      "quoteLink": "contact",
+      "quoteText2": " page. Our experts will get back to you promptly."
+    }
+  },
+  
+  "service5": {
+    "spares": {
+      "pageTitle": "Spare Parts Supply - NASA Technical Services",
+      "pageHeading": "Spare Parts Supply",
+      "subtitle": "We guarantee uninterrupted operation with original parts.",
+      "backButton": "Go Back",
+
+      "summaryTitle": "Service Overview",
+      "summary": {
+        "item1": "Original Part Sourcing",
+        "item2": "Stock & Logistics Management",
+        "item3": "Quick Shipment",
+        "item4": "Emergency Part Support",
+        "item5": "Technical Consulting"
+      },
+
+      "contentTitle": "Service Details",
+      "contentDesc": "With our extensive spare-parts network, we quickly procure original equipment parts to ensure your production never stops.",
+
+      "processTitle": "Step-by-Step Process:",
+      "process": {
+        "step1": {
+          "title": "Part Identification:",
+          "desc": "Determining required spare parts by model and serial number."
+        },
+        "step2": {
+          "title": "Stock Check:",
+          "desc": "Reviewing stock levels and alternative procurement channels."
+        },
+        "step3": {
+          "title": "Ordering & Logistics:",
+          "desc": "Fast ordering process and secure logistics coordination."
+        },
+        "step4": {
+          "title": "Delivery:",
+          "desc": "Coordinating delivery to site or warehouse."
+        },
+        "step5": {
+          "title": "Technical Support:",
+          "desc": "Consulting on part installation and compatibility."
+        }
+      },
+
+      "benefitsTitle": "Benefits:",
+      "benefit1": "Guaranteed uninterrupted production",
+      "benefit2": "Original part quality",
+      "benefit3": "Quick resolution in emergencies",
+      "benefit4": "Long-term cost advantage",
+
+      "quoteTitle": "Get a Quote",
+      "quoteText1": "For your spare-part needs and pricing quote, please visit our ",
+      "quoteLink": "contact",
+      "quoteText2": " page."
+    }
+  },
+  
+  "product": {
+    "monoblok": {
+      "pageTitle": "Monoblock Burner | NASA Technical Services",
+      "name": "Monoblock Burner",
+      "desc": "Compact design with all components in a single housing.",
+      "featuresTitle": "Features",
+      "feature1": "All components in one enclosure",
+      "feature2": "Easy maintenance and quick installation",
+      "feature3": "High combustion efficiency",
+      "feature4": "Durable materials and long lifespan",
+      "overviewTitle": "Product Overview",
+      "overviewDesc": "The Monoblock Burner is engineered for high-efficiency combustion solutions in industrial facilities. With a ceramic-coated combustion chamber and integrated control panel, it delivers maximum performance. Its compact design makes it ideal for small to medium-scale boilers.",
+      "specsTitle": "Technical Specifications",
+      "spec1": "Power Range: 100 kW – 500 kW",
+      "spec2": "Fuel Type: Natural Gas / LPG",
+      "spec3": "Efficiency: Over 92%",
+      "spec4": "Control: PID-Controlled Integrated Panel",
+      "spec5": "Operating Pressure: 0.1 – 0.3 bar",
+      "spec6": "Dimensions: 600 x 400 x 450 mm (LxWxH)",
+      "spec7": "Weight: 45 kg",
+      "applicationsTitle": "Application Areas",
+      "app1": "Industrial Boiler Rooms",
+      "app2": "Chemical and Petrochemical Industries",
+      "app3": "Food and Beverage Facilities",
+      "app4": "Heating Systems & Power Plants",
+      "benefitsTitle": "Benefits",
+      "benefit1": "Low fuel consumption and eco-friendly emissions",
+      "benefit2": "Space-saving compact design",
+      "benefit3": "Easy control with integrated automation system",
+      "benefit4": "Quick maintenance and long-lasting components",
+      "button": "Learn More"
+    }
+  },
+  
+  "product22": {
+    "duoblok": {
+      "pageTitle": "Duoblock Burner | NASA Technical Services",
+      "name": "Duoblock Burner",
+      "desc": "Modular design, high capacity, and efficient combustion control.",
+      "featuresTitle": "Features",
+      "feature1": "Modular design and easy integration",
+      "feature2": "High capacity / fast combustion control",
+      "feature3": "Wear-resistant components",
+      "feature4": "Uninterrupted operation guarantee",
+      "overviewTitle": "Product Overview",
+      "overviewDesc": "The Duoblock Burner, with its dual-block design, meets high-capacity combustion needs while simplifying maintenance. Each block can operate independently—if one block goes offline, the other continues running, ensuring uninterrupted production.",
+      "specsTitle": "Technical Specifications",
+      "spec1": "Total Power Range: 200 kW – 1000 kW",
+      "spec2": "Fuel Type: Natural Gas / LPG / Fuel Oil",
+      "spec3": "Efficiency: Over 93%",
+      "spec4": "Control: PLC-Supported Automation Panel",
+      "spec5": "Operating Pressure: 0.2 – 0.4 bar",
+      "spec6": "Dimensions (Each Block): 800 x 500 x 600 mm (LxWxH)",
+      "spec7": "Total Weight: 2 x 120 kg",
+      "applicationsTitle": "Application Areas",
+      "app1": "Large-Scale Industrial Facilities",
+      "app2": "Power Plants & Cogeneration Facilities",
+      "app3": "Petrochemical & Chemical Industries",
+      "app4": "Cement & Steel Factories",
+      "benefitsTitle": "Benefits",
+      "benefit1": "One block maintains operation even if the other fails",
+      "benefit2": "Energy efficiency through high capacity adjustment",
+      "benefit3": "Easy maintenance and quick spare-part supply",
+      "benefit4": "Long-lasting, reliable components",
+      "button": "Learn More"
+    }
   }
+
 }
