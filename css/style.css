@@ -433,3 +433,7 @@ img, picture, source {
   box-shadow: 0 8px 32px rgba(0,0,0,0.13);
   border-color: var(--bs-primary);
 }
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
