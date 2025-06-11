@@ -1,574 +1,605 @@
 {
-  "siteTitle": "NASA Teknik Hizmetler | Endüstriyel Brülör Sistemleri",
-  "brand": "NASA Teknik",
-  "nav": {
-    "home": "Ana Sayfa",
-    "about": "Hakkımızda",
-    "products": "Ürünler",
-    "contact": "İletişim",
-    "faq": "SSS"
-  },
-  "hero": {
-    "title": "Endüstriyel Brülör Sistemlerinde Uzman Hizmet",
-    "subtitle": "Türkiye genelinde güvenilir kurulum, bakım ve yedek parça hizmeti",
-    "btnVisit": "Keşfet",
-    "energyTitle": "Enerji Verimliliği",
-    "supportTitle": "Uzman Teknik Destek",
-    "supportDesc": "Türkiye genelinde servis ve bakım hizmeti"
-  },
-  "services": {
-    "title": "Hizmetlerimiz",
-    "subtitle": "Endüstriyel ihtiyaçlarınıza yönelik profesyonel çözümler"
-  },
-  "service": {
-    "maintenance": {
-      "title": "Yıllık Periyodik Bakım",
-      "desc": "Tesisinizde maksimum güvenlik ve verimlilik için kapsamlı yıllık bakım ve kontrol hizmetleri.",
-      "button": "Devamını Oku"
+    "siteTitle": "NASA Teknik Hizmetler | Endüstriyel Brülör Sistemleri",
+    "brand": "NASA Teknik",
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "products": "Ürünler",
+        "contact": "İletişim",
+        "faq": "SSS"
     },
-    "installation": {
-      "title": "Brülör Kurulumu",
-      "desc": "Yeni tesis kurulumları ve sistem entegrasyonları için uzman brülör montaj hizmetleri.",
-      "button": "Devamını Oku"
+    "hero": {
+        "title": "Endüstriyel Brülör Sistemlerinde Uzman Hizmet",
+        "subtitle": "Türkiye genelinde güvenilir kurulum, bakım ve yedek parça hizmeti",
+        "btnVisit": "Keşfet",
+        "energyTitle": "Enerji Verimliliği",
+        "supportTitle": "Uzman Teknik Destek",
+        "supportDesc": "Türkiye genelinde servis ve bakım hizmeti"
     },
-    "automation": {
-      "title": "Otomasyon Sistemleri",
-      "desc": "SCADA, PLC ve uzaktan erişim destekli yakma kontrol otomasyon çözümleri.",
-      "button": "Devamını Oku"
+    "services": {
+        "title": "Hizmetlerimiz",
+        "subtitle": "Endüstriyel ihtiyaçlarınıza yönelik profesyonel çözümler"
     },
-    "energy": {
-      "title": "Enerji Verimliliği",
-      "desc": "Sistemlerinizi analiz ederek enerji tasarrufu sağlayacak çözümler geliştiriyoruz.",
-      "button": "Devamını Oku"
-    },
-    "spares": {
-      "title": "Yedek Parça Temini",
-      "desc": "Orijinal brülör yedek parçaları ile kesintisiz operasyon sağlıyoruz.",
-      "button": "Devamını Oku"
-    }
-  },
-  "about": {
-    "title": "Hakkımızda – NASA Teknik Hizmetler",
-    "heading": "Hakkımızda",
-    "text": "NASA Teknik Hizmetler, endüstriyel brülör sistemleri konusunda uzmanlaşmış bir mühendislik firmasıdır. Türkiye genelinde kurulum, bakım ve servis hizmetleri sunar.",
-    "who": "Biz Kimiz?",
-    "whoDesc": "NASA Teknik Hizmetler, sektörde yılların deneyimine sahip mühendis kadrosuyla yüksek kaliteli çözümler sunar. Müşteri memnuniyetini ve hızlı müdahaleyi ön planda tutuyoruz.",
-    "vision": "Vizyonumuz",
-    "visionDesc": "Endüstriyel brülör sistemlerinde lider, yenilikçi ve güvenilir bir çözüm ortağı olmak.",
-    "mission": "Misyonumuz",
-    "missionDesc": "En yeni teknolojileri kullanarak verimli, çevre dostu ve sürdürülebilir hizmetler sunmak."
-  },
-  "footer": {
-    "copy": "© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır."
-  },
-  "btn": {
-    "whatsapp": "WhatsApp",
-    "quote": "Teklif Al"
-  },
-  "products": {
-    "pageTitle": "Ürünlerimiz | NASA Teknik Hizmetler",
-    "heroTitle": "Ürünlerimiz",
-    "heroSubtitle": "Endüstriyel brülörler ve tamamlayıcı parçalar: kalite ve performansın adresi",
-    "section1Title": "Brülör Tipleri",
-    "section2Title": "Diğer Parçalar"
-  },
-  "product1": {
-    "name": "Monoblok Brülör",
-    "desc": "Kompakt ve tüm bileşenler tek gövdede.",
-    "button": "Detaylı Bilgi"
-  },
-  "product2": {
-    "name": "Duoblok Brülör",
-    "desc": "Modüler yapı, yüksek kapasite ve verimli yanma kontrolü.",
-    "button": "Detaylı Bilgi"
-  },
-  "product5": {
-    "name": "Emniyet Kapama Valfi",
-    "desc": "Acil durumda gaz akışını kesen güvenlik valfi.",
-    "button": "Detaylı Bilgi"
-  },
-  "product7": {
-    "name": "Filtre Ünitesi",
-    "desc": "Brülöre giren havayı partiküllerden arındıran, modüler yapı ve kolay bakım.",
-    "button": "Detaylı Bilgi"
-  },
-  "product8": {
-    "name": "Gaz Basınç Regülatörü",
-    "desc": "Gaz basıncını istenen seviyede sabitleyen, yüksek hassasiyetli regülatör.",
-    "button": "Detaylı Bilgi"
-  },
-  "product9": {
-    "name": "Yanma Analizörü",
-    "desc": "O₂/CO oranını ölçerek yanma verimliliğini optimize eden dijital gösterge.",
-    "button": "Detaylı Bilgi"
-  },
-  "product10": {
-    "name": "Valf Aktüatörü",
-    "desc": "Elektrik motorlu veya pnömatik tahrikli valf hareket ettirici, uzaktan kumanda özelliği.",
-    "button": "Detaylı Bilgi"
-  },
-  "product11": {
-    "name": "ProsesStat Draft Regülatörü",
-    "desc": "Baca çekişi ve basınç kontrolü sağlayan yüksek performanslı regülatör cihazı.",
-    "button": "Detaylı Bilgi"
-  },
-  "contact": {
-    "title": "Teklif Al - NASA Teknik Hizmetler",
-    "heading": "Teklif Al",
-    "subheading": "Teklif talebinde bulunmak için lütfen formu eksiksiz doldurun.",
-    "form": {
-      "companyLabel": "Firma Adı",
-      "companyInvalid": "Firma adı gerekli.",
-      "nameLabel": "Ad Soyad",
-      "nameInvalid": "Ad Soyad gerekli.",
-      "emailLabel": "E-posta",
-      "emailInvalid": "Geçerli bir e-posta giriniz.",
-      "phoneLabel": "Telefon",
-      "phoneInvalid": "Telefon numarası gerekli.",
-      "addressLabel": "Adres",
-      "addressInvalid": "Adres gerekli.",
-      "messageLabel": "Teklif İçeriği / Mesajınız",
-      "messageInvalid": "Mesaj alanı boş bırakılamaz.",
-      "submitButton": "Teklif Al"
-    },
-    "info": {
-      "heading": "Şirket Bilgileri",
-      "companyLabel": "Firma:",
-      "companyName": "NASA Teknik Hizmetler",
-      "phoneLabel": "Telefon:",
-      "phoneValue": "0531 625 0694",
-      "whatsappLabel": "WhatsApp:",
-      "whatsappValue": "0531 625 0694",
-      "emailLabel": "E-posta:",
-      "emailValue": "adiguzelhuseyin@outlook.com",
-      "addressHeading": "Adresimiz",
-      "addressValue": "Kağıthane, İstanbul, Türkiye"
-    }
-  },
-  "faq": {
-    "title": "Sıkça Sorulan Sorular",
-    "description": "Brülör sistemleri ve hizmetlerimizle ilgili sıkça sorulan soruların yanıtları.",
-    "q1": {
-      "question": "Brülör bakım periyodu ne kadar sıklıktadır?",
-      "answer": "Brülör performansını korumak için yıllık bakım öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir."
-    },
-    "q2": {
-      "question": "Servis talebimi nasıl oluştururum?",
-      "answer": "Web sitemizdeki \"İletişim\" formunu doldurarak veya 7/24 WhatsApp hattımızdan talebinizi iletebilirsiniz. Hızlı geri dönüş alırsınız."
-    },
-    "q3": {
-      "question": "Acil arıza durumunda ne yapmalıyım?",
-      "answer": "Acil durum formunu işaretleyin veya 0531 625 06 94’ü arayın. Saha ekibimiz en kısa sürede müdahale edecektir."
-    },
-    "q4": {
-      "question": "Hizmet bölgeleriniz nelerdir?",
-      "answer": "Türkiye genelinde hizmet veriyoruz. İstanbul, Ankara, İzmir ve çevresinde hızlı saha desteği sunuyoruz."
-    },
-    "q5": {
-      "question": "Fiyat teklifi nasıl alınır?",
-      "answer": "\"Teklif Al\" butonuna tıklayıp ihtiyaç bilgilerini paylaştığınızda 24 saat içinde detaylı teklif sunuyoruz."
-    },
-    "q6": {
-      "question": "Eğitim ve kullanıcı eğitimi hizmetiniz var mı?",
-      "answer": "Evet, brülör kullanımı ve bakımı için sertifikalı eğitim hizmetimiz mevcuttur. Tarih ve içerik detayları için bizimle iletişime geçin."
-    }
-  },
-  "service1": {
-    "maintenance": {
-      "pageTitle": "Yıllık Periyodik Bakım - NASA Teknik Hizmetler",
-      "pageHeading": "Yıllık Periyodik Bakım",
-      "subtitle": "Tesisinizde maksimum güvenlik ve verimlilik için kapsamlı yıllık bakım, temizlik ve baca gazı analizi.",
-      "backButton": "Geri Dön",
-      "summaryTitle": "Hizmet Özeti",
-      "summary": {
-        "item1": "Ön İnceleme",
-        "item2": "Temizlik ve Bakım",
-        "item3": "Güvenlik Kontrolleri",
-        "item4": "Yakma Performansı ve Baca Gazı Analizi",
-        "item5": "Raporlama ve Rekomendasyon"
-      },
-      "contentTitle": "Hizmet İçeriği",
-      "contentDesc": "Yıllık periyodik bakım hizmetimiz kapsamında uzman ekibimiz, brülör sisteminizin tüm kritik noktalarını kapsayan bir süreç uygular. Özellikle baca gazı analizini ön planda tutarak sisteminizin verimini ve emniyetini en üst düzeyde garanti altına alırız.",
-      "processTitle": "Adım Adım Süreç:",
-      "process": {
-        "step1": {
-          "title": "Ön İnceleme:",
-          "desc": "Tesis kayıtlarının ve önceki bakım raporlarının analizi ile mevcut durumun değerlendirilmesi."
+    "service": {
+        "maintenance": {
+            "title": "Yıllık Periyodik Bakım",
+            "desc": "Tesisinizde maksimum güvenlik ve verimlilik için kapsamlı yıllık bakım ve kontrol hizmetleri.",
+            "button": "Devamını Oku"
         },
-        "step2": {
-          "title": "Temizlik ve Bakım:",
-          "desc": "Brülör kompenentlerinin temizlenmesi, filtre ve nozül değişimi ve mekanik bakımların yapılması."
+        "installation": {
+            "title": "Brülör Kurulumu",
+            "desc": "Yeni tesis kurulumları ve sistem entegrasyonları için uzman brülör montaj hizmetleri.",
+            "button": "Devamını Oku"
         },
-        "step3": {
-          "title": "Güvenlik Kontrolleri:",
-          "desc": "Emniyet vanaları, basınç anahtarları, sensörlerin ve emniyet sistemlerinin testi ve doğrulanması."
+        "automation": {
+            "title": "Otomasyon Sistemleri",
+            "desc": "SCADA, PLC ve uzaktan erişim destekli yakma kontrol otomasyon çözümleri.",
+            "button": "Devamını Oku"
         },
-        "step4": {
-          "title": "Yakma Performansı ve Baca Gazı Analizi:",
-          "desc": "Yakıt-hava ayarlarının optimizasyonu, emisyon ölçümleri ve baca gazı analiz cihazı ile performans değerlendirmesi."
+        "energy": {
+            "title": "Enerji Verimliliği",
+            "desc": "Sistemlerinizi analiz ederek enerji tasarrufu sağlayacak çözümler geliştiriyoruz.",
+            "button": "Devamını Oku"
         },
-        "step5": {
-          "title": "Raporlama:",
-          "desc": "Yapılan işlemler, ölçüm sonuçları, öneriler ve bir sonraki bakım takvimi rapor halinde sunulur."
+        "spares": {
+            "title": "Yedek Parça Temini",
+            "desc": "Orijinal brülör yedek parçaları ile kesintisiz operasyon sağlıyoruz.",
+            "button": "Devamını Oku"
         }
-      },
-      "benefitsTitle": "Faydalar:",
-      "benefit1": "Yakıt tüketiminde azalma ve enerji verimliliği artışı",
-      "benefit2": "Baca gazı analizine dayalı doğru optimizasyon ile emisyon değerlerinde düşüş",
-      "benefit3": "Olası arızaların erken tespiti ile maliyet ve iş kayıplarının önlenmesi",
-      "benefit4": "Uzun vadeli sistem dayanıklılığı ve ekipman ömrünün uzatılması",
-      "benefit5": "Güncel yasal düzenlemelere uygunluk ve emniyet standartlarının sağlanması",
-      "quoteTitle": "Teklif Al",
-      "quoteText1": "Hizmet bedeli ve detaylı teklif almak için ",
-      "quoteLink": "iletişim",
-      "quoteText2": " sayfamızdan bizimle iletişime geçebilirsiniz. Profesyonel ekip arkadaşlarımız en kısa sürede size dönüş yapacaktır."
-    }
-  },
-  "service2": {
-    "installation": {
-      "pageTitle": "Endüstriyel Brülör Kurulumu - NASA Teknik Hizmetler",
-      "pageHeading": "Endüstriyel Brülör Kurulumu",
-      "subtitle": "Verimli ve güvenli yakma sistemleri için profesyonel brülör kurulum hizmeti.",
-      "backButton": "Geri Dön",
-      "summaryTitle": "Hizmet Özeti",
-      "summary": {
-        "item1": "Brülör Seçimi ve Uygunluk Kontrolü",
-        "item2": "Saha Keşfi ve Montaj Planlaması",
-        "item3": "Kurulum ve Devreye Alma",
-        "item4": "Yakıt Ayarları ve Emniyet Testleri",
-        "item5": "Eğitim ve Raporlama"
-      },
-      "contentTitle": "Hizmet İçeriği",
-      "contentDesc": "NASA Teknik Hizmetler olarak, endüstriyel tesislerde yüksek güvenlik ve enerji verimliliği sağlayan brülör sistemlerinin kurulumunu gerçekleştiriyoruz. Kurulum öncesi saha keşfi ile başlayan süreç, brülörün uygun şekilde montajı ve devreye alınmasıyla tamamlanır.",
-      "processTitle": "Adım Adım Süreç:",
-      "process": {
-        "step1": {
-          "title": "Brülör Seçimi:",
-          "desc": "Yakıt tipine, kapasiteye ve tesis yapısına göre brülör belirlenmesi"
+    },
+    "about": {
+        "title": "Hakkımızda – NASA Teknik Hizmetler",
+        "heading": "Hakkımızda",
+        "text": "NASA Teknik Hizmetler, endüstriyel brülör sistemleri konusunda uzmanlaşmış bir mühendislik firmasıdır. Türkiye genelinde kurulum, bakım ve servis hizmetleri sunar.",
+        "who": "Biz Kimiz?",
+        "whoDesc": "NASA Teknik Hizmetler, sektörde yılların deneyimine sahip mühendis kadrosuyla yüksek kaliteli çözümler sunar. Müşteri memnuniyetini ve hızlı müdahaleyi ön planda tutuyoruz.",
+        "vision": "Vizyonumuz",
+        "visionDesc": "Endüstriyel brülör sistemlerinde lider, yenilikçi ve güvenilir bir çözüm ortağı olmak.",
+        "mission": "Misyonumuz",
+        "missionDesc": "En yeni teknolojileri kullanarak verimli, çevre dostu ve sürdürülebilir hizmetler sunmak."
+    },
+    "footer": {
+        "copy": "© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır."
+    },
+    "btn": {
+        "whatsapp": "WhatsApp",
+        "quote": "Teklif Al"
+    },
+    "products": {
+        "pageTitle": "Ürünlerimiz | NASA Teknik Hizmetler",
+        "heroTitle": "Ürünlerimiz",
+        "heroSubtitle": "Endüstriyel brülörler ve tamamlayıcı parçalar: kalite ve performansın adresi",
+        "section1Title": "Brülör Tipleri",
+        "section2Title": "Diğer Parçalar",
+        "backToProducts": "Ürünlerimize Geri Dön"
+    },
+    "product1": {
+        "name": "Monoblok Brülör",
+        "desc": "Kompakt ve tüm bileşenler tek gövdede.",
+        "button": "Detaylı Bilgi"
+    },
+    "product2": {
+        "name": "Duoblok Brülör",
+        "desc": "Modüler yapı, yüksek kapasite ve verimli yanma kontrolü.",
+        "button": "Detaylı Bilgi"
+    },
+    "product5": {
+        "name": "Emniyet Kapama Valfi",
+        "desc": "Acil durumda gaz akışını kesen güvenlik valfi.",
+        "button": "Detaylı Bilgi"
+    },
+    "product7": {
+        "name": "Filtre Ünitesi",
+        "desc": "Brülöre giren havayı partiküllerden arındıran, modüler yapı ve kolay bakım.",
+        "button": "Detaylı Bilgi"
+    },
+    "product8": {
+        "name": "Gaz Basınç Regülatörü",
+        "desc": "Gaz basıncını istenen seviyede sabitleyen, yüksek hassasiyetli regülatör.",
+        "button": "Detaylı Bilgi"
+    },
+    "product9": {
+        "name": "Yanma Analizörü",
+        "desc": "O₂/CO oranını ölçerek yanma verimliliğini optimize eden dijital gösterge.",
+        "button": "Detaylı Bilgi"
+    },
+    "product10": {
+        "name": "Valf Aktüatörü",
+        "desc": "Elektrik motorlu veya pnömatik tahrikli valf hareket ettirici, uzaktan kumanda özelliği.",
+        "button": "Detaylı Bilgi"
+    },
+    "product11": {
+        "name": "ProsesStat Draft Regülatörü",
+        "desc": "Baca çekişi ve basınç kontrolü sağlayan yüksek performanslı regülatör cihazı.",
+        "button": "Detaylı Bilgi"
+    },
+    "contact": {
+        "title": "Teklif Al - NASA Teknik Hizmetler",
+        "heading": "Teklif Al",
+        "subheading": "Teklif talebinde bulunmak için lütfen formu eksiksiz doldurun.",
+        "form": {
+            "companyLabel": "Firma Adı",
+            "companyInvalid": "Firma adı gerekli.",
+            "nameLabel": "Ad Soyad",
+            "nameInvalid": "Ad Soyad gerekli.",
+            "emailLabel": "E-posta",
+            "emailInvalid": "Geçerli bir e-posta giriniz.",
+            "phoneLabel": "Telefon",
+            "phoneInvalid": "Telefon numarası gerekli.",
+            "addressLabel": "Adres",
+            "addressInvalid": "Adres gerekli.",
+            "messageLabel": "Teklif İçeriği / Mesajınız",
+            "messageInvalid": "Mesaj alanı boş bırakılamaz.",
+            "submitButton": "Teklif Al"
         },
-        "step2": {
-          "title": "Saha Keşfi:",
-          "desc": "Montaj alanının kontrolü ve ihtiyaç duyulan hazırlıkların tespiti"
-        },
-        "step3": {
-          "title": "Montaj:",
-          "desc": "Mekanik montaj, elektrik bağlantıları ve sistem entegrasyonu"
-        },
-        "step4": {
-          "title": "Devreye Alma:",
-          "desc": "İlk ateşleme, yanma ayarları ve emniyet sistemlerinin kontrolü"
-        },
-        "step5": {
-          "title": "Eğitim:",
-          "desc": "Kullanıcıya sistemin doğru kullanımı ve bakım süreçleri hakkında bilgilendirme"
+        "info": {
+            "heading": "Şirket Bilgileri",
+            "companyLabel": "Firma:",
+            "companyName": "NASA Teknik Hizmetler",
+            "phoneLabel": "Telefon:",
+            "phoneValue": "0531 625 0694",
+            "whatsappLabel": "WhatsApp:",
+            "whatsappValue": "0531 625 0694",
+            "emailLabel": "E-posta:",
+            "emailValue": "adiguzelhuseyin@outlook.com",
+            "addressHeading": "Adresimiz",
+            "addressValue": "Kağıthane, İstanbul, Türkiye"
         }
-      },
-      "benefitsTitle": "Faydalar:",
-      "benefit1": "Yüksek enerji verimliliği ve yakıt tasarrufu",
-      "benefit2": "Standartlara uygunluk ve uzun ömürlü kullanım",
-      "benefit3": "Arıza risklerini azaltan güvenli yapı",
-      "benefit4": "İleri düzey teknik destek ve belge sunumu",
-      "quoteTitle": "Teklif Al",
-      "quoteText1": "Tesisinize özel brülör kurulumu hizmeti hakkında detaylı bilgi almak için ",
-      "quoteLink": "iletişim",
-      "quoteText2": " sayfamızdan bizimle iletişime geçebilirsiniz."
-    }
-  },
-  "service3": {
-    "automation": {
-      "pageTitle": "Otomasyon ve Kontrol Sistemleri - NASA Teknik Hizmetler",
-      "pageHeading": "Otomasyon ve Kontrol Sistemleri",
-      "subtitle": "Endüstriyel süreçlerinizi optimize eden modern otomasyon çözümleri ile üretim verimliliğinizi artırın.",
-      "backButton": "Geri Dön",
-      "summaryTitle": "Hizmet Özeti",
-      "summary": {
-        "item1": "Saha Keşfi ve Sistem Analizi",
-        "item2": "PLC & SCADA Entegrasyonu",
-        "item3": "Uzaktan İzleme ve Kontrol",
-        "item4": "Enerji Verimliliği Optimizasyonu",
-        "item5": "Süreç Otomasyonu ve Raporlama"
-      },
-      "contentTitle": "Hizmet İçeriği",
-      "contentDesc": "NASA Teknik Hizmetler olarak, endüstriyel tesislerin üretim, güvenlik ve enerji verimliliğini artırmak için akıllı otomasyon çözümleri geliştiriyoruz. PLC, HMI ve SCADA sistemleri entegrasyonu ile süreçlerinizi uzaktan izlenebilir ve kontrol edilebilir hale getiriyoruz.",
-      "processTitle": "Adım Adım Süreç:",
-      "process": {
-        "step1": {
-          "title": "Keşif:",
-          "desc": "Mevcut sistem analizi ve ihtiyaç belirleme"
+    },
+    "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "description": "Brülör sistemleri ve hizmetlerimizle ilgili sıkça sorulan soruların yanıtları.",
+        "q1": {
+            "question": "Brülör bakım periyodu ne kadar sıklıktadır?",
+            "answer": "Brülör performansını korumak için yıllık bakım öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir."
         },
-        "step2": {
-          "title": "Projelendirme:",
-          "desc": "Uygun otomasyon yapısının oluşturulması"
+        "q2": {
+            "question": "Servis talebimi nasıl oluştururum?",
+            "answer": "Web sitemizdeki \"İletişim\" formunu doldurarak veya 7/24 WhatsApp hattımızdan talebinizi iletebilirsiniz. Hızlı geri dönüş alırsınız."
         },
-        "step3": {
-          "title": "Kurulum:",
-          "desc": "Donanım montajı, kablolama ve sistem konfigürasyonu"
+        "q3": {
+            "question": "Acil arıza durumunda ne yapmalıyım?",
+            "answer": "Acil durum formunu işaretleyin veya 0531 625 06 94’ü arayın. Saha ekibimiz en kısa sürede müdahale edecektir."
         },
-        "step4": {
-          "title": "Yazılım ve Test:",
-          "desc": "PLC programlaması, SCADA ekran tasarımları ve devreye alma testleri"
+        "q4": {
+            "question": "Hizmet bölgeleriniz nelerdir?",
+            "answer": "Türkiye genelinde hizmet veriyoruz. İstanbul, Ankara, İzmir ve çevresinde hızlı saha desteği sunuyoruz."
         },
-        "step5": {
-          "title": "Dokümantasyon ve Eğitim:",
-          "desc": "Kullanıcı eğitimleri ve teknik dökümantasyon sağlanması"
+        "q5": {
+            "question": "Fiyat teklifi nasıl alınır?",
+            "answer": "\"Teklif Al\" butonuna tıklayıp ihtiyaç bilgilerini paylaştığınızda 24 saat içinde detaylı teklif sunuyoruz."
+        },
+        "q6": {
+            "question": "Eğitim ve kullanıcı eğitimi hizmetiniz var mı?",
+            "answer": "Evet, brülör kullanımı ve bakımı için sertifikalı eğitim hizmetimiz mevcuttur. Tarih ve içerik detayları için bizimle iletişime geçin."
         }
-      },
-      "benefitsTitle": "Faydalar:",
-      "benefit1": "İzlenebilirlik ve anlık veri takibi",
-      "benefit2": "Hataların erken tespiti ve hızlı müdahale",
-      "benefit3": "Enerji tasarrufu ve üretim sürecinde optimizasyon",
-      "benefit4": "Yüksek güvenlik ve uyumluluk",
-      "quoteTitle": "Teklif Al",
-      "quoteText1": "İşletmenize özel otomasyon çözümleri için ",
-      "quoteLink": "iletişim",
-      "quoteText2": " sayfamızdan bize ulaşabilirsiniz."
-    }
-  },
-  "service4": {
-    "energy": {
-      "pageTitle": "Enerji Verimliliği - NASA Teknik Hizmetler",
-      "pageHeading": "Enerji Verimliliği",
-      "subtitle": "Sistemlerinizi analiz ederek enerji tasarrufunu maksimize ediyoruz.",
-      "backButton": "Geri Dön",
-      "summaryTitle": "Hizmet Özeti",
-      "summary": {
-        "item1": "Enerji Denetimi",
-        "item2": "Verimlilik Analizi",
-        "item3": "Optimizasyon Önerileri",
-        "item4": "Yatırım Geri Dönüş Analizi",
-        "item5": "Uygulama ve Eğitim"
-      },
-      "contentTitle": "Hizmet İçeriği",
-      "contentDesc": "Uzman ekibimiz, tesisinizde kapsamlı bir enerji denetimi yapar; elde edilen veriler ışığında verimlilik analizleri ve optimizasyon planları geliştirir.",
-      "processTitle": "Adım Adım Süreç:",
-      "process": {
-        "step1": {
-          "title": "Enerji Denetimi:",
-          "desc": "Tesisinizin enerji tüketim profillerinin ölçülmesi ve raporlanması."
-        },
-        "step2": {
-          "title": "Verimlilik Analizi:",
-          "desc": "Toplanan verilerle sistemlerin performans ve verimlilik değerlendirmesi."
-        },
-        "step3": {
-          "title": "Optimizasyon:",
-          "desc": "İyileştirme önerileri, ekipman güncellemeleri ve yazılım ayarlamaları."
-        },
-        "step4": {
-          "title": "Yatırım İncelemesi:",
-          "desc": "Önerilen yatırımların geri dönüş süreleri ve maliyet-fayda analizleri."
-        },
-        "step5": {
-          "title": "Eğitim & Uygulama:",
-          "desc": "Personel eğitimi ve önerilen aksiyonların sahada uygulanması."
+    },
+    "service1": {
+        "maintenance": {
+            "pageTitle": "Yıllık Periyodik Bakım - NASA Teknik Hizmetler",
+            "pageHeading": "Yıllık Periyodik Bakım",
+            "subtitle": "Tesisinizde maksimum güvenlik ve verimlilik için kapsamlı yıllık bakım, temizlik ve baca gazı analizi.",
+            "backButton": "Geri Dön",
+            "summaryTitle": "Hizmet Özeti",
+            "summary": {
+                "item1": "Ön İnceleme",
+                "item2": "Temizlik ve Bakım",
+                "item3": "Güvenlik Kontrolleri",
+                "item4": "Yakma Performansı ve Baca Gazı Analizi",
+                "item5": "Raporlama ve Rekomendasyon"
+            },
+            "contentTitle": "Hizmet İçeriği",
+            "contentDesc": "Yıllık periyodik bakım hizmetimiz kapsamında uzman ekibimiz, brülör sisteminizin tüm kritik noktalarını kapsayan bir süreç uygular. Özellikle baca gazı analizini ön planda tutarak sisteminizin verimini ve emniyetini en üst düzeyde garanti altına alırız.",
+            "processTitle": "Adım Adım Süreç:",
+            "process": {
+                "step1": {
+                    "title": "Ön İnceleme:",
+                    "desc": "Tesis kayıtlarının ve önceki bakım raporlarının analizi ile mevcut durumun değerlendirilmesi."
+                },
+                "step2": {
+                    "title": "Temizlik ve Bakım:",
+                    "desc": "Brülör kompenentlerinin temizlenmesi, filtre ve nozül değişimi ve mekanik bakımların yapılması."
+                },
+                "step3": {
+                    "title": "Güvenlik Kontrolleri:",
+                    "desc": "Emniyet vanaları, basınç anahtarları, sensörlerin ve emniyet sistemlerinin testi ve doğrulanması."
+                },
+                "step4": {
+                    "title": "Yakma Performansı ve Baca Gazı Analizi:",
+                    "desc": "Yakıt-hava ayarlarının optimizasyonu, emisyon ölçümleri ve baca gazı analiz cihazı ile performans değerlendirmesi."
+                },
+                "step5": {
+                    "title": "Raporlama:",
+                    "desc": "Yapılan işlemler, ölçüm sonuçları, öneriler ve bir sonraki bakım takvimi rapor halinde sunulur."
+                }
+            },
+            "benefitsTitle": "Faydalar:",
+            "benefit1": "Yakıt tüketiminde azalma ve enerji verimliliği artışı",
+            "benefit2": "Baca gazı analizine dayalı doğru optimizasyon ile emisyon değerlerinde düşüş",
+            "benefit3": "Olası arızaların erken tespiti ile maliyet ve iş kayıplarının önlenmesi",
+            "benefit4": "Uzun vadeli sistem dayanıklılığı ve ekipman ömrünün uzatılması",
+            "benefit5": "Güncel yasal düzenlemelere uygunluk ve emniyet standartlarının sağlanması",
+            "quoteTitle": "Teklif Al",
+            "quoteText1": "Hizmet bedeli ve detaylı teklif almak için ",
+            "quoteLink": "iletişim",
+            "quoteText2": " sayfamızdan bizimle iletişime geçebilirsiniz. Profesyonel ekip arkadaşlarımız en kısa sürede size dönüş yapacaktır."
         }
-      },
-      "benefitsTitle": "Faydalar:",
-      "benefit1": "Azaltılmış enerji maliyetleri",
-      "benefit2": "İyileştirilmiş proses verimliliği",
-      "benefit3": "Daha düşük karbon ayak izi",
-      "benefit4": "Yüksek yatırım geri dönüşü",
-      "quoteTitle": "Teklif Al",
-      "quoteText1": "Enerji verimliliği analiz raporu ve teklif için ",
-      "quoteLink": "iletişim",
-      "quoteText2": " sayfamızdan bize ulaşabilirsiniz. Uzman ekibimiz en kısa sürede dönüş yapacaktır."
-    }
-  },
-  "service5": {
-    "spares": {
-      "pageTitle": "Yedek Parça Temini - NASA Teknik Hizmetler",
-      "pageHeading": "Yedek Parça Temini",
-      "subtitle": "Orijinal parçalarla kesintisiz operasyon garantisi sunuyoruz.",
-      "backButton": "Geri Dön",
-      "summaryTitle": "Hizmet Özeti",
-      "summary": {
-        "item1": "Orijinal Parça Bulma",
-        "item2": "Stok ve Lojistik Yönetimi",
-        "item3": "Hızlı Sevkiyat",
-        "item4": "Acil Durum Parça Desteği",
-        "item5": "Teknik Danışmanlık"
-      },
-      "contentTitle": "Hizmet İçeriği",
-      "contentDesc": "Geniş yedek parça ağımız sayesinde, orijinal ekipman parçalarını hızlıca temin ederek üretiminizin aksamamasını sağlıyoruz.",
-      "processTitle": "Adım Adım Süreç:",
-      "process": {
-        "step1": {
-          "title": "Parça Tespiti:",
-          "desc": "Gerekli yedek parçaların model ve seri numarasının belirlenmesi"
-        },
-        "step2": {
-          "title": "Stok Kontrolü:",
-          "desc": "Hedef parça stoklarının ve alternatif tedarik yollarının incelenmesi"
-        },
-        "step3": {
-          "title": "Sipariş ve Lojistik:",
-          "desc": "Hızlı sipariş süreci ve güvenli lojistik organizasyonu"
-        },
-        "step4": {
-          "title": "Teslimat:",
-          "desc": "Saha veya depo teslimatlarının koordinasyonu"
-        },
-        "step5": {
-          "title": "Teknik Destek:",
-          "desc": "Parça montajı ve uyum konusunda teknik danışmanlık"
+    },
+    "service2": {
+        "installation": {
+            "pageTitle": "Endüstriyel Brülör Kurulumu - NASA Teknik Hizmetler",
+            "pageHeading": "Endüstriyel Brülör Kurulumu",
+            "subtitle": "Verimli ve güvenli yakma sistemleri için profesyonel brülör kurulum hizmeti.",
+            "backButton": "Geri Dön",
+            "summaryTitle": "Hizmet Özeti",
+            "summary": {
+                "item1": "Brülör Seçimi ve Uygunluk Kontrolü",
+                "item2": "Saha Keşfi ve Montaj Planlaması",
+                "item3": "Kurulum ve Devreye Alma",
+                "item4": "Yakıt Ayarları ve Emniyet Testleri",
+                "item5": "Eğitim ve Raporlama"
+            },
+            "contentTitle": "Hizmet İçeriği",
+            "contentDesc": "NASA Teknik Hizmetler olarak, endüstriyel tesislerde yüksek güvenlik ve enerji verimliliği sağlayan brülör sistemlerinin kurulumunu gerçekleştiriyoruz. Kurulum öncesi saha keşfi ile başlayan süreç, brülörün uygun şekilde montajı ve devreye alınmasıyla tamamlanır.",
+            "processTitle": "Adım Adım Süreç:",
+            "process": {
+                "step1": {
+                    "title": "Brülör Seçimi:",
+                    "desc": "Yakıt tipine, kapasiteye ve tesis yapısına göre brülör belirlenmesi"
+                },
+                "step2": {
+                    "title": "Saha Keşfi:",
+                    "desc": "Montaj alanının kontrolü ve ihtiyaç duyulan hazırlıkların tespiti"
+                },
+                "step3": {
+                    "title": "Montaj:",
+                    "desc": "Mekanik montaj, elektrik bağlantıları ve sistem entegrasyonu"
+                },
+                "step4": {
+                    "title": "Devreye Alma:",
+                    "desc": "İlk ateşleme, yanma ayarları ve emniyet sistemlerinin kontrolü"
+                },
+                "step5": {
+                    "title": "Eğitim:",
+                    "desc": "Kullanıcıya sistemin doğru kullanımı ve bakım süreçleri hakkında bilgilendirme"
+                }
+            },
+            "benefitsTitle": "Faydalar:",
+            "benefit1": "Yüksek enerji verimliliği ve yakıt tasarrufu",
+            "benefit2": "Standartlara uygunluk ve uzun ömürlü kullanım",
+            "benefit3": "Arıza risklerini azaltan güvenli yapı",
+            "benefit4": "İleri düzey teknik destek ve belge sunumu",
+            "quoteTitle": "Teklif Al",
+            "quoteText1": "Tesisinize özel brülör kurulumu hizmeti hakkında detaylı bilgi almak için ",
+            "quoteLink": "iletişim",
+            "quoteText2": " sayfamızdan bizimle iletişime geçebilirsiniz."
         }
-      },
-      "benefitsTitle": "Faydalar:",
-      "benefit1": "Kesintisiz üretim garantisi",
-      "benefit2": "Orijinal parça kalitesi",
-      "benefit3": "Acil durumlarda hızlı çözüm",
-      "benefit4": "Uzun vadeli maliyet avantajı",
-      "quoteTitle": "Teklif Al",
-      "quoteText1": "Yedek parça ihtiyaçlarınız ve fiyat teklifi için ",
-      "quoteLink": "iletişim",
-      "quoteText2": " sayfamızdan bize ulaşabilirsiniz."
+    },
+    "service3": {
+        "automation": {
+            "pageTitle": "Otomasyon ve Kontrol Sistemleri - NASA Teknik Hizmetler",
+            "pageHeading": "Otomasyon ve Kontrol Sistemleri",
+            "subtitle": "Endüstriyel süreçlerinizi optimize eden modern otomasyon çözümleri ile üretim verimliliğinizi artırın.",
+            "backButton": "Geri Dön",
+            "summaryTitle": "Hizmet Özeti",
+            "summary": {
+                "item1": "Saha Keşfi ve Sistem Analizi",
+                "item2": "PLC & SCADA Entegrasyonu",
+                "item3": "Uzaktan İzleme ve Kontrol",
+                "item4": "Enerji Verimliliği Optimizasyonu",
+                "item5": "Süreç Otomasyonu ve Raporlama"
+            },
+            "contentTitle": "Hizmet İçeriği",
+            "contentDesc": "NASA Teknik Hizmetler olarak, endüstriyel tesislerin üretim, güvenlik ve enerji verimliliğini artırmak için akıllı otomasyon çözümleri geliştiriyoruz. PLC, HMI ve SCADA sistemleri entegrasyonu ile süreçlerinizi uzaktan izlenebilir ve kontrol edilebilir hale getiriyoruz.",
+            "processTitle": "Adım Adım Süreç:",
+            "process": {
+                "step1": {
+                    "title": "Keşif:",
+                    "desc": "Mevcut sistem analizi ve ihtiyaç belirleme"
+                },
+                "step2": {
+                    "title": "Projelendirme:",
+                    "desc": "Uygun otomasyon yapısının oluşturulması"
+                },
+                "step3": {
+                    "title": "Kurulum:",
+                    "desc": "Donanım montajı, kablolama ve sistem konfigürasyonu"
+                },
+                "step4": {
+                    "title": "Yazılım ve Test:",
+                    "desc": "PLC programlaması, SCADA ekran tasarımları ve devreye alma testleri"
+                },
+                "step5": {
+                    "title": "Dokümantasyon ve Eğitim:",
+                    "desc": "Kullanıcı eğitimleri ve teknik dökümantasyon sağlanması"
+                }
+            },
+            "benefitsTitle": "Faydalar:",
+            "benefit1": "İzlenebilirlik ve anlık veri takibi",
+            "benefit2": "Hataların erken tespiti ve hızlı müdahale",
+            "benefit3": "Enerji tasarrufu ve üretim sürecinde optimizasyon",
+            "benefit4": "Yüksek güvenlik ve uyumluluk",
+            "quoteTitle": "Teklif Al",
+            "quoteText1": "İşletmenize özel otomasyon çözümleri için ",
+            "quoteLink": "iletişim",
+            "quoteText2": " sayfamızdan bize ulaşabilirsiniz."
+        }
+    },
+    "service4": {
+        "energy": {
+            "pageTitle": "Enerji Verimliliği - NASA Teknik Hizmetler",
+            "pageHeading": "Enerji Verimliliği",
+            "subtitle": "Sistemlerinizi analiz ederek enerji tasarrufunu maksimize ediyoruz.",
+            "backButton": "Geri Dön",
+            "summaryTitle": "Hizmet Özeti",
+            "summary": {
+                "item1": "Enerji Denetimi",
+                "item2": "Verimlilik Analizi",
+                "item3": "Optimizasyon Önerileri",
+                "item4": "Yatırım Geri Dönüş Analizi",
+                "item5": "Uygulama ve Eğitim"
+            },
+            "contentTitle": "Hizmet İçeriği",
+            "contentDesc": "Uzman ekibimiz, tesisinizde kapsamlı bir enerji denetimi yapar; elde edilen veriler ışığında verimlilik analizleri ve optimizasyon planları geliştirir.",
+            "processTitle": "Adım Adım Süreç:",
+            "process": {
+                "step1": {
+                    "title": "Enerji Denetimi:",
+                    "desc": "Tesisinizin enerji tüketim profillerinin ölçülmesi ve raporlanması."
+                },
+                "step2": {
+                    "title": "Verimlilik Analizi:",
+                    "desc": "Toplanan verilerle sistemlerin performans ve verimlilik değerlendirmesi."
+                },
+                "step3": {
+                    "title": "Optimizasyon:",
+                    "desc": "İyileştirme önerileri, ekipman güncellemeleri ve yazılım ayarlamaları."
+                },
+                "step4": {
+                    "title": "Yatırım İncelemesi:",
+                    "desc": "Önerilen yatırımların geri dönüş süreleri ve maliyet-fayda analizleri."
+                },
+                "step5": {
+                    "title": "Eğitim & Uygulama:",
+                    "desc": "Personel eğitimi ve önerilen aksiyonların sahada uygulanması."
+                }
+            },
+            "benefitsTitle": "Faydalar:",
+            "benefit1": "Azaltılmış enerji maliyetleri",
+            "benefit2": "İyileştirilmiş proses verimliliği",
+            "benefit3": "Daha düşük karbon ayak izi",
+            "benefit4": "Yüksek yatırım geri dönüşü",
+            "quoteTitle": "Teklif Al",
+            "quoteText1": "Enerji verimliliği analiz raporu ve teklif için ",
+            "quoteLink": "iletişim",
+            "quoteText2": " sayfamızdan bize ulaşabilirsiniz. Uzman ekibimiz en kısa sürede dönüş yapacaktır."
+        }
+    },
+    "service5": {
+        "spares": {
+            "pageTitle": "Yedek Parça Temini - NASA Teknik Hizmetler",
+            "pageHeading": "Yedek Parça Temini",
+            "subtitle": "Orijinal parçalarla kesintisiz operasyon garantisi sunuyoruz.",
+            "backButton": "Geri Dön",
+            "summaryTitle": "Hizmet Özeti",
+            "summary": {
+                "item1": "Orijinal Parça Bulma",
+                "item2": "Stok ve Lojistik Yönetimi",
+                "item3": "Hızlı Sevkiyat",
+                "item4": "Acil Durum Parça Desteği",
+                "item5": "Teknik Danışmanlık"
+            },
+            "contentTitle": "Hizmet İçeriği",
+            "contentDesc": "Geniş yedek parça ağımız sayesinde, orijinal ekipman parçalarını hızlıca temin ederek üretiminizin aksamamasını sağlıyoruz.",
+            "processTitle": "Adım Adım Süreç:",
+            "process": {
+                "step1": {
+                    "title": "Parça Tespiti:",
+                    "desc": "Gerekli yedek parçaların model ve seri numarasının belirlenmesi"
+                },
+                "step2": {
+                    "title": "Stok Kontrolü:",
+                    "desc": "Hedef parça stoklarının ve alternatif tedarik yollarının incelenmesi"
+                },
+                "step3": {
+                    "title": "Sipariş ve Lojistik:",
+                    "desc": "Hızlı sipariş süreci ve güvenli lojistik organizasyonu"
+                },
+                "step4": {
+                    "title": "Teslimat:",
+                    "desc": "Saha veya depo teslimatlarının koordinasyonu"
+                },
+                "step5": {
+                    "title": "Teknik Destek:",
+                    "desc": "Parça montajı ve uyum konusunda teknik danışmanlık"
+                }
+            },
+            "benefitsTitle": "Faydalar:",
+            "benefit1": "Kesintisiz üretim garantisi",
+            "benefit2": "Orijinal parça kalitesi",
+            "benefit3": "Acil durumlarda hızlı çözüm",
+            "benefit4": "Uzun vadeli maliyet avantajı",
+            "quoteTitle": "Teklif Al",
+            "quoteText1": "Yedek parça ihtiyaçlarınız ve fiyat teklifi için ",
+            "quoteLink": "iletişim",
+            "quoteText2": " sayfamızdan bize ulaşabilirsiniz."
+        }
+    },
+    "product": {
+        "monoblok": {
+            "pageTitle": "Monoblok Brülör | NASA Teknik Hizmetler",
+            "metaDescription": "Monoblok Brülör - NASA Teknik Hizmetler",
+            "metaKeywords": "Monoblok Brülör, Endüstriyel Brülör, Kompakt Brülör, Teknik Brülör",
+            "name": "Monoblok Brülör",
+            "desc": "Kompakt tasarım, tüm bileşenler tek gövdede.",
+            "featuresTitle": "Özellikler",
+            "feature1": "Tüm bileşenler tek muhafazada",
+            "feature2": "Kolay bakım ve hızlı kurulum",
+            "feature3": "Yüksek yanma verimliliği",
+            "feature4": "Dayanıklı malzeme ve uzun ömür",
+            "overviewTitle": "Ürün Özeti",
+            "overviewDesc": "Monoblok Brülör, endüstriyel tesislerde yüksek verimli yakma çözümleri sunmak üzere tasarlanmıştır. Özel seramik kaplamalı yanma odası ve entegre kontrol paneli sayesinde maksimum performans sağlar. Kompakt yapısı ile hem küçük hem de orta ölçekli kazanlarda kolaylıkla kullanılabilir.",
+            "specsTitle": "Teknik Özellikler",
+            "spec1": "Güç Aralığı: 100 kW – 500 kW",
+            "spec2": "Yakıt Türü: Doğalgaz / LPG",
+            "spec3": "Verimlilik: %92 üzeri",
+            "spec4": "Kontrol: PID Kontrollü Entegre Panel",
+            "spec5": "Çalışma Basıncı: 0.1 – 0.3 bar",
+            "spec6": "Boyutlar: 600 x 400 x 450 mm (LxGxY)",
+            "spec7": "Ağırlık: 45 kg",
+            "applicationsTitle": "Uygulama Alanları",
+            "app1": "Kazan Dairesi Endüstriyel Tesisler",
+            "app2": "Kimya ve Petrokimya Sanayii",
+            "app3": "Gıda ve İçecek İşletmeleri",
+            "app4": "Isıtma Sistemleri ve Enerji Santralleri",
+            "benefitsTitle": "Avantajlar",
+            "benefit1": "Düşük yakıt tüketimi ve çevre dostu emisyon değerleri",
+            "benefit2": "Kompakt tasarım sayesinde yer tasarrufu",
+            "benefit3": "Entegre otomasyon sistemi ile kolay kontrol",
+            "benefit4": "Hızlı bakım ve uzun ömürlü komponentler",
+            "button": "Detaylı Bilgi",
+            "imgAlt": "Monoblok Brülör",
+            "backToProducts": "Ürünlerimize Geri Dön"
+        }
+    },
+    "product22": {
+        "duoblok": {
+            "pageTitle": "Duoblok Brülör | NASA Teknik Hizmetler",
+            "metaDescription": "Duoblok Brülör - NASA Teknik Hizmetler",
+            "metaKeywords": "Duoblok Brülör, Modüler Brülör, Endüstriyel Brülör, Yüksek Kapasite Brülör",
+            "name": "Duoblok Brülör",
+            "desc": "Modüler yapı, yüksek kapasite ve verimli yanma kontrolü.",
+            "featuresTitle": "Özellikler",
+            "feature1": "Modüler tasarım ve kolay entegrasyon",
+            "feature2": "Yüksek kapasite / hızlı yanma kontrolü",
+            "feature3": "Aşınmaya dayanıklı bileşenler",
+            "feature4": "Kesintisiz operasyon garantisi",
+            "overviewTitle": "Ürün Özeti",
+            "overviewDesc": "Duoblok Brülör, çift blok yapısı sayesinde hem yüksek kapasiteli yakma ihtiyaçlarını karşılar hem de bakım sürecini kolaylaştırır. Her iki blok birbirinden bağımsız çalışabilme özelliğine sahiptir; bu sayede bir blok devre dışı kaldığında diğeri çalışmaya devam ederek üretimin aksamamasını sağlar.",
+            "specsTitle": "Teknik Özellikler",
+            "spec1": "Toplam Güç Aralığı: 200 kW – 1000 kW",
+            "spec2": "Yakıt Türü: Doğalgaz / LPG / Fuel Oil",
+            "spec3": "Verimlilik: %93 üzeri",
+            "spec4": "Kontrol: PLC Destekli Otomasyon Paneli",
+            "spec5": "Çalışma Basıncı: 0.2 – 0.4 bar",
+            "spec6": "Boyutlar (Her Blok): 800 x 500 x 600 mm (LxGxY)",
+            "spec7": "Toplam Ağırlık: 2 x 120 kg",
+            "applicationsTitle": "Uygulama Alanları",
+            "app1": "Büyük Ölçekli Endüstriyel Tesisler",
+            "app2": "Enerji Santralleri ve Kojenerasyon Tesisleri",
+            "app3": "Petrokimya ve Kimya Endüstrisi",
+            "app4": "Çimento ve Çelik Fabrikaları",
+            "benefitsTitle": "Avantajlar",
+            "benefit1": "Felaket anında bile diğer bloğun çalışmaya devam etme imkânı",
+            "benefit2": "Yüksek kapasite ayarı ile enerji verimliliği",
+            "benefit3": "Kolay bakım ve hızlı yedek parça temini",
+            "benefit4": "Uzun ömürlü ve güvenilir bileşenler",
+            "button": "Detaylı Bilgi",
+            "imgAlt": "Duoblok Brülör",
+            "backToProducts": "Ürünlerimize Geri Dön"
+        }
+    },
+    "product33": {
+        "pageTitle": "Emniyet Kapama Valfi | NASA Teknik Hizmetler",
+        "metaDescription": "Emniyet Kapama Valfi: Acil durumlarda gaz akışını keserek tesis güvenliğini sağlayan yüksek hızlı, güvenilir valf çözümleri. Teknik veriler, özellikler ve kullanım alanları hakkında detaylı bilgi.",
+        "metaKeywords": "Emniyet Kapama Valfi, Gaz Güvenlik Valfi, Alev Emniyet, Endüstriyel Emniyet Valfi, NASA Teknik",
+        "metaOgDescription": "Emniyet Kapama Valfi: Acil durumlarda gaz akışını keserek tesis güvenliğini sağlayan yüksek hızlı, güvenilir valf çözümleri.",
+        "heroTitle": "Emniyet Kapama Valfi",
+        "heroSubtitle": "Acil durumlarda gaz akışını keserek tesisinizin güvenliğini sağlayan hızlı tepki veren emniyet valfi çözümü.",
+        "productDescription": "Emniyet Kapama Valfi, gaz sistemlerinde olası alev geri tepmesi, basınç dalgalanmaları veya sistem arızalarında anında devreye girerek gaz akışını keser ve yangın, patlama risklerini önler. Yüksek hızlı elektrik/pnömatik aktüatörü sayesinde milisaniyeler içinde kapanma sağlar.",
+        "sectionFeatures": "Öne Çıkan Özellikler",
+        "featureFastClose": "<strong>Hızlı Kapanma Süresi:</strong> 15 ms’ye kadar tepki süresiyle hızlı emniyet.",
+        "featureDurable": "<strong>Yüksek Dayanım:</strong> 16 bar çalışma basıncına kadar dayanıklı paslanmaz çelik gövde.",
+        "featureActuator": "<strong>Güvenilir Aktüatör:</strong> Elektrik (24V DC / 220V AC) veya pnömatik seçenekler.",
+        "featureStandard": "<strong>Standart Uyumluluk:</strong> EN 161 ve ISO 23551-1 standartlarına uygun.",
+        "featureEasyInstall": "<strong>Kolay Montaj:</strong> Flanşlı veya dişli bağlantı seçenekleri.",
+        "featureSafety": "<strong>Olağanüstü Güvenlik:</strong> Termal aşırı yük koruması ve manuel elle açma mekanizması.",
+        "sectionSpecs": "Teknik Özellikler",
+        "specModel": "Model",
+        "specPressure": "Çalışma Basıncı",
+        "specResponseTime": "Tepki Süresi",
+        "specConnectionType": "Bağlantı Tipi",
+        "specBodyMaterial": "Gövde Malzemesi",
+        "specActuatorType": "Aktüatör Tipi",
+        "specTemp": "Çalışma Sıcaklığı",
+        "specIP": "Koruma Sınıfı",
+        "specContact": "Elektriksel Kontak",
+        "specWeight": "Ağırlık",
+        "sectionUsage": "Kullanım Alanları",
+        "usageGasLine": "Doğalgaz ve LPG yakıt hatları",
+        "usageBoiler": "Endüstriyel kazanın emniyet kontrolü",
+        "usageFurnace": "Fırın, kurutma ve pişirme ekipmanları",
+        "usageChemical": "Kimya ve petrokimya tesisleri",
+        "usageHVAC": "Isıtma, havalandırma ve iklimlendirme (HVAC) sistemleri",
+        "usageFire": "Yangın suppression sistemleri",
+        "imgAlt": "Emniyet Kapama Valfi",
+        "backToProducts": "Ürünlerimize Geri Dön"
+    },
+    "product44": {
+        "pageTitle": "Yanma Analizörü | NASA Teknik Hizmetler",
+        "metaDescription": "Yanma Analizörü: O₂/CO ölçümü ile yanma verimliliğini en üst düzeye çıkaran modern analiz cihazı. Teknik veriler, özellikler ve kullanım alanları hakkında detaylı bilgi.",
+        "metaKeywords": "Yanma Analizörü, Oksijen Analizi, Karbon Monoksit Ölçümü, Yanma Verimliliği, NASA Teknik Hizmetler",
+        "metaOgDescription": "Yanma Analizörü: O₂/CO ölçümü ile yanma verimliliğini en üst düzeye çıkaran modern analiz cihazı.",
+        "heroTitle": "Yanma Analizörü",
+        "heroSubtitle": "Oksijen (O₂) ve karbon monoksit (CO) değerlerini hassas bir şekilde ölçerek yanma verimliliğinizi maksimize eden ileri teknoloji cihazı.",
+        "imgAlt": "Yanma Analizörü",
+        "productDescription": "Yanma Analizörü, endüstriyel kazan, fırın ve brülör sistemlerindeki yanma süreçlerini optimize etmek için gerçek zamanlı oksijen ve karbon monoksit verilerini sunar. Dokunmatik ekranlı kullanıcı arayüzü ve entegre data logging özelliği sayesinde, proses verilerini kaydederek enerji verimliliği analizlerine olanak tanır.",
+        "sectionFeatures": "Öne Çıkan Özellikler",
+        "featureDualGas": "<strong>Çift Gaz Ölçümü:</strong> O₂ ve CO sensörleri ile eş zamanlı veri toplama.",
+        "featureTouchScreen": "<strong>Dokunmatik TFT Ekran:</strong> Kolay okunabilir grafik arayüz, parametre ayarları.",
+        "featureSoftware": "<strong>Entegre Analiz Yazılımı:</strong> Data logging, raporlama ve PC entegrasyonu.",
+        "featureFastResponse": "<strong>Hızlı Tepki Süresi:</strong> 2 saniye yanıt hızı ile gerçek zamanlı izleme.",
+        "featureWideRange": "<strong>Geniş Aralık:</strong> %0–25 O₂, 0–5000 ppm CO ölçüm aralığı.",
+        "featureDurable": "<strong>Dayanıklı Yapı:</strong> IP65 koruma sınıfı, zorlu sanayi ortamlarına uygun gövde.",
+        "featureEasyMaintenance": "<strong>Kolay Bakım:</strong> Modüler sensör değişim kiti, sahada hızlı servis imkanı.",
+        "sectionSpecs": "Teknik Özellikler",
+        "specModel": "Model",
+        "specO2Range": "O₂ Ölçüm Aralığı",
+        "specCORange": "CO Ölçüm Aralığı",
+        "specAccuracy": "Doğruluk",
+        "specDisplay": "Ekran",
+        "specConnections": "Bağlantılar",
+        "specBodyMaterial": "Gövde Malzemesi",
+        "specOperatingTemp": "Çalışma Sıcaklığı",
+        "specPowerSupply": "Elektrik Besleme",
+        "specDimensions": "Boyutlar",
+        "specWeight": "Ağırlık",
+        "sectionUsage": "Kullanım Alanları",
+        "usageBoiler": "Kazan ve fırın proseslerinin yanma verimliliği optimizasyonu",
+        "usageBurner": "Endüstriyel brülör kontrol sistemleri",
+        "usageWasteHeat": "Atık ısı geri kazanım ve enerji santralleri",
+        "usageChemical": "Kimya tesisleri ve sürdürülebilir enerji uygulamaları",
+        "usageVentilation": "Havalandırma ve emisyon izleme projeleri",
+        "usageLab": "Laboratuvar ve AR-GE test standları",
+        "backToProducts": "Ürünlerimize Geri Dön"
+    },
+    "product66": {
+        "filter": {
+            "pageTitle": "Gaz Filtresi | NASA Teknik Hizmetler",
+            "metaDescription": "Gaz Filtresi: Endüstriyel ve ticari uygulamalar için yüksek verimli, dayanıklı gaz filtreleri. Teknik veriler, avantajlar ve kullanım alanları hakkında detaylı bilgi.",
+            "metaKeywords": "Gaz Filtresi, Endüstriyel Filtre, Doğalgaz Filtresi, Brülör Filtre, NASA Teknik",
+            "name": "Gaz Filtresi",
+            "desc": "Endüstriyel ve ticari gaz hatlarında partikül ve kirliliği engelleyen, uzun ömürlü ve yüksek kapasiteli filtre.",
+            "featuresTitle": "Özellikler",
+            "feature1": "Yüksek filtrasyon verimliliği",
+            "feature2": "Dayanıklı metal gövde ve korozyon direnci",
+            "feature3": "Kolay bakım ve kartuş değişimi",
+            "feature4": "EN 779 / ISO 16890 standardına uygunluk",
+            "specsTitle": "Teknik Özellikler",
+            "spec1": "Filtrasyon Hassasiyeti: 5 mikron’a kadar",
+            "spec2": "Çalışma Basıncı: 0.1 – 16 bar",
+            "spec3": "Bağlantı: 1'' – 6'' flanşlı/dişli",
+            "spec4": "Gövde Malzemesi: Karbon çelik, paslanmaz seçenekli",
+            "applicationsTitle": "Kullanım Alanları",
+            "app1": "Doğalgaz ve LPG hatları",
+            "app2": "Brülör ve kazan öncesi koruma",
+            "app3": "Endüstriyel proses gaz sistemleri",
+            "benefitsTitle": "Avantajlar",
+            "benefit1": "Gaz hattındaki ekipmanların ömrünü uzatır",
+            "benefit2": "Enerji kayıplarını ve bakım maliyetini azaltır",
+            "benefit3": "Yüksek debili gaz geçişi",
+            "button": "Detaylı Bilgi",
+            "imgAlt": "Gaz Filtresi"
+        }
     }
-  },
-  "product": {
-    "monoblok": {
-      "pageTitle": "Monoblok Brülör | NASA Teknik Hizmetler",
-      "metaDescription": "Monoblok Brülör - NASA Teknik Hizmetler",
-      "metaKeywords": "Monoblok Brülör, Endüstriyel Brülör, Kompakt Brülör, Teknik Brülör",
-      "name": "Monoblok Brülör",
-      "desc": "Kompakt tasarım, tüm bileşenler tek gövdede.",
-      "featuresTitle": "Özellikler",
-      "feature1": "Tüm bileşenler tek muhafazada",
-      "feature2": "Kolay bakım ve hızlı kurulum",
-      "feature3": "Yüksek yanma verimliliği",
-      "feature4": "Dayanıklı malzeme ve uzun ömür",
-      "overviewTitle": "Ürün Özeti",
-      "overviewDesc": "Monoblok Brülör, endüstriyel tesislerde yüksek verimli yakma çözümleri sunmak üzere tasarlanmıştır. Özel seramik kaplamalı yanma odası ve entegre kontrol paneli sayesinde maksimum performans sağlar. Kompakt yapısı ile hem küçük hem de orta ölçekli kazanlarda kolaylıkla kullanılabilir.",
-      "specsTitle": "Teknik Özellikler",
-      "spec1": "Güç Aralığı: 100 kW – 500 kW",
-      "spec2": "Yakıt Türü: Doğalgaz / LPG",
-      "spec3": "Verimlilik: %92 üzeri",
-      "spec4": "Kontrol: PID Kontrollü Entegre Panel",
-      "spec5": "Çalışma Basıncı: 0.1 – 0.3 bar",
-      "spec6": "Boyutlar: 600 x 400 x 450 mm (LxGxY)",
-      "spec7": "Ağırlık: 45 kg",
-      "applicationsTitle": "Uygulama Alanları",
-      "app1": "Kazan Dairesi Endüstriyel Tesisler",
-      "app2": "Kimya ve Petrokimya Sanayii",
-      "app3": "Gıda ve İçecek İşletmeleri",
-      "app4": "Isıtma Sistemleri ve Enerji Santralleri",
-      "benefitsTitle": "Avantajlar",
-      "benefit1": "Düşük yakıt tüketimi ve çevre dostu emisyon değerleri",
-      "benefit2": "Kompakt tasarım sayesinde yer tasarrufu",
-      "benefit3": "Entegre otomasyon sistemi ile kolay kontrol",
-      "benefit4": "Hızlı bakım ve uzun ömürlü komponentler",
-      "button": "Detaylı Bilgi",
-      "imgAlt": "Monoblok Brülör"
-    }
-  },
-  "product22": {
-    "duoblok": {
-      "pageTitle": "Duoblok Brülör | NASA Teknik Hizmetler",
-      "metaDescription": "Duoblok Brülör - NASA Teknik Hizmetler",
-      "metaKeywords": "Duoblok Brülör, Modüler Brülör, Endüstriyel Brülör, Yüksek Kapasite Brülör",
-      "name": "Duoblok Brülör",
-      "desc": "Modüler yapı, yüksek kapasite ve verimli yanma kontrolü.",
-      "featuresTitle": "Özellikler",
-      "feature1": "Modüler tasarım ve kolay entegrasyon",
-      "feature2": "Yüksek kapasite / hızlı yanma kontrolü",
-      "feature3": "Aşınmaya dayanıklı bileşenler",
-      "feature4": "Kesintisiz operasyon garantisi",
-      "overviewTitle": "Ürün Özeti",
-      "overviewDesc": "Duoblok Brülör, çift blok yapısı sayesinde hem yüksek kapasiteli yakma ihtiyaçlarını karşılar hem de bakım sürecini kolaylaştırır. Her iki blok birbirinden bağımsız çalışabilme özelliğine sahiptir; bu sayede bir blok devre dışı kaldığında diğeri çalışmaya devam ederek üretimin aksamamasını sağlar.",
-      "specsTitle": "Teknik Özellikler",
-      "spec1": "Toplam Güç Aralığı: 200 kW – 1000 kW",
-      "spec2": "Yakıt Türü: Doğalgaz / LPG / Fuel Oil",
-      "spec3": "Verimlilik: %93 üzeri",
-      "spec4": "Kontrol: PLC Destekli Otomasyon Paneli",
-      "spec5": "Çalışma Basıncı: 0.2 – 0.4 bar",
-      "spec6": "Boyutlar (Her Blok): 800 x 500 x 600 mm (LxGxY)",
-      "spec7": "Toplam Ağırlık: 2 x 120 kg",
-      "applicationsTitle": "Uygulama Alanları",
-      "app1": "Büyük Ölçekli Endüstriyel Tesisler",
-      "app2": "Enerji Santralleri ve Kojenerasyon Tesisleri",
-      "app3": "Petrokimya ve Kimya Endüstrisi",
-      "app4": "Çimento ve Çelik Fabrikaları",
-      "benefitsTitle": "Avantajlar",
-      "benefit1": "Felaket anında bile diğer bloğun çalışmaya devam etme imkânı",
-      "benefit2": "Yüksek kapasite ayarı ile enerji verimliliği",
-      "benefit3": "Kolay bakım ve hızlı yedek parça temini",
-      "benefit4": "Uzun ömürlü ve güvenilir bileşenler",
-      "button": "Detaylı Bilgi",
-      "imgAlt": "Duoblok Brülör"
-    }
-  },
-  "product33": {
-  "pageTitle": "Emniyet Kapama Valfi | NASA Teknik Hizmetler",
-  "metaDescription": "Emniyet Kapama Valfi: Acil durumlarda gaz akışını keserek tesis güvenliğini sağlayan yüksek hızlı, güvenilir valf çözümleri. Teknik veriler, özellikler ve kullanım alanları hakkında detaylı bilgi.",
-  "metaKeywords": "Emniyet Kapama Valfi, Gaz Güvenlik Valfi, Alev Emniyet, Endüstriyel Emniyet Valfi, NASA Teknik",
-  "metaOgDescription": "Emniyet Kapama Valfi: Acil durumlarda gaz akışını keserek tesis güvenliğini sağlayan yüksek hızlı, güvenilir valf çözümleri.",
-  "heroTitle": "Emniyet Kapama Valfi",
-  "heroSubtitle": "Acil durumlarda gaz akışını keserek tesisinizin güvenliğini sağlayan hızlı tepki veren emniyet valfi çözümü.",
-  "productDescription": "Emniyet Kapama Valfi, gaz sistemlerinde olası alev geri tepmesi, basınç dalgalanmaları veya sistem arızalarında anında devreye girerek gaz akışını keser ve yangın, patlama risklerini önler. Yüksek hızlı elektrik/pnömatik aktüatörü sayesinde milisaniyeler içinde kapanma sağlar.",
-  "sectionFeatures": "Öne Çıkan Özellikler",
-  "featureFastClose": "<strong>Hızlı Kapanma Süresi:</strong> 15 ms’ye kadar tepki süresiyle hızlı emniyet.",
-  "featureDurable": "<strong>Yüksek Dayanım:</strong> 16 bar çalışma basıncına kadar dayanıklı paslanmaz çelik gövde.",
-  "featureActuator": "<strong>Güvenilir Aktüatör:</strong> Elektrik (24V DC / 220V AC) veya pnömatik seçenekler.",
-  "featureStandard": "<strong>Standart Uyumluluk:</strong> EN 161 ve ISO 23551-1 standartlarına uygun.",
-  "featureEasyInstall": "<strong>Kolay Montaj:</strong> Flanşlı veya dişli bağlantı seçenekleri.",
-  "featureSafety": "<strong>Olağanüstü Güvenlik:</strong> Termal aşırı yük koruması ve manuel elle açma mekanizması.",
-  "sectionSpecs": "Teknik Özellikler",
-  "specModel": "Model",
-  "specPressure": "Çalışma Basıncı",
-  "specResponseTime": "Tepki Süresi",
-  "specConnectionType": "Bağlantı Tipi",
-  "specBodyMaterial": "Gövde Malzemesi",
-  "specActuatorType": "Aktüatör Tipi",
-  "specTemp": "Çalışma Sıcaklığı",
-  "specIP": "Koruma Sınıfı",
-  "specContact": "Elektriksel Kontak",
-  "specWeight": "Ağırlık",
-  "sectionUsage": "Kullanım Alanları",
-  "usageGasLine": "Doğalgaz ve LPG yakıt hatları",
-  "usageBoiler": "Endüstriyel kazanın emniyet kontrolü",
-  "usageFurnace": "Fırın, kurutma ve pişirme ekipmanları",
-  "usageChemical": "Kimya ve petrokimya tesisleri",
-  "usageHVAC": "Isıtma, havalandırma ve iklimlendirme (HVAC) sistemleri",
-  "usageFire": "Yangın suppression sistemleri",
-  "imgAlt": "Emniyet Kapama Valfi",
-  "backToProducts": "Ürünlerimize Geri Dön"
- },
- "product44": {
-  "pageTitle": "Yanma Analizörü | NASA Teknik Hizmetler",
-  "metaDescription": "Yanma Analizörü: O₂/CO ölçümü ile yanma verimliliğini en üst düzeye çıkaran modern analiz cihazı. Teknik veriler, özellikler ve kullanım alanları hakkında detaylı bilgi.",
-  "metaKeywords": "Yanma Analizörü, Oksijen Analizi, Karbon Monoksit Ölçümü, Yanma Verimliliği, NASA Teknik Hizmetler",
-  "metaOgDescription": "Yanma Analizörü: O₂/CO ölçümü ile yanma verimliliğini en üst düzeye çıkaran modern analiz cihazı.",
-  "heroTitle": "Yanma Analizörü",
-  "heroSubtitle": "Oksijen (O₂) ve karbon monoksit (CO) değerlerini hassas bir şekilde ölçerek yanma verimliliğinizi maksimize eden ileri teknoloji cihazı.",
-  "imgAlt": "Yanma Analizörü",
-  "productDescription": "Yanma Analizörü, endüstriyel kazan, fırın ve brülör sistemlerindeki yanma süreçlerini optimize etmek için gerçek zamanlı oksijen ve karbon monoksit verilerini sunar. Dokunmatik ekranlı kullanıcı arayüzü ve entegre data logging özelliği sayesinde, proses verilerini kaydederek enerji verimliliği analizlerine olanak tanır.",
-  "sectionFeatures": "Öne Çıkan Özellikler",
-  "featureDualGas": "<strong>Çift Gaz Ölçümü:</strong> O₂ ve CO sensörleri ile eş zamanlı veri toplama.",
-  "featureTouchScreen": "<strong>Dokunmatik TFT Ekran:</strong> Kolay okunabilir grafik arayüz, parametre ayarları.",
-  "featureSoftware": "<strong>Entegre Analiz Yazılımı:</strong> Data logging, raporlama ve PC entegrasyonu.",
-  "featureFastResponse": "<strong>Hızlı Tepki Süresi:</strong> 2 saniye yanıt hızı ile gerçek zamanlı izleme.",
-  "featureWideRange": "<strong>Geniş Aralık:</strong> %0–25 O₂, 0–5000 ppm CO ölçüm aralığı.",
-  "featureDurable": "<strong>Dayanıklı Yapı:</strong> IP65 koruma sınıfı, zorlu sanayi ortamlarına uygun gövde.",
-  "featureEasyMaintenance": "<strong>Kolay Bakım:</strong> Modüler sensör değişim kiti, sahada hızlı servis imkanı.",
-  "sectionSpecs": "Teknik Özellikler",
-  "specModel": "Model",
-  "specO2Range": "O₂ Ölçüm Aralığı",
-  "specCORange": "CO Ölçüm Aralığı",
-  "specAccuracy": "Doğruluk",
-  "specDisplay": "Ekran",
-  "specConnections": "Bağlantılar",
-  "specBodyMaterial": "Gövde Malzemesi",
-  "specOperatingTemp": "Çalışma Sıcaklığı",
-  "specPowerSupply": "Elektrik Besleme",
-  "specDimensions": "Boyutlar",
-  "specWeight": "Ağırlık",
-  "sectionUsage": "Kullanım Alanları",
-  "usageBoiler": "Kazan ve fırın proseslerinin yanma verimliliği optimizasyonu",
-  "usageBurner": "Endüstriyel brülör kontrol sistemleri",
-  "usageWasteHeat": "Atık ısı geri kazanım ve enerji santralleri",
-  "usageChemical": "Kimya tesisleri ve sürdürülebilir enerji uygulamaları",
-  "usageVentilation": "Havalandırma ve emisyon izleme projeleri",
-  "usageLab": "Laboratuvar ve AR-GE test standları"
- 
- },
-  "backToProducts": "Ürünlerimize Geri Dön"
 }
