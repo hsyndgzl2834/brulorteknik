@@ -12,11 +12,9 @@
     "title": "Expert Service in Industrial Burner Systems",
     "subtitle": "Reliable installation, maintenance, and spare parts across Turkey",
     "btnVisit": "Explore",
-    "energyTitle":"Energy Efficiency",
-    "energyDesc":"High performance system solutions",
-    "supportTitle":"Expert Technical Support",
-    "supportDesc":"Service and maintenance services throughout Turkey"
- 
+    "energyTitle": "Energy Efficiency",
+    "supportTitle": "Expert Technical Support",
+    "supportDesc": "Service and maintenance services throughout Turkey"
   },
   "services": {
     "title": "Our Services",
@@ -114,33 +112,24 @@
     "desc": "High-performance regulator device for chimney draft and pressure control.",
     "button": "Learn More"
   },
-    "contact": {
+  "contact": {
     "title": "Get a Quote - NASA Technical Services",
     "heading": "Get a Quote",
     "subheading": "Please fill out the form completely to request a quote.",
     "form": {
       "companyLabel": "Company Name",
-      "companyPlaceholder": "Enter your company name",
       "companyInvalid": "Company name is required.",
       "nameLabel": "Full Name",
-      "namePlaceholder": "Enter your full name",
       "nameInvalid": "Full name is required.",
       "emailLabel": "Email",
-      "emailPlaceholder": "email@example.com",
       "emailInvalid": "Please enter a valid email.",
       "phoneLabel": "Phone",
-      "phonePlaceholder": "+90 531 625 0694",
       "phoneInvalid": "Phone number is required.",
       "addressLabel": "Address",
-      "addressPlaceholder": "Enter your address",
       "addressInvalid": "Address is required.",
       "messageLabel": "Quote Details / Your Message",
-      "messagePlaceholder": "Enter your quote details",
       "messageInvalid": "Message cannot be empty.",
-      "submitButton": "Get a Quote",
-      "submitSuccess": "✅ Your message has been sent successfully!",
-      "submitError": "⚠️ Message could not be sent. Please try again.",
-      "submitConnError": "🚫 Connection error! Please check your internet."
+      "submitButton": "Get a Quote"
     },
     "info": {
       "heading": "Company Information",
@@ -156,7 +145,6 @@
       "addressValue": "Kağıthane, Istanbul, Turkey"
     }
   },
-  
   "faq": {
     "title": "Frequently Asked Questions",
     "description": "Answers to common questions about our burner systems and services.",
@@ -191,7 +179,6 @@
       "pageHeading": "Annual Periodic Maintenance",
       "subtitle": "For maximum safety and efficiency, our expert team performs comprehensive annual maintenance, cleaning, and flue gas analysis.",
       "backButton": "Go Back",
-
       "summaryTitle": "Service Overview",
       "summary": {
         "item1": "Pre-Inspection",
@@ -200,10 +187,8 @@
         "item4": "Combustion Performance & Flue Gas Analysis",
         "item5": "Reporting & Recommendations"
       },
-
       "contentTitle": "Service Details",
       "contentDesc": "During our annual periodic maintenance, our expert team covers all critical points of your burner system. We prioritize flue gas analysis to ensure optimal performance and safety.",
-
       "processTitle": "Step-by-Step Process:",
       "process": {
         "step1": {
@@ -227,27 +212,24 @@
           "desc": "Providing a report with performed tasks, measurement results, recommendations, and scheduling the next maintenance."
         }
       },
-
       "benefitsTitle": "Benefits:",
       "benefit1": "Reduced fuel consumption and increased energy efficiency",
       "benefit2": "Lower emissions through accurate optimization based on flue gas analysis",
       "benefit3": "Preventing costs and downtime by detecting potential failures early",
       "benefit4": "Long-term system durability and extended equipment lifespan",
       "benefit5": "Compliance with current regulations and safety standards",
-
       "quoteTitle": "Get a Quote",
       "quoteText1": "To receive a service fee estimate and detailed quote, please visit our ",
       "quoteLink": "contact",
       "quoteText2": " page and get in touch with us. Our professional team will respond promptly."
     }
   },
-   "service2": {
+  "service2": {
     "installation": {
       "pageTitle": "Industrial Burner Installation - NASA Technical Services",
       "pageHeading": "Industrial Burner Installation",
       "subtitle": "Professional burner installation service for efficient and safe combustion systems.",
       "backButton": "Go Back",
-
       "summaryTitle": "Service Overview",
       "summary": {
         "item1": "Burner Selection & Compatibility Check",
@@ -256,10 +238,8 @@
         "item4": "Fuel Tuning & Safety Tests",
         "item5": "Training & Reporting"
       },
-
       "contentTitle": "Service Details",
       "contentDesc": "At NASA Technical Services, we install burner systems in industrial facilities to ensure high safety and energy efficiency. The process begins with a site survey and completes with proper burner assembly and commissioning.",
-
       "processTitle": "Step-by-Step Process:",
       "process": {
         "step1": {
@@ -283,27 +263,23 @@
           "desc": "Training the end-user on correct operation and maintenance procedures."
         }
       },
-
       "benefitsTitle": "Benefits:",
       "benefit1": "High energy efficiency and fuel savings",
       "benefit2": "Compliance with standards and long-lasting performance",
       "benefit3": "Safe design that minimizes breakdown risks",
       "benefit4": "Advanced technical support and documentation",
-
       "quoteTitle": "Get a Quote",
       "quoteText1": "For detailed information about our custom burner installation service, please visit our ",
       "quoteLink": "contact",
       "quoteText2": " page and get in touch with us."
     }
   },
-  
   "service3": {
     "automation": {
       "pageTitle": "Automation & Control Systems - NASA Technical Services",
       "pageHeading": "Automation & Control Systems",
       "subtitle": "Increase your production efficiency with modern automation solutions that optimize industrial processes.",
       "backButton": "Go Back",
-
       "summaryTitle": "Service Overview",
       "summary": {
         "item1": "Site Survey & System Analysis",
@@ -312,10 +288,8 @@
         "item4": "Energy Efficiency Optimization",
         "item5": "Process Automation & Reporting"
       },
-
       "contentTitle": "Service Details",
       "contentDesc": "At NASA Technical Services, we develop intelligent automation solutions to enhance production, safety, and energy efficiency in industrial facilities. By integrating PLC, HMI, and SCADA systems, we make your processes remotely monitorable and controllable.",
-
       "processTitle": "Step-by-Step Process:",
       "process": {
         "step1": {
@@ -339,27 +313,23 @@
           "desc": "Providing user training and technical documentation."
         }
       },
-
       "benefitsTitle": "Benefits:",
       "benefit1": "Real-time data tracking and traceability",
       "benefit2": "Early detection of faults and rapid intervention",
       "benefit3": "Energy savings and process optimization",
       "benefit4": "High safety and compliance",
-
       "quoteTitle": "Get a Quote",
       "quoteText1": "For tailored automation solutions for your facility, please visit our ",
       "quoteLink": "contact",
       "quoteText2": " page and get in touch with us."
     }
   },
-  
   "service4": {
     "energy": {
       "pageTitle": "Energy Efficiency - NASA Technical Services",
       "pageHeading": "Energy Efficiency",
       "subtitle": "We maximize energy savings by analyzing your systems.",
       "backButton": "Go Back",
-
       "summaryTitle": "Service Overview",
       "summary": {
         "item1": "Energy Audit",
@@ -368,10 +338,8 @@
         "item4": "Investment ROI Analysis",
         "item5": "Implementation & Training"
       },
-
       "contentTitle": "Service Details",
       "contentDesc": "Our expert team conducts a comprehensive energy audit of your facility; based on the collected data, we develop efficiency analyses and optimization plans.",
-
       "processTitle": "Step-by-Step Process:",
       "process": {
         "step1": {
@@ -395,27 +363,23 @@
           "desc": "Training staff and applying recommended actions on-site."
         }
       },
-
       "benefitsTitle": "Benefits:",
       "benefit1": "Reduced energy costs",
       "benefit2": "Improved process efficiency",
       "benefit3": "Lower carbon footprint",
       "benefit4": "High return on investment",
-
       "quoteTitle": "Get a Quote",
       "quoteText1": "For an energy efficiency audit report and quote, please visit our ",
       "quoteLink": "contact",
       "quoteText2": " page. Our experts will get back to you promptly."
     }
   },
-  
   "service5": {
     "spares": {
       "pageTitle": "Spare Parts Supply - NASA Technical Services",
       "pageHeading": "Spare Parts Supply",
       "subtitle": "We guarantee uninterrupted operation with original parts.",
       "backButton": "Go Back",
-
       "summaryTitle": "Service Overview",
       "summary": {
         "item1": "Original Part Sourcing",
@@ -424,10 +388,8 @@
         "item4": "Emergency Part Support",
         "item5": "Technical Consulting"
       },
-
       "contentTitle": "Service Details",
       "contentDesc": "With our extensive spare-parts network, we quickly procure original equipment parts to ensure your production never stops.",
-
       "processTitle": "Step-by-Step Process:",
       "process": {
         "step1": {
@@ -451,86 +413,164 @@
           "desc": "Consulting on part installation and compatibility."
         }
       },
-
       "benefitsTitle": "Benefits:",
       "benefit1": "Guaranteed uninterrupted production",
       "benefit2": "Original part quality",
       "benefit3": "Quick resolution in emergencies",
       "benefit4": "Long-term cost advantage",
-
       "quoteTitle": "Get a Quote",
       "quoteText1": "For your spare-part needs and pricing quote, please visit our ",
       "quoteLink": "contact",
       "quoteText2": " page."
     }
   },
-  
-  "product": {
-    "monoblok": {
-      "pageTitle": "Monoblock Burner | NASA Technical Services",
-      "name": "Monoblock Burner",
-      "desc": "Compact design with all components in a single housing.",
-      "featuresTitle": "Features",
-      "feature1": "All components in one enclosure",
-      "feature2": "Easy maintenance and quick installation",
-      "feature3": "High combustion efficiency",
-      "feature4": "Durable materials and long lifespan",
-      "overviewTitle": "Product Overview",
-      "overviewDesc": "The Monoblock Burner is engineered for high-efficiency combustion solutions in industrial facilities. With a ceramic-coated combustion chamber and integrated control panel, it delivers maximum performance. Its compact design makes it ideal for small to medium-scale boilers.",
-      "specsTitle": "Technical Specifications",
-      "spec1": "Power Range: 100 kW – 500 kW",
-      "spec2": "Fuel Type: Natural Gas / LPG",
-      "spec3": "Efficiency: Over 92%",
-      "spec4": "Control: PID-Controlled Integrated Panel",
-      "spec5": "Operating Pressure: 0.1 – 0.3 bar",
-      "spec6": "Dimensions: 600 x 400 x 450 mm (LxWxH)",
-      "spec7": "Weight: 45 kg",
-      "applicationsTitle": "Application Areas",
-      "app1": "Industrial Boiler Rooms",
-      "app2": "Chemical and Petrochemical Industries",
-      "app3": "Food and Beverage Facilities",
-      "app4": "Heating Systems & Power Plants",
-      "benefitsTitle": "Benefits",
-      "benefit1": "Low fuel consumption and eco-friendly emissions",
-      "benefit2": "Space-saving compact design",
-      "benefit3": "Easy control with integrated automation system",
-      "benefit4": "Quick maintenance and long-lasting components",
-      "button": "Learn More"
-    }
-  },
-  
   "product22": {
     "duoblok": {
-      "pageTitle": "Duoblock Burner | NASA Technical Services",
-      "name": "Duoblock Burner",
-      "desc": "Modular design, high capacity, and efficient combustion control.",
+      "pageTitle": "Duoblok Burner | NASA Technical Services",
+      "metaDescription": "Duoblok Burner - NASA Technical Services",
+      "metaKeywords": "Duoblok Burner, Modular Burner, Industrial Burner, High Capacity Burner",
+      "name": "Duoblok Burner",
+      "desc": "Modular structure, high capacity, and efficient combustion control.",
       "featuresTitle": "Features",
       "feature1": "Modular design and easy integration",
       "feature2": "High capacity / fast combustion control",
       "feature3": "Wear-resistant components",
-      "feature4": "Uninterrupted operation guarantee",
+      "feature4": "Continuous operation guarantee",
       "overviewTitle": "Product Overview",
-      "overviewDesc": "The Duoblock Burner, with its dual-block design, meets high-capacity combustion needs while simplifying maintenance. Each block can operate independently—if one block goes offline, the other continues running, ensuring uninterrupted production.",
+      "overviewDesc": "Duoblok Burner meets high-capacity combustion needs and simplifies maintenance with its dual-block structure. Each block can operate independently; if one goes out of service, the other continues, ensuring uninterrupted production.",
       "specsTitle": "Technical Specifications",
       "spec1": "Total Power Range: 200 kW – 1000 kW",
       "spec2": "Fuel Type: Natural Gas / LPG / Fuel Oil",
       "spec3": "Efficiency: Over 93%",
-      "spec4": "Control: PLC-Supported Automation Panel",
+      "spec4": "Control: PLC Supported Automation Panel",
       "spec5": "Operating Pressure: 0.2 – 0.4 bar",
       "spec6": "Dimensions (Each Block): 800 x 500 x 600 mm (LxWxH)",
       "spec7": "Total Weight: 2 x 120 kg",
-      "applicationsTitle": "Application Areas",
-      "app1": "Large-Scale Industrial Facilities",
-      "app2": "Power Plants & Cogeneration Facilities",
-      "app3": "Petrochemical & Chemical Industries",
-      "app4": "Cement & Steel Factories",
-      "benefitsTitle": "Benefits",
-      "benefit1": "One block maintains operation even if the other fails",
-      "benefit2": "Energy efficiency through high capacity adjustment",
-      "benefit3": "Easy maintenance and quick spare-part supply",
-      "benefit4": "Long-lasting, reliable components",
-      "button": "Learn More"
+      "applicationsTitle": "Applications",
+      "app1": "Large Scale Industrial Facilities",
+      "app2": "Power Plants and Cogeneration Facilities",
+      "app3": "Petrochemical and Chemical Industry",
+      "app4": "Cement and Steel Factories",
+      "benefitsTitle": "Advantages",
+      "benefit1": "Continued operation of the other block even in the event of failure",
+      "benefit2": "High capacity adjustment for energy efficiency",
+      "benefit3": "Easy maintenance and fast spare part supply",
+      "benefit4": "Long-lasting and reliable components",
+      "button": "More Information",
+      "imgAlt": "Duoblok Burner"
     }
-  }
+  },
+  "product": {
+    "monoblok": {
+      "pageTitle": "Monoblok Burner | NASA Technical Services",
+      "metaDescription": "Monoblok Burner - NASA Technical Services",
+      "metaKeywords": "Monoblok Burner, Industrial Burner, Compact Burner, Technical Burner",
+      "name": "Monoblok Burner",
+      "desc": "Compact design, all components in a single body.",
+      "featuresTitle": "Features",
+      "feature1": "All components in a single enclosure",
+      "feature2": "Easy maintenance and quick installation",
+      "feature3": "High combustion efficiency",
+      "feature4": "Durable material and long life",
+      "overviewTitle": "Product Overview",
+      "overviewDesc": "The Monoblok Burner is designed to provide high-efficiency combustion solutions for industrial facilities. Thanks to its specially coated ceramic combustion chamber and integrated control panel, it delivers maximum performance. Its compact structure makes it ideal for both small and medium-sized boilers.",
+      "specsTitle": "Technical Specifications",
+      "spec1": "Power Range: 100 kW – 500 kW",
+      "spec2": "Fuel Type: Natural Gas / LPG",
+      "spec3": "Efficiency: Over 92%",
+      "spec4": "Control: PID Controlled Integrated Panel",
+      "spec5": "Operating Pressure: 0.1 – 0.3 bar",
+      "spec6": "Dimensions: 600 x 400 x 450 mm (LxWxH)",
+      "spec7": "Weight: 45 kg",
+      "applicationsTitle": "Applications",
+      "app1": "Boiler Room Industrial Facilities",
+      "app2": "Chemical and Petrochemical Industry",
+      "app3": "Food and Beverage Plants",
+      "app4": "Heating Systems and Power Plants",
+      "benefitsTitle": "Advantages",
+      "benefit1": "Low fuel consumption and eco-friendly emissions",
+      "benefit2": "Space-saving thanks to compact design",
+      "benefit3": "Easy control with integrated automation system",
+      "benefit4": "Quick maintenance and long-life components",
+      "button": "More Information",
+      "imgAlt": "Monoblok Burner",
+      "backToProducts": "Back to Our Products"
+    }
+  },
+  "product33": {
+  "pageTitle": "Safety Shut-Off Valve | NASA Technical Services",
+  "metaDescription": "Safety Shut-Off Valve: High-speed, reliable valve solution that cuts off gas flow in emergencies to ensure facility safety. Technical data, features, and application areas in detail.",
+  "metaKeywords": "Safety Shut-Off Valve, Gas Safety Valve, Flame Safety, Industrial Safety Valve, NASA Technical",
+  "metaOgDescription": "Safety Shut-Off Valve: High-speed, reliable valve solution that cuts off gas flow in emergencies.",
+  "heroTitle": "Safety Shut-Off Valve",
+  "heroSubtitle": "A fast-acting safety valve solution that ensures your facility’s safety by shutting off gas flow instantly in emergencies.",
+  "productDescription": "The Safety Shut-Off Valve immediately cuts off gas flow in cases such as flashback, pressure surges, or system faults in gas systems, preventing fire and explosion risks. Its high-speed electric/pneumatic actuator ensures closing within milliseconds.",
+  "sectionFeatures": "Key Features",
+  "featureFastClose": "<strong>Fast Closing Time:</strong> Fast safety with response time up to 15 ms.",
+  "featureDurable": "<strong>High Durability:</strong> Stainless steel body resistant to working pressure up to 16 bar.",
+  "featureActuator": "<strong>Reliable Actuator:</strong> Electric (24V DC / 220V AC) or pneumatic options.",
+  "featureStandard": "<strong>Standard Compliance:</strong> Meets EN 161 and ISO 23551-1 standards.",
+  "featureEasyInstall": "<strong>Easy Installation:</strong> Flanged or threaded connection options.",
+  "featureSafety": "<strong>Exceptional Safety:</strong> Thermal overload protection and manual hand release mechanism.",
+  "sectionSpecs": "Technical Specifications",
+  "specModel": "Model",
+  "specPressure": "Operating Pressure",
+  "specResponseTime": "Response Time",
+  "specConnectionType": "Connection Type",
+  "specBodyMaterial": "Body Material",
+  "specActuatorType": "Actuator Type",
+  "specTemp": "Operating Temperature",
+  "specIP": "Protection Class",
+  "specContact": "Electrical Contact",
+  "specWeight": "Weight",
+  "sectionUsage": "Application Areas",
+  "usageGasLine": "Natural gas and LPG fuel lines",
+  "usageBoiler": "Industrial boiler safety control",
+  "usageFurnace": "Furnaces, dryers, and baking equipment",
+  "usageChemical": "Chemical and petrochemical plants",
+  "usageHVAC": "Heating, ventilation, and air conditioning (HVAC) systems",
+  "usageFire": "Fire suppression systems",
+  "imgAlt" : "Safety Shut-Off Valve",
+  "backToProducts": "Back to Our Products"
+ },
+  "product44": {
+  "pageTitle": "Combustion Analyzer | NASA Technical Services",
+  "metaDescription": "Combustion Analyzer: A modern analysis device that maximizes combustion efficiency with O₂/CO measurement. Technical data, features, and application areas in detail.",
+  "metaKeywords": "Combustion Analyzer, Oxygen Analysis, Carbon Monoxide Measurement, Efficiency, NASA Technical Services",
+  "metaOgDescription": "Combustion Analyzer: A modern analysis device that maximizes combustion efficiency with O₂/CO measurement.",
+  "heroTitle": "Combustion Analyzer",
+  "heroSubtitle": "An advanced technology device that precisely measures oxygen (O₂) and carbon monoxide (CO) values to maximize your combustion efficiency.",
+  "imgAlt": "Combustion Analyzer",
+  "productDescription": "The Combustion Analyzer provides real-time oxygen and carbon monoxide data to optimize combustion processes in industrial boilers, furnaces, and burner systems. With its touch-screen interface and integrated data logging feature, it enables energy efficiency analyses by recording process data.",
+  "sectionFeatures": "Key Features",
+  "featureDualGas": "<strong>Dual Gas Measurement:</strong> Simultaneous data collection with O₂ and CO sensors.",
+  "featureTouchScreen": "<strong>Touch TFT Display:</strong> Easy-to-read graphical interface and parameter settings.",
+  "featureSoftware": "<strong>Integrated Analysis Software:</strong> Data logging, reporting, and PC integration.",
+  "featureFastResponse": "<strong>Fast Response Time:</strong> 2-second response speed for real-time monitoring.",
+  "featureWideRange": "<strong>Wide Range:</strong> 0–25% O₂ and 0–5000 ppm CO measurement range.",
+  "featureDurable": "<strong>Durable Construction:</strong> IP65 protection rating, suitable for harsh industrial environments.",
+  "featureEasyMaintenance": "<strong>Easy Maintenance:</strong> Modular sensor replacement kit for quick field service.",
+  "sectionSpecs": "Technical Specifications",
+  "specModel": "Model",
+  "specO2Range": "O₂ Measurement Range",
+  "specCORange": "CO Measurement Range",
+  "specAccuracy": "Accuracy",
+  "specDisplay": "Display",
+  "specConnections": "Connections",
+  "specBodyMaterial": "Body Material",
+  "specOperatingTemp": "Operating Temperature",
+  "specPowerSupply": "Power Supply",
+  "specDimensions": "Dimensions",
+  "specWeight": "Weight",
+  "sectionUsage": "Application Areas",
+  "usageBoiler": "Optimization of combustion efficiency in boiler and furnace processes",
+  "usageBurner": "Industrial burner control systems",
+  "usageWasteHeat": "Waste heat recovery and power plants",
+  "usageChemical": "Chemical plants and sustainable energy applications",
+  "usageVentilation": "Ventilation and emission monitoring projects",
+  "usageLab": "Laboratory and R&D test benches",
+  "backToProducts": "Back to Our Products"
+  
+ }
 
 }

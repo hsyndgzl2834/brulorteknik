@@ -1,28 +1,21 @@
-function includeHTML(id, url, callback) {
-  fetch(url)
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById(id).innerHTML = data;
-      if (typeof callback === "function") callback();
-    });
+// Simple HTML include with callback
+async function includeHTML(elementId, filePath, callback) {
+  try {
+    const res = await fetch(filePath);
+    if (!res.ok) throw new Error(`Include failed: ${filePath}`);
+    const html = await res.text();
+    document.getElementById(elementId).innerHTML = html;
+    if (typeof callback === 'function') callback();
+  } catch (e) {
+    console.error(e);
+  }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  includeHTML('navbar', 'navbar.html', function() {
-    // Navbar geldikten sonra:
-    if (typeof setupLanguageSwitcher === "function") {
-      setupLanguageSwitcher(); // Eventleri ata
-    }
-    if (typeof applyTranslation === "function") {
-      const storedLang = localStorage.getItem('selectedLang') || 'tr';
-      applyTranslation(storedLang);    // Navbar içi çeviri
-    }
-  });
-  includeHTML('footer', 'footer.html', function() {
-    if (typeof applyTranslation === "function") {
-      const storedLang = localStorage.getItem('selectedLang') || 'tr';
-      applyTranslation(storedLang);    // Footer içi çeviri
-    }
-  });
+// Include navbar and reapply translations once loaded
+includeHTML('navbar', 'navbar.html', function() {
+  if (typeof setupLanguageSwitcher === 'function') setupLanguageSwitcher();
+  if (typeof applyTranslation === 'function') applyTranslation();
 });
 
+// Include footer (no callback needed)
+includeHTML('footer', 'footer.html');
