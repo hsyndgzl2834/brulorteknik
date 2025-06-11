@@ -39,3 +39,14 @@ new Swiper(".hero-swiper", {
   speed: 800,
   effect: 'fade',
 });
+ddocument.addEventListener("DOMContentLoaded", function() {
+  var scrollBtn = document.getElementById('scrollTop');
+  if (scrollBtn) {
+    window.addEventListener('scroll', function () {
+      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    scrollBtn.onclick = function() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    };
+  }
+});

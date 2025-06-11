@@ -16,6 +16,15 @@ includeHTML('navbar', 'navbar.html', function() {
   if (typeof setupLanguageSwitcher === 'function') setupLanguageSwitcher();
   if (typeof applyTranslation === 'function') applyTranslation();
 });
-
-// Include footer (no callback needed)
-includeHTML('footer', 'footer.html');
+includeHTML('footer', 'footer.html', function() {
+  // Footer yüklendi, scrollTop artık var!
+  var scrollBtn = document.getElementById('scrollTop');
+  if (scrollBtn) {
+    window.addEventListener('scroll', function () {
+      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    scrollBtn.onclick = function() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    };
+  }
+});

@@ -1,3 +1,49 @@
+:root {
+  --bs-primary:   #003478;  /* Örneğin şirket mavi tonu */
+  --bs-secondary: #ffcc00;  /* Sarı/altın */
+  --bs-success:   #30b130;  /* Kurumsal yeşil */
+  --bs-warning:   #ff9000;  /* Parlak turuncu */
+  --bs-dark:      #18213c;  /* Koyu mavi/gri */
+  --bs-light:     #fafafa;  /* Açık gri/beyaz */
+}
+
+/* Özel navbar rengi (gerekirse) */
+.navbar {
+  background-color: var(--bs-dark) !important;
+}
+
+/* Buton ve ikonların kurumsal renkleri */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+.btn-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+  color: #fff !important;
+}
+.btn-success {
+  background-color: var(--bs-success) !important;
+  border-color: var(--bs-success) !important;
+}
+
+.navbar-brand img {
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.2); /* altın vurgulu gölge */
+  background: #fff;
+}
+.fab, .fas {
+  color: var(--bs-secondary);
+}
+.fab.fa-whatsapp {
+  color: #25d366 !important;
+}
+.btn-whatsapp {
+  background: #25d366 !important;
+  color: #fff !important;
+}
+.btn-whatsapp:hover {
+  background: #21b05a !important;
+}
 
 
 body {
@@ -369,4 +415,21 @@ img, picture, source {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+}
+
+#scrollTop {
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+#scrollTop:hover {
+  opacity: 1;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.card {
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  border-color: var(--bs-primary);
 }
