@@ -3,16 +3,26 @@ function includeHTML(id, url, callback) {
     .then(res => res.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
-      if (typeof callback === "function") callback(); // Yüklendikten sonra çağır!
+      if (typeof callback === "function") callback();
     });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   includeHTML('navbar', 'navbar.html', function() {
-    // Navbar geldikten sonra dil eventlerini burada atayabilirsin
+    // Navbar geldikten sonra:
     if (typeof setupLanguageSwitcher === "function") {
-      setupLanguageSwitcher(); // language.js içinde bu fonksiyonu olmalı
+      setupLanguageSwitcher(); // Eventleri ata
+    }
+    if (typeof applyTranslation === "function") {
+      const storedLang = localStorage.getItem('selectedLang') || 'tr';
+      applyTranslation(storedLang);    // Navbar içi çeviri
     }
   });
-  includeHTML('footer', 'footer.html');
+  includeHTML('footer', 'footer.html', function() {
+    if (typeof applyTranslation === "function") {
+      const storedLang = localStorage.getItem('selectedLang') || 'tr';
+      applyTranslation(storedLang);    // Footer içi çeviri
+    }
+  });
 });
+
