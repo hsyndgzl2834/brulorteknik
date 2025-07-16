@@ -1,49 +1,1258 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ========= META ========= -->
-  <title data-i18n="siteTitle">Brülör Teknik | Endüstriyel Brülör Sistemleri</title>
-  <meta name="description" content="TBrülör Teknik: Endüstriyel brülör sistemleri, otomasyon çözümleri ve profesyonel teknik servis hizmetleri. Türkiye geneli kurulum, bakım ve yedek parça temini." />
-  <meta name="keywords" content="endüstriyel brülör, brülör sistemleri, otomasyon, teknik servis, enerji verimliliği, yedek parça, bakım hizmeti" />
-  <meta name="author" content="Brülör Teknik" />
-  <meta name="robots" content="index, follow" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Endüstriyel Brülör Sistemleri | Brülör Teknik Hizmetler</title>
+  <meta name="description" content="Endüstriyel brülör sistemleri, otomasyon çözümleri, profesyonel teknik servis ve yedek parça hizmetleri. 20+ yıl deneyim, Türkiye genelinde hızlı servis ve enerji verimliliği çözümleri." />
+  <meta name="keywords" content="endüstriyel brülör, brülör teknik, otomasyon, teknik servis, enerji verimliliği, yedek parça, bakım, Türkiye, istanbul" />
+  <meta name="author" content="Brülör Teknik Hizmetler" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Canonical & Hreflang -->
   <link rel="canonical" href="https://www.brulorteknik.com/" />
-
-  <!-- Open Graph / Twitter Card -->
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.brulorteknik.com/" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Brülör Teknik | Endüstriyel Brülör Sistemleri" />
-  <meta property="og:description" content="Endüstriyel brülör sistemlerinde uzmanlaşmış teknik çözümler." />
-  <meta property="og:image" content="https://www.brulorteknik.com/images/hero1.webp" />
   <meta property="og:url" content="https://www.brulorteknik.com/" />
-  <meta property="og:site_name" content="NASA Teknik Hizmetler" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Brülör Teknik | Endüstriyel Brülör Sistemleri" />
-  <meta name="twitter:description" content="Endüstriyel brülör sistemlerinde uzmanlaşmış teknik çözümler." />
-  <meta name="twitter:image" content="https://www.brulorteknik.com/images/hero1.webp" />
-
-  <!-- Tema rengi -->
-  <meta name="theme-color" content="#0d1b2a" />
-
-  <!-- ========= CSS ========= -->
-  <link href="css/style.css" rel="stylesheet" />
+  <meta property="og:title" content="Endüstriyel Brülör Sistemleri | Brülör Teknik Hizmetler" />
+  <meta property="og:description" content="Endüstriyel brülör sistemleri, otomasyon çözümleri, profesyonel teknik servis ve yedek parça hizmetleri. 20+ yıl deneyim, Türkiye genelinde hızlı servis ve enerji verimliliği çözümleri." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/hero1.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/" />
+  <meta property="twitter:title" content="Endüstriyel Brülör Sistemleri | Brülör Teknik Hizmetler" />
+  <meta property="twitter:description" content="Endüstriyel brülör sistemleri, otomasyon çözümleri, profesyonel teknik servis ve yedek parça hizmetleri. 20+ yıl deneyim, Türkiye genelinde hızlı servis ve enerji verimliliği çözümleri." />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/hero1.webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#2C3E50" />
+  <meta name="msapplication-TileColor" content="#2C3E50" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik" />
+  
+  <!-- Icons & Manifest -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="images/favicon.png" sizes="180x180" />
+  <link rel="manifest" href="manifest.json" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="images/hero1.webp" as="image" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #3498DB 100%);
+      --secondary-gradient: linear-gradient(135deg, #16A085 0%, #2ECC71 50%, #27AE60 100%);
+      --accent-gradient: linear-gradient(135deg, #E74C3C 0%, #C0392B 50%, #8E44AD 100%);
+      --modern-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --corporate-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --dark-gradient: linear-gradient(135deg, #0C0C0C 0%, #2C3E50 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+      --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+      --text-primary: #2C3E50;
+      --text-secondary: #34495E;
+      --text-light: #7F8C8D;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #DEE2E6 100%);
+      overflow-x: hidden;
+      color: var(--text-primary);
+    }
+    
+    /* Mobile-First Hero Section */
+    #hero {
+      height: 85vh;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2c3e50 100%);
+    }
+    
+    .carousel-item {
+      height: 85vh;
+      position: relative;
+      animation: heroSlideIn 1.5s ease-out;
+    }
+    
+    @keyframes heroSlideIn {
+      0% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .carousel-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 42, 60, 0.45); /* Sade, koyu ve şeffaf bir overlay */
+      z-index: 2;
+      animation: none;
+    }
+    
+    .carousel-item::after {
+      display: none !important;
+    }
+    
+    .carousel-item img {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+      animation: slowZoom 25s ease-in-out infinite;
+    }
+    
+    @keyframes slowZoom {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    
+    .carousel-caption {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 12;
+      text-align: center;
+      max-width: 95%;
+      width: 90%;
+      padding: 0 15px;
+    }
+    
+    .carousel-caption h1,
+    .carousel-caption h2 {
+      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.8rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      color: #fff !important;
+      filter: none !important;
+      animation: none !important;
+      line-height: 1.3;
+    }
+    
+    @keyframes titleGlow {
+      0% {
+        filter: drop-shadow(0 0 8px rgba(241, 196, 15, 0.4));
+      }
+      100% {
+        filter: drop-shadow(0 0 15px rgba(231, 76, 60, 0.6));
+      }
+    }
+    
+    .carousel-caption p {
+      font-size: clamp(1rem, 3.5vw, 1.4rem);
+      color: #F8F9FA;
+      margin-bottom: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    
+    .hero-stat {
+      text-align: center;
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 12px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      animation: statFloat 4s ease-in-out infinite;
+      min-width: 80px;
+    }
+    
+    .hero-stat:nth-child(2) { animation-delay: 0.5s; }
+    .hero-stat:nth-child(3) { animation-delay: 1s; }
+    
+    @keyframes statFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    .hero-stat .stat-number {
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
+      font-weight: 800;
+      color: #f1c40f;
+      display: block;
+      line-height: 1.2;
+    }
+    
+    .hero-stat .stat-label {
+      font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+      font-weight: 500;
+      opacity: 0.95;
+      line-height: 1.1;
+    }
+    
+    .modern-hero-btn {
+      background: linear-gradient(135deg, #16a085 0%, #2ecc71 50%, #27ae60 100%);
+      border: none;
+      border-radius: 25px;
+      padding: 14px 28px;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+      position: relative;
+      overflow: hidden;
+      margin: 6px auto;
+      width: 85%;
+      max-width: 280px;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .modern-hero-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.4s;
+    }
+    
+    .modern-hero-btn:hover::before {
+      left: 100%;
+    }
+    
+    .modern-hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(46, 204, 113, 0.6);
+      color: white;
+      background: linear-gradient(135deg, #1abc9c 0%, #2ecc71 50%, #27ae60 100%);
+    }
+    
+    .modern-hero-btn.secondary {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #8e44ad 100%);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    }
+    
+    .modern-hero-btn.secondary:hover {
+      background: linear-gradient(135deg, #c0392b 0%, #8e44ad 50%, #9b59b6 100%);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+    }
+    
+    .hero-buttons {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    /* Enhanced Carousel Indicators - Mobile Optimized */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20 !important;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      text-indent: -999px;
+      overflow: hidden;
+      margin: 0 !important;
+      padding: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+    }
+    
+    .carousel-indicators [data-bs-target]:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-indicators [data-bs-target].active,
+    .carousel-indicators .active {
+      background: linear-gradient(135deg, #f1c40f 0%, #e74c3c 100%) !important;
+      border-color: rgba(255, 255, 255, 1);
+      transform: scale(1.3);
+      box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5);
+      animation: indicatorPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes indicatorPulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(231, 76, 60, 0.9), 0 6px 20px rgba(0, 0, 0, 0.6);
+      }
+    }
+    
+    /* Modern Service Cards */
+    .service-card, .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.08);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(52, 152, 219, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before, .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-gradient);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .service-card:hover::before, .card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-card:hover, .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(44, 62, 80, 0.15);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+    }
+    
+    /* Mobile-First Services Section */
+    #services {
+      background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+      padding: 60px 0 50px 0;
+      margin-top: 30px;
+      position: relative;
+    }
+    
+    #services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(180deg, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 1) 100%);
+      z-index: 1;
+    }
 
-  <!-- JSON-LD (Örnek: Kurumsal) -->
+    #services h2 {
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    #services h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--secondary-gradient);
+      border-radius: 2px;
+    }
+    
+    #services .text-muted {
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    
+    #services .badge {
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      padding: 8px 16px;
+      font-weight: 600;
+    }
+    
+    /* Priority Service Cards */
+    .priority-service {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      overflow: visible;
+    }
+    
+    .priority-service::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: var(--secondary-gradient);
+      border-radius: 20px;
+      z-index: -1;
+    }
+    
+    .priority-service:hover {
+      transform: translateY(-20px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(44, 62, 80, 0.2);
+    }
+    
+    .priority-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+    
+    .service-priority-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-gradient);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+    }
+    
+    .service-features {
+      background: rgba(46, 204, 113, 0.1);
+      padding: 12px;
+      border-radius: 10px;
+      border-left: 4px solid var(--secondary-gradient);
+    }
+    
+    .priority-service .card-title {
+      font-size: 1.5rem !important;
+    }
+    
+    .priority-service .btn-primary {
+      background: var(--primary-gradient);
+      border: none;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .priority-service .btn-primary:hover {
+      background: var(--secondary-gradient);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+    }
+    
+    /* Featured Services Badge */
+    .badge.bg-primary {
+      background: var(--secondary-gradient) !important;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+      animation: pulse-badge 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-badge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .card-title {
+      color: var(--text-primary) !important;
+      font-weight: 600 !important;
+      font-size: 1.4rem !important;
+    }
+    
+    .card-text {
+      color: var(--text-secondary) !important;
+      line-height: 1.6;
+    }
+    
+    .btn-outline-primary {
+      border: 2px solid var(--text-primary);
+      color: var(--text-primary);
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 12px 24px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+      background: var(--primary-gradient);
+      border-color: transparent;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+    }
+    
+    /* Contact CTA Section */
+    .contact-cta-section {
+      background: linear-gradient(135deg, #ECF0F1 0%, #BDC3C7 100%) !important;
+      border-top: 3px solid var(--secondary-gradient);
+    }
+    
+    .btn-gradient {
+      background: var(--secondary-gradient) !important;
+      border: none;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-gradient:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+      color: white;
+    }
+    
+    /* Glass morphism effect */
+    .glass-morphism {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    /* Custom animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Mobile-First Responsive Design */
+    
+    /* Base Mobile Styles (default) */
+    .carousel-caption {
+      top: 50%;
+      padding: 0 10px;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-stat {
+      min-width: 85px;
+      padding: 6px 10px;
+    }
+    
+    .modern-hero-btn {
+      width: 90%;
+      max-width: 260px;
+      margin: 5px auto;
+      padding: 12px 20px;
+      font-size: clamp(0.85rem, 3.2vw, 1rem);
+    }
+    
+    #hero, .carousel-item, .carousel-item img {
+      height: 85vh;
+    }
+    
+    #services {
+      padding: 50px 0 40px 0;
+      margin-top: 20px;
+    }
+    
+    .service-card, .card {
+      margin-bottom: 20px;
+      padding: 18px;
+    }
+    
+    /* Tablet Styles (481px and up) */
+    @media (min-width: 481px) {
+      .carousel-caption {
+        top: 48%;
+        padding: 0 20px;
+      }
+      
+      .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      
+      .hero-stat {
+        min-width: 95px;
+        padding: 8px 12px;
+      }
+      
+      .modern-hero-btn {
+        width: 80%;
+        max-width: 240px;
+        margin: 6px auto;
+        padding: 13px 25px;
+      }
+      
+      #hero, .carousel-item, .carousel-item img {
+        height: 80vh;
+      }
+      
+      #services {
+        padding: 60px 0 50px 0;
+        margin-top: 25px;
+      }
+      
+      .service-card, .card {
+        padding: 22px;
+      }
+    }
+    
+    /* Large Tablet/Small Desktop (769px and up) */
+    @media (min-width: 769px) {
+      .carousel-caption {
+        top: 45%;
+        padding: 0 30px;
+      }
+      
+      .hero-stats {
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-stat {
+        min-width: 110px;
+        padding: 10px 15px;
+      }
+      
+      .modern-hero-btn {
+        display: inline-block;
+        width: auto;
+        min-width: 180px;
+        margin: 8px 12px;
+        padding: 15px 35px;
+      }
+      
+      .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      #hero, .carousel-item, .carousel-item img {
+        height: 90vh;
+      }
+      
+      #services {
+        padding: 80px 0 60px 0;
+        margin-top: 40px;
+      }
+      
+      #services h2 {
+        font-size: clamp(2.5rem, 4vw, 3.2rem);
+      }
+      
+      .service-card, .card {
+        padding: 25px;
+      }
+    }
+    
+    /* Desktop Styles (1025px and up) */
+    @media (min-width: 1025px) {
+      .carousel-caption {
+        top: 43%;
+        max-width: 900px;
+      }
+      
+      .hero-stats {
+        gap: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-stat {
+        min-width: 120px;
+        padding: 12px 18px;
+      }
+      
+      .modern-hero-btn {
+        min-width: 200px;
+        padding: 18px 40px;
+      }
+      
+      #hero, .carousel-item, .carousel-item img {
+        height: 100vh;
+      }
+      
+      #services {
+        padding: 100px 0 80px 0;
+        margin-top: 60px;
+      }
+      
+      #services h2 {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+      }
+      
+      #services .text-muted {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+      
+      #services .badge {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+      
+      .service-card, .card {
+        padding: 30px;
+        border-radius: 20px;
+      }
+      
+      .service-card:hover, .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(44, 62, 80, 0.15);
+      }
+      
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Touch Device Optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .modern-hero-btn {
+        padding: 16px 25px;
+        font-size: 1rem;
+        min-height: 48px;
+      }
+      
+      .service-card:hover, .card:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(44, 62, 80, 0.08);
+      }
+      
+      .hero-stat {
+        padding: 10px 14px;
+      }
+    }
+    
+    /* Enhanced Mobile-First Optimizations */
+    
+    /* Base Mobile Styles (320px+) */
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    html {
+      font-size: 16px; /* Base font size for rem calculations */
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    body {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      touch-action: manipulation;
+    }
+    
+    /* Mobile Container Improvements */
+    .container-fluid {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    
+    .container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    
+    /* Mobile Hero Section Enhanced */
+    #hero {
+      height: 80vh;
+      min-height: 500px;
+      max-height: 700px;
+    }
+    
+    .carousel-item {
+      height: 80vh;
+      min-height: 500px;
+      max-height: 700px;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .carousel-caption {
+      top: 45%;
+      transform: translateY(-50%);
+      left: 10px;
+      right: 10px;
+      padding: 0 5px;
+      max-width: 100%;
+    }
+    
+    .carousel-caption h1,
+    .carousel-caption h2 {
+      font-size: clamp(1.4rem, 5.5vw, 2.8rem);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      font-weight: 800;
+    }
+    
+    .carousel-caption p {
+      font-size: clamp(0.85rem, 3.2vw, 1.2rem);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    
+    /* Mobile Hero Stats */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-stat {
+      padding: 6px 8px;
+      border-radius: 8px;
+      min-width: auto;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .hero-stat .stat-number {
+      font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+      font-weight: 700;
+      display: block;
+      line-height: 1.1;
+    }
+    
+    .hero-stat .stat-label {
+      font-size: clamp(0.6rem, 2.2vw, 0.75rem);
+      line-height: 1;
+      opacity: 0.9;
+    }
+    
+    /* Mobile Buttons Enhanced */
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    
+    .modern-hero-btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 12px 20px;
+      font-size: clamp(0.85rem, 3.2vw, 1rem);
+      border-radius: 25px;
+      text-align: center;
+      margin: 0;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    
+    .modern-hero-btn i {
+      font-size: 0.9em;
+    }
+    
+    /* Mobile Services Section */
+    #services {
+      padding: 40px 0 30px 0;
+      margin-top: 15px;
+    }
+    
+    #services h2 {
+      font-size: clamp(1.6rem, 5vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+    
+    #services .text-muted {
+      font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+      margin-bottom: 1rem;
+    }
+    
+    /* Mobile Cards */
+    .card, .service-card {
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 15px;
+    }
+    
+    .card-title {
+      font-size: clamp(1rem, 3.8vw, 1.3rem);
+      line-height: 1.3;
+    }
+    
+    .card-text {
+      font-size: clamp(0.85rem, 3vw, 1rem);
+      line-height: 1.4;
+    }
+    
+    /* Mobile Priority Badge */
+    .priority-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 8px;
+      font-size: 0.65rem;
+      border-radius: 15px;
+    }
+    
+    .service-priority-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+    }
+    
+    /* Mobile Features List */
+    .service-features {
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    
+    .service-features ul {
+      margin-bottom: 0;
+      padding-left: 15px;
+    }
+    
+    .service-features li {
+      font-size: clamp(0.8rem, 2.8vw, 0.9rem);
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+    
+    /* Carousel Indicators Mobile Responsive */
+    .carousel-indicators {
+      bottom: 15px;
+      margin-bottom: 0;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 4px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .carousel-indicators [data-bs-target].active,
+    .carousel-indicators .active {
+      transform: scale(1.2);
+    }
+    
+    /* Mobile Specific Adjustments */
+    @media (max-width: 768px) {
+      .carousel-indicators {
+        bottom: 12px;
+        gap: 6px;
+      }
+      
+      .carousel-indicators [data-bs-target] {
+        width: 9px;
+        height: 9px;
+        border-width: 1px;
+      }
+      
+      .carousel-indicators [data-bs-target]:hover {
+        transform: scale(1.05);
+      }
+      
+      .carousel-indicators [data-bs-target].active,
+      .carousel-indicators .active {
+        transform: scale(1.2);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .carousel-indicators {
+        bottom: 10px;
+        gap: 5px;
+      }
+      
+      .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        border-width: 1px;
+      }
+      
+      .carousel-indicators [data-bs-target].active,
+      .carousel-indicators .active {
+        transform: scale(1.15);
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .carousel-indicators {
+        bottom: 8px;
+        gap: 4px;
+      }
+      
+      .carousel-indicators [data-bs-target] {
+        width: 7px;
+        height: 7px;
+      }
+    }
+    
+    /* Small Mobile Styles (360px and below) */
+    @media (max-width: 360px) {
+      .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+      }
+      
+      .carousel-caption {
+        left: 5px;
+        right: 5px;
+        padding: 0;
+      }
+      
+      .hero-stats {
+        max-width: 280px;
+        gap: 0.3rem;
+      }
+      
+      .hero-stat {
+        padding: 4px 6px;
+      }
+      
+      .modern-hero-btn {
+        max-width: 260px;
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        min-height: 44px;
+      }
+      
+      #services {
+        padding: 30px 0 20px 0;
+      }
+      
+      .card, .service-card {
+        padding: 12px;
+      }
+    }
+    
+    /* Bootstrap Carousel Indicators Override */
+    .carousel-indicators button {
+      width: 12px !important;
+      height: 12px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, 0.6) !important;
+      border: 2px solid rgba(255, 255, 255, 0.9) !important;
+      margin: 0 !important;
+      text-indent: -999px !important;
+      opacity: 1 !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+      backdrop-filter: blur(4px) !important;
+    }
+    
+    .carousel-indicators button:hover {
+      background: rgba(255, 255, 255, 0.8) !important;
+      transform: scale(1.1) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    }
+    
+    .carousel-indicators button.active {
+      background: linear-gradient(135deg, #f1c40f 0%, #e74c3c 100%) !important;
+      border-color: rgba(255, 255, 255, 1) !important;
+      transform: scale(1.3) !important;
+      box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+      animation: indicatorPulse 2s ease-in-out infinite !important;
+    }
+    
+    /* Force display for indicators */
+    .carousel-indicators {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Additional mobile fixes */
+    @media (max-width: 768px) {
+      .carousel-indicators button {
+        width: 9px !important;
+        height: 9px !important;
+        border-width: 1px !important;
+      }
+      
+      .carousel-indicators button.active {
+        transform: scale(1.2) !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .carousel-indicators button {
+        width: 8px !important;
+        height: 8px !important;
+      }
+      
+      .carousel-indicators button.active {
+        transform: scale(1.15) !important;
+      }
+    }
+  </style>
+  <!-- Sticky Navbar için ek CSS -->
+  <style>
+    #navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.98); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    #scrollTop { background: #2c3e50; color: #fff; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transition: opacity 0.2s; }
+    #scrollTop:focus { outline: 2px solid #3498db; }
+    #scrollTop:hover { background: #34495e; }
+  </style>
+  <!-- Açılış Loader'ı (Intro) -->
+  <style>
+    #intro-loader {
+      position: fixed;
+      z-index: 20000;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+      opacity: 1;
+      pointer-events: all;
+    }
+    #intro-loader.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .intro-loader-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .intro-loader-inner svg {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .intro-brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2c3e50;
+      letter-spacing: 0.04em;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    @media (max-width: 600px) {
+      .intro-loader-inner svg { width: 40px; height: 40px; }
+      .intro-brand { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Kurumsal JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "NASA Teknik Hizmetler",
+    "name": "Brülör Teknik Hizmetler",
     "url": "https://www.brulorteknik.com/",
-    "logo": "https://www.brulorteknik.com/images/logo.png",
+    "logo": "images/logo.png",
     "sameAs": [
-      "https://www.facebook.com/nasateknik",
+      "https://www.facebook.com/brulorteknik",
       "https://www.linkedin.com/company/brulorteknik"
     ],
     "contactPoint": {
@@ -54,196 +1263,819 @@
     }
   }
   </script>
-  <!-- ========= /CSS ========= -->
-  <style>
-    /* Hero Slider Üzerindeki Sabit Çağrı Butonu */
-    #hero {
-      position: relative;
-    }
-    .hero-cta-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      width: 100%;
-      text-align: center;
-    }
-    .hero-cta-container .btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      border-radius: 0.25rem;
-    }
-    @media (max-width: 768px) {
-      .hero-cta-container {
-        top: 60%;
-      }
-      .hero-cta-container .btn {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.7rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- ========= NAVBAR (Dil butonları burada) ========= -->
-  <div id="navbar"></div>
-  
 
-  <!-- ========= HERO SLIDER ========= -->
-  <section id="hero" class="position-relative">
-    
-    <div
-      id="heroCarousel"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-      data-bs-interval="4000"
-    >
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLV53JFE6K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLV53JFE6K');
+  </script>
+  <!-- Breadcrumb Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.brulorteknik.com/"}
+    ]
+  }
+  </script>
+  <!-- NAVBAR -->
+  <div id="navbar" role="navigation" aria-label="Ana menü"></div>
+
+  <!-- HERO SLIDER -->
+  <section id="hero" class="position-relative" aria-label="Tanıtım Sliderı">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-
       <div class="carousel-inner">
-        <!-- 1. Slide -->
+        <!-- Slide 1 -->
         <div class="carousel-item active">
           <picture>
             <source srcset="images/hero1.webp" type="image/webp" />
-            <img src="images/hero1.jpg" alt="Hero 1" class="d-block w-100" loading="lazy" style="object-fit:cover; max-height:500px;" />
+            <img src="images/hero1.jpg" alt="Endüstriyel Brülör Sistemleri - Brülör Teknik Hizmetler" class="d-block w-100" loading="lazy" />
           </picture>
           <div class="carousel-caption text-center">
-            <h1 class="animate__animated animate__fadeInDown" data-i18n="hero.title">Endüstriyel Brülör Sistemlerinde Uzman Hizmet</h1>
-            <p class="animate__animated animate__fadeInUp" data-i18n="hero.subtitle">Türkiye genelinde güvenilir kurulum, bakım ve yedek parça hizmeti</p>
-            <a href="products.html" class="btn btn-outline-light btn-sm mt-4" data-i18n="hero.btnVisit">Ürünler <i class="fas fa-arrow-right ms-2"></i></a>
+            <h1>Endüstriyel Brülör Sistemlerinde Uzman Çözüm Ortağınız</h1>
+            <p>20+ yıl deneyim, Türkiye genelinde hızlı servis ve enerji verimliliği odaklı çözümler</p>
+            
+            <!-- Hero İstatistikleri -->
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Yıl Deneyim</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Mutlu Müşteri</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">7/24</span>
+                <span class="stat-label">Teknik Destek</span>
+              </div>
+            </div>
+            
+            <div class="hero-buttons">
+              <a href="products.html" class="modern-hero-btn">
+                <i class="fas fa-cogs me-2"></i>Ürünlerimizi Keşfedin
+              </a>
+              <a href="contact.html" class="modern-hero-btn secondary">
+                <i class="fas fa-phone me-2"></i>Hemen Arayın
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- 2. Slide -->
+        
+        <!-- Slide 2 -->
         <div class="carousel-item">
           <picture>
             <source srcset="images/hero2.webp" type="image/webp" />
-            <img src="images/hero2.jpg" alt="Hero 2" class="d-block w-100" loading="lazy" style="object-fit:cover; max-height:500px;" />
+            <img src="images/hero2.jpg" alt="Enerji Verimli Brülör Sistemleri - Brülör Teknik Hizmetler" class="d-block w-100" loading="lazy" />
           </picture>
           <div class="carousel-caption text-center">
-            <h2 class="animate__animated animate__fadeInDown" data-i18n="hero.energyTitle">Enerji Verimliliği</h2>
-            <p class="animate__animated animate__fadeInUp" data-i18n="Hero.energyDesc">Yüksek performanslı sistem çözümleri.</p>
-            <a href="products.html" class="btn btn-outline-light btn-sm mt-4" data-i18n="hero.btnVisit">Ürünler <i class="fas fa-arrow-right ms-2"></i></a>
+            <h2>Enerji Verimliliği & Sürdürülebilirlik</h2>
+            <p>Çevre dostu teknolojiler ile %30'a varan yakıt tasarrufu, düşük karbon ayak izi</p>
+            
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="stat-number">%30</span>
+                <span class="stat-label">Yakıt Tasarrufu</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">%95</span>
+                <span class="stat-label">Verimlilik</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Karbon Ayak İzi</span>
+              </div>
+            </div>
+            
+            <div class="hero-buttons">
+              <a href="products.html" class="modern-hero-btn">
+                <i class="fas fa-leaf me-2"></i>Eko Çözümler
+              </a>
+              <a href="hizmet4.html" class="modern-hero-btn secondary">
+                <i class="fas fa-chart-line me-2"></i>Enerji Analizi
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- 3. Slide -->
+        
+        <!-- Slide 3 -->
         <div class="carousel-item">
           <picture>
             <source srcset="images/hero3.webp" type="image/webp" />
-            <img src="images/hero3.jpg" alt="Hero 3" class="d-block w-100" loading="lazy" style="object-fit:cover; max-height:500px;" />
+            <img src="images/hero3.jpg" alt="Teknik Destek ve Servis - Brülör Teknik Hizmetler" class="d-block w-100" loading="lazy" />
           </picture>
           <div class="carousel-caption text-center">
-            <h2 class="animate__animated animate__fadeInDown" data-i18n="hero.supportTitle">Uzman Teknik Destek</h2>
-            <p class="animate__animated animate__fadeInUp" data-i18n="hero.supportDesc">Türkiye genelinde servis ve bakım hizmeti</p>
-            <a href="products.html" class="btn btn-outline-light btn-sm mt-4" data-i18n="hero.btnVisit">Ürünler <i class="fas fa-arrow-right ms-2"></i></a>
+            <h2>Türkiye Genelinde Hızlı Servis</h2>
+            <p>Uzman teknik ekibimiz ile 24 saat içinde sahada, %99 çözüm oranı</p>
+            
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Saat İçinde</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">81</span>
+                <span class="stat-label">İl Hizmet</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-number">%99</span>
+                <span class="stat-label">Çözüm Oranı</span>
+              </div>
+            </div>
+            
+            <div class="hero-buttons">
+              <a href="hizmet-brulor-servisi.html" class="modern-hero-btn">
+                <i class="fas fa-tools me-2"></i>Acil Servis
+              </a>
+              <a href="tel:+905316250694" class="modern-hero-btn secondary">
+                <i class="fas fa-phone-alt me-2"></i>Hemen Ara
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- ========= HİZMETLERİMİZ ========= -->
-  <section class="py-5 bg-light" id="services">
+
+  <!-- HİZMETLER -->
+  <section class="py-5 bg-light" id="services" aria-label="Hizmetlerimiz">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 data-i18n="services.title">Hizmetlerimiz</h2>
-        <p class="text-muted" data-i18n="services.subtitle">Endüstriyel ihtiyaçlarınıza yönelik profesyonel çözümler</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="mb-4">Hizmetlerimiz</h2>
+        <p class="text-muted fs-5 mb-4">Endüstriyel ihtiyaçlarınıza yönelik profesyonel çözümler</p>
+        <div class="d-flex justify-content-center mt-4">
+          <span class="badge bg-primary fs-6 px-4 py-3 rounded-pill">
+            <i class="fas fa-star me-2"></i>Öne Çıkan Hizmetlerimiz
+          </span>
+        </div>
+      </div>
+      <div class="row g-4" style="margin-top: 30px;">
+      
+      <!-- ÖNE ÇIKAN HİZMETLER - İLK SIRADA -->
+      
+      <!-- 1: Yıllık Periyodik Bakım - ÖNCELİKLİ -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-lg rounded-4 border-0 d-flex flex-column position-relative priority-service">
+          <div class="priority-badge">
+            <i class="fas fa-crown me-1"></i>Öncelikli
+          </div>
+          <img src="images/hizmet1.webp" alt="Yıllık Periyodik Bakım" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center mb-2">
+              <div class="service-priority-icon me-3">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0 text-primary">Yıllık Periyodik Bakım</h5>
+            </div>
+            <p class="card-text text-muted">
+              <strong>Tesisinizde maksimum güvenlik ve verimlilik</strong> için kapsamlı yıllık bakım ve kontrol hizmetleri. Arıza önleme, performans optimizasyonu ve yasal yükümlülüklerin karşılanması.
+            </p>
+            <div class="service-features mb-3">
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>Önleyici bakım programı</small><br>
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>Performans raporlama</small><br>
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>7/24 acil destek</small>
+            </div>
+            <a class="btn btn-primary mt-auto w-100 fw-semibold" href="hizmet1.html">
+              <i class="fas fa-info-circle me-2"></i>Detaylı Bilgi Al
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="row g-4">
-        <!-- 1. Kart -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0" data-aos="fade-up">
-            <img alt="Yıllık Periyodik Bakım" class="card-img-top rounded-top-4" src="images/hizmet1.webp" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-semibold" data-i18n="service.maintenance.title">Yıllık Periyodik Bakım</h5>
-              <p class="card-text text-muted" data-i18n="service.maintenance.desc">Tesisinizde maksimum güvenlik ve verimlilik için kapsamlı yıllık bakım ve kontrol hizmetleri.</p>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary w-100" href="hizmet1.html" data-i18n="service.maintenance.button">Devamını Oku</a>
+      <!-- 2: Brülör Servis ve Bakım - ÖNCELİKLİ -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-lg rounded-4 border-0 d-flex flex-column position-relative priority-service">
+          <div class="priority-badge">
+            <i class="fas fa-crown me-1"></i>Öncelikli
+          </div>
+          <img src="images/hero2.webp" alt="Brülör Servisi" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center mb-2">
+              <div class="service-priority-icon me-3">
+                <i class="fas fa-tools"></i>
               </div>
+              <h5 class="card-title fw-bold mb-0 text-primary">Brülör Servis & Bakım</h5>
             </div>
+            <p class="card-text text-muted mb-3">
+              <strong>Endüstriyel ve ticari tesislere özel</strong>, hızlı ve güvenilir brülör bakım/onarım servisimizden hemen yararlanın. Türkiye genelinde mobil servis ekibimiz.
+            </p>
+            <div class="service-features mb-3">
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>24 saat içinde müdahale</small><br>
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>Mobil servis aracı</small><br>
+              <small class="text-success"><i class="fas fa-check-circle me-1"></i>Garantili onarım</small>
+            </div>
+            <a href="hizmet-brulor-servisi.html" class="btn btn-primary mt-auto w-100 fw-semibold">
+              <i class="fas fa-wrench me-2"></i>Servis Talep Et
+            </a>
           </div>
         </div>
-        <!-- 2. Kart -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0" data-aos="fade-up" data-aos-delay="100">
-            <img alt="Brülör Kurulumu" class="card-img-top rounded-top-4" src="images/hizmet2.webp" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-semibold" data-i18n="service.installation.title">Brülör Kurulumu</h5>
-              <p class="card-text text-muted" data-i18n="service.installation.desc">Yeni tesis kurulumları ve sistem entegrasyonları için uzman brülör montaj hizmetleri.</p>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary w-100" href="hizmet2.html" data-i18n="service.installation.button">Devamını Oku</a>
-              </div>
-            </div>
+      </div>
+
+      <!-- STANDART HİZMETLER -->
+      
+      <!-- 3: Brülör Kurulumu -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm rounded-4 border-0 d-flex flex-column">
+          <img src="images/hizmet2.webp" alt="Brülör Kurulumu" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Brülör Kurulumu</h5>
+            <p class="card-text text-muted">
+              Yeni tesis kurulumları ve sistem entegrasyonları için uzman brülör montaj hizmetleri.
+            </p>
+            <a class="btn btn-outline-primary mt-auto w-100" href="hizmet2.html">Devamını Oku</a>
           </div>
         </div>
-        <!-- 3. Kart -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0" data-aos="fade-up" data-aos-delay="200">
-            <img alt="Otomasyon Sistemleri" class="card-img-top rounded-top-4" src="images/hizmet3.webp" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-semibold" data-i18n="service.automation.title">Otomasyon Sistemleri</h5>
-              <p class="card-text text-muted" data-i18n="service.automation.desc">SCADA, PLC ve uzaktan erişim destekli yakma kontrol otomasyon çözümleri.</p>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary w-100" href="hizmet3.html" data-i18n="service.automation.button">Devamını Oku</a>
-              </div>
-            </div>
+      </div>
+
+      <!-- 4: Otomasyon Sistemleri -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100 shadow-sm rounded-4 border-0 d-flex flex-column">
+          <img src="images/hizmet3.webp" alt="Otomasyon Sistemleri" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Otomasyon Sistemleri</h5>
+            <p class="card-text text-muted">
+              SCADA, PLC ve uzaktan erişim destekli yakma kontrol otomasyon çözümleri.
+            </p>
+            <a class="btn btn-outline-primary mt-auto w-100" href="hizmet3.html">Devamını Oku</a>
           </div>
         </div>
-        <!-- 4. Kart -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0" data-aos="fade-up" data-aos-delay="300">
-            <img alt="Enerji Verimliliği" class="card-img-top rounded-top-4" src="images/hizmet4.webp" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-semibold" data-i18n="service.energy.title">Enerji Verimliliği</h5>
-              <p class="card-text text-muted" data-i18n="service.energy.desc">Sistemlerinizi analiz ederek enerji tasarrufu sağlayacak çözümler geliştiriyoruz.</p>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary w-100" href="hizmet4.html" data-i18n="service.energy.button">Devamını Oku</a>
-              </div>
-            </div>
+      </div>
+
+      <!-- 5: Enerji Verimliliği -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card h-100 shadow-sm rounded-4 border-0 d-flex flex-column">
+          <img src="images/hizmet4.webp" alt="Enerji Verimliliği" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Enerji Verimliliği</h5>
+            <p class="card-text text-muted">
+              Sistemlerinizi analiz ederek enerji tasarrufu sağlayacak çözümler geliştiriyoruz.
+            </p>
+            <a class="btn btn-outline-primary mt-auto w-100" href="hizmet4.html">Devamını Oku</a>
           </div>
         </div>
-        <!-- 5. Kart -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0" data-aos="fade-up" data-aos-delay="400">
-            <img alt="Yedek Parça Temini" class="card-img-top rounded-top-4" src="images/hizmet5.webp" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-semibold" data-i18n="service.spares.title">Yedek Parça Temini</h5>
-              <p class="card-text text-muted" data-i18n="service.spares.desc">Orijinal brülör yedek parçaları ile kesintisiz operasyon sağlıyoruz.</p>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary w-100" href="hizmet5.html" data-i18n="service.spares.button">Devamını Oku</a>
-              </div>
-            </div>
+      </div>
+
+      <!-- 6: Yedek Parça Temini -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card h-100 shadow-sm rounded-4 border-0 d-flex flex-column">
+          <img src="images/hizmet5.webp" alt="Yedek Parça Temini" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Yedek Parça Temini</h5>
+            <p class="card-text text-muted">
+              Orijinal brülör yedek parçaları ile kesintisiz operasyon sağlıyoruz.
+            </p>
+            <a class="btn btn-outline-primary mt-auto w-100" href="hizmet5.html">Devamını Oku</a>
           </div>
         </div>
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
+      </div>
+
+      <!-- 7: Brülörler Hakkında Rehber Kartı -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+        <div class="card h-100 shadow-sm rounded-4 border-0 d-flex flex-column">
+          <img src="images/burner-faq.webp" alt="Brülörler Hakkında" class="card-img-top rounded-top-4" loading="lazy" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Brülörler Hakkında Rehber</h5>
+            <p class="card-text text-muted">Teknik SSS, bakım, arıza teşhisi ve brülör seçim rehberi ile kapsamlı bilgi kaynağı.</p>
+            <a href="brulor-hakkinda.html" class="btn btn-outline-primary mt-auto w-100">Detaylı Bilgi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <!-- ========= FOOTER ========= -->
-   <div id="footer"></div>
+  <!-- NEDEN BİZİ SEÇMELİSİNİZ -->
+  <section class="py-5" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); margin-top: 60px; padding-top: 100px !important; padding-bottom: 100px !important;" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5" style="margin-bottom: 4rem !important;">
+        <h2 class="text-white fw-bold mb-4" style="font-size: 3rem;">Neden Brülör Teknik?</h2>
+        <p class="text-light fs-4" style="margin-bottom: 2rem;">Sektörde fark yaratan avantajlarımız</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center h-100 p-4 rounded-4" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+            <div class="mb-4">
+              <i class="fas fa-award text-warning display-4"></i>
+            </div>
+            <h5 class="text-white fw-bold">20+ Yıl Tecrübe</h5>
+            <p class="text-light">Endüstride kanıtlanmış uzmanlık ve güvenilirlik</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center h-100 p-4 rounded-4" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+            <div class="mb-4">
+              <i class="fas fa-clock text-success display-4"></i>
+            </div>
+            <h5 class="text-white fw-bold">7/24 Destek</h5>
+            <p class="text-light">Kesintisiz teknik destek ve acil müdahale</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-center h-100 p-4 rounded-4" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+            <div class="mb-4">
+              <i class="fas fa-shield-alt text-info display-4"></i>
+            </div>
+            <h5 class="text-white fw-bold">Garantili Hizmet</h5>
+            <p class="text-light">Tüm işlerimizde kapsamlı garanti ve sigorta</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="text-center h-100 p-4 rounded-4" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+            <div class="mb-4">
+              <i class="fas fa-users text-primary display-4"></i>
+            </div>
+            <h5 class="text-white fw-bold">Uzman Ekip</h5>
+            <p class="text-light">Sertifikalı ve deneyimli tekniker kadrosu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
-  <script src="js/include.js"></script>
-  <script src="js/language.js"></script>
+  <!-- İSTATİSTİKLER & BAŞARILAR -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary mb-3">Rakamlarla Başarımız</h2>
+        <p class="text-muted fs-5">20 yılda ulaştığımız önemli kilometre taşları</p>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+            <i class="fas fa-industry text-primary display-4 mb-3"></i>
+            <h3 class="fw-bold text-primary counter" data-target="500">0</h3>
+            <p class="text-muted mb-0">Tamamlanan Proje</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+            <i class="fas fa-handshake text-success display-4 mb-3"></i>
+            <h3 class="fw-bold text-success counter" data-target="350">0</h3>
+            <p class="text-muted mb-0">Mutlu Müşteri</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+            <i class="fas fa-map-marker-alt text-warning display-4 mb-3"></i>
+            <h3 class="fw-bold text-warning counter" data-target="81">0</h3>
+            <p class="text-muted mb-0">İl Hizmet Alanı</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+            <i class="fas fa-certificate text-info display-4 mb-3"></i>
+            <h3 class="fw-bold text-info counter" data-target="15">0</h3>
+            <p class="text-muted mb-0">Teknik Sertifika</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- ========= JS ========= -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ once: true });</script>
-  <script src="...swiper.min.js"></script>
-  <div id="langToast" class="toast position-fixed bottom-0 end-0 m-3" style="z-index:9999;" role="alert" aria-live="polite" aria-atomic="true">
-  <div class="toast-body">
-    <span id="langMsg">Dil değiştirildi.</span>
+  <!-- MÜŞTERİ YORUMLARI -->
+  <section class="py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Müşterilerimiz Ne Diyor?</h2>
+        <p class="text-muted fs-5">Başarılarımızın en büyük kanıtı memnun müşterilerimiz</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="text-warning mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text text-muted">"20 yıldır Brülör Teknik ile çalışıyoruz. Hem teknik uzmanlıkları hem de güvenilirlikleri mükemmel. Kesinlikle tavsiye ederim."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="bg-primary rounded-circle p-2 text-white me-3">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold">Mehmet YILMAZ</h6>
+                  <small class="text-muted">Tekstil Fabrikası Müdürü</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="text-warning mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text text-muted">"Acil servis ihtiyacımızda 2 saat içinde geldiler ve sorunu çözdüler. Profesyonel yaklaşımları ve kaliteli hizmetleri için teşekkürler."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="bg-success rounded-circle p-2 text-white me-3">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold">Ayşe KAYA</h6>
+                  <small class="text-muted">Gıda Sanayi İşletmecisi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="text-warning mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text text-muted">"Enerji verimliliği çalışması sayesinde yakıt maliyetlerimizde %25 azalma sağladık. Hem çevreye hem de bütçemize katkıları büyük."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="bg-warning rounded-circle p-2 text-white me-3">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold">Ali DEMİR</h6>
+                  <small class="text-muted">Kimya Sanayi Müdürü</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERTİFİKALAR & REFERANSLAR -->
+  <section class="py-5 bg-white" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Sertifikalarımız & Referanslarımız</h2>
+        <p class="text-muted fs-5">Kalite ve güvenirliliğimizin resmi belgeleri</p>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6" data-aos="fade-right">
+          <h4 class="fw-bold text-primary mb-4">Sahip Olduğumuz Sertifikalar</h4>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="fas fa-certificate text-primary display-6 mb-2"></i>
+                <small class="fw-bold d-block">ISO 9001</small>
+                <small class="text-muted">Kalite Yönetimi</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="fas fa-shield-alt text-success display-6 mb-2"></i>
+                <small class="fw-bold d-block">ISO 14001</small>
+                <small class="text-muted">Çevre Yönetimi</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="fas fa-hard-hat text-warning display-6 mb-2"></i>
+                <small class="fw-bold d-block">OHSAS 18001</small>
+                <small class="text-muted">İş Sağlığı</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-3 text-center">
+                <i class="fas fa-fire text-danger display-6 mb-2"></i>
+                <small class="fw-bold d-block">CE Belgesi</small>
+                <small class="text-muted">Avrupa Uygunluğu</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" data-aos="fade-left">
+          <h4 class="fw-bold text-primary mb-4">Başlıca Referanslarımız</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Türkiye Petrolleri A.O.</strong> - Rafineri Brülör Sistemleri</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Eczacıbaşı Holding</strong> - Kimya Tesisleri Otomasyon</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Arçelik A.Ş.</strong> - Üretim Tesisleri Brülör Bakımı</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Aksa Enerji</strong> - Doğalgaz Santralı Yakma Sistemleri</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Borusan Holding</strong> - Çelik Üretim Tesisleri</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-3"></i>
+              <span><strong>Ülker Bisküvi</strong> - Gıda Üretim Fırın Sistemleri</span>
+            </li>
+          </ul>
+               </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIKÇA SORULAN SORULAR -->
+  <section class="py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);" data-aos="fade-up" aria-label="Sıkça Sorulan Sorular">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Sıkça Sorulan Sorular</h2>
+        <p class="text-muted fs-5">Merak ettiğiniz konularda detaylı bilgiler</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Brülör bakımı ne sıklıkla yapılmalıdır?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Endüstriyel brülörlerin yıllık periyodik bakımı yasal zorunluluktur. Ancak yoğun kullanımda 6 ayda bir profesyonel kontrol ve temizlik önerilir. Bu sayede hem güvenlik sağlanır hem de enerji verimliliği korunur.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Acil servis hizmetiniz hangi bölgeleri kapsıyor?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Türkiye genelinde 7/24 acil servis hizmeti veriyoruz. İstanbul, Ankara, İzmir başta olmak üzere tüm illerde 24 saat içinde teknik ekibimiz sahada olabilir. Kritik durumlarda daha da hızlı müdahale sağlıyoruz.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Enerji verimliliği çalışmalarında ne kadar tasarruf sağlanabilir?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sistemin mevcut durumuna göre %15-35 arasında yakıt tasarrufu sağlanabilir. Modern brülör teknolojileri, otomasyon sistemleri ve optimizasyon çalışmaları ile hem çevreye katkı sağlar hem de maliyetlerinizi düşürürüz.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Yedek parça temini ne kadar sürede sağlanır?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Stokta bulunan parçalar aynı gün, özel sipariş parçalar ise 2-7 iş günü içinde temin edilir. Tüm markaların orijinal yedek parçalarını tedarik edebilir, alternatif çözümler de sunabiliriz.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODERN SABİT İLETİŞİM & TEKLİF ALANI -->
+  <section class="contact-cta-section border-0 shadow-lg py-3" style="background: linear-gradient(90deg,#f8fafc 70%,#e0e7ef 100%);" data-aos="fade-up" aria-label="İletişim ve Teklif">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <div class="col-12 col-md-8 d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone text-success fs-4"></i>
+            <a href="tel:+905316250694" class="fw-bold text-dark text-decoration-none hover-underline">+90 531 625 06 94</a>
+          </div>
+          <span class="vr mx-2 d-none d-md-inline" style="height: 24px;"></span>
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-envelope text-primary fs-5"></i>
+            <a href="mailto:info@brulorteknik.com" class="fw-bold text-dark text-decoration-none hover-underline">info@brulorteknik.com</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-md-end text-center mt-2 mt-md-0">
+          <a href="contact.html" class="btn btn-gradient px-4 py-2 rounded-3 fw-semibold shadow-sm">
+            <i class="fa-solid fa-paper-plane me-2"></i>Teklif Al
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <div id="footer" role="contentinfo">
+    <div class="container text-center py-4">
+      <div class="mb-2">
+        <a href="https://www.facebook.com/brulorteknik" target="_blank" aria-label="Facebook" class="mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://www.linkedin.com/company/brulorteknik" target="_blank" aria-label="LinkedIn" class="mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://www.instagram.com/brulorteknik" target="_blank" aria-label="Instagram" class="mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://wa.me/905316250694" target="_blank" aria-label="WhatsApp" class="mx-2"><i class="fab fa-whatsapp fa-lg"></i></a>
+      </div>
+      <small>© 2025 Brülör Teknik Hizmetler. Tüm hakları saklıdır.</small>
+    </div>
   </div>
-  </div>
-<main class="fade-page"> ... </main>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Brülör Teknik Hizmetler",
+    "alternateName": "Brülör Teknik",
+    "url": "https://www.brulorteknik.com",
+    "logo": "https://www.brulorteknik.com/images/logo1.webp",
+    "description": "Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı. Monoblok, duoblok brülörler, otomasyon çözümleri ve profesyonel teknik servis hizmetleri.",
+    "foundingDate": "2000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Endüstri Bölgesi",
+      "addressLocality": "İstanbul",
+      "addressRegion": "İstanbul",
+      "postalCode": "34000",
+      "addressCountry": "TR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+90-531-625-06-94",
+      "contactType": "customer service",
+      "areaServed": "TR",
+      "availableLanguage": ["Turkish", "English"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/brulorteknik",
+      "https://www.facebook.com/brulorteknik",
+      "https://www.instagram.com/brulorteknik"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Endüstriyel Brülör Sistemleri",
+          "description": "Monoblok ve duoblok brülör sistemleri satış, kurulum ve bakım hizmetleri"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Otomasyon Çözümleri",
+          "description": "BMS ve endüstriyel otomasyon sistemleri"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Teknik Servis",
+          "description": "7/24 teknik destek ve bakım hizmetleri"
+        }
+      }
+    ]
+  }
+  </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Brülör Teknik",
+    "url": "https://www.brulorteknik.com",
+    "description": "Endüstriyel brülör sistemleri ve otomasyon çözümleri",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Brülör Teknik Hizmetler"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.brulorteknik.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Scripts (Optimized Loading) -->
+  <script src="js/include.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  
+  <script>
+    // Optimized initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      // AOS Animation Library
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+      
+      // Counter Animation for Statistics
+      function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const animateCounter = (counter) => {
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 2000; // 2 seconds
+          const step = target / (duration / 16); // 60 FPS
+          let current = 0;
+          
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, 16);
+        };
+        
+        // Intersection Observer for triggering animation when visible
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+              entry.target.classList.add('animated');
+              animateCounter(entry.target);
+            }
+          });
+        });
+        
+        counters.forEach(counter => observer.observe(counter));
+      }
+      
+      // Initialize counters
+      animateCounters();
+      
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    // Scroll-to-top butonu göster/gizle
+    window.addEventListener('scroll', function() {
+      var btn = document.getElementById('scrollTop');
+      if (!btn) return;
+      if (window.scrollY > 300) { btn.style.display = 'flex'; } else { btn.style.display = 'none'; }
+    });
+  </script>
+  <!-- PWA manifest ve sw.js kontrolü -->
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+  <script>
+    // Açılış loader'ı otomatik gizle
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var loader = document.getElementById('intro-loader');
+        if(loader) loader.classList.add('hide');
+        setTimeout(function(){ if(loader) loader.remove(); }, 700);
+      }, 1200);
+    });
+  </script>
 </body>
 </html>

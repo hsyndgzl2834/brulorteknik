@@ -1,80 +1,724 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Meta ve SEO -->
-  <title data-i18n="about.title">Hakkımızda – NASA Teknik Hizmetler</title>
-  <meta name="description" content="NASA Teknik Hizmetler: Endüstriyel brülör sistemleri için kurulum, bakım ve servis hizmetleri."/>
-  <meta name="keywords" content="brülör, teknik hizmetler, sanayi, kurulum, bakım, servis, otomasyon"/>
-  <meta name="author" content="NASA Teknik Hizmetler"/>
+  <!-- Primary Meta Tags -->
+  <title>Hakkımızda | Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı</title>
+  <meta name="title" content="Hakkımızda | Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı" />
+  <meta name="description" content="20+ yıllık deneyim ile Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, ekibimiz ve kalite politikamız hakkında detaylı bilgi alın."/>
+  <meta name="keywords" content="brülör teknik hizmetler, hakkımızda, kurumsal, endüstriyel brülör uzmanı, deneyim, kalite, mühendislik, Türkiye"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/about.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/about.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/about.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.brulorteknik.com/about.html" />
+  <meta property="og:title" content="Hakkımızda | Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı" />
+  <meta property="og:description" content="20+ yıllık deneyim ile Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, ekibimiz ve kalite politikamız hakkında detaylı bilgi alın." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/about-us.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/about.html" />
+  <meta property="twitter:title" content="Hakkımızda | Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı" />
+  <meta property="twitter:description" content="20+ yıllık deneyim ile Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, ekibimiz ve kalite politikamız hakkında detaylı bilgi alın." />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/about-us.webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="images/about-us.webp" as="image" />
 
-  <!-- CSS Kütüphaneler -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
-
-  <!-- Özel CSS -->
   <link href="css/style.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --dark-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+      --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+    }
+    
+    .hero-section {
+      background: var(--primary-gradient);
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 0,0 1000,0"/></svg>');
+      background-size: cover;
+    }
+    
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .modern-btn {
+      background: var(--secondary-gradient);
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .modern-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .modern-btn:hover::before {
+      left: 100%;
+    }
+    
+    .modern-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .stats-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .stats-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    
+    .contact-cta-section {
+      background: var(--dark-gradient);
+      border-radius: 30px 30px 0 0;
+      margin-top: 80px;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+    
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+    
+    /* Mobile-First About Page Optimizations */
+    
+    /* Base Mobile Styles */
+    .hero-section {
+      padding: 60px 0 40px;
+      min-height: 50vh;
+    }
+    
+    .hero-section .display-4 {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      line-height: 1.2;
+    }
+    
+    .hero-section .lead {
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      line-height: 1.4;
+    }
+    
+    .glass-card {
+      padding: 20px;
+      margin-bottom: 1.5rem;
+      border-radius: 15px;
+    }
+    
+    .section-title {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+    
+    .glass-card h4 {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      margin-bottom: 1rem;
+    }
+    
+    .glass-card p {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      line-height: 1.5;
+    }
+    
+    .stats-section {
+      padding: 3rem 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat-number {
+      font-size: clamp(2rem, 8vw, 4rem);
+      font-weight: 800;
+      color: #667eea;
+      display: block;
+      line-height: 1;
+    }
+    
+    .stat-label {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+    
+    .timeline-item {
+      padding: 15px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+    }
+    
+    .timeline-year {
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      font-weight: 700;
+      color: #667eea;
+    }
+    
+    .timeline-content {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      line-height: 1.4;
+    }
+    
+    /* Mobile Responsive Improvements */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 50px 0 30px;
+        min-height: 40vh;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .glass-card {
+        padding: 15px;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+      }
+      
+      .glass-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .stats-section {
+        padding: 2rem 0;
+      }
+      
+      .stat-item {
+        margin-bottom: 1rem;
+      }
+      
+      .timeline-item {
+        padding: 12px;
+        margin-bottom: 0.8rem;
+      }
+      
+      .row.g-4 {
+        gap: 1rem !important;
+      }
+      
+      .col-lg-6,
+      .col-lg-4 {
+        margin-bottom: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 40px 0 25px;
+      }
+      
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      
+      .glass-card {
+        padding: 12px;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+      }
+      
+      .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+      
+      .glass-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .glass-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+      
+      .stats-section {
+        padding: 1.5rem 0;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .stat-label {
+        font-size: 0.8rem;
+      }
+      
+      .timeline-item {
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .timeline-year {
+        font-size: 1rem;
+      }
+      
+      .timeline-content {
+        font-size: 0.8rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .hero-section {
+        padding: 35px 0 20px;
+      }
+      
+      .container {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      
+      .glass-card {
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .glass-card h4 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      
+      .glass-card p {
+        font-size: 0.8rem;
+      }
+      
+      .stat-number {
+        font-size: 2rem;
+      }
+      
+      .stat-label {
+        font-size: 0.75rem;
+      }
+      
+      .timeline-year {
+        font-size: 0.9rem;
+      }
+      
+      .timeline-content {
+        font-size: 0.75rem;
+      }
+    }
+    
+    /* Touch Device Optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .glass-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-soft);
+      }
+      
+      .glass-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+      }
+    }
+    
+    /* Improve readability on mobile */
+    @media (max-width: 768px) {
+      .text-justify {
+        text-align: left;
+      }
+      
+      .lead {
+        text-align: center;
+      }
+    }
+  </style>
+  <!-- Schema.org mikro veri -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Brülör Teknik Hizmetler",
+  "url": "https://www.brulorteknik.com",
+  "description": "Endüstriyel brülör sistemlerinde kurulum, bakım, otomasyon ve yedek parça hizmeti.",
+  "image": "https://www.brulorteknik.com/images/about-us.webp",
+  "email": "info@brulorteknik.com",
+  "telephone": "+90 531 625 06 94",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "İstanbul",
+    "addressCountry": "Türkiye"
+  }
+}
+ </script>
+  </script><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLV53JFE6K">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-SLV53JFE6K');
+    </script>
+    
 </head>
-<body>
-  <!-- NAVBAR (Dil butonu yok, sadece içerikler çevrilecek) -->
+<body class="page-wrapper">
+  <!-- NAVBAR -->
   <div id="navbar"></div>
 
-  <!-- ABOUT BÖLÜMÜ -->
-  <main class="container py-5">
-    <div class="text-center mb-4 animate__animated animate__fadeInDown">
-      <h1 data-i18n="about.heading">Hakkımızda</h1>
-      <p class="lead animate__animated animate__fadeInUp" data-i18n="about.text">
-        NASA Teknik Hizmetler, endüstriyel brülör sistemleri konusunda uzmanlaşmış bir mühendislik firmasıdır. Türkiye genelinde kurulum, bakım ve servis hizmetleri sunar.
-      </p>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 animate__animated animate__fadeInLeft">
-        <img
-          src="images/about-us.webp"
-          alt="Hakkımızda"
-          class="img-fluid"
-          style="max-width:100%;height:auto;"
-          loading="lazy"
-        />
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="text-center text-white" data-aos="fade-up">
+        <h1 class="page-title" data-i18n="about.heading">Hakkımızda</h1>
+        <p class="page-subtitle" data-i18n="about.text">
+          Brülör Teknik Hizmetler, endüstriyel brülör sistemleri konusunda uzmanlaşmış bir mühendislik firmasıdır. 
+          Türkiye genelinde kurulum, bakım ve servis hizmetleri sunar.
+        </p>
       </div>
-      <div class="col-lg-6 animate__animated animate__fadeInRight">
-        <h2 data-i18n="about.who">Biz Kimiz?</h2>
-        <p data-i18n="about.whoDesc">
-          NASA Teknik Hizmetler, sektörde yılların deneyimine sahip mühendis kadrosuyla yüksek kaliteli çözümler sunar. Müşteri memnuniyetini ve hızlı müdahaleyi ön planda tutuyoruz.
-        </p>
+    </div>
+  </section>
 
-        <h3 data-i18n="about.vision">Vizyonumuz</h3>
-        <p data-i18n="about.visionDesc">
-          Endüstriyel brülör sistemlerinde lider, yenilikçi ve güvenilir bir çözüm ortağı olmak.
+  <!-- ABOUT CONTENT -->
+  <main class="page-content">
+    <div class="container">
+      <div class="content-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4" data-aos="fade-right">
+            <div class="position-relative">
+              <img
+                src="images/about-us.webp"
+                alt="Brülör Teknik Hizmetler Hakkında"
+                class="img-fluid rounded-4 shadow-lg"
+                style="max-width:100%;height:auto;"
+                loading="lazy"
+              />
+            </div>
+          </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="section-title" data-i18n="about.who">Biz Kimiz?</h2>
+        <p class="text-muted mb-4" data-i18n="about.whoDesc">
+          Brülör Teknik Hizmetler, sektörde yılların deneyimine sahip mühendis kadrosuyla yüksek kaliteli çözümler sunar. 
+          Müşteri memnuniyetini ve hızlı müdahaleyi ön planda tutuyoruz.
         </p>
+        
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <div class="feature-icon">
+              <i class="fas fa-eye fa-2x text-white"></i>
+            </div>
+            <h4 class="fw-bold mb-2" data-i18n="about.vision">Vizyonumuz</h4>
+            <p class="text-muted small" data-i18n="about.visionDesc">
+              Endüstriyel brülör sistemlerinde lider, yenilikçi ve güvenilir bir çözüm ortağı olmak.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-icon">
+              <i class="fas fa-bullseye fa-2x text-white"></i>
+            </div>
+            <h4 class="fw-bold mb-2" data-i18n="about.mission">Misyonumuz</h4>
+            <p class="text-muted small" data-i18n="about.missionDesc">
+              En yeni teknolojileri kullanarak verimli, çevre dostu ve sürdürülebilir hizmetler sunmak.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <h3 data-i18n="about.mission">Misyonumuz</h3>
-        <p data-i18n="about.missionDesc">
-          En yeni teknolojileri kullanarak verimli, çevre dostu ve sürdürülebilir hizmetler sunmak.
-        </p>
+    <!-- STATS SECTION -->
+    <div class="row g-4 mb-5" data-aos="fade-up">
+      <div class="col-md-3 col-6">
+        <div class="stats-card">
+          <div class="display-4 fw-bold text-primary mb-2">15+</div>
+          <h6 class="text-muted mb-0">Yıl Deneyim</h6>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-card">
+          <div class="display-4 fw-bold text-success mb-2">500+</div>
+          <h6 class="text-muted mb-0">Tamamlanan Proje</h6>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-card">
+          <div class="display-4 fw-bold text-warning mb-2">24/7</div>
+          <h6 class="text-muted mb-0">Teknik Destek</h6>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-card">
+          <div class="display-4 fw-bold text-info mb-2">100%</div>
+          <h6 class="text-muted mb-0">Müşteri Memnuniyeti</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALUES SECTION -->
+    <div class="row g-4" data-aos="fade-up">
+      <div class="col-lg-4">
+        <div class="glass-card p-4 h-100 text-center">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt fa-2x text-white"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Güvenilirlik</h5>
+          <p class="text-muted mb-0">Yüksek kalite standartları ve güvenilir hizmet anlayışı ile çalışıyoruz.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="glass-card p-4 h-100 text-center">
+          <div class="feature-icon">
+            <i class="fas fa-lightbulb fa-2x text-white"></i>
+          </div>
+          <h5 class="fw-bold mb-3">İnovasyon</h5>
+          <p class="text-muted mb-0">Sürekli gelişim ve yenilikçi çözümlerle sektöre öncülük ediyoruz.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="glass-card p-4 h-100 text-center">
+          <div class="feature-icon">
+            <i class="fas fa-handshake fa-2x text-white"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Güven</h5>
+          <p class="text-muted mb-0">Müşterilerimizle uzun vadeli ortaklıklar kurarak karşılıklı güven oluşturuyoruz.</p>
+        </div>
       </div>
     </div>
   </main>
 
+  <!-- MODERN CONTACT CTA SECTION -->
+  <section class="contact-cta-section position-relative">
+    <div class="container position-relative z-index-2">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8 text-white">
+          <h3 class="display-6 fw-bold mb-3" style="letter-spacing: -0.02em;">
+            Projeniz için hemen teklif alın
+          </h3>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">E-posta</small>
+                  <a href="mailto:info@brulorteknik.com" class="text-white fw-semibold text-decoration-none">
+                    info@brulorteknik.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-phone-alt text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">Telefon</small>
+                  <a href="tel:+905316250694" class="text-white fw-semibold text-decoration-none">
+                    +90 531 625 06 94
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">Lokasyon</small>
+                  <span class="fw-semibold">İstanbul, Türkiye</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center">
+          <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-center justify-content-lg-end">
+            <a href="https://wa.me/905316250694" target="_blank" class="modern-btn text-white text-decoration-none d-inline-flex align-items-center justify-content-center">
+              <i class="fab fa-whatsapp me-2"></i> WhatsApp İletişim
+            </a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">
+              <i class="fas fa-paper-plane me-2"></i> Teklif Formu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-   <div id="footer"></div>
+  <div id="footer"></div>
+  <!-- Modern Scripts -->
   <script src="js/main.js"></script>
   <script src="js/include.js"></script>
-<script src="js/include.js"></script>
-
-
-  <!-- JS: Bootstrap, AOS, ardından language.js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
+    // Initialize AOS with modern settings
+    AOS.init({ 
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic',
+      offset: 100
+    });
+
+    // Modern scroll animations
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallax = document.querySelector('.hero-section');
+      if (parallax) {
+        const speed = scrolled * 0.5;
+        parallax.style.transform = `translateY(${speed}px)`;
+      }
+    });
+
+    // Counter animation for stats
+    const observerOptions = {
+      threshold: 0.7,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counters = entry.target.querySelectorAll('[data-count]');
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              counter.textContent = Math.floor(current);
+            }, 20);
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.stats-card').forEach(card => {
+      observer.observe(card);
+    });
   </script>
-  <!-- DİL DEĞİŞTİRME BETİĞİ -->
   <script src="js/language.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

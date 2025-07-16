@@ -1,3 +1,91 @@
+# Robots.txt for Brülör Teknik Hizmetler - Mobile Optimized
+# https://www.brulorteknik.com/robots.txt
+# Last Updated: 2025-06-28
+
 User-agent: *
 Allow: /
-Sitemap: https://www.nasateknikhizmetler.com/sitemap.xml
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+Allow: /locales/
+Allow: *.css
+Allow: *.js
+Allow: *.webp
+Allow: *.jpg
+Allow: *.png
+Allow: *.ico
+Allow: *.woff2
+Allow: *.woff
+Allow: *.ttf
+Disallow: /admin/
+Disallow: /test/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /temp/
+Disallow: /*.php$
+Disallow: /*?*
+Disallow: /*&
+Disallow: /404.html
+Disallow: /template.html
+Disallow: /*.py$
+Disallow: /*.ps1$
+Disallow: /*-backup.html
+Disallow: /*-test.html
+
+# Specific bot instructions - Mobile First
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Request-rate: 1/10s
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: *.webp
+Allow: *.jpg
+Allow: *.png
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+
+User-agent: TelegramBot
+Allow: /
+
+# SEO and Performance bots
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: BaiduSpider
+Allow: /
+Crawl-delay: 2
+
+# Sitemap location - Updated 2025-06-28
+Sitemap: https://www.brulorteknik.com/sitemap.xml
+
+# Host declaration for SEO
+Host: https://www.brulorteknik.com

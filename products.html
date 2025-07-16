@@ -3,218 +3,666 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="products.pageTitle">Ürünlerimiz | NASA Teknik Hizmetler</title>
-  <meta
-    name="description"
-    content="NASA Teknik Hizmetler ürünler: Monoblok Brülör, Duoblok Brülör, Emniyet Kapama Valfi, Alarm & Gösterge Panelleri ve ProsesStat Regülatör. SEO ve hızlı yükleme optimizasyonlarıyla modern tasarım."
-  />
-  <meta name="keywords" content="Monoblok Brülör, Duoblok Brülör, Endüstriyel Parçalar, Emniyet Valfi, Alarm Paneli, ProsesStat" />
-  <link rel="canonical" href="https://www.nasa-teknik.com/products.html" />
+  <title data-i18n="products.pageTitle">Ürünlerimiz | Brülör Teknik Hizmetler</title>
+  <meta name="description" content="Brülör Teknik Hizmetler'in monoblok ve duoblok brülörler, emniyet kapama valfi, prosesstat ve daha birçok endüstriyel ürününü keşfedin. Modern tasarım, hızlı yükleme ve SEO uyumu!" />
+  <meta name="keywords" content="Brülör, Monoblok Brülör, Duoblok Brülör, Emniyet Kapama Valfi, ProsesStat, Endüstriyel Ürünler" />
+  <link rel="canonical" href="https://www.brulorteknik.com/products.html" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- Bootstrap & FontAwesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 
   <!-- Özel CSS -->
   <link href="css/style.css" rel="stylesheet" />
   <style>
-    .card-img-top { height: 200px; object-fit: cover; }
-    .section-title { margin-top: 40px; margin-bottom: 20px; font-weight: 600; }
-    .hero-bg { background-color: #f8f9fa; }
-    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --success-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+    }
+    
+    .hero-section {
+      background: var(--primary-gradient);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 0,0 1000,0"/></svg>');
+      background-size: cover;
+    }
+    
+    .product-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-gradient);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-soft);
+      background: white;
+    }
+    
+    .product-img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-img {
+      transform: scale(1.05);
+    }
+    
+    .category-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--secondary-gradient);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    .section-divider {
+      height: 2px;
+      background: var(--primary-gradient);
+      border-radius: 1px;
+      margin: 60px auto;
+      width: 100px;
+    }
+    
+    /* Mobile-First Products Page Optimizations */
+    
+    /* Base Mobile Styles */
+    .hero-section {
+      padding: 60px 0 40px;
+      min-height: 50vh;
+    }
+    
+    .hero-section .display-4 {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      line-height: 1.2;
+    }
+    
+    .hero-section .lead {
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      line-height: 1.4;
+    }
+    
+    .section-spacing {
+      padding: 3rem 0;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .card-body {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-title {
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+    
+    .card-text {
+      font-size: clamp(0.85rem, 3vw, 1rem);
+      line-height: 1.5;
+      color: #6b7280;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-primary-custom {
+      background: var(--primary-gradient);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-top: auto;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      color: white;
+    }
+    
+    .section-title {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2d3748;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    
+    /* Mobile Grid Adjustments */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 50px 0 30px;
+        min-height: 40vh;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .section-spacing {
+        padding: 2rem 0;
+      }
+      
+      .product-card {
+        margin-bottom: 1rem;
+        border-radius: 12px;
+      }
+      
+      .product-card img {
+        height: 180px;
+      }
+      
+      .card-body {
+        padding: 12px;
+      }
+      
+      .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+      }
+      
+      .card-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .btn-primary-custom {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        min-height: 38px;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .row.g-4 {
+        gap: 1rem !important;
+      }
+      
+      .col-lg-4,
+      .col-md-6 {
+        margin-bottom: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 40px 0 25px;
+      }
+      
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      
+      .section-spacing {
+        padding: 1.5rem 0;
+      }
+      
+      .product-card {
+        margin-bottom: 0.8rem;
+        border-radius: 10px;
+      }
+      
+      .product-card img {
+        height: 160px;
+      }
+      
+      .card-body {
+        padding: 10px;
+      }
+      
+      .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .card-text {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
+      }
+      
+      .btn-primary-custom {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-height: 36px;
+        border-radius: 20px;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      /* Single column layout on mobile */
+      .row > .col-lg-4,
+      .row > .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .hero-section {
+        padding: 35px 0 20px;
+      }
+      
+      .container {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      
+      .product-card img {
+        height: 140px;
+      }
+      
+      .card-body {
+        padding: 8px;
+      }
+      
+      .card-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+      }
+      
+      .card-text {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .btn-primary-custom {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        min-height: 34px;
+      }
+      
+      .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .section-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+    
+    /* Touch Device Optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .product-card:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+      
+      .product-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+      }
+      
+      .btn-primary-custom:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+      }
+      
+      .btn-primary-custom:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+      }
+    }
+    
+    /* Ensure consistent card heights on larger screens */
+    @media (min-width: 769px) {
+      .row-equal-height {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .row-equal-height > [class*='col-'] {
+        display: flex;
+      }
+      
+      .product-card {
+        width: 100%;
+      }
+    }
   </style>
 </head>
-<body>
-
+<body class="page-wrapper">
   <!-- NAVBAR -->
   <div id="navbar"></div>
 
   <!-- HERO SECTION -->
-  <section class="hero-bg text-center py-5">
+  <section class="hero-section">
     <div class="container">
-      <h1 class="display-6" data-i18n="products.heroTitle">Ürünlerimiz</h1>
-      <p class="text-muted" data-i18n="products.heroSubtitle">Endüstriyel brülörler ve tamamlayıcı parçalar: kalite ve performansın adresi</p>
+      <div class="text-center text-white" data-aos="fade-up">
+        <h1 class="page-title" data-i18n="products.heroTitle">Ürünlerimiz</h1>
+        <p class="page-subtitle" data-i18n="products.heroSubtitle">
+          Endüstriyel brülörler ve tamamlayıcı parçalar: kalite ve performansın adresi
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- MAIN CONTENT -->
-  <main class="container py-5">
-    <!-- Brülör Tipleri -->
-    <div class="mb-5">
-      <h2 class="section-title" data-i18n="products.section1Title">Brülör Tipleri</h2>
-      <div class="row g-4">
+  <main class="page-content">
+    <div class="container">
+      <!-- Brülör Tipleri -->
+      <div class="content-section" data-aos="fade-up">
+        <h2 class="section-title" data-i18n="products.section1Title">Brülör Tipleri</h2>
+        <div class="row g-4 row-equal-height">
         <!-- Monoblok -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product1.webp"
-              class="card-img-top"
-              alt="Monoblok Brülör"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product1.name">Monoblok Brülör</h5>
-              <p class="card-text text-muted" data-i18n="product1.desc">Kompakt ve tüm bileşenler tek gövdede.</p>
-              <a href="monoblok.html" class="stretched-link text-decoration-none" data-i18n="product1.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+        <div class="col-lg-4 col-md-6">
+          <div class="universal-card text-center" data-aos="fade-up">
+            <div class="product-badge">Popüler</div>
+            <img src="images/product1.webp" alt="Monoblok Brülör" class="product-img w-100 mb-3" style="height: 200px; object-fit: cover; border-radius: 10px;">
+            <h5 class="fw-bold mb-2">Monoblok Brülörler</h5>
+            <p class="text-muted mb-3">Kompakt tasarım, yüksek verimlilik</p>
+            <a href="monoblok.html" class="btn-primary-custom">
+              <i class="fas fa-arrow-right me-1"></i> Detaylar
+            </a>
+          </div>
+        </div>
+        
+        <!-- Duoblok -->
+        <div class="col-lg-4 col-md-6">
+          <div class="universal-card text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-badge">Güvenilir</div>
+            <img src="images/product22.webp" alt="Duoblok Brülör" class="product-img w-100 mb-3" style="height: 200px; object-fit: cover; border-radius: 10px;">
+            <h5 class="fw-bold mb-2">Duoblok Brülörler</h5>
+            <p class="text-muted mb-3">İki kademe yakma sistemi</p>
+              <a href="duoblok.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
             </div>
           </div>
         </div>
-        <!-- Duoblok -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product22.webp"
-              class="card-img-top"
-              alt="Duoblok Brülör"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product2.name">Duoblok Brülör</h5>
-              <p class="card-text text-muted" data-i18n="product2.desc">Modüler yapı, yüksek kapasite ve verimli yanma kontrolü.</p>
-              <a href="duoblok.html" class="stretched-link text-decoration-none" data-i18n="product2.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+        
+        <!-- Multiblok -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-badge">Endüstriyel</div>
+            <img src="images/product33.webp" alt="Multiblok Brülör" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Multiblok Brülörler</h5>
+              <p class="text-muted mb-3">Çok kademeli yüksek kapasite</p>
+              <a href="multiblok.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Diğer Parçalar -->
-    <div>
-      <h2 class="section-title" data-i18n="products.section2Title">Diğer Parçalar</h2>
+    <div class="section-divider"></div>
+
+    <!-- Emniyet Sistemleri -->
+    <div class="mb-5" data-aos="fade-up">
+      <h2 class="category-title" data-i18n="products.section2Title">Emniyet Sistemleri</h2>
       <div class="row g-4">
-        <!-- Emniyet Kapama Valfi -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product33.webp"
-              class="card-img-top"
-              alt="Emniyet Kapama Valfi"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product5.name">Emniyet Kapama Valfi</h5>
-              <p class="card-text text-muted" data-i18n="product5.desc">Acil durumda gaz akışını kesen güvenlik valfi.</p>
-              <a href="emniyet-valfi.html" class="stretched-link text-decoration-none" data-i18n="product5.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+        <!-- Emniyet Valfi -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up">
+            <div class="product-badge">Güvenlik</div>
+            <img src="images/product7.webp" alt="Emniyet Kapama Valfi" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Emniyet Kapama Valfi</h5>
+              <p class="text-muted mb-3">Otomatik güvenlik sistemi</p>
+              <a href="emniyet-valfi.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
             </div>
           </div>
         </div>
-        <!-- Filtre Ünitesi -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product7.webp"
-              class="card-img-top"
-              alt="Filtre Ünitesi"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product7.name">Filtre Ünitesi</h5>
-              <p class="card-text text-muted" data-i18n="product7.desc">Brülöre giren havayı partiküllerden arındıran, modüler yapı ve kolay bakım.</p>
-              <a href="filtre.html" class="stretched-link text-decoration-none" data-i18n="product7.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Gaz Basınç Regülatörü -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product8.webp"
-              class="card-img-top"
-              alt="Gaz Basınç Regülatörü"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product8.name">Gaz Basınç Regülatörü</h5>
-              <p class="card-text text-muted" data-i18n="product8.desc">Gaz basıncını istenen seviyede sabitleyen, yüksek hassasiyetli regülatör.</p>
-              <a href="gaz-basinç-regulatoru.html" class="stretched-link text-decoration-none" data-i18n="product8.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Yanma Analizörü -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product9.webp"
-              class="card-img-top"
-              alt="Yanma Analizörü"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product9.name">Yanma Analizörü</h5>
-              <p class="card-text text-muted" data-i18n="product9.desc">O₂/CO oranını ölçerek yanma verimliliğini optimize eden dijital gösterge.</p>
-              <a href="yanma-analizoru.html" class="stretched-link text-decoration-none" data-i18n="product9.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
+        
         <!-- Valf Aktüatörü -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/product88.webp"
-              class="card-img-top"
-              alt="Valf Aktüatörü"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product10.name">Valf Aktüatörü</h5>
-              <p class="card-text text-muted" data-i18n="product10.desc">Elektrik motorlu veya pnömatik tahrikli valf hareket ettirici, uzaktan kumanda özelliği.</p>
-              <a href="valf-aktuatoru.html" class="stretched-link text-decoration-none" data-i18n="product10.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-badge">Kontrol</div>
+            <img src="images/product8.webp" alt="Valf Aktüatörü" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Valf Aktüatörü</h5>
+              <p class="text-muted mb-3">Hassas valf kontrolü</p>
+              <a href="valf-aktuatoru.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
             </div>
           </div>
         </div>
-        <!-- ProsesStat -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 card-hover border-0 rounded-4 shadow-sm">
-            <img
-              src="images/prosesstat.webp"
-              class="card-img-top"
-              alt="ProsesStat Draft Regülatörü"
-              loading="lazy"
-              width="400"
-              height="300"
-            >
-            <div class="card-body">
-              <h5 class="card-title" data-i18n="product11.name">Prosesstat</h5>
-              <p class="card-text text-muted" data-i18n="product11.desc">Baca çekişi ve basınç kontrolü sağlayan yüksek performanslı regülatör cihazı.</p>
-              <a href="prosesstat.html" class="stretched-link text-decoration-none" data-i18n="product11.button">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+        
+        <!-- Prosesstat -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-badge">Ölçüm</div>
+            <img src="images/prosesstat.webp" alt="Prosesstat" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Prosesstat</h5>
+              <p class="text-muted mb-3">Basınç ve sıcaklık kontrolü</p>
+              <a href="prosesstat.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Ek Ürünler -->
+    <div class="mb-5" data-aos="fade-up">
+      <h2 class="category-title" data-i18n="products.section3Title">Ek Ürünler</h2>
+      <div class="row g-4">
+        <!-- Filtre -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up">
+            <div class="product-badge">Temizlik</div>
+            <img src="images/product88.webp" alt="Gaz Filtresi" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Gaz Filtresi</h5>
+              <p class="text-muted mb-3">Yüksek filtrasyon kapasitesi</p>
+              <a href="filtre.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gaz Basınç Regülatörü -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-badge">Regülasyon</div>
+            <img src="images/product9.webp" alt="Gaz Basınç Regülatörü" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Gaz Basınç Regülatörü</h5>
+              <p class="text-muted mb-3">Sabit basınç kontrolü</p>
+              <a href="gaz-basinç-regulatoru.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yanma Analizörü -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-badge">Analiz</div>
+            <img src="images/product9.webp" alt="Yanma Analizörü" class="product-img w-100">
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Yanma Analizörü</h5>
+              <p class="text-muted mb-3">O₂/CO ölçümü ve verimlilik analizi</p>
+              <a href="yanma-analizoru.html" class="btn btn-primary btn-sm rounded-pill">
+                <i class="fas fa-arrow-right me-1"></i> Detaylar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center py-5" data-aos="fade-up">
+      <div class="cta-container">
+        <h3 class="fw-bold mb-3" style="color: #2d3748;">Aradığınız ürünü bulamadınız mı?</h3>
+        <p class="text-muted mb-4">Özel projeleriniz için kişiselleştirilmiş çözümler sunuyoruz.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+            <i class="fas fa-file-signature me-2"></i>Özel Teklif Al
+          </a>
+          <a href="https://wa.me/905316250694" target="_blank" class="btn btn-success btn-lg rounded-pill px-4">
+            <i class="fab fa-whatsapp me-2"></i>WhatsApp'tan Sor
+          </a>
         </div>
       </div>
     </div>
   </main>
 
   <!-- FOOTER -->
-  <!-- FOOTER -->
-   <div id="footer"></div>
+  <div id="footer"></div>
+  
+  <!-- Modern Scripts -->
   <script src="js/main.js"></script>
   <script src="js/include.js"></script>
-
- <script src="js/include.js"></script>
-
-  <!-- JS: Bootstrap, AOS ve Dil Değiştirme -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({ once: true });
+    // Initialize AOS
+    AOS.init({ 
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic',
+      offset: 100
+    });
+
+    // Product card interactions
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
     });
   </script>
-  <script src="js/language.js" defer></script>
+  <script src="js/language.js"></script>
 </body>
 </html>

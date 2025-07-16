@@ -1,13 +1,15 @@
 // Simple HTML include with callback
 async function includeHTML(elementId, filePath, callback) {
+  console.log(`Include başlıyor: ${filePath} -> ${elementId}`);
   try {
     const res = await fetch(filePath);
     if (!res.ok) throw new Error(`Include failed: ${filePath}`);
     const html = await res.text();
     document.getElementById(elementId).innerHTML = html;
+    console.log(`Include başarılı: ${filePath}`);
     if (typeof callback === 'function') callback();
   } catch (e) {
-    console.error(e);
+    console.error(`Include hatası: ${filePath}`, e);
   }
 }
 

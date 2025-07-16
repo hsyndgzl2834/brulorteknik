@@ -23,11 +23,11 @@ $pages = @( 'about.html', 'services.html', 'products.html', 'faq.html', 'contact
 $TemplateHead = @"
 <head>
   <meta charset=\"utf-8\"/>
-  <meta name=\"description\" content=\"NASA Teknik Hizmetler: Endüstriyel brülör sistemleri için kurulum, bakım ve servis hizmetleri.\"/>
-  <meta name=\"keywords\" content=\"brülör, teknik hizmetler, sanayi, kurulum, bakım, servis, otomasyon\"/>
-  <meta name=\"author\" content=\"NASA Teknik Hizmetler\"/>
+  <meta name=\"description\" content=\"Brülör Teknik Hizmetler: Endüstriyel brülör sistemleri için kurulum, bakım ve servis hizmetleri.\"/>
+  <meta name=\"keywords\" content=\"Brülör, Teknik hizmetler, sanayi, kurulum, bakım, servis, otomasyon\"/>
+  <meta name=\"author\" content=\"Brülör, Teknik Hizmetler\"/>
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-  <title data-i18n=\"siteTitle\">NASA Teknik Hizmetler</title>
+  <title data-i18n=\"siteTitle\">Brülör, Teknik Hizmetler</title>
   <!-- CSS Libraries -->
   <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\"/>
   <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\"/>
@@ -40,7 +40,7 @@ $TemplateHead = @"
 $TemplateNav = @"
 <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow\">
   <div class=\"container-fluid\">
-    <a class=\"navbar-brand\" href=\"index.html\"><i class=\"fas fa-fire-alt me-2\"></i>NASA Teknik</a>
+    <a class=\"navbar-brand\" href=\"index.html\"><i class=\"fas fa-fire-alt me-2\"></i>Brülör, Teknik</a>
     <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarContent\" aria-controls=\"navbarContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
       <span class=\"navbar-toggler-icon\"></span>
     </button>
@@ -74,7 +74,7 @@ $TemplateNav = @"
 
 $TemplateFooter = @"
 <footer class=\"bg-dark text-light text-center py-3\">
-  <p data-i18n=\"rights\">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</p>
+  <p data-i18n=\"rights\">© 2025 Brülör, Teknik Hizmetler. Tüm hakları saklıdır.</p>
 </footer>
 "@
 
@@ -129,11 +129,11 @@ $pages = @( 'about.html', 'services.html', 'products.html', 'faq.html', 'contact
 $TemplateHead = @"
 <head>
   <meta charset=\"utf-8\"/>
-  <meta name=\"description\" content=\"NASA Teknik Hizmetler: Endüstriyel brülör sistemleri için kurulum, bakım ve servis hizmetleri.\"/>
-  <meta name=\"keywords\" content=\"brülör, teknik hizmetler, sanayi, kurulum, bakım, servis, otomasyon\"/>
-  <meta name=\"author\" content=\"NASA Teknik Hizmetler\"/>
+  <meta name=\"description\" content=\"Brülör, Teknik Hizmetler: Endüstriyel brülör sistemleri için kurulum, bakım ve servis hizmetleri.\"/>
+  <meta name=\"keywords\" content=\"Brülör, Teknik hizmetler, sanayi, kurulum, bakım, servis, otomasyon\"/>
+  <meta name=\"author\" content=\"Brülör, Teknik Hizmetler\"/>
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-  <title data-i18n=\"siteTitle\">NASA Teknik Hizmetler</title>
+  <title data-i18n=\"siteTitle\">Brülör, Teknik Hizmetler</title>
   <!-- CSS Libraries -->
   <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\"/>
   <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\"/>

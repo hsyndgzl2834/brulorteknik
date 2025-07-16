@@ -1,4 +1,7 @@
-let translations = {};
+// Initialize translations object (only if not already defined)
+if (typeof translations === 'undefined') {
+  var translations = {};
+}
 
 async function fetchTranslations(lang) {
   const res = await fetch(`locales/${lang}.json`);

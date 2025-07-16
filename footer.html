@@ -1,31 +1,620 @@
-<footer class="footer">
-
-
-<footer class="bg-dark text-light text-center py-3 mt-5">
-    <div class="container">
-      <p class="mb-0"><span data-i18n="footer.copy">© 2025 NASA Teknik Hizmetler. Tüm hakları saklıdır.</span></p>
+<footer class="modern-footer position-relative overflow-hidden">
+  <div class="footer-background"></div>
+  <div class="container position-relative z-index-2">
+    <div class="row g-3 g-md-4 py-4 py-md-5">
+      <!-- Company Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-section">
+          <div class="footer-logo mb-4">
+            <img src="images/logo.webp" alt="Brülör Teknik Logo" width="60" height="60" class="rounded-circle shadow-lg mb-3">
+            <h5 class="text-white fw-bold">Brülör Teknik Hizmetler</h5>
+            <p class="text-light opacity-75 small">Endüstriyel brülör sistemlerinde güvenilir çözüm ortağınız</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-section">
+          <h6 class="text-white fw-bold mb-3">Hızlı Bağlantılar</h6>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link" data-i18n="nav.home">Ana Sayfa</a></li>
+            <li><a href="about.html" class="footer-link" data-i18n="nav.about">Hakkımızda</a></li>
+            <li><a href="products.html" class="footer-link" data-i18n="nav.products">Ürünler</a></li>
+            <li><a href="contact.html" class="footer-link" data-i18n="nav.contact">İletişim</a></li>
+            <li><a href="faq.html" class="footer-link" data-i18n="nav.faq">SSS</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Services -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-section">
+          <h6 class="text-white fw-bold mb-3">Hizmetlerimiz</h6>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#" class="footer-link">Brülör Kurulumu</a></li>
+            <li><a href="#" class="footer-link">Periyodik Bakım</a></li>
+            <li><a href="#" class="footer-link">Otomasyon Sistemleri</a></li>
+            <li><a href="#" class="footer-link">Yedek Parça Temini</a></li>
+            <li><a href="#" class="footer-link">Teknik Destek</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-section">
+          <h6 class="text-white fw-bold mb-3">İletişim</h6>
+          <div class="contact-info">
+            <div class="contact-item mb-3">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <small class="text-light opacity-75 d-block">Telefon</small>
+                <a href="tel:+905316250694" class="text-white text-decoration-none fw-semibold">+90 531 625 06 94</a>
+              </div>
+            </div>
+            <div class="contact-item mb-3">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <small class="text-light opacity-75 d-block">E-posta</small>
+                <a href="mailto:info@brulorteknik.com" class="text-white text-decoration-none fw-semibold">info@brulorteknik.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <small class="text-light opacity-75 d-block">Adres</small>
+                <span class="text-white fw-semibold">İstanbul, Türkiye</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
-<!-- Scroll-to-top Butonu -->
-<button id="scrollTop" class="btn bg-white border border-2 border-primary rounded-circle position-fixed shadow"
-  style="bottom:24px;right:24px;display:none;z-index:2000;width:52px;height:52px;">
-  <i class="fas fa-arrow-up text-primary fs-4"></i>
-</button>
-<!-- Hoş Geldiniz Modalı -->
-<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center">
-      <div class="modal-header border-0 pb-0">
-        <h5 class="modal-title w-100" id="welcomeModalLabel">👋 Hoş Geldiniz!</h5>
-      </div>
-      <div class="modal-body pb-4">
-        NASA Teknik Hizmetler web sitesine ilk ziyaretiniz.<br>
-        Her türlü soru için <a href="https://wa.me/905316250694" target="_blank" class="fw-semibold text-success">WhatsApp</a> ile anında iletişim kurabilirsiniz!
-      </div>
-      <div class="modal-footer border-0 justify-content-center pt-0">
-        <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Siteyi Keşfet</button>
+    
+    <!-- Social & Copyright -->
+    <div class="footer-bottom py-4 border-top border-light border-opacity-10">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-light opacity-75" data-i18n="footer.copy">
+            © 2025 Brülör Teknik Hizmetler. Tüm hakları saklıdır.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <div class="social-links d-flex gap-3 justify-content-center justify-content-md-end">
+            <a href="https://wa.me/905316250694" target="_blank" class="social-link whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:info@brulorteknik.com" class="social-link email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</footer>
+
+<!-- Modern Scroll-to-top Button -->
+<button id="scrollTop" class="scroll-top-btn">
+  <i class="fas fa-arrow-up"></i>
+  <div class="scroll-progress"></div>
+</button>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/905316250694" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+  <div class="whatsapp-tooltip">WhatsApp ile iletişim</div>
+</a>
+
+<!-- Bülten abone formu -->
+<div class="row mt-4">
+  <div class="col-12 col-lg-6 offset-lg-6">
+    <form class="newsletter-form d-flex flex-column flex-md-row align-items-center gap-2" action="#" method="post" aria-label="Bülten Aboneliği">
+      <input type="email" name="newsletter" class="form-control" placeholder="E-posta adresiniz" required aria-label="E-posta adresiniz">
+      <button type="submit" class="btn btn-primary px-4" aria-label="Abone Ol">Abone Ol</button>
+    </form>
+  </div>
 </div>
 
+<style>
+/* Modern Footer Styles */
+.modern-footer {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  margin-top: 80px;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.05"><polygon points="0,100 0,0 1000,0"/></svg>');
+  background-size: cover;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #667eea;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+.social-link.whatsapp:hover { background: #25d366; }
+.social-link.linkedin:hover { background: #0077b5; }
+.social-link.facebook:hover { background: #1877f2; }
+.social-link.email:hover { background: #ea4335; }
+
+/* Modern Scroll-to-top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #3498DB 100%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.3rem;
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(44, 62, 80, 0.4);
+  background: linear-gradient(135deg, #16A085 0%, #2ECC71 100%);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  z-index: 1000;
+  transition: var(--transition-all);
+  animation: pulse 2s infinite;
+  box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-float:hover {
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  animation: none;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.9);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 80px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3), 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3), 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Enhanced Mobile Footer Styles */
+@media (max-width: 768px) {
+  .modern-footer {
+    margin-top: 40px;
+  }
+  
+  .modern-footer .row {
+    text-align: center;
+  }
+  
+  .modern-footer .col-lg-4,
+  .modern-footer .col-lg-2,
+  .modern-footer .col-lg-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-logo h5 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-logo p {
+    font-size: 0.85rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
+  
+  .footer-link {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+  }
+  
+  .contact-item {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem !important;
+  }
+  
+  .contact-icon {
+    margin-right: 8px;
+  }
+  
+  .contact-text {
+    font-size: 0.85rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  /* Enhanced Mobile Floating Buttons */
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+  }
+  
+  .whatsapp-float {
+    bottom: 75px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+  }
+  
+  .whatsapp-tooltip {
+    display: none; /* Hide tooltip on mobile for better UX */
+  }
+}
+
+@media (max-width: 576px) {
+  .modern-footer {
+    margin-top: 30px;
+  }
+  
+  .modern-footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .modern-footer .row {
+    padding: 2rem 0;
+  }
+  
+  .footer-section h6 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-logo h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-logo p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .footer-links {
+    gap: 0.3rem 0.8rem;
+  }
+  
+  .footer-link {
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+  
+  .contact-text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .social-links {
+    gap: 0.6rem;
+  }
+  
+  .social-link {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+  
+  .scroll-top-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+  
+  .whatsapp-float {
+    bottom: 72px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-top-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+  
+  .whatsapp-float {
+    bottom: 68px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .modern-footer .row {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo h5 {
+    font-size: 0.95rem;
+  }
+  
+  .footer-logo p {
+    font-size: 0.75rem;
+  }
+  
+  .footer-links {
+    gap: 0.2rem 0.6rem;
+  }
+  
+  .footer-link {
+    font-size: 0.75rem;
+  }
+  
+  .contact-text {
+    font-size: 0.75rem;
+  }
+  
+  .social-link {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  
+  .scroll-top-btn {
+    bottom: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 0.95rem;
+  }
+  
+  .whatsapp-float {
+    bottom: 62px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-top-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px; /* iOS recommended touch target size */
+  }
+  
+  .whatsapp-float {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px; /* iOS recommended touch target size */
+    animation: none; /* Disable animation for better battery life */
+  }
+  
+  .scroll-top-btn:hover,
+  .whatsapp-float:hover {
+    transform: none;
+  }
+  
+  .scroll-top-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+  .whatsapp-float:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Ensure buttons don't interfere with scrolling on mobile */
+@media (max-width: 768px) {
+  .scroll-top-btn,
+  .whatsapp-float {
+    z-index: 999; /* Lower z-index to prevent interference with modals */
+  }
+}
+
+/* Footer bölümlerine ayraç */
+@media (min-width:992px){
+  .footer-section:not(:last-child){
+    border-right:1.5px solid rgba(255,255,255,0.10);
+    margin-right:18px;
+    padding-right:18px;
+  }
+}
+.social-link[aria-label]{transition:transform 0.3s,background 0.3s;}
+.social-link[aria-label]:hover{transform:scale(1.18);}
+.social-link.whatsapp:hover{background:#25d366!important;}
+.social-link.linkedin:hover{background:#0077b5!important;}
+.social-link.facebook:hover{background:#1877f2!important;}
+.social-link.email:hover{background:#ea4335!important;}
+</style>
+
+<script>
+// Yıl otomatik güncellensin
+var yearSpan=document.createElement('span');
+yearSpan.textContent=new Date().getFullYear();
+var copy=document.querySelector('[data-i18n="footer.copy"]');
+if(copy){
+  copy.innerHTML='&copy; <img src="images/logo.webp" alt="Brülör Teknik Logo" width="18" height="18" style="vertical-align:middle;margin-right:4px;">'+yearSpan.textContent+' Brülör Teknik Hizmetler. Tüm hakları saklıdır.';
+}
+// Sosyal linklere aria-label ekle
+var socialLinks=document.querySelectorAll('.social-link');
+socialLinks.forEach(function(link){
+  if(!link.hasAttribute('aria-label')){
+    var label=link.className.match(/whatsapp|linkedin|facebook|email/);
+    if(label) link.setAttribute('aria-label',label[0].charAt(0).toUpperCase()+label[0].slice(1));
+  }
+});
+</script>

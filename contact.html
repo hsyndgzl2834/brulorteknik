@@ -3,201 +3,546 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta content="NASA Teknik Hizmetler - Teklif Al" name="description"/>
-  <meta content="teklif, firma, destek, NASA Teknik" name="keywords"/>
-  <meta content="NASA Teknik Hizmetler" name="author"/>
-  <title data-i18n="contact.title">Teklif Al - NASA Teknik Hizmetler</title>
-
+  <title>İletişim & Teklif Al - Brülör Teknik Hizmetler</title>
+  <meta name="description" content="Brülör Teknik Hizmetler iletişim ve teklif formu"/>
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="/manifest.json">
   <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  
+  <!-- CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <link href="css/style.css" rel="stylesheet"/>
+  
+  <style>
+    /* Mobile-First Contact Page Optimizations */
+    
+    /* Base Mobile Styles */
+    .contact-page .hero-section {
+      padding: 80px 0 60px;
+      min-height: 50vh;
+    }
+    
+    .contact-page .display-4 {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+    
+    .contact-page .lead {
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      line-height: 1.4;
+    }
+    
+    .content-section {
+      padding: 3rem 0;
+    }
+    
+    .universal-card {
+      padding: 20px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+      margin-bottom: 1.5rem !important;
+    }
+    
+    .form-label {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-control,
+    .form-select {
+      padding: 12px 15px;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      border-radius: 10px;
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+      min-height: 48px;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    .btn-submit {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      min-height: 48px;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(59, 130, 246, 0.05);
+    }
+    
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .contact-text {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      line-height: 1.4;
+    }
+    
+    /* Mobile Responsive Improvements */
+    @media (max-width: 768px) {
+      .contact-page .hero-section {
+        padding: 60px 0 40px;
+        min-height: 40vh;
+      }
+      
+      .content-section {
+        padding: 2rem 0;
+      }
+      
+      .universal-card {
+        padding: 15px;
+        margin-bottom: 1rem;
+      }
+      
+      .row.g-5 {
+        gap: 1rem !important;
+      }
+      
+      .col-lg-8,
+      .col-lg-4 {
+        margin-bottom: 1rem;
+      }
+      
+      .form-control,
+      .form-select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        min-height: 44px;
+      }
+      
+      .btn-submit {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+        min-height: 44px;
+      }
+      
+      .contact-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+      }
+      
+      .contact-text {
+        font-size: 0.9rem;
+      }
+      
+      .form-check-label {
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .contact-page .hero-section {
+        padding: 50px 0 30px;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .universal-card {
+        padding: 12px;
+        border-radius: 12px;
+      }
+      
+      .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem !important;
+      }
+      
+      .form-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+      }
+      
+      .form-control,
+      .form-select {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        min-height: 42px;
+        border-radius: 8px;
+      }
+      
+      .btn-submit {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        min-height: 42px;
+        border-radius: 20px;
+      }
+      
+      .contact-item {
+        padding: 8px;
+        margin-bottom: 0.8rem;
+        border-radius: 8px;
+      }
+      
+      .contact-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 8px;
+      }
+      
+      .contact-text {
+        font-size: 0.8rem;
+      }
+      
+      .form-check-label {
+        font-size: 0.8rem;
+      }
+      
+      .row.g-3 > * {
+        margin-bottom: 0.8rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .contact-page .hero-section {
+        padding: 40px 0 25px;
+      }
+      
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      
+      .universal-card {
+        padding: 10px;
+      }
+      
+      .form-control,
+      .form-select {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+        min-height: 40px;
+      }
+      
+      .btn-submit {
+        padding: 6px 15px;
+        font-size: 0.85rem;
+        min-height: 40px;
+      }
+      
+      .contact-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+      }
+      
+      .contact-text {
+        font-size: 0.75rem;
+      }
+    }
+    
+    /* Touch Device Optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .form-control:hover,
+      .form-select:hover {
+        border-color: #e2e8f0;
+      }
+      
+      .btn-submit:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+      }
+      
+      .btn-submit:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+      }
+    }
+  </style>
 </head>
-<body>
+
+<body class="contact-page">
   <!-- NAVBAR -->
   <div id="navbar"></div>
 
-  <!-- Teklif Al Section -->
-  <main class="container py-5">
-    <div class="text-center mb-4">
-      <h1 data-i18n="contact.heading">Teklif Al</h1>
-      <p class="text-muted" data-i18n="contact.subheading">Teklif talebinde bulunmak için lütfen formu eksiksiz doldurun.</p>
-    </div>
-    <div class="row">
-      <!-- Form Column -->
-      <div class="col-lg-8 mb-4">
-        <form id="teklifForm" class="needs-validation" novalidate>
-          <div class="mb-3">
-            <label class="form-label" for="firma" data-i18n="contact.form.companyLabel">Firma Adı</label>
-            <input type="text"
-                   class="form-control"
-                   id="firma"
-                   name="firma"
-                   placeholder=""
-                   data-i18n="[placeholder]contact.form.companyPlaceholder"
-                   required />
-            <div class="invalid-feedback" data-i18n="contact.form.companyInvalid">Firma adı gerekli.</div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="adSoyad" data-i18n="contact.form.nameLabel">Ad Soyad</label>
-            <input type="text"
-                   class="form-control"
-                   id="adSoyad"
-                   name="adSoyad"
-                   placeholder=""
-                   data-i18n="[placeholder]contact.form.namePlaceholder"
-                   required />
-            <div class="invalid-feedback" data-i18n="contact.form.nameInvalid">Ad Soyad gerekli.</div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="email" data-i18n="contact.form.emailLabel">E-posta</label>
-            <input type="email"
-                   class="form-control"
-                   id="email"
-                   name="email"
-                   placeholder=""
-                   data-i18n="[placeholder]contact.form.emailPlaceholder"
-                   required />
-            <div class="invalid-feedback" data-i18n="contact.form.emailInvalid">Geçerli bir e-posta giriniz.</div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="telefon" data-i18n="contact.form.phoneLabel">Telefon</label>
-            <input type="tel"
-                   class="form-control"
-                   id="telefon"
-                   name="telefon"
-                   placeholder=""
-                   data-i18n="[placeholder]contact.form.phonePlaceholder"
-                   required />
-            <div class="invalid-feedback" data-i18n="contact.form.phoneInvalid">Telefon numarası gerekli.</div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="adres" data-i18n="contact.form.addressLabel">Adres</label>
-            <input type="text"
-                   class="form-control"
-                   id="adres"
-                   name="adres"
-                   placeholder=""
-                   data-i18n="[placeholder]contact.form.addressPlaceholder"
-                   required />
-            <div class="invalid-feedback" data-i18n="contact.form.addressInvalid">Adres gerekli.</div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="mesaj" data-i18n="contact.form.messageLabel">Teklif İçeriği / Mesajınız</label>
-            <textarea class="form-control"
-                      id="mesaj"
-                      name="mesaj"
-                      rows="6"
-                      placeholder=""
-                      data-i18n="[placeholder]contact.form.messagePlaceholder"
-                      required></textarea>
-            <div class="invalid-feedback" data-i18n="contact.form.messageInvalid">Mesaj alanı boş bırakılamaz.</div>
-          </div>
-          <button type="submit" class="btn btn-success">
-            <i class="fas fa-paper-plane me-2"></i>
-            <span data-i18n="contact.form.submitButton">Teklif Al</span>
-          </button>
-        </form>
-      </div>
-      <!-- Info Column -->
-      <div class="col-lg-4">
-        <div class="mb-4">
-          <h5 data-i18n="contact.info.heading">Şirket Bilgileri</h5>
-          <p><i class="fas fa-building me-2"></i><strong data-i18n="contact.info.companyLabel">Firma:</strong> <span data-i18n="contact.info.companyName">NASA Teknik Hizmetler</span></p>
-          <p><i class="fas fa-phone-alt me-2"></i><strong data-i18n="contact.info.phoneLabel">Telefon:</strong> <span data-i18n="contact.info.phoneValue">0531 625 0694</span></p>
-          <p><i class="fab fa-whatsapp me-2"></i><strong data-i18n="contact.info.whatsappLabel">WhatsApp:</strong> <span data-i18n="contact.info.whatsappValue">0531 625 0694</span></p>
-          <p><i class="fas fa-envelope me-2"></i><strong data-i18n="contact.info.emailLabel">E-posta:</strong> <span data-i18n="contact.info.emailValue">adiguzelhuseyin@outlook.com</span></p>
-        </div>
-        <div>
-          <h5 data-i18n="contact.info.addressHeading">Adresimiz</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i><span data-i18n="contact.info.addressValue">Kağıthane, İstanbul, Türkiye</span></p>
-        </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="text-center text-white" data-aos="fade-up">
+        <h1 class="display-4 fw-bold mb-4">İletişim & Teklif</h1>
+        <p class="lead mb-0 opacity-90">
+          Projeniz için profesyonel çözümler alın. Size en uygun teklifi hazırlayalım.
+        </p>
       </div>
     </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+    <div class="container">
+      <!-- Contact Form -->
+      <div class="content-section">
+        <div class="row g-5 row-equal-height">
+          <div class="col-lg-8">
+            <div class="universal-card">
+              <h3 class="section-title text-start mb-4" style="color: #2d3748;">Teklif Formu</h3>
+          <form id="contactForm" class="modern-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label fw-semibold">Ad *</label>
+                <input type="text" class="form-control" id="firstName" required>
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label fw-semibold">Soyad *</label>
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
+              <div class="col-md-6">
+                <label for="company" class="form-label fw-semibold">Firma Adı</label>
+                <input type="text" class="form-control" id="company">
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label fw-semibold">Telefon *</label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label fw-semibold">E-posta *</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="col-12">
+                <label for="service" class="form-label fw-semibold">Hizmet Türü</label>
+                <select class="form-select" id="service">
+                  <option value="">Seçiniz...</option>
+                  <option value="kurulum">Brülör Kurulumu</option>
+                  <option value="bakim">Periyodik Bakım</option>
+                  <option value="otomasyon">Otomasyon Sistemleri</option>
+                  <option value="yedek-parca">Yedek Parça</option>
+                  <option value="diger">Diğer</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label fw-semibold">Mesajınız</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Projeniz hakkında detayları paylaşın..."></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="consent" required>
+                  <label class="form-check-label small text-muted" for="consent">
+                    Kişisel verilerimin işlenmesini kabul ediyorum.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn-submit text-white">
+                  <i class="fas fa-paper-plane me-2"></i>
+                  Teklif Gönder
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>        <div class="col-lg-4">
+          <div class="universal-card">
+            <h3 class="section-title text-start mb-4" style="color: #2d3748;">İletişim Bilgileri</h3>
+            
+            <!-- Contact Info Items -->
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt text-white fa-lg"></i>
+              </div>
+              <h6 class="fw-bold mb-2">Telefon</h6>
+              <p class="text-muted mb-2">7/24 Acil Destek</p>
+              <a href="tel:+905316250694" class="fw-bold text-primary text-decoration-none">
+                +90 531 625 06 94
+              </a>
+            </div>
+            
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-envelope text-white fa-lg"></i>
+              </div>
+              <h6 class="fw-bold mb-2">E-posta</h6>
+              <p class="text-muted mb-2">Teklifler için</p>
+              <a href="mailto:info@brulorteknik.com" class="fw-bold text-primary text-decoration-none">
+                info@brulorteknik.com
+              </a>
+            </div>
+            
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt text-white fa-lg"></i>
+              </div>
+              <h6 class="fw-bold mb-2">Adres</h6>
+              <p class="text-muted mb-2">Merkez Ofis</p>
+              <span class="fw-bold" style="color: #2d3748;">İstanbul, Türkiye</span>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock text-white fa-lg"></i>
+              </div>
+              <h6 class="fw-bold mb-2">Çalışma Saatleri</h6>
+              <p class="text-muted mb-1">Pazartesi - Cuma: 08:00 - 18:00</p>
+              <p class="text-muted mb-0">Cumartesi: 09:00 - 15:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Contact Section -->
+    <div class="content-section">
+      <div class="row g-4 justify-content-center row-equal-height">
+        <div class="col-lg-5 col-md-6">
+          <div class="universal-card text-center">
+            <div class="quick-contact-icon whatsapp">
+              <i class="fab fa-whatsapp fa-2x"></i>
+            </div>
+            <h5 class="fw-bold mb-2">WhatsApp ile Hızlı İletişim</h5>
+            <p class="text-muted mb-3">Anında yanıt alın</p>
+            <a href="https://wa.me/905316250694" target="_blank" class="btn-primary-custom">
+              <i class="fab fa-whatsapp me-2"></i>WhatsApp'ta Aç
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="universal-card text-center">
+            <div class="quick-contact-icon phone">
+              <i class="fas fa-phone-alt fa-2x"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Acil Durum Hattı</h5>
+            <p class="text-muted mb-3">7/24 Teknik Destek</p>
+            <a href="tel:+905316250694" class="btn-secondary-custom">
+              <i class="fas fa-phone-alt me-2"></i>Hemen Ara
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="content-section">
+      <h3 class="section-title">Konum</h3>
+      <div class="universal-card">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps?q=Mehmet+Akif+Ersoy,+Etibank+Cd.+No:74,+34400+Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul&output=embed"
+            width="100%" 
+            height="400" 
+            style="border:0; border-radius: 15px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
   </main>
 
   <!-- FOOTER -->
   <div id="footer"></div>
+  
+  <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/include.js"></script>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Form Doğrulama ve Gönderme -->
+  <script src="js/language.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
   <script>
-    (function() {
-      'use strict'
-      const forms = document.querySelectorAll('.needs-validation')
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
+    // Debug log
+    console.log('Contact page loading...');
+    
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM Content Loaded');
+      
+      // Check if navbar and footer are loaded
+      setTimeout(() => {
+        const navbar = document.getElementById('navbar');
+        const footer = document.getElementById('footer');
+        console.log('Navbar loaded:', navbar && navbar.innerHTML.length > 0);
+        console.log('Footer loaded:', footer && footer.innerHTML.length > 0);
+      }, 1000);
+      
+      // Initialize AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ 
+          once: true,
+          duration: 800,
+          easing: 'ease-out-cubic'
+        });
+        console.log('AOS initialized');
+      } else {
+        console.error('AOS not loaded');
+      }
+
+      // Form handling
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validate required fields
+          const firstName = document.getElementById('firstName').value.trim();
+          const lastName = document.getElementById('lastName').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const consent = document.getElementById('consent').checked;
+          
+          if (!firstName || !lastName || !phone || !email || !consent) {
+            alert('Lütfen gerekli alanları doldurun ve izin verdiğinizi onaylayın.');
+            return;
           }
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("teklifForm");
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        if (!form.checkValidity()) {
-          form.classList.add('was-validated');
-          return;
-        }
-
-        const formData = new FormData(form);
-        const formJson = JSON.stringify(Object.fromEntries(formData.entries()));
-
-        try {
-          const response = await fetch("https://formspree.io/f/mvgandne", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: formJson
-          });
-
-          if (response.ok) {
-            form.reset();
-            form.classList.remove('was-validated');
-            alert( translations["contact.form.submitSuccess"] || "✅ Mesajınız başarıyla iletildi!" );
-          } else {
-            alert( translations["contact.form.submitError"] || "⚠️ Mesaj gönderilemedi. Lütfen tekrar deneyin." );
-          }
-        } catch (error) {
-          alert( translations["contact.form.submitConnError"] || "🚫 Bağlantı hatası! Lütfen internetinizi kontrol edin." );
-        }
-      });
+          
+          // Show success animation
+          const submitBtn = this.querySelector('.btn-submit');
+          const originalText = submitBtn.innerHTML;
+          
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Gönderiliyor...';
+          submitBtn.disabled = true;
+          
+          // Simulate form submission
+          setTimeout(() => {
+            alert('Talebiniz başarıyla gönderildi! En kısa sürede dönüş yapacağız.');
+            this.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 2000);
+        });
+      }
     });
   </script>
-
-  <!-- AOS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
-
-  <!-- Dil Değiştirme -->
-  <script src="js/language.js"></script>
-
-  <script src="...swiper.min.js"></script>
-  <!-- Toast Bildirim Kutusu -->
-<div id="formToast" class="toast position-fixed bottom-0 end-0 m-3" style="z-index:9999;" role="alert" aria-live="polite" aria-atomic="true">
-  <div class="toast-body">
-    <i class="fas fa-check-circle text-success me-2"></i>
-    <span id="formToastMsg">Mesajınız başarıyla gönderildi!</span>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

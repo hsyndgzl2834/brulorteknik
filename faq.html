@@ -3,138 +3,594 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta content="NASA Teknik Hizmetler - Sıkça Sorulan Sorular" name="description"/>
-  <meta content="SSS, sıkça sorulan sorular, destek" name="keywords"/>
-  <meta content="NASA Teknik Hizmetler" name="author"/>
-  <title data-i18n="faq.title">Sıkça Sorulan Sorular</title>
+  <title data-i18n="faq.title">Sıkça Sorulan Sorular | Brülör Teknik Hizmetler</title>
+  <meta name="description" content="Brülör Teknik Hizmetler sıkça sorulan sorular: brülör bakımı, servis talebi, fiyat teklifi ve hizmet bölgeleri hakkında en güncel yanıtlar."/>
+  <meta name="keywords" content="SSS, sıkça sorulan sorular, brülör teknik, brülör bakım, teklif, destek"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <link rel="canonical" href="https://www.brulorteknik.com/faq.html" />
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="/manifest.json">
 
-  <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <!-- Custom CSS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sıkça Sorulan Sorular | Brülör Teknik Hizmetler" />
+  <meta property="og:description" content="Brülör Teknik Hizmetler: Brülör bakımı, servis, yedek parça ve fiyat teklifleriyle ilgili en çok merak edilen soruların cevapları burada!" />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/burner-faq.webp" />
+  <meta property="og:url" content="https://www.brulorteknik.com/faq.html" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <link href="css/style.css" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+    }
+    
+    .hero-section {
+      background: var(--primary-gradient);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 0,0 1000,0"/></svg>');
+      background-size: cover;
+    }
+    
+    .faq-container {
+      margin-top: -50px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .faq-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .faq-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .faq-header {
+      padding: 20px 25px;
+      cursor: pointer;
+      background: white;
+      border: none;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .faq-header:hover {
+      background: #f8f9fa;
+    }
+    
+    .faq-header.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0;
+      flex: 1;
+      padding-right: 20px;
+    }
+    
+    .faq-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s ease;
+      margin-right: 15px;
+    }
+    
+    .faq-header.active .faq-icon {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(180deg);
+    }
+    
+    .faq-toggle {
+      transition: transform 0.3s ease;
+      color: #667eea;
+      font-size: 1.2rem;
+    }
+    
+    .faq-header.active .faq-toggle {
+      transform: rotate(180deg);
+      color: white;
+    }
+    
+    .faq-content {
+      padding: 0 25px 25px;
+      background: white;
+      display: none;
+      animation: fadeInUp 0.3s ease;
+    }
+    
+    .faq-content.show {
+      display: block;
+    }
+    
+    .search-box {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(102, 126, 234, 0.2);
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .search-box:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+      background: white;
+    }
+    
+    .category-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    .category-pill {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid rgba(102, 126, 234, 0.2);
+      border-radius: 25px;
+      padding: 8px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .category-pill:hover,
+    .category-pill.active {
+      background: var(--primary-gradient);
+      color: white;
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section { padding: 80px 0 60px; }
+      .faq-container { margin-top: -30px; }
+      .faq-header { padding: 15px 20px; }
+      .faq-content { padding: 0 20px 20px; }
+      .faq-question { font-size: 1rem; }
+    }
+  </style>
+  <!-- Schema.org mikro veri -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Brülör bakım periyodu ne kadar sıklıktadır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brülör performansını korumak için yıllık bakım öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Servis talebimi nasıl oluştururum?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Web sitemizdeki 'İletişim' formunu doldurarak veya 7/24 WhatsApp hattımızdan talebinizi iletebilirsiniz. Hızlı geri dönüş alırsınız."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Acil arıza durumunda ne yapmalıyım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acil durum formunu işaretleyin veya 0531 625 06 94’ü arayın. Saha ekibimiz en kısa sürede müdahale edecektir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hizmet bölgeleriniz nelerdir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Türkiye genelinde hizmet veriyoruz. İstanbul, Ankara, İzmir ve çevresinde hızlı saha desteği sunuyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Fiyat teklifi nasıl alınır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "'Teklif Al' butonuna tıklayıp ihtiyaç bilgilerini paylaştığınızda 24 saat içinde detaylı teklif sunuyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Eğitim ve kullanıcı eğitimi hizmetiniz var mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, brülör kullanımı ve bakımı için sertifikalı eğitim hizmetimiz mevcuttur. Tarih ve içerik detayları için bizimle iletişime geçin."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- NAVBAR -->
- <div id="navbar"></div>
+  <div id="navbar"></div>
 
-  <!-- FAQ Section -->
-  <main class="container py-5">
-    <div class="text-center mb-4">
-      <h1 class="display-6" data-i18n="faq.title">Sıkça Sorulan Sorular</h1>
-      <p class="text-muted" data-i18n="faq.description">Brülör sistemleri ve hizmetlerimizle ilgili sıkça sorulan soruların yanıtları.</p>
+  <!-- HERO SECTION -->
+  <section class="hero-section position-relative">
+    <div class="container position-relative z-index-2">
+      <div class="text-center text-white" data-aos="fade-up">
+        <h1 class="display-4 fw-bold mb-4" data-i18n="faq.title">Sıkça Sorulan Sorular</h1>
+        <p class="lead mb-4 opacity-90" data-i18n="faq.description">
+          Brülör sistemleri ve hizmetlerimizle ilgili merak ettiklerinizi burada bulun
+        </p>
+        
+        <!-- Search Box -->
+        <div class="d-flex justify-content-center mb-4">
+          <input type="text" class="search-box" placeholder="Soru ara..." id="searchFAQ">
+        </div>
+        
+        <!-- Category Pills -->
+        <div class="category-pills">
+          <div class="category-pill active" data-category="all">Tümü</div>
+          <div class="category-pill" data-category="bakim">Bakım</div>
+          <div class="category-pill" data-category="servis">Servis</div>
+          <div class="category-pill" data-category="fiyat">Fiyat</div>
+          <div class="category-pill" data-category="teknik">Teknik</div>
+        </div>
+      </div>
     </div>
-    <div class="accordion shadow-sm" id="faqAccordion">
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <main class="container">
+    <div class="faq-container" data-aos="fade-up">
+      
       <!-- FAQ Item 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <span data-i18n="faq.q1.question">Brülör bakım periyodu ne kadar sıklıktadır?</span>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q1.answer">
-            Brülör performansını korumak için yıllık bakım öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir.
+      <div class="faq-card" data-category="bakim">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h5 class="faq-question" data-i18n="faq.q1.question">
+            Brülör bakım periyodu ne kadar sıklıktadır?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q1.answer">
+            Brülör performansını korumak için <strong>yıllık bakım</strong> öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir. 
+            Düzenli bakım sayesinde enerji verimliliği artar ve arıza riskleri minimuma iner.
+          </p>
+          <div class="mt-3">
+            <span class="badge bg-primary">Bakım</span>
+            <span class="badge bg-secondary">Periyodik</span>
           </div>
         </div>
       </div>
+
       <!-- FAQ Item 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <span data-i18n="faq.q2.question">Servis talebimi nasıl oluştururum?</span>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q2.answer">
-            Web sitemizdeki "İletişim" formunu doldurarak veya 7/24 WhatsApp hattımızdan talebinizi iletebilirsiniz. Hızlı geri dönüş alırsınız.
+      <div class="faq-card" data-category="servis">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h5 class="faq-question" data-i18n="faq.q2.question">
+            Servis talebimi nasıl oluştururum?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p data-i18n="faq.q2.answer">
+            Servis talebi oluşturmak için birkaç seçeneğiniz var:
+          </p>
+          <ul>
+            <li><strong>WhatsApp:</strong> +90 531 625 06 94 (7/24 aktif)</li>
+            <li><strong>Web Formu:</strong> <a href="contact.html">İletişim sayfamız</a>dan</li>
+            <li><strong>E-posta:</strong> info@brulorteknik.com</li>
+          </ul>
+          <p>Talebinizi aldıktan sonra <strong>2 saat içinde</strong> size dönüş yapıyoruz.</p>
+          <div class="mt-3">
+            <span class="badge bg-success">7/24</span>
+            <span class="badge bg-info">Hızlı Dönüş</span>
           </div>
         </div>
       </div>
+
       <!-- FAQ Item 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <span data-i18n="faq.q3.question">Acil arıza durumunda ne yapmalıyım?</span>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q3.answer">
-            Acil durum formunu işaretleyin veya 0531 625 0694’ü arayın. Saha ekibimiz en kısa sürede müdahale edecektir.
+      <div class="faq-card" data-category="servis">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h5 class="faq-question" data-i18n="faq.q3.question">
+            Acil arıza durumunda ne yapmalıyım?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p>Acil durumlarda şu adımları izleyin:</p>
+          <ol>
+            <li><strong>Güvenlik:</strong> Gaz vanasını kapatın</li>
+            <li><strong>İletişim:</strong> Bizi hemen arayın: <a href="tel:+905316250694">0531 625 06 94</a></li>
+            <li><strong>WhatsApp:</strong> Arıza fotoğrafını gönderin</li>
+          </ol>
+          <div class="alert alert-warning mt-3">
+            <i class="fas fa-info-circle me-2"></i>
+            Acil müdahale ekibimiz <strong>2 saat içinde</strong> sahada olur.
+          </div>
+          <div class="mt-3">
+            <span class="badge bg-danger">Acil</span>
+            <span class="badge bg-warning">2 Saat</span>
           </div>
         </div>
       </div>
+
       <!-- FAQ Item 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <span data-i18n="faq.q4.question">Hizmet bölgeleriniz nelerdir?</span>
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q4.answer">
-            Türkiye genelinde hizmet veriyoruz. İstanbul, Ankara, İzmir ve çevresinde hızlı saha desteği sunuyoruz.
+      <div class="faq-card" data-category="fiyat">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h5 class="faq-question" data-i18n="faq.q4.question">
+            Fiyat teklifi nasıl alabilirim?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p>Ücretsiz fiyat teklifi için:</p>
+          <ul>
+            <li><strong>Online Form:</strong> <a href="contact.html">Teklif formu</a>nu doldurun</li>
+            <li><strong>WhatsApp:</strong> Proje detaylarını gönderin</li>
+            <li><strong>Telefon:</strong> Direkt görüşme yapın</li>
+          </ul>
+          <p>Tekliflerimiz <strong>24 saat içinde</strong> hazırlanır ve size ulaştırılır.</p>
+          <div class="mt-3">
+            <a href="contact.html" class="btn btn-primary btn-sm rounded-pill">
+              <i class="fas fa-file-signature me-1"></i> Teklif Al
+            </a>
           </div>
         </div>
       </div>
+
       <!-- FAQ Item 5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            <span data-i18n="faq.q5.question">Fiyat teklifi nasıl alınır?</span>
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q5.answer">
-            "Teklif Al" butonuna tıklayıp ihtiyaç bilgilerini paylaştığınızda 24 saat içinde detaylı teklif sunuyoruz.
+      <div class="faq-card" data-category="teknik">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h5 class="faq-question" data-i18n="faq.q5.question">
+            Hizmet bölgeleriniz nelerdir?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p><strong>Türkiye genelinde</strong> hizmet veriyoruz:</p>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h6><i class="fas fa-star text-warning me-1"></i> Öncelikli Bölgeler:</h6>
+              <ul>
+                <li>İstanbul ve çevresi</li>
+                <li>Ankara ve çevresi</li>
+                <li>İzmir ve çevresi</li>
+                <li>Bursa ve çevresi</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6><i class="fas fa-check text-success me-1"></i> Diğer İller:</h6>
+              <ul>
+                <li>Kocaeli, Sakarya</li>
+                <li>Eskişehir, Konya</li>
+                <li>Manisa, Denizli</li>
+                <li>Ve tüm Türkiye</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-3">
+            <span class="badge bg-success">Türkiye Geneli</span>
+            <span class="badge bg-primary">Hızlı Servis</span>
           </div>
         </div>
       </div>
+
       <!-- FAQ Item 6 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            <span data-i18n="faq.q6.question">Eğitim ve kullanıcı eğitimi hizmetiniz var mı?</span>
-          </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-             data-bs-parent="#faqAccordion">
-          <div class="accordion-body" data-i18n="faq.q6.answer">
-            Evet, brülör kullanımı ve bakımı için sertifikalı eğitim hizmetimiz mevcuttur. Tarih ve içerik detayları için bizimle iletişime geçin.
+      <div class="faq-card" data-category="fiyat">
+        <button class="faq-header">
+          <div class="faq-icon">
+            <i class="fas fa-credit-card"></i>
           </div>
+          <h5 class="faq-question">
+            Ödeme seçenekleriniz nelerdir?
+          </h5>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </button>
+        <div class="faq-content">
+          <p>Esnek ödeme seçenekleri sunuyoruz:</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h6><i class="fas fa-money-bill text-success me-1"></i> Nakit/Havale:</h6>
+              <ul>
+                <li>Peşin ödeme indirimi</li>
+                <li>Banka havalesi</li>
+                <li>Nakit ödeme</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6><i class="fas fa-calendar text-info me-1"></i> Vadeli Ödeme:</h6>
+              <ul>
+                <li>Taksitli ödeme planları</li>
+                <li>Kurumsal anlaşmalar</li>
+                <li>Bakım paketleri</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Contact CTA -->
+    <div class="text-center py-5" data-aos="fade-up">
+      <div class="contact-cta-container">
+        <h3 class="fw-bold mb-3">Sorunuzun cevabını bulamadınız mı?</h3>
+        <p class="text-muted mb-4">Uzman ekibimiz size yardımcı olmaya hazır!</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="https://wa.me/905316250694" target="_blank" class="btn btn-success btn-lg rounded-pill px-4">
+            <i class="fab fa-whatsapp me-2"></i>WhatsApp'ta Sor
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+            <i class="fas fa-envelope me-2"></i>İletişim Formu
+          </a>
         </div>
       </div>
     </div>
   </main>
 
   <!-- FOOTER -->
-   <!-- FOOTER -->
-   <div id="footer"></div>
-  <script src="js/main.js"></script>
+  <div id="footer"></div>
+  
+  <!-- Modern Scripts -->
   <script src="js/include.js"></script>
-
-  <script src="js/include.js"></script>
-
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/language.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
+    // Initialize AOS
+    AOS.init({ 
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic'
+    });
+
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const isActive = this.classList.contains('active');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-header.active').forEach(activeHeader => {
+          if (activeHeader !== this) {
+            activeHeader.classList.remove('active');
+            activeHeader.nextElementSibling.classList.remove('show');
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          this.classList.remove('active');
+          content.classList.remove('show');
+        } else {
+          this.classList.add('active');
+          content.classList.add('show');
+        }
+      });
+    });
+
+    // Search functionality
+    document.getElementById('searchFAQ').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const faqCards = document.querySelectorAll('.faq-card');
+      
+      faqCards.forEach(card => {
+        const question = card.querySelector('.faq-question').textContent.toLowerCase();
+        const answer = card.querySelector('.faq-content').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Category filtering
+    document.querySelectorAll('.category-pill').forEach(pill => {
+      pill.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        
+        // Update active pill
+        document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter FAQ items
+        document.querySelectorAll('.faq-card').forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   </script>
+  <script src="js/language.js"></script>
+
+  <style>
+    .contact-cta-container {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 50px 30px;
+      border-radius: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    }
+  </style>
 </body>
 </html>
