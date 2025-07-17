@@ -9,15 +9,15 @@ Allow: /js/
 Allow: /images/
 Allow: /fonts/
 Allow: /locales/
-Allow: *.css
-Allow: *.js
-Allow: *.webp
-Allow: *.jpg
-Allow: *.png
-Allow: *.ico
-Allow: *.woff2
-Allow: *.woff
-Allow: *.ttf
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.ico$
+Allow: /*.woff2$
+Allow: /*.woff$
+Allow: /*.ttf$
 Disallow: /admin/
 Disallow: /test/
 Disallow: /private/
@@ -33,11 +33,10 @@ Disallow: /*.ps1$
 Disallow: /*-backup.html
 Disallow: /*-test.html
 
-# Specific bot instructions - Mobile First
+# Googlebot genel izin ve mobil öncelik
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
-Request-rate: 1/10s
 
 User-agent: Googlebot-Mobile
 Allow: /
@@ -45,14 +44,16 @@ Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /images/
-Allow: *.webp
-Allow: *.jpg
-Allow: *.png
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
 
+# Bingbot izin ve tarama gecikmesi
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+# Facebook, Twitter, WhatsApp, LinkedIn, Telegram, Yandex, DuckDuckGo, Baidu ve diğerleri için izinler
 User-agent: facebookexternalhit
 Allow: /
 Allow: /images/
@@ -72,7 +73,6 @@ Allow: /images/
 User-agent: TelegramBot
 Allow: /
 
-# SEO and Performance bots
 User-agent: YandexBot
 Allow: /
 Crawl-delay: 2
@@ -84,8 +84,8 @@ User-agent: BaiduSpider
 Allow: /
 Crawl-delay: 2
 
-# Sitemap location - Updated 2025-06-28
+# Sitemap location
 Sitemap: https://www.brulorteknik.com/sitemap.xml
 
-# Host declaration for SEO
-Host: https://www.brulorteknik.com
+# Host declaration (Yandex için)
+Host: www.brulorteknik.com
