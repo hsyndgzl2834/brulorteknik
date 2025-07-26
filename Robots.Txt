@@ -1,91 +1,292 @@
-# Robots.txt for Brülör Teknik Hizmetler - Mobile Optimized
-# https://www.brulorteknik.com/robots.txt
-# Last Updated: 2025-06-28
+# Robots.txt for Brülör Teknik Hizmetler - SEO Optimized 2024
+# https://brulorteknik.com/robots.txt
+# Last Updated: 2024-12-20
+
+# ============================================================================
+# 🤖 GLOBAL ROBOT RULES - BRÜLÖR TEKNİK HİZMETLER
+# ============================================================================
 
 User-agent: *
 Allow: /
+
+# Allow Essential Static Resources
 Allow: /css/
 Allow: /js/
 Allow: /images/
+Allow: /assets/
 Allow: /fonts/
-Allow: /locales/
+Allow: /icons/
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /sw.js
+
+# Allow File Extensions
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.webp$
 Allow: /*.jpg$
+Allow: /*.jpeg$
 Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
 Allow: /*.ico$
 Allow: /*.woff2$
 Allow: /*.woff$
 Allow: /*.ttf$
+Allow: /*.eot$
+
+# Disallow Admin & Private Areas
 Disallow: /admin/
-Disallow: /test/
+Disallow: /wp-admin/
+Disallow: /includes/
 Disallow: /private/
 Disallow: /backup/
 Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /test/
+Disallow: /dev/
+
+# Disallow Dynamic Files & Scripts
 Disallow: /*.php$
-Disallow: /*?*
-Disallow: /*&
-Disallow: /404.html
-Disallow: /template.html
+Disallow: /*.asp$
 Disallow: /*.py$
 Disallow: /*.ps1$
-Disallow: /*-backup.html
-Disallow: /*-test.html
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.bak$
 
-# Googlebot genel izin ve mobil öncelik
+# Disallow URL Parameters
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*utm_*
+Disallow: /*ref=*
+Disallow: /search?
+Disallow: /arama?
+
+# Disallow Test & Template Files
+Disallow: /404.html
+Disallow: /template.html
+Disallow: /*-test.html
+Disallow: /*-backup.html
+Disallow: /*-dev.html
+
+# ============================================================================
+# 🎯 MAJOR SEARCH ENGINES
+# ============================================================================
+
+# Google Bot - Primary SEO Focus
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
+# Google Mobile Bot - Mobile-First Indexing
 User-agent: Googlebot-Mobile
 Allow: /
 Crawl-delay: 1
 
+# Google Image Bot - Visual SEO
 User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/images/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Google News Bot
+User-agent: Googlebot-News
+Allow: /
+Allow: /blog/
+Allow: /haberler/
+
+# Bing Bot - Secondary Search Engine
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bing Mobile
+User-agent: Bingbot-Mobile
+Allow: /
+Crawl-delay: 1
+
+# ============================================================================
+# 🌐 SOCIAL MEDIA CRAWLERS
+# ============================================================================
+
+# Facebook Link Previews
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# Twitter Card Bot
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# WhatsApp Link Previews
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# LinkedIn Professional Network
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# Telegram Instant Messaging
+User-agent: TelegramBot
+Allow: /
+Allow: /images/
+
+# Instagram Meta Bot
+User-agent: Instagrambot
+Allow: /
+Allow: /images/
+
+# Pinterest Visual Discovery
+User-agent: Pinterestbot
+Allow: /
+Allow: /images/
+
+# ============================================================================
+# 🌍 INTERNATIONAL SEARCH ENGINES
+# ============================================================================
+
+# Yandex - Russian Market
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexImages
 Allow: /images/
 Allow: /*.webp$
 Allow: /*.jpg$
 Allow: /*.png$
 
-# Bingbot izin ve tarama gecikmesi
-User-agent: Bingbot
+# DuckDuckGo - Privacy-Focused
+User-agent: DuckDuckBot
 Allow: /
 Crawl-delay: 1
 
-# Facebook, Twitter, WhatsApp, LinkedIn, Telegram, Yandex, DuckDuckGo, Baidu ve diğerleri için izinler
-User-agent: facebookexternalhit
-Allow: /
-Allow: /images/
-
-User-agent: Twitterbot
-Allow: /
-Allow: /images/
-
-User-agent: WhatsApp
-Allow: /
-Allow: /images/
-
-User-agent: LinkedInBot
-Allow: /
-Allow: /images/
-
-User-agent: TelegramBot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-User-agent: DuckDuckBot
-Allow: /
-
+# Baidu - Chinese Market
 User-agent: BaiduSpider
 Allow: /
+Crawl-delay: 3
+
+# Seznam - Czech Republic
+User-agent: SeznamBot
+Allow: /
 Crawl-delay: 2
 
-# Sitemap location
-Sitemap: https://www.brulorteknik.com/sitemap.xml
+# Naver - South Korea
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
 
-# Host declaration (Yandex için)
-Host: www.brulorteknik.com
+# ============================================================================
+# 🚫 BLOCKED AGGRESSIVE CRAWLERS
+# ============================================================================
+
+# SEO Tool Bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+# AI Training Bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Malicious & Spam Bots
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: JobboerseBot
+Disallow: /
+
+User-agent: seoscanners
+Disallow: /
+
+# ============================================================================
+# 🗺️ SITEMAPS
+# ============================================================================
+
+# Main Sitemap
+Sitemap: https://brulorteknik.com/sitemap.xml
+
+# Specialized Sitemaps
+Sitemap: https://brulorteknik.com/sitemap-pages.xml
+Sitemap: https://brulorteknik.com/sitemap-images.xml
+Sitemap: https://brulorteknik.com/sitemap-services.xml
+
+# ============================================================================
+# 🌐 HOST DECLARATION
+# ============================================================================
+
+# Preferred Domain (Yandex)
+Host: brulorteknik.com
+
+# ============================================================================
+# 📋 SITE INFORMATION
+# ============================================================================
+
+# Company: Brülör Teknik Hizmetler
+# Industry: Industrial Burner Services & Automation
+# Location: Kağıthane, İstanbul, Turkey
+# Phone: +90 531 625 06 94
+# Email: info@brulorteknik.com
+# Services: Brülör Kurulumu, Periyodik Bakım, Otomasyon Sistemleri
+# 
+# SEO Strategy:
+# - Mobile-first indexing priority
+# - Social media optimization
+# - International market reach
+# - Security-focused crawling
+# - Performance optimization
+# 
+# Technical Features:
+# - Blocks aggressive SEO crawlers
+# - Prevents AI training data collection
+# - Optimized for Turkish market
+# - Social sharing enhancement
+# - Image SEO optimization
