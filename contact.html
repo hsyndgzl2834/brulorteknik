@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title>İletişim & Teklif Al - Brülör Teknik Hizmetler</title>
-  <meta name="description" content="Brülör Teknik Hizmetler iletişim ve teklif formu"/>
+  
+  <!-- Enhanced Meta Tags - MODERN SEO -->
+  <title>📞 İletişim & Ücretsiz Teklif Al | Brülör Teknik Hizmetler İstanbul</title>
+  <meta name="description" content="📋 Brülör Teknik Hizmetler ile iletişime geçin | ✅ Ücretsiz keşif ve teklif ✅ 7/24 müşteri hizmetleri ✅ Hızlı dönüş ✅ İstanbul geneli hizmet ☎️ +90 531 625 06 94"/>
+  <meta name="keywords" content="brülör teknik iletişim, endüstriyel brülör teklif, istanbul brülör servisi iletişim, brülör montaj teklifi, ücretsiz keşif"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Geographic SEO -->
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="İstanbul" />
+  <meta name="business:contact_data:phone_number" content="+905316250694" />
+  <meta name="business:contact_data:email" content="info@brulorteknik.com" />
+  
   <meta name="theme-color" content="#667eea" />
+  <link rel="canonical" href="https://brulorteknik.com/contact.html" />
   <link rel="manifest" href="/manifest.json">
   <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
   
@@ -471,7 +483,17 @@
   </main>
 
   <!-- FOOTER -->
+
+  <!-- Sticky WhatsApp & Scroll Top Include -->
+  <div id="sticky-wp"></div>
   <div id="footer"></div>
+  <script>
+    fetch('sticky-wp.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('sticky-wp').innerHTML = html;
+      });
+  </script>
   
   <!-- Scripts -->
   <script src="js/main.js"></script>
@@ -521,6 +543,20 @@
           const email = document.getElementById('email').value.trim();
           const consent = document.getElementById('consent').checked;
           
+      // Scroll to top button
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      if(scrollBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+          } else {
+            scrollBtn.classList.remove('show');
+          }
+        });
+        scrollBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
           if (!firstName || !lastName || !phone || !email || !consent) {
             alert('Lütfen gerekli alanları doldurun ve izin verdiğinizi onaylayın.');
             return;

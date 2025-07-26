@@ -1,0 +1,72 @@
+<script>
+function setupNavbar() {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+}
+</script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.webp" alt="Brülör Teknik Logo" class="me-2">
+      <div class="brand-text">
+        <div class="fw-bold text-white">Brülör Teknik</div>
+        <div class="brand-subtitle text-light">Endüstriyel Brülör Uzmanı</div>
+      </div>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home me-1"></i>Ana Sayfa
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="fas fa-info-circle me-1"></i>Hakkımızda
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">
+            <i class="fas fa-cogs me-1"></i>Ürünler
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hizmetler.html">
+            <i class="fas fa-tools me-1"></i>Hizmetler
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="fas fa-envelope me-1"></i>İletişim
+          </a>
+        </li>
+      </ul>
+      
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://wa.me/905327729347?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+           class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp me-1"></i>WhatsApp
+        </a>
+        <a href="contact.html" class="btn btn-quote">
+          <i class="fas fa-calculator me-1"></i>Teklif Al
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

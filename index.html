@@ -1193,9 +1193,6 @@
   <!-- Sticky Navbar için ek CSS -->
   <style>
     #navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.98); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-    #scrollTop { background: #2c3e50; color: #fff; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transition: opacity 0.2s; }
-    #scrollTop:focus { outline: 2px solid #3498db; }
-    #scrollTop:hover { background: #34495e; }
   </style>
   <!-- Açılış Loader'ı (Intro) -->
   <style>
@@ -1896,101 +1893,335 @@
       </div>
     </div>
   </section>
-  <!-- FOOTER -->
-  <div id="footer" role="contentinfo">
-    <div class="container text-center py-4">
-      <div class="mb-2">
-        <a href="https://www.facebook.com/brulorteknik" target="_blank" aria-label="Facebook" class="mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="https://www.linkedin.com/company/brulorteknik" target="_blank" aria-label="LinkedIn" class="mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://www.instagram.com/brulorteknik" target="_blank" aria-label="Instagram" class="mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="https://wa.me/905316250694" target="_blank" aria-label="WhatsApp" class="mx-2"><i class="fab fa-whatsapp fa-lg"></i></a>
+  <!-- Modern Footer ve Floating Butonlar -->
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <footer class="modern-footer glass-footer">
+    <div class="footer-background glass-bg"></div>
+    <div class="container">
+      <div class="row gy-4 align-items-stretch">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-section">
+            <h6 class="footer-logo">🏭 <span>Brülör Teknik</span></h6>
+            <p class="text-light mb-3">
+              Endüstriyel brülör sistemlerinde 20+ yıl tecrübe ile güvenilir ve yenilikçi çözümler.
+            </p>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <span class="text-light">İstanbul, Türkiye</span>
       </div>
-      <small>© 2025 Brülör Teknik Hizmetler. Tüm hakları saklıdır.</small>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <a href="tel:+905327729347" class="footer-link">+90 532 772 93 47</a>
     </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <a href="mailto:info@brulorteknik.com" class="footer-link">info@brulorteknik.com</a>
   </div>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Brülör Teknik Hizmetler",
-    "alternateName": "Brülör Teknik",
-    "url": "https://www.brulorteknik.com",
-    "logo": "https://www.brulorteknik.com/images/logo1.webp",
-    "description": "Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı. Monoblok, duoblok brülörler, otomasyon çözümleri ve profesyonel teknik servis hizmetleri.",
-    "foundingDate": "2000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Endüstri Bölgesi",
-      "addressLocality": "İstanbul",
-      "addressRegion": "İstanbul",
-      "postalCode": "34000",
-      "addressCountry": "TR"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+90-531-625-06-94",
-      "contactType": "customer service",
-      "areaServed": "TR",
-      "availableLanguage": ["Turkish", "English"]
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/brulorteknik",
-      "https://www.facebook.com/brulorteknik",
-      "https://www.instagram.com/brulorteknik"
-    ],
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Endüstriyel Brülör Sistemleri",
-          "description": "Monoblok ve duoblok brülör sistemleri satış, kurulum ve bakım hizmetleri"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Otomasyon Çözümleri",
-          "description": "BMS ve endüstriyel otomasyon sistemleri"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Teknik Servis",
-          "description": "7/24 teknik destek ve bakım hizmetleri"
-        }
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <div class="footer-section">
+            <h6>🔗 Linkler</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="footer-link">Ana Sayfa</a></li>
+              <li><a href="about.html" class="footer-link">Hakkımızda</a></li>
+              <li><a href="products.html" class="footer-link">Ürünler</a></li>
+              <li><a href="hizmetler.html" class="footer-link">Hizmetler</a></li>
+              <li><a href="contact.html" class="footer-link">İletişim</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-section">
+            <h6>🛠️ Hizmetler</h6>
+            <ul class="list-unstyled">
+              <li><a href="hizmet1.html" class="footer-link">Brülör Montajı</a></li>
+              <li><a href="hizmet2.html" class="footer-link">Bakım & Onarım</a></li>
+              <li><a href="hizmet3.html" class="footer-link">Yedek Parça</a></li>
+              <li><a href="hizmet4.html" class="footer-link">Teknik Destek</a></li>
+              <li><a href="hizmet5.html" class="footer-link">Danışmanlık</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="footer-section">
+            <h6>📱 Sosyal</h6>
+            <div class="d-flex gap-3 mt-3">
+              <a href="https://wa.me/905327729347" class="social-link whatsapp" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="mailto:info@brulorteknik.com" class="social-link email" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="#" class="social-link linkedin" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link facebook" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+            <p class="text-light small mt-2">
+              📞 7/24 Servis • 🚀 Hızlı Çözüm • ⭐ Kaliteli Hizmet
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-light my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-light">&copy; 2025 Brülör Teknik. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="floating-action-group">
+    <button class="modern-scroll-top-btn glass-scroll-top" id="scrollTopBtn" aria-label="Yukarı çık">
+      <svg class="scroll-btn-progress" width="56" height="56">
+        <circle class="progress-ring-circle" cx="28" cy="28" r="24" fill="none" stroke="#3b82f6" stroke-width="3"/>
+      </svg>
+      <i class="fas fa-chevron-up scroll-btn-icon"></i>
+    </button>
+    <a href="https://wa.me/905327729347?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum."
+       class="glass-whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    const progressRing = document.querySelector('.progress-ring-circle');
+    if (!scrollBtn || !progressRing) return;
+    const radius = 24;
+    const circumference = radius * 2 * Math.PI;
+    progressRing.style.strokeDasharray = circumference;
+    progressRing.style.strokeDashoffset = circumference;
+    let ticking = false;
+    function updateScrollProgress() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const offset = circumference - (scrolled / 100) * circumference;
+      progressRing.style.strokeDashoffset = offset;
+      if (winScroll > 300) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
       }
-    ]
+    }
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          updateScrollProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    scrollBtn.addEventListener('click', function() {
+      const startPos = window.pageYOffset;
+      const startTime = performance.now();
+      const duration = 800;
+      function animate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = progress < 0.5 ? 4 * progress * progress * progress : 
+                     (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1;
+        window.scrollTo(0, startPos * (1 - ease));
+        if (progress < 1) requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+      const ripple = document.createElement('div');
+      ripple.className = 'scroll-btn-ripple';
+      scrollBtn.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+    updateScrollProgress();
+  });
+  function scrollToTop() {
+    document.getElementById('scrollTopBtn')?.click();
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Brülör Teknik",
-    "url": "https://www.brulorteknik.com",
-    "description": "Endüstriyel brülör sistemleri ve otomasyon çözümleri",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Brülör Teknik Hizmetler"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.brulorteknik.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
+  <style>
+  .glass-footer {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+  }
+  .glass-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(30,58,138,0.95) 0%, rgba(59,130,246,0.85) 100%);
+    opacity: 0.95;
+    z-index: -1;
+  }
+  .footer-logo span {
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(30,58,138,0.15);
+  }
+  .social-link {
+    font-size: 1.5em;
+    color: #e0e7ef;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(30,58,138,0.10);
+  }
+  .social-link:hover {
+    background: var(--primary-gradient, linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%));
+    color: #fff;
+    transform: scale(1.12) rotate(-8deg);
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+  }
+  .floating-action-group {
+    position: fixed;
+    right: 2.2rem;
+    bottom: 2.2rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  .glass-scroll-top {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(30,58,138,0.18);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+    position: relative;
+  }
+  .glass-scroll-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+  .glass-scroll-top:hover {
+    background: var(--primary-gradient, linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%));
+    transform: scale(1.08) rotate(-8deg);
+  }
+  .scroll-btn-icon {
+    color: #fff;
+    font-size: 1.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .scroll-btn-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: rotate(-90deg);
+  }
+  .progress-ring-circle {
+    transition: stroke-dashoffset 0.3s;
+    stroke: #3b82f6;
+    opacity: 0.7;
+  }
+  .scroll-btn-ripple {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    background: rgba(59,130,246,0.18);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: rippleEffect 0.6s linear;
+    z-index: 0;
+  }
+  .glass-whatsapp-float {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    font-size: 2em;
+    box-shadow: 0 8px 32px 0 rgba(30,58,138,0.18);
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .glass-whatsapp-float:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    transform: scale(1.08) rotate(-8deg);
+    color: #fff;
+  }
+  @keyframes rippleEffect {
+    0% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(2.2); }
+  }
+  @media (max-width: 767px) {
+    .glass-footer {
+      border-radius: 1.2rem 1.2rem 0 0;
+      padding-bottom: 1.5rem;
+    }
+    .footer-section {
+      text-align: center;
+    }
+    .floating-action-group {
+      right: 1rem;
+      bottom: 1rem;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-end;
+    }
+    .glass-scroll-top, .glass-whatsapp-float {
+      width: 48px;
+      height: 48px;
+    }
+    .scroll-btn-icon {
+      font-size: 1.2em;
+    }
+    .scroll-btn-progress {
+      width: 48px;
+      height: 48px;
+    }
+    .glass-whatsapp-float {
+      font-size: 1.5em;
     }
   }
-  </script>
-
+  </style>
   <!-- Scripts (Optimized Loading) -->
   <script src="js/include.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -2087,5 +2318,6 @@
       }, 1200);
     });
   </script>
+  <div id="footer"></div>
 </body>
 </html>

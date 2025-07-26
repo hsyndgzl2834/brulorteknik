@@ -662,7 +662,35 @@
   </section>
 
   <!-- FOOTER -->
+
+  <!-- Sticky WhatsApp & Scroll Top Include -->
+  <div id="sticky-wp"></div>
   <div id="footer"></div>
+  <script>
+    fetch('sticky-wp.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('sticky-wp').innerHTML = html;
+      });
+  </script>
+  <!-- Scroll to top button (sticky-wp.html için) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      if(scrollBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+          } else {
+            scrollBtn.classList.remove('show');
+          }
+        });
+        scrollBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
   <!-- Modern Scripts -->
   <script src="js/main.js"></script>
   <script src="js/include.js"></script>

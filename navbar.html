@@ -1,450 +1,153 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" style="background: rgba(45, 55, 72, 0.95); backdrop-filter: blur(10px);">
-  <div class="container-fluid px-4">
-    <!-- LOGO -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <div class="logo-container me-3">
-        <img src="images/logo.webp" alt="Brülör Teknik Logo" width="50" height="50" 
-             class="rounded-circle border border-3" 
-             style="border-color: #667eea !important; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);" />
+<script>
+function setupNavbar() {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced scroll effect with glassmorphism
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar-custom');
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Auto-detect active page and highlight nav item
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        link.classList.add('active');
+        link.closest('.nav-item').classList.add('active');
+      }
+    });
+
+    // Enhanced mobile menu animation
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+      navbarToggler.addEventListener('click', function() {
+        // Add animation class
+        navbarCollapse.classList.toggle('show-animate');
+        navbarToggler.classList.toggle('active');
+      });
+    }
+
+    // Close mobile menu when clicking on nav link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth < 992) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            hide: true
+          });
+          navbarToggler.classList.remove('active');
+          navbarCollapse.classList.remove('show-animate');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+}
+
+// Initialize navbar
+setupNavbar();
+</script>
+
+<!-- Modern Professional Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+  <div class="container">
+    <!-- Enhanced Brand with Animation -->
+    <a class="navbar-brand modern-brand d-flex align-items-center" href="index.html">
+      <div class="brand-logo-container">
+        <img src="images/logo.webp" alt="Brülör Teknik Logo" class="brand-logo">
+        <div class="logo-glow"></div>
       </div>
       <div class="brand-text">
-        <span class="fw-bold fs-4" data-i18n="brand" style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-          Brülör Teknik
-        </span>
-        <div class="brand-subtitle text-light opacity-75" style="font-size: 0.7rem; margin-top: -2px;">
-          Endüstriyel Çözümler
-        </div>
+        <div class="brand-title">Brülör Teknik</div>
+        <div class="brand-subtitle">Endüstriyel Brülör Uzmanı</div>
       </div>
     </a>
     
-    <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç" 
-      style="background: rgba(255,255,255,0.1); border-radius: 10px;">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Modern Hamburger Button -->
+    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler-line line-1"></span>
+      <span class="toggler-line line-2"></span>
+      <span class="toggler-line line-3"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-lg-1">
+    <!-- Enhanced Navigation Menu -->
+    <div class="collapse navbar-collapse modern-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link fw-semibold px-3 py-2 rounded-pill position-relative" href="index.html" data-i18n="nav.home">
-            <i class="fas fa-home me-2"></i>
-            <span>Ana Sayfa</span>
+          <a class="nav-link modern-nav-link" href="index.html" data-text="Ana Sayfa">
+            <i class="fas fa-home nav-icon"></i>
+            <span class="nav-text">Ana Sayfa</span>
             <div class="nav-indicator"></div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold px-3 py-2 rounded-pill position-relative" href="about.html" data-i18n="nav.about">
-            <i class="fas fa-users me-2"></i>
-            <span>Hakkımızda</span>
+          <a class="nav-link modern-nav-link" href="about.html" data-text="Hakkımızda">
+            <i class="fas fa-info-circle nav-icon"></i>
+            <span class="nav-text">Hakkımızda</span>
             <div class="nav-indicator"></div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold px-3 py-2 rounded-pill position-relative" href="products.html" data-i18n="nav.products">
-            <i class="fas fa-cogs me-2"></i>
-            <span>Ürünler</span>
+          <a class="nav-link modern-nav-link" href="products.html" data-text="Ürünler">
+            <i class="fas fa-cogs nav-icon"></i>
+            <span class="nav-text">Ürünler</span>
             <div class="nav-indicator"></div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold px-3 py-2 rounded-pill position-relative" href="contact.html" data-i18n="nav.contact">
-            <i class="fas fa-envelope me-2"></i>
-            <span>İletişim</span>
+          <a class="nav-link modern-nav-link" href="hizmetler.html" data-text="Hizmetler">
+            <i class="fas fa-tools nav-icon"></i>
+            <span class="nav-text">Hizmetler</span>
             <div class="nav-indicator"></div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold px-3 py-2 rounded-pill position-relative" href="faq.html" data-i18n="nav.faq">
-            <i class="fas fa-question-circle me-2"></i>
-            <span>SSS</span>
+          <a class="nav-link modern-nav-link" href="contact.html" data-text="İletişim">
+            <i class="fas fa-envelope nav-icon"></i>
+            <span class="nav-text">İletişim</span>
             <div class="nav-indicator"></div>
           </a>
         </li>
       </ul>
       
-      <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
-        <div class="language-switcher d-flex gap-1">
-          <button id="btn-tr" class="btn btn-outline-light btn-sm rounded-pill px-3 lang-btn" 
-                  style="font-size: 0.8rem; font-weight: 600; transition: all 0.3s ease;">TR</button>
-          <button id="btn-en" class="btn btn-outline-light btn-sm rounded-pill px-3 lang-btn" 
-                  style="font-size: 0.8rem; font-weight: 600; transition: all 0.3s ease;">EN</button>
-        </div>
-        
-        <a href="https://wa.me/905316250694" target="_blank" 
-           class="btn btn-sm rounded-pill px-3 d-flex align-items-center shadow-sm modern-whatsapp-btn" 
-           style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); border: none; color: white; font-weight: 600; transition: all 0.3s ease;">
-          <i class="fab fa-whatsapp me-1"></i> 
-          <span data-i18n="btn.whatsapp" class="d-none d-sm-inline">WhatsApp</span>
+      <!-- Modern Action Buttons -->
+      <div class="navbar-actions d-flex align-items-center gap-2">
+        <a href="https://wa.me/905327729347?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+           class="btn modern-btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp btn-icon"></i>
+          <span class="btn-text">WhatsApp</span>
+          <div class="btn-ripple"></div>
         </a>
-        
-        <a href="contact.html" 
-           class="btn btn-sm rounded-pill px-3 d-flex align-items-center shadow-sm modern-quote-btn" 
-           style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border: none; color: white; font-weight: 600; transition: all 0.3s ease;">
-          <i class="fas fa-file-signature me-1"></i> 
-          <span data-i18n="btn.quote" class="d-none d-sm-inline">Teklif</span>
+        <a href="contact.html" class="btn modern-btn btn-quote">
+          <i class="fas fa-calculator btn-icon"></i>
+          <span class="btn-text">Teklif Al</span>
+          <div class="btn-ripple"></div>
         </a>
       </div>
     </div>
   </div>
+  
+  <!-- Navbar Background Effect -->
+  <div class="navbar-bg-effect"></div>
 </nav>
-
-<!-- Navbar Overlay for Mobile Menu -->
-<div id="navbar-overlay" style="display:none;position:fixed;inset:0;z-index:1040;background:rgba(30,42,60,0.65);backdrop-filter:blur(6px);transition:opacity 0.4s;opacity:0;"></div>
-
-<script>
-// Sticky navbar arka plan koyulaşsın
-window.addEventListener('scroll',function(){
-  var nav=document.querySelector('.navbar');
-  if(window.scrollY>30){nav.style.background='rgba(30,42,60,0.98)';nav.style.boxShadow='0 2px 16px rgba(30,42,60,0.10)';}
-  else{nav.style.background='rgba(45,55,72,0.95)';nav.style.boxShadow='none';}
-});
-// Mobil menü açıldığında overlay ve scroll kilidi
-var toggler=document.querySelector('.navbar-toggler');
-var overlay=document.getElementById('navbar-overlay');
-var navCollapse=document.getElementById('navbarNav');
-if(toggler&&overlay&&navCollapse){
-  toggler.addEventListener('click',function(){
-    var isOpen=navCollapse.classList.contains('show');
-    if(!isOpen){
-      overlay.style.display='block';
-      setTimeout(()=>overlay.style.opacity='1',10);
-      document.body.style.overflow='hidden';
-    }else{
-      overlay.style.opacity='0';
-      setTimeout(()=>overlay.style.display='none',400);
-      document.body.style.overflow='';
-    }
-  });
-  overlay.addEventListener('click',function(){
-    toggler.click();
-  });
-  // Menüde linke tıklanınca menü kapansın
-  navCollapse.querySelectorAll('.nav-link').forEach(function(link){
-    link.addEventListener('click',function(){
-      if(window.innerWidth<992&&navCollapse.classList.contains('show')) toggler.click();
-    });
-  });
-}
-// Menü animasyonları
-if(navCollapse){
-  navCollapse.addEventListener('show.bs.collapse',function(){
-    navCollapse.style.animation='fadeInDown 0.4s';
-  });
-  navCollapse.addEventListener('hide.bs.collapse',function(){
-    navCollapse.style.animation='fadeOutUp 0.3s';
-  });
-}
-</script>
-
-<style>
-/* Modern Navbar Styles */
-.navbar-brand:hover .logo-container img {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5) !important;
-}
-
-.nav-link {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover .nav-indicator,
-.nav-link.active .nav-indicator {
-  width: 80%;
-}
-
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  transform: scale(1.05);
-}
-
-.modern-whatsapp-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
-}
-
-.modern-quote-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4) !important;
-}
-
-/* Enhanced Mobile Navbar Styles */
-@media (max-width: 991px) {
-  .navbar {
-    padding: 0.8rem 0;
-  }
-  
-  .container-fluid {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  
-  .navbar-brand {
-    font-size: 1rem;
-  }
-  
-  .brand-text .fw-bold {
-    font-size: 1.1rem !important;
-  }
-  
-  .brand-subtitle {
-    font-size: 0.65rem !important;
-  }
-  
-  .navbar-toggler {
-    padding: 6px 10px;
-    margin-right: 0;
-    font-size: 1rem;
-  }
-  
-  .navbar-collapse {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-  }
-  
-  .navbar-nav {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .nav-link {
-    padding: 12px 20px !important;
-    margin: 2px 0;
-    font-size: 1rem;
-    border-radius: 10px !important;
-  }
-  
-  .nav-link:hover,
-  .nav-link:focus {
-    background: rgba(255,255,255,0.1);
-  }
-  
-  .d-flex.align-items-center.gap-2 {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem !important;
-  }
-  
-  .language-switcher {
-    margin-bottom: 0.5rem;
-  }
-  
-  .modern-whatsapp-btn,
-  .modern-quote-btn {
-    min-width: 100px;
-    padding: 8px 16px !important;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.6rem 0;
-  }
-  
-  .container-fluid {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  
-  .navbar-brand img {
-    width: 45px !important;
-    height: 45px !important;
-  }
-  
-  .brand-text .fw-bold {
-    font-size: 1rem !important;
-  }
-  
-  .brand-subtitle {
-    font-size: 0.6rem !important;
-  }
-  
-  .nav-link {
-    padding: 10px 15px !important;
-    font-size: 0.95rem;
-  }
-  
-  .nav-link i {
-    font-size: 0.9rem;
-  }
-  
-  .lang-btn {
-    font-size: 0.75rem !important;
-    padding: 6px 12px !important;
-  }
-  
-  .modern-whatsapp-btn,
-  .modern-quote-btn {
-    padding: 6px 12px !important;
-    font-size: 0.85rem;
-    min-width: 90px;
-  }
-  
-  .modern-whatsapp-btn i,
-  .modern-quote-btn i {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar {
-    padding: 0.5rem 0;
-  }
-  
-  .container-fluid {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
-  
-  .navbar-brand {
-    font-size: 0.9rem;
-  }
-  
-  .navbar-brand img {
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
-  .brand-text .fw-bold {
-    font-size: 0.95rem !important;
-  }
-  
-  .brand-subtitle {
-    font-size: 0.55rem !important;
-  }
-  
-  .navbar-toggler {
-    padding: 4px 8px;
-    font-size: 0.9rem;
-  }
-  
-  .nav-link {
-    padding: 8px 12px !important;
-    font-size: 0.9rem;
-    margin: 1px 0;
-  }
-  
-  .nav-link span {
-    font-size: 0.9rem;
-  }
-  
-  .lang-btn {
-    font-size: 0.7rem !important;
-    padding: 4px 10px !important;
-  }
-  
-  .modern-whatsapp-btn,
-  .modern-quote-btn {
-    padding: 5px 10px !important;
-    font-size: 0.8rem;
-    min-width: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-brand {
-    margin-right: 0.5rem;
-  }
-  
-  .brand-text .fw-bold {
-    font-size: 0.9rem !important;
-  }
-  
-  .brand-subtitle {
-    display: none; /* Hide subtitle on very small screens */
-  }
-  
-  .nav-link i {
-    display: none; /* Hide icons to save space */
-  }
-  
-  .nav-link span {
-    font-size: 0.85rem;
-  }
-  
-  .d-none.d-sm-inline {
-    display: none !important; /* Hide button text */
-  }
-  
-  .modern-whatsapp-btn,
-  .modern-quote-btn {
-    min-width: 40px;
-    padding: 5px 8px !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .container-fluid {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-  
-  .navbar-brand img {
-    width: 35px !important;
-    height: 35px !important;
-  }
-  
-  .brand-text .fw-bold {
-    font-size: 0.85rem !important;
-  }
-  
-  .nav-link {
-    padding: 6px 10px !important;
-    font-size: 0.8rem;
-  }
-  
-  .lang-btn {
-    padding: 3px 8px !important;
-    font-size: 0.65rem !important;
-  }
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .nav-link:hover {
-    background: none;
-  }
-  
-  .nav-link:active {
-    background: rgba(255,255,255,0.2);
-    transform: scale(0.98);
-    transition: all 0.1s ease;
-  }
-  
-  .navbar-brand:hover .logo-container img {
-    transform: none;
-  }
-  
-  .navbar-brand:active .logo-container img {
-    transform: scale(0.95);
-  }
-}
-
-@keyframes fadeInDown{0%{opacity:0;transform:translateY(-30px);}100%{opacity:1;transform:translateY(0);}}
-@keyframes fadeOutUp{0%{opacity:1;transform:translateY(0);}100%{opacity:0;transform:translateY(-30px);}}
-#navbar-overlay{display:none;}
-#navbar-overlay[style*="display: block"]{display:block;}
-@media (max-width:991px){
-  .navbar-toggler{font-size:1.3rem;padding:12px 18px;}
-  .lang-btn{font-size:1.1rem !important;padding:10px 18px !important;}
-}
-</style>

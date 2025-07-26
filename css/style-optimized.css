@@ -62,18 +62,6 @@ body {
   padding: 0;
 }
 
-/* Mobile First: Prevent horizontal scroll */
-html {
-  overflow-x: hidden;
-}
-
-/* Mobile First: Ensure containers don't overflow */
-.container,
-.container-fluid {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* Mobile First Typography */
 h1 { 
   font-size: 1.75rem; 
@@ -149,7 +137,7 @@ p {
 
 .page-content {
   flex: 1;
-  padding-top: 70px; /* Reduced navbar compensation for compact design */
+  padding-top: 80px; /* Navbar compensation */
 }
 
 /* Hero Section - Mobile First */
@@ -372,713 +360,219 @@ p {
 }
 
 /* ==================================
-   MODERN NAVBAR - MOBILE FIRST
+   NAVBAR - MOBILE FIRST
    ================================== */
 
-/* Modern Navbar Base - Mobile First - OPTIMIZED */
+/* Navbar Styles - Mobile First */
 .navbar-custom {
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 152, 219, 0.95) 100%);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.6rem 0; /* Reduced from 0.75rem for more compact mobile navbar */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  position: fixed;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  padding: 0.75rem 0; /* Mobile: smaller padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1030;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Scrolled State - Enhanced Glassmorphism - OPTIMIZED */
-.navbar-custom.scrolled {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.98) 0%, rgba(59, 130, 246, 0.98) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 0.4rem 0; /* Reduced from 0.5rem for compact scrolled state */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* Navbar Background Effect */
-.navbar-bg-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.03"><polygon points="0,100 0,0 1000,0"/></svg>');
-  background-size: cover;
-  pointer-events: none;
-}
-
-/* Modern Container */
-.navbar-custom .container {
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  z-index: 2;
-}
-
-/* ==================================
-   MODERN BRAND - ENHANCED
-   ================================== */
-
-/* Enhanced Brand Container */
-.modern-brand {
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 3;
-}
-
-.modern-brand:hover {
-  transform: translateY(-1px);
-  text-decoration: none;
-}
-
-/* Logo Container with Glow Effect */
-.brand-logo-container {
-  position: relative;
-  margin-right: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.brand-logo {
-  max-height: 35px;
+/* Mobile First: Logo */
+.navbar-brand img {
+  max-height: 35px; /* Mobile: smaller logo */
   width: auto;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease;
 }
 
-.logo-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 45px;
-  height: 45px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+.navbar-brand img:hover {
+  transform: scale(1.05);
 }
 
-.modern-brand:hover .logo-glow {
-  opacity: 1;
-}
-
-.modern-brand:hover .brand-logo {
-  transform: scale(1.05) rotate(2deg);
-}
-
-/* Enhanced Brand Text */
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.brand-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.2;
-  margin: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  letter-spacing: 0.5px;
+/* Mobile First: Brand Text */
+.brand-text .fw-bold {
+  font-size: 0.9rem; /* Mobile: smaller brand text */
 }
 
 .brand-subtitle {
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1;
-  margin: 0;
+  font-size: 0.65rem; /* Mobile: smaller subtitle */
+  opacity: 0.9;
+}
+
+/* Mobile First: Navigation Links */
+.navbar-nav .nav-link {
+  color: white !important;
   font-weight: 500;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  letter-spacing: 0.3px;
-}
-
-/* ==================================
-   MODERN HAMBURGER BUTTON
-   ================================== */
-
-/* Enhanced Hamburger Button */
-.modern-toggler {
-  border: none;
-  padding: 8px 10px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  width: 45px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-
-.modern-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
-  outline: none;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.modern-toggler:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
-/* Animated Hamburger Lines */
-.toggler-line {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #ffffff;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
-}
-
-/* Active State Animation */
-.modern-toggler.active .line-1 {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.modern-toggler.active .line-2 {
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.modern-toggler.active .line-3 {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-/* ==================================
-   MODERN NAVIGATION LINKS
-   ================================== */
-
-/* Modern Navigation List */
-.navbar-nav {
-  gap: 0.25rem;
-}
-
-/* Enhanced Nav Links */
-.modern-nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-weight: 600;
-  padding: 10px 16px !important;
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  overflow: hidden;
-  background: transparent;
-  backdrop-filter: blur(5px);
-  font-size: 0.9rem;
-  text-align: center;
-  justify-content: center;
-  margin: 2px 0;
-}
-
-/* Nav Icon Styling */
-.nav-icon {
-  font-size: 1rem;
+  margin: 3px 0; /* Mobile: vertical stacking */
+  padding: 10px 15px !important; /* Mobile: larger touch targets */
+  border-radius: 15px;
   transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-.nav-text {
   position: relative;
-  z-index: 2;
+  text-align: center; /* Mobile: center aligned */
+  font-size: 0.9rem; /* Mobile: smaller font */
 }
 
-/* Nav Indicator Line */
-.nav-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
-  transform: translateX(-50%);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px;
-}
-
-/* Hover Effects */
-.modern-nav-link:hover {
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.modern-nav-link:hover .nav-indicator {
-  width: 80%;
-}
-
-.modern-nav-link:hover .nav-icon {
-  transform: scale(1.1) rotate(5deg);
-  color: #3b82f6;
-}
-
-/* Active State */
-.modern-nav-link.active {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff !important;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.modern-nav-link.active .nav-indicator {
-  width: 100%;
-  background: linear-gradient(90deg, #06b6d4, #3b82f6);
-}
-
-.modern-nav-link.active .nav-icon {
-  color: #06b6d4;
-  transform: scale(1.05);
-}
-
-/* ==================================
-   MODERN ACTION BUTTONS
-   ================================== */
-
-/* Enhanced Button Container */
-.navbar-actions {
-  gap: 0.5rem;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 10px;
-  margin-top: 1rem;
-}
-
-/* Modern Button Base */
-.modern-btn {
-  position: relative;
-  overflow: hidden;
+/* Mobile First: Buttons */
+.btn-quote {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
   border: none;
+  color: white;
+  padding: 10px 20px; /* Mobile: larger touch targets */
   border-radius: 25px;
-  padding: 12px 20px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
+  transition: all 0.3s ease;
+  margin: 8px auto; /* Mobile: center and spacing */
+  display: flex; /* Mobile: full width buttons */
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 0.9rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto 8px auto;
-  cursor: pointer;
-}
-
-/* Button Icons */
-.btn-icon {
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.btn-text {
-  position: relative;
-  z-index: 2;
-  font-weight: 600;
-}
-
-/* Button Ripple Effect */
-.btn-ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s ease, height 0.4s ease;
-  z-index: 1;
-}
-
-/* WhatsApp Button */
-.btn-whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-}
-
-.btn-whatsapp:hover {
-  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-}
-
-.btn-whatsapp:hover .btn-ripple {
-  width: 120px;
-  height: 120px;
-}
-
-.btn-whatsapp:hover .btn-icon {
-  transform: scale(1.2) rotate(10deg);
-}
-
-/* Quote Button */
-.btn-quote {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  font-size: 0.9rem; /* Mobile: smaller font */
+  width: 90%; /* Mobile: almost full width */
+  max-width: 200px;
 }
 
 .btn-quote:hover {
-  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
 }
 
-.btn-quote:hover .btn-ripple {
-  width: 120px;
-  height: 120px;
+.btn-whatsapp {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Mobile: larger touch targets */
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 8px auto; /* Mobile: center and spacing */
+  display: flex; /* Mobile: full width buttons */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem; /* Mobile: smaller font */
+  width: 90%; /* Mobile: almost full width */
+  max-width: 200px;
 }
 
-.btn-quote:hover .btn-icon {
-  transform: scale(1.2) rotate(-10deg);
+.btn-whatsapp:hover {
+  background: linear-gradient(45deg, #128c7e, #075e54);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  color: white;
 }
 
-/* ==================================
-   MOBILE COLLAPSE ANIMATION
-   ================================== */
-
-/* Enhanced Collapse Container */
-.modern-collapse {
-  margin-top: 20px;
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 152, 219, 0.95) 100%);
-  backdrop-filter: blur(20px);
-  border-radius: 0 0 20px 20px;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+/* Mobile: Collapse styles */
+.navbar-collapse {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-/* Collapse Animation */
-.modern-collapse.show-animate {
-  animation: slideDownFade 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.navbar-nav {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@keyframes slideDownFade {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.d-flex.align-items-center.gap-2 {
+  flex-direction: column; /* Mobile: stack buttons vertically */
+  gap: 0.5rem !important;
+  width: 100%;
 }
 
-/* ==================================
-   TABLET RESPONSIVE (768px+)
-   ================================== */
-
+/* Tablet: 768px and up */
 @media (min-width: 768px) {
-  /* Navbar Enhancements - OPTIMIZED */
   .navbar-custom {
-    padding: 0.7rem 0; /* Reduced from 0.875rem for better proportion */
+    padding: 0.875rem 0; /* Tablet: medium padding */
   }
   
-  .navbar-custom.scrolled {
-    padding: 0.5rem 0; /* Compact scrolled state */
+  .navbar-brand img {
+    max-height: 45px; /* Tablet: medium logo */
   }
   
-  .navbar-custom .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  /* Brand Scaling - Proportional */
-  .brand-logo {
-    max-height: 38px; /* Optimized for tablet */
-  }
-  
-  .brand-title {
-    font-size: 1.05rem; /* Slightly reduced */
+  .brand-text .fw-bold {
+    font-size: 1rem; /* Tablet: medium brand text */
   }
   
   .brand-subtitle {
-    font-size: 0.68rem; /* Slightly reduced */
+    font-size: 0.7rem; /* Tablet: medium subtitle */
   }
   
-  /* Navigation Links - Compact Horizontal Layout */
-  .modern-nav-link {
-    font-size: 0.9rem; /* Reduced for better proportion */
-    padding: 7px 14px !important; /* Reduced padding */
-    margin: 0 3px; /* Reduced margin */
+  .navbar-nav .nav-link {
+    font-size: 0.95rem; /* Tablet: medium font */
+    padding: 8px 16px !important;
+    margin: 2px 5px;
+  }
+  
+  .btn-quote,
+  .btn-whatsapp {
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    width: auto; /* Tablet: auto width */
+    margin: 5px 5px;
+  }
+  
+  .d-flex.align-items-center.gap-2 {
+    flex-direction: row; /* Tablet: horizontal buttons */
+    gap: 0.75rem !important;
     width: auto;
-    text-align: left;
-    justify-content: flex-start;
-  }
-  
-  .navbar-nav .nav-item {
-    width: auto;
-  }
-  
-  /* Collapse Reset */
-  .modern-collapse {
-    margin-top: 0;
-    padding: 0;
-    border-top: none;
-    max-height: none;
-    overflow: visible;
-    background: none;
-    border-radius: 0;
-    margin-left: 0;
-    margin-right: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-  
-  /* Button Layout - Compact Horizontal */
-  .navbar-actions {
-    flex-direction: row;
-    width: auto;
-    padding: 0;
-    margin-top: 0;
-    gap: 0.5rem; /* Reduced gap */
-  }
-  
-  .modern-btn {
-    font-size: 0.85rem; /* Reduced for better proportion */
-    padding: 7px 15px; /* Reduced padding */
-    width: auto;
-    margin: 0;
-    max-width: none;
-  }
-  
-  /* Hide hamburger button */
-  .modern-toggler {
-    display: none;
   }
 }
 
-/* ==================================
-   DESKTOP RESPONSIVE (992px+)
-   ================================== */
-
+/* Desktop: 992px and up */
 @media (min-width: 992px) {
-  /* Optimized Desktop Navbar - Compact & Proportional */
   .navbar-custom {
-    padding: 0.75rem 0; /* Reduced from 1rem for better proportion */
+    padding: 1rem 0; /* Desktop: full padding */
   }
   
-  .navbar-custom.scrolled {
-    padding: 0.5rem 0; /* Reduced for compact scrolled state */
+  .navbar-brand img {
+    max-height: 50px; /* Desktop: full logo */
   }
   
-  /* Proportional Desktop Brand */
-  .brand-logo {
-    max-height: 40px; /* Reduced from 50px for better proportion */
-  }
-  
-  .logo-glow {
-    width: 45px; /* Reduced from 55px */
-    height: 45px;
-  }
-  
-  .brand-title {
-    font-size: 1.1rem; /* Reduced from 1.3rem for better balance */
-    letter-spacing: 0.5px; /* Reduced letter spacing */
+  .brand-text .fw-bold {
+    font-size: 1.2rem; /* Desktop: full brand text */
   }
   
   .brand-subtitle {
-    font-size: 0.7rem; /* Slightly reduced */
+    font-size: 0.75rem; /* Desktop: full subtitle */
   }
   
-  /* Compact Desktop Navigation */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Desktop: full font */
+    margin: 0 8px;
+    padding: 8px 16px !important;
+  }
+  
+  .btn-quote,
+  .btn-whatsapp {
+    font-size: 1rem;
+    padding: 8px 20px;
+    margin: 0 10px;
+  }
+  
   .navbar-nav {
-    gap: 0.25rem; /* Reduced gap between nav items */
+    margin-bottom: 0;
   }
   
-  .modern-nav-link {
-    font-size: 0.9rem; /* Reduced from 1rem for better proportion */
-    padding: 8px 14px !important; /* Reduced padding for compact look */
-    margin: 0 4px; /* Reduced margin */
-    border-radius: 12px; /* Slightly smaller border radius */
+  .navbar-collapse {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
   }
   
-  .modern-nav-link:hover {
-    transform: translateY(-2px); /* Reduced hover effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Lighter shadow */
-  }
-  
-  /* Compact Button Styles */
-  .modern-btn {
-    font-size: 0.85rem; /* Reduced for better proportion */
-    padding: 8px 18px; /* Reduced padding */
-    border-radius: 20px; /* Smaller border radius */
-  }
-  
-  .modern-btn:hover {
-    transform: translateY(-2px); /* Reduced hover effect */
-  }
-  
-  /* Refined Active States */
-  .modern-nav-link.active {
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3); /* Refined shadow */
-    background: rgba(255, 255, 255, 0.2); /* Slightly transparent */
-  }
-  
-  /* Desktop Hover Effects - Subtle */
-  .navbar-nav .nav-item:hover .modern-nav-link .nav-indicator {
-    width: 90%; /* Reduced from 100% for subtlety */
-    background: linear-gradient(90deg, #06b6d4, #3b82f6); /* Simplified gradient */
-  }
-  
-  /* Button Container - Compact */
-  .navbar-actions {
-    gap: 0.5rem; /* Reduced gap between buttons */
+  .d-flex.align-items-center.gap-2 {
+    gap: 1rem !important;
   }
 }
 
-/* ==================================
-   LARGE DESKTOP (1200px+) - OPTIMIZED
-   ================================== */
-
-@media (min-width: 1200px) {
-  /* Refined Large Desktop Navbar */
-  .navbar-custom {
-    padding: 0.875rem 0; /* Reduced from 1.25rem for better proportion */
-  }
-  
-  .navbar-custom.scrolled {
-    padding: 0.625rem 0; /* Reduced for compact scrolled state */
-  }
-  
-  /* Proportional Large Brand */
-  .brand-logo {
-    max-height: 45px; /* Reduced from 55px for better balance */
-  }
-  
-  .brand-title {
-    font-size: 1.2rem; /* Reduced from 1.4rem for better proportion */
-  }
-  
-  .brand-subtitle {
-    font-size: 0.75rem;
-  }
-  
-  /* Balanced Navigation */
-  .navbar-nav {
-    gap: 0.5rem; /* Moderate gap */
-  }
-  
-  .modern-nav-link {
-    padding: 9px 16px !important; /* Balanced padding */
-    margin: 0 5px; /* Moderate margin */
-    font-size: 0.95rem; /* Balanced font size */
-  }
-  
-  /* Refined Button Styles */
-  .modern-btn {
-    padding: 9px 20px; /* Balanced padding */
-    font-size: 0.9rem; /* Balanced font size */
-  }
-  
-  /* Navbar Actions Spacing */
-  .navbar-actions {
-    gap: 0.6rem; /* Moderate gap between buttons */
-  }
-}
-
-/* ==================================
-   ACCESSIBILITY & PERFORMANCE
-   ================================== */
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .navbar-custom {
-    background: #000000;
-    border-bottom: 2px solid #ffffff;
-  }
-  
-  .modern-nav-link {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-  }
-  
-  .modern-btn {
-    border: 2px solid #ffffff;
-  }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  .navbar-custom,
-  .modern-nav-link,
-  .modern-btn,
-  .brand-logo,
-  .toggler-line {
-    transition: none;
-    animation: none;
-  }
-  
-  .modern-nav-link:hover,
-  .modern-btn:hover {
-    transform: none;
-  }
-}
-
-/* Focus Visible Support */
-.modern-nav-link:focus-visible,
-.modern-btn:focus-visible {
-  outline: 3px solid rgba(59, 130, 246, 0.6);
-  outline-offset: 2px;
-}
-
-/* ==================================
-   SCROLL ENHANCEMENTS
-   ================================== */
-
-/* Enhanced Scroll Effect */
-.navbar-custom {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Navbar Scrolled Effect */
 .navbar-custom.scrolled {
-  transform: translateY(0);
-}
-
-/* Scroll Shadow Enhancement */
-.navbar-custom.scrolled::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
-  pointer-events: none;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 0.5rem 0;
 }
 
 /* ==================================
@@ -1303,176 +797,51 @@ hr.border-light {
 }
 
 /* ==================================
-   MODERN FLOATING ACTION BUTTONS
+   FLOATING ACTION BUTTONS
    ================================== */
 
-/* Modern Scroll to Top Button - Enhanced */
-.modern-scroll-top-btn {
+/* Floating Action Buttons - Mobile First & Modern */
+.scroll-top-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  bottom: 20px; /* Mobile: good position */
+  right: 20px; /* Mobile: accessible */
+  width: 50px; /* Mobile: perfect touch target */
+  height: 50px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100px) scale(0.8);
-  
-  /* Modern enhancements */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: none;
+  /* Modern touch optimization */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  
-  /* Accessibility */
-  outline: none;
-  user-select: none;
-}
-
-/* Visible state with smooth entrance */
-.modern-scroll-top-btn.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-}
-
-/* Button Icon */
-.scroll-btn-icon {
-  position: relative;
-  z-index: 3;
-  color: white;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  transform: translateY(0);
-}
-
-/* Progress Ring Container */
-.scroll-btn-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-  z-index: 2;
-}
-
-/* Progress Ring Circle */
-.progress-ring-circle {
-  transition: stroke-dashoffset 0.3s ease;
-  stroke-linecap: round;
-  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
-}
-
-/* Modern Tooltip */
-.scroll-btn-tooltip {
-  position: absolute;
-  right: 75px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  pointer-events: none;
+  /* Modern glassmorphism effect */
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Tooltip arrow */
-.scroll-btn-tooltip::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border: 5px solid transparent;
-  border-left-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Click Ripple Effect */
-.scroll-btn-ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: rippleEffect 0.6s ease-out forwards;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes rippleEffect {
-  0% {
-    width: 10px;
-    height: 10px;
-    opacity: 0.8;
-  }
-  100% {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-  }
-}
-
-/* Hover Effects */
-.modern-scroll-top-btn:hover {
+.scroll-top-btn:hover,
+.scroll-top-btn:focus {
   transform: translateY(-4px) scale(1.1);
   box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  outline: none;
 }
 
-.modern-scroll-top-btn:hover .scroll-btn-icon {
-  transform: translateY(-2px);
-  color: #ffffff;
-  font-size: 1.4rem;
-}
-
-.modern-scroll-top-btn:hover .scroll-btn-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateX(-5px);
-}
-
-/* Focus state for accessibility */
-.modern-scroll-top-btn:focus {
-  outline: 3px solid rgba(102, 126, 234, 0.5);
-  outline-offset: 3px;
-}
-
-/* Active state */
-.modern-scroll-top-btn:active {
+.scroll-top-btn:active {
   transform: translateY(-2px) scale(1.05);
 }
 
-/* Floating Action Buttons - WhatsApp (Updated for consistency) */
 .whatsapp-float {
   position: fixed;
-  bottom: 95px; /* Stack above scroll button */
-  right: 20px;
-  width: 55px;
+  bottom: 85px; /* Mobile: stack nicely above scroll btn */
+  right: 20px; /* Mobile: aligned with scroll btn */
+  width: 55px; /* Mobile: slightly larger for WhatsApp */
   height: 55px;
   background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   border-radius: 50%;
@@ -1485,10 +854,13 @@ hr.border-light {
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Modern touch optimization */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  /* Modern glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Subtle animation */
   animation: whatsappPulse 3s infinite;
 }
 
@@ -1499,14 +871,14 @@ hr.border-light {
   background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
   color: white;
   text-decoration: none;
-  animation: none;
+  animation: none; /* Stop animation on hover */
 }
 
 .whatsapp-float:active {
   transform: translateY(-2px) scale(1.05);
 }
 
-/* WhatsApp Pulse Animation */
+/* WhatsApp subtle pulse animation */
 @keyframes whatsappPulse {
   0%, 100% {
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -1530,9 +902,10 @@ hr.border-light {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  /* Modern glassmorphism */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  display: none;
+  display: none; /* Mobile: hide by default */
 }
 
 .whatsapp-float:hover .whatsapp-tooltip {
@@ -1540,34 +913,18 @@ hr.border-light {
   transform: translateY(-50%) translateX(-5px);
 }
 
-/* ==================================
-   RESPONSIVE FLOATING BUTTONS
-   ================================== */
-
 /* Tablet: 768px and up */
 @media (min-width: 768px) {
-  .modern-scroll-top-btn {
+  .scroll-top-btn {
     bottom: 25px;
     right: 25px;
-    width: 65px;
-    height: 65px;
-  }
-  
-  .scroll-btn-icon {
-    font-size: 1.4rem;
-  }
-  
-  .modern-scroll-top-btn:hover .scroll-btn-icon {
-    font-size: 1.5rem;
-  }
-  
-  .scroll-btn-tooltip {
-    display: block; /* Show tooltip on tablet+ */
-    right: 80px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
   }
   
   .whatsapp-float {
-    bottom: 105px;
+    bottom: 95px;
     right: 25px;
     width: 60px;
     height: 60px;
@@ -1575,36 +932,23 @@ hr.border-light {
   }
   
   .whatsapp-tooltip {
-    display: block;
+    display: block; /* Tablet: show tooltip */
     right: 70px;
   }
 }
 
 /* Desktop: 992px and up */
 @media (min-width: 992px) {
-  .modern-scroll-top-btn {
+  .scroll-top-btn {
     bottom: 30px;
     right: 30px;
-    width: 70px;
-    height: 70px;
-  }
-  
-  .scroll-btn-icon {
-    font-size: 1.5rem;
-  }
-  
-  .modern-scroll-top-btn:hover .scroll-btn-icon {
-    font-size: 1.6rem;
-  }
-  
-  .scroll-btn-tooltip {
-    right: 85px;
-    padding: 10px 15px;
-    font-size: 0.85rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
   }
   
   .whatsapp-float {
-    bottom: 115px;
+    bottom: 105px;
     right: 30px;
     width: 65px;
     height: 65px;

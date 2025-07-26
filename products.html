@@ -635,8 +635,17 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- Sticky WhatsApp & Scroll Top Include -->
+  <div id="sticky-wp"></div>
   <div id="footer"></div>
+  <script>
+    fetch('sticky-wp.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('sticky-wp').innerHTML = html;
+      });
+  </script>
   
   <!-- Modern Scripts -->
   <script src="js/main.js"></script>
