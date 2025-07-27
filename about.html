@@ -67,13 +67,14 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       overflow-x: hidden;
+      overflow-y: auto;
     }
     
     .hero-section {
       background: var(--primary-gradient);
       padding: 80px 0 60px;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     
     .hero-section::before {
@@ -110,7 +111,7 @@
       letter-spacing: 0.5px;
       transition: all 0.3s ease;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     
     .modern-btn::before {
@@ -154,7 +155,7 @@
       margin-top: 80px;
       padding: 60px 0;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     
     .contact-cta-section::before {
@@ -444,6 +445,16 @@
       .lead {
         text-align: center;
       }
+    }
+    
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+    }
+    .container, .container-fluid, .row, .content-section, .card, .universal-card {
+      overflow: visible !important;
+      box-sizing: border-box;
     }
   </style>
   <!-- Schema.org mikro veri -->
