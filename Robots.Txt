@@ -1,6 +1,6 @@
-# Robots.txt for Brülör Teknik Hizmetler - SEO Optimized 2024
+# Robots.txt for Brülör Teknik Hizmetler - SEO Optimized 2025
 # https://brulorteknik.com/robots.txt
-# Last Updated: 2024-12-20
+# Last Updated: 2025-07-28
 
 # ============================================================================
 # 🤖 GLOBAL ROBOT RULES - BRÜLÖR TEKNİK HİZMETLER
@@ -66,10 +66,12 @@ Disallow: /arama?
 
 # Disallow Test & Template Files
 Disallow: /404.html
-Disallow: /template.html
 Disallow: /*-test.html
 Disallow: /*-backup.html
 Disallow: /*-dev.html
+Disallow: /*-modern.html
+Disallow: /footer-clean.html
+Disallow: /navbar-clean.html
 
 # ============================================================================
 # 🎯 MAJOR SEARCH ENGINES
@@ -254,11 +256,6 @@ Disallow: /
 # Main Sitemap
 Sitemap: https://brulorteknik.com/sitemap.xml
 
-# Specialized Sitemaps
-Sitemap: https://brulorteknik.com/sitemap-pages.xml
-Sitemap: https://brulorteknik.com/sitemap-images.xml
-Sitemap: https://brulorteknik.com/sitemap-services.xml
-
 # ============================================================================
 # 🌐 HOST DECLARATION
 # ============================================================================
@@ -290,3 +287,4 @@ Host: brulorteknik.com
 # - Optimized for Turkish market
 # - Social sharing enhancement
 # - Image SEO optimization
+# - Updated for 2025 standards
