@@ -279,19 +279,31 @@
       .container { max-width: 1170px; }
     }
     
-    /* SCROLLBAR FIX */
+    /* SCROLLBAR HIDDEN - MOBILE FIRST */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 0px;
+      background: transparent;
     }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+    
+    /* Firefox için scrollbar gizleme */
+    html {
+      scrollbar-width: none;
     }
-    ::-webkit-scrollbar-thumb {
-      background: #c1c1c1;
-      border-radius: 4px;
+    
+    /* Alternative styling for when scrollbars are needed */
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #a8a8a8;
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+      border-radius: 3px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,0.3);
     }
   </style>
   <!-- Harici CSS dosyalarını render-blocking olmadan yükle -->
