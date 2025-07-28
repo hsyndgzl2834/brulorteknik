@@ -3,13 +3,20 @@
   "short_name": "Brülör Teknik",
   "description": "İstanbul'da endüstriyel brülör servisi, bakım ve arıza giderme hizmetleri",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#667eea",
-  "background_color": "#ffffff",
-  "lang": "tr",
-  "scope": "/",
+  "theme_color": "#2C3E50",
+  "background_color": "#F8F9FA",
+  "lang": "tr-TR",
+  "dir": "ltr",
   "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "images/logo.webp",
       "sizes": "192x192",
@@ -28,20 +35,30 @@
       "src": "images/hero1-1600.webp",
       "sizes": "1600x900",
       "type": "image/webp",
-      "form_factor": "wide"
+      "form_factor": "wide",
+      "label": "Brülör Teknik Ana Sayfa"
     }
   ],
   "categories": ["business", "utilities", "productivity"],
   "shortcuts": [
     {
-      "name": "Acil Servis",
-      "url": "tel:+905316250694",
-      "description": "7/24 Acil Brülör Servisi"
+      "name": "İletişim",
+      "url": "/contact.html",
+      "description": "İletişim sayfası"
     },
     {
-      "name": "WhatsApp",
-      "url": "https://wa.me/905316250694",
-      "description": "WhatsApp ile İletişim"
+      "name": "Hizmetler",
+      "url": "/hizmetler.html", 
+      "description": "Tüm hizmetlerimiz"
+    },
+    {
+      "name": "Ürünler",
+      "url": "/products.html",
+      "description": "Brülör ürünleri"
     }
-  ]
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }
