@@ -175,16 +175,70 @@
     }
     
     /* NAVBAR - MOBILE FIRST */
-    .navbar {
-      background: #2C3E50;
-      color: #fff;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    .navbar-custom {
+      background: rgba(44, 62, 80, 0.95);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
       position: sticky;
       top: 0;
       z-index: 1030;
       width: 100%;
       max-width: 100vw;
       overflow-x: hidden;
+    }
+    
+    .navbar-custom.scrolled {
+      background: rgba(44, 62, 80, 0.98);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+      color: rgba(255,255,255,0.9) !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #3498db !important;
+      background: rgba(52, 152, 219, 0.1);
+      border-radius: 8px;
+    }
+    
+    .navbar-toggler {
+      border: none;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    /* Mobile navbar styles */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        border-radius: 12px;
+        margin-top: 10px;
+        padding: 15px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      }
+      
+      .navbar-nav .nav-link {
+        padding: 12px 16px !important;
+        margin: 4px 0;
+        border-radius: 8px;
+      }
     }
     
     /* RESPONSIVE IMAGES */
@@ -244,9 +298,13 @@
   <link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
   
-  <!-- Bootstrap Grid Only (daha küçük) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet"></noscript>
+  <!-- Bootstrap Full CSS for Navbar functionality -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+  
+  <!-- Bootstrap Grid Only (daha küçük) - alternative for grid-only pages -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet"></noscript> -->
   
   <!-- Font Awesome Minimal (sadece kullanılan iconlar) -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/fontawesome.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -1451,7 +1509,132 @@
   </style>
   <!-- Sticky Navbar için ek CSS -->
   <style>
-    #navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.98); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .navbar-custom { 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+      background: rgba(44, 62, 80, 0.98); 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      backdrop-filter: blur(15px);
+    }
+    
+    .modern-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff !important;
+      text-decoration: none;
+    }
+    
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+    
+    .brand-text .brand-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    
+    .brand-text .brand-subtitle {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: -2px;
+    }
+    
+    .modern-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.9) !important;
+      padding: 8px 16px !important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .modern-nav-link:hover {
+      color: #3498db !important;
+      background: rgba(52, 152, 219, 0.1);
+    }
+    
+    .modern-nav-link.active {
+      color: #3498db !important;
+      background: rgba(52, 152, 219, 0.15);
+    }
+    
+    .modern-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff !important;
+    }
+    
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-1px);
+    }
+    
+    .btn-quote {
+      background: #3498db;
+      color: #fff !important;
+    }
+    
+    .btn-quote:hover {
+      background: #2980b9;
+      transform: translateY(-1px);
+    }
+    
+    .modern-toggler {
+      border: none;
+      padding: 4px 8px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+    }
+    
+    .toggler-line {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    
+    /* Mobile menu styles */
+    @media (max-width: 991.98px) {
+      .modern-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        border-radius: 12px;
+        margin-top: 10px;
+        padding: 20px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      }
+      
+      .navbar-actions {
+        flex-direction: column;
+        gap: 10px !important;
+        margin-top: 15px;
+      }
+      
+      .modern-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
     #scrollTop { background: #2c3e50; color: #fff; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transition: opacity 0.2s; }
     #scrollTop:focus { outline: 2px solid #3498db; }
     #scrollTop:hover { background: #34495e; }
@@ -1543,6 +1726,29 @@
   </script>
   <!-- NAVBAR -->
   <div id="navbar" role="navigation" aria-label="Ana menü"></div>
+
+  <script>
+    // Navbar'ı dinamik olarak yükle
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => { 
+          document.getElementById('navbar').innerHTML = html;
+          // Navbar yüklendikten sonra Bootstrap JS'i başlat
+          if (typeof bootstrap !== 'undefined') {
+            // Bootstrap navbar işlevselliğini başlat
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && navbarCollapse) {
+              navbarToggler.addEventListener('click', function() {
+                navbarCollapse.classList.toggle('show');
+              });
+            }
+          }
+        })
+        .catch(error => console.error('Navbar yüklenemedi:', error));
+    });
+  </script>
 
   <!-- HERO SLIDER -->
   <section id="hero" class="position-relative" aria-label="Tanıtım Sliderı">
@@ -2494,6 +2700,9 @@
     document.documentElement.style.scrollBehavior = 'smooth';
     document.body.style.touchAction = 'manipulation';
   </script>
+  <!-- Bootstrap JS for navbar functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
   <!-- PWA manifest ve sw.js kontrolü -->
   <link rel="manifest" href="manifest.json">
   <script>
