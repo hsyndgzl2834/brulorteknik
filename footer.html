@@ -147,9 +147,9 @@
         </div>
         <div class="col-12 col-md-6 text-md-end">
           <div class="footer-meta">
-            <span class="made-in">
-              <i class="fas fa-heart text-danger me-1"></i>
-              Türkiye'de yapıldı
+            <span class="version-info">
+              <i class="fas fa-code me-1"></i>
+              v2025
             </span>
           </div>
         </div>
@@ -370,7 +370,7 @@
   font-size: 0.9rem;
 }
 
-.made-in {
+.version-info {
   color: rgba(255,255,255,0.8);
   font-size: 0.9rem;
 }
@@ -486,8 +486,11 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollBtn.style.display = 'none';
       }
       
-      // Update progress circle
-      if (scrollProgress) {
-        scrollProgress.style.background = `conic-gradient(#3498DB ${scrollPercent * 3.6}deg, transparent 0deg)`;
+          // Update progress circle
+          if (scrollProgress) {
+            scrollProgress.style.background = `conic-gradient(#3498DB ${scrollPercent * 3.6}deg, transparent 0deg)`;
+          }
+        });
       }
     });
+    </script>
