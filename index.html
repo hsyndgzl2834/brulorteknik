@@ -87,6 +87,13 @@
   <link rel="preload" href="css/style.min.css" as="style" />
   <link rel="preload" href="js/include.js" as="script" />
   <link rel="preload" href="js/main.js" as="script" />
+  <link rel="preload" href="navbar.html" as="fetch" crossorigin />
+  
+  <!-- Resource hints for better performance -->
+  <link rel="prefetch" href="images/hero2.webp" />
+  <link rel="prefetch" href="images/hero3.webp" />
+  <link rel="prefetch" href="contact.html" />
+  <link rel="prefetch" href="products.html" />
   
   <!-- Modern SEO Meta Tags -->
   <meta name="format-detection" content="telephone=no" />
@@ -133,7 +140,7 @@
       max-width: 100vw;
       position: relative;
       -webkit-overflow-scrolling: touch;
-      padding-top: 80px; /* Navbar yüksekliği kadar */
+      padding-top: 70px; /* Navbar yüksekliği kadar */
     }
     
     /* LAYOUT CONTAINERS - MOBILE FIRST */
@@ -192,6 +199,7 @@
       width: 100%;
       max-width: 100vw;
       overflow-x: hidden;
+      min-height: 70px;
     }
     
     .navbar-custom.scrolled {
@@ -202,33 +210,41 @@
     .navbar-brand {
       color: #fff !important;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      padding: 8px 0;
     }
     
     .navbar-nav .nav-link {
       color: rgba(255,255,255,0.9) !important;
       font-weight: 500;
-      padding: 0.5rem 1rem !important;
+      padding: 12px 16px !important;
       transition: all 0.3s ease;
       position: relative;
+      border-radius: 8px;
+      margin: 2px 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
     
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
       color: #3498db !important;
-      background: rgba(52, 152, 219, 0.1);
-      border-radius: 8px;
+      background: rgba(52, 152, 219, 0.15);
+      transform: translateX(5px);
     }
     
     .navbar-toggler {
       border: none !important;
       color: #fff !important;
-      font-size: 1.25rem;
-      padding: 0.25rem 0.5rem;
+      font-size: 1.4rem;
+      padding: 10px 12px !important;
       box-shadow: none !important;
       outline: none !important;
       background: rgba(255,255,255,0.1) !important;
-      border-radius: 6px !important;
+      border-radius: 8px !important;
+      min-width: 48px;
+      min-height: 48px;
     }
     
     .navbar-toggler:focus {
@@ -238,8 +254,8 @@
     
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-      width: 1.5em !important;
-      height: 1.5em !important;
+      width: 1.6em !important;
+      height: 1.6em !important;
     }
 
     /* Mobile navbar styles */
@@ -247,10 +263,10 @@
       .navbar-collapse {
         background: rgba(44, 62, 80, 0.98) !important;
         border-radius: 12px;
-        margin-top: 10px;
-        padding: 15px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        margin-top: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         border: 1px solid rgba(255,255,255,0.1);
+        padding: 20px;
       }
       
       .navbar-nav .nav-link {
@@ -278,6 +294,47 @@
         margin-top: 1rem;
         padding-top: 1rem;
         border-top: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .navbar-actions .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+      
+      .navbar-actions .btn-success {
+        background: #25D366 !important;
+        border-color: #25D366 !important;
+      }
+      
+      .navbar-actions .btn-success:hover {
+        background: #128C7E !important;
+        border-color: #128C7E !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      }
+      
+      .navbar-actions .btn-primary {
+        background: #3498db !important;
+        border-color: #3498db !important;
+      }
+      
+      .navbar-actions .btn-primary:hover {
+        background: #2980b9 !important;
+        border-color: #2980b9 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
       }
       
       .navbar-toggler {
@@ -470,14 +527,18 @@
     
     /* Mobile-First Hero Section */
     #hero {
-      height: 85vh;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
       position: relative;
       overflow: visible;
       background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2c3e50 100%);
     }
     
     .carousel-item {
-      height: 85vh;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
       position: relative;
       animation: heroSlideIn 1.5s ease-out;
     }
@@ -511,9 +572,13 @@
     
     .carousel-item img {
       width: 100%;
-      height: 85vh;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
       object-fit: cover;
       animation: slowZoom 25s ease-in-out infinite;
+      will-change: transform;
+      contain: layout style paint;
     }
     
     @keyframes slowZoom {
@@ -614,22 +679,26 @@
     .modern-hero-btn {
       background: linear-gradient(135deg, #16a085 0%, #2ecc71 50%, #27ae60 100%);
       border: none;
-      border-radius: 25px;
-      padding: 14px 28px;
+      border-radius: 30px;
+      padding: 16px 32px;
       font-weight: 700;
-      font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
       color: white;
       text-decoration: none;
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+      box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
       position: relative;
       overflow: visible;
-      margin: 6px auto;
-      width: 85%;
-      max-width: 280px;
+      margin: 8px 10px;
+      min-width: 200px;
+      max-width: 300px;
       text-align: center;
       line-height: 1.2;
+      min-height: 50px;
     }
     
     .modern-hero-btn::before {
@@ -665,11 +734,43 @@
     }
     
     .hero-buttons {
-      margin-top: 15px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+    }
+    
+    /* Mobil hero button optimizasyonları */
+    @media (max-width: 576px) {
+      .modern-hero-btn {
+        width: 90%;
+        max-width: 280px;
+        margin: 6px auto;
+        display: block;
+        padding: 14px 24px;
+        min-height: 48px;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    
+    /* Tablet ve üzeri için yan yana butonlar */
+    @media (min-width: 768px) {
+      .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      
+      .modern-hero-btn {
+        min-width: 220px;
+        max-width: 280px;
+      }
     }
     
     /* Enhanced Carousel Indicators - Mobile Optimized */
@@ -730,7 +831,7 @@
     .service-card, .card {
       background: white;
       border-radius: 20px;
-      padding: 30px;
+      padding: 25px;
       height: 100%;
       box-shadow: 0 8px 25px rgba(44, 62, 80, 0.08);
       transition: all 0.4s ease;
@@ -739,6 +840,67 @@
       overflow: visible;
       box-sizing: border-box;
       max-width: 100%;
+      margin-bottom: 25px;
+    }
+    
+    /* Service card responsive improvements */
+    @media (max-width: 576px) {
+      .service-card, .card {
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+      
+      .service-card .card-img-top {
+        height: 180px;
+        object-fit: cover;
+      }
+      
+      .service-card .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+      }
+      
+      .service-card .card-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      
+      .service-card .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        min-height: 44px;
+      }
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+      .service-card, .card {
+        padding: 22px;
+        margin-bottom: 22px;
+      }
+      
+      .service-card .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+    
+    @media (min-width: 769px) {
+      .service-card, .card {
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(44, 62, 80, 0.12);
+        will-change: transform;
+      }
+      
+      .service-card .card-img-top {
+        height: 220px;
+        object-fit: cover;
+      }
     }
     /* Satır ve container taşmalarını önle */
     .row {
@@ -766,6 +928,49 @@
       .service-card, .card {
         min-width: 0;
         max-width: 100%;
+      }
+    }
+    
+    /* Global button improvements for mobile */
+    .btn {
+      min-height: 44px;
+      padding: 12px 20px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    
+    .btn-sm {
+      min-height: 40px;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+      min-height: 50px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+    }
+    
+    /* Touch-friendly button spacing */
+    @media (max-width: 768px) {
+      .btn {
+        margin: 4px 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .btn-group .btn {
+        width: auto;
+        flex: 1;
+      }
+      
+      .navbar-actions .btn {
+        margin: 6px 0;
       }
     }
     
@@ -806,6 +1011,87 @@
       padding: 60px 0 50px 0;
       margin-top: 30px;
       position: relative;
+    }
+    
+    /* Desktop layout improvements */
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      #services {
+        padding: 100px 0 80px 0;
+        margin-top: 50px;
+      }
+      
+      #services h2 {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+        font-weight: 700;
+      }
+      
+      #services .text-muted {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+      
+      .service-card, .card {
+        padding: 35px;
+        border-radius: 25px;
+      }
+      
+      .service-card .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+      
+      .service-card .card-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      
+      .btn {
+        font-size: 1.05rem;
+        padding: 14px 24px;
+      }
+      
+      /* Better spacing for desktop sections */
+      section {
+        margin-bottom: 60px;
+      }
+      
+      section:last-child {
+        margin-bottom: 0;
+      }
+      
+      /* Improved typography hierarchy */
+      h1 {
+        font-size: 3.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 3.2rem;
+        line-height: 1.3;
+        margin-bottom: 1.2rem;
+      }
+      
+      h3 {
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+      }
+    }
     }
     
     #services::before {
@@ -1040,7 +1326,9 @@
     }
     
     #hero, .carousel-item, .carousel-item img {
-      height: 85vh;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 800px;
     }
     
     #services {
@@ -1771,6 +2059,42 @@
     @media (max-width: 600px) {
       .intro-loader-inner svg { width: 40px; height: 40px; }
       .intro-brand { font-size: 1.05rem; }
+    }
+    
+    /* Performance optimizations */
+    .carousel-item,
+    .service-card,
+    .modern-hero-btn,
+    .navbar-nav .nav-link {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    
+    /* Smooth scrolling performance */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    
+    /* Image loading optimization */
+    img {
+      loading: lazy;
+      decoding: async;
+    }
+    
+    img[src*="hero"] {
+      loading: eager;
     }
   </style>
 </head>
