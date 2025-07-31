@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function() {
       if (window.innerWidth < 992) {
         const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse) {
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
           if (bsCollapse) {
             bsCollapse.hide();
@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (window.innerWidth < 992) {
+      const navbar = document.querySelector('.navbar');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      
+      if (navbar && navbarCollapse && navbarToggler) {
+        if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+        }
+      }
+    }
   });
 
   // Smooth scroll for anchor links
