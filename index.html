@@ -222,20 +222,24 @@
     
     .navbar-toggler {
       border: none !important;
-      color: #fff;
+      color: #fff !important;
       font-size: 1.25rem;
       padding: 0.25rem 0.5rem;
       box-shadow: none !important;
       outline: none !important;
+      background: rgba(255,255,255,0.1) !important;
+      border-radius: 6px !important;
     }
     
     .navbar-toggler:focus {
-      box-shadow: none !important;
+      box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
       outline: none !important;
     }
     
     .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      width: 1.5em !important;
+      height: 1.5em !important;
     }
 
     /* Mobile navbar styles */
@@ -246,23 +250,7 @@
         margin-top: 10px;
         padding: 15px;
         box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-        position: absolute !important;
-        top: 100% !important;
-        left: 15px !important;
-        right: 15px !important;
-        width: calc(100% - 30px) !important;
-        z-index: 1050 !important;
         border: 1px solid rgba(255,255,255,0.1);
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-      }
-      
-      .navbar-collapse.show {
-        display: block !important;
-        opacity: 1;
-        transform: translateY(0);
       }
       
       .navbar-nav .nav-link {
@@ -278,7 +266,6 @@
       .navbar-nav .nav-link:hover {
         background: rgba(52, 152, 219, 0.2) !important;
         color: #3498db !important;
-        transform: translateX(5px);
       }
       
       .navbar-nav {
@@ -296,11 +283,6 @@
       .navbar-toggler {
         z-index: 1060 !important;
         position: relative !important;
-        padding: 8px 12px !important;
-      }
-      
-      .navbar-toggler:focus {
-        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
       }
       
       body {
@@ -1842,28 +1824,7 @@
         .then(response => response.text())
         .then(html => { 
           document.getElementById('navbar').innerHTML = html;
-          console.log('Navbar yüklendi');
-          
-          // Bootstrap yüklendikten sonra navbar'ı initialize et
-          setTimeout(function() {
-            if (typeof bootstrap !== 'undefined') {
-              // Navbar toggle button'ını kontrol et
-              const navbarToggler = document.querySelector('.navbar-toggler');
-              const navbarCollapse = document.querySelector('.navbar-collapse');
-              
-              console.log('Navbar toggler:', navbarToggler);
-              console.log('Navbar collapse:', navbarCollapse);
-              
-              if (navbarToggler && navbarCollapse) {
-                // Manuel click event ekle
-                navbarToggler.addEventListener('click', function(e) {
-                  e.preventDefault();
-                  console.log('Hamburger menü tıklandı');
-                  navbarCollapse.classList.toggle('show');
-                });
-              }
-            }
-          }, 100);
+          console.log('Navbar yüklendi - Bootstrap otomatik başlatılacak');
         })
         .catch(error => console.error('Navbar yüklenemedi:', error));
     });
