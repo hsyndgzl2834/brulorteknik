@@ -476,6 +476,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (scrollBtn) {
     // Show/hide button based on scroll position
     window.addEventListener('scroll', function() {
+    // Smooth scroll to top
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
@@ -486,11 +496,11 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollBtn.style.display = 'none';
       }
       
-          // Update progress circle
-          if (scrollProgress) {
-            scrollProgress.style.background = `conic-gradient(#3498DB ${scrollPercent * 3.6}deg, transparent 0deg)`;
-          }
-        });
+      // Update progress circle
+      if (scrollProgress) {
+        scrollProgress.style.background = `conic-gradient(#3498DB ${scrollPercent * 3.6}deg, transparent 0deg)`;
       }
     });
-    </script>
+  }
+});
+</script>
