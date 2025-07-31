@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Sayfası - Brülör Teknik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .success {
+            background: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>✅ Uygulama Çalışıyor!</h1>
+    <div class="success">
+        <h2>🎉 Tebrikler!</h2>
+        <p>Web sunucunuz başarıyla çalışıyor.</p>
+        <p>Ana sayfaya dönmek için: <a href="index.html" style="color: yellow;">Buraya tıklayın</a></p>
+    </div>
+    
+    <h3>Test Bilgileri:</h3>
+    <p>Tarih: <span id="date"></span></p>
+    <p>Tarayıcı: <span id="browser"></span></p>
+    
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleString('tr-TR');
+        document.getElementById('browser').textContent = navigator.userAgent.split(' ')[0];
+    </script>
+</body>
+</html>
