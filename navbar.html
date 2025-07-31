@@ -1,5 +1,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('Navbar script başlatıldı');
+  
   // Enhanced scroll effect
   window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar-custom');
@@ -23,17 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Manual hamburger menu toggle
+  const navbarToggler = document.getElementById('navbarToggler');
+  const navbarCollapse = document.getElementById('navbarNav');
+  
+  console.log('Navbar elements:', { navbarToggler, navbarCollapse });
+  
+  if (navbarToggler && navbarCollapse) {
+    navbarToggler.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Hamburger menü toggle');
+      
+      const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+      navbarToggler.setAttribute('aria-expanded', !isExpanded);
+      
+      if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      } else {
+        navbarCollapse.classList.add('show');
+      }
+    });
+  }
+
   // Close mobile menu when clicking on nav link
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
-      if (window.innerWidth < 992) {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          }
-        }
+      if (window.innerWidth < 992 && navbarCollapse) {
+        navbarCollapse.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
       }
     });
   });
@@ -42,15 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', function(event) {
     if (window.innerWidth < 992) {
       const navbar = document.querySelector('.navbar');
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-      const navbarToggler = document.querySelector('.navbar-toggler');
       
       if (navbar && navbarCollapse && navbarToggler) {
         if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          }
+          navbarCollapse.classList.remove('show');
+          navbarToggler.setAttribute('aria-expanded', 'false');
         }
       }
     }
@@ -85,9 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     
     <!-- Standard Bootstrap Hamburger Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Menü">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" id="navbarToggler"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Menü"
+            style="border: 2px solid #fff; background: rgba(255,255,255,0.1);">
+      <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
     </button>
     
     <!-- Enhanced Navigation Menu -->

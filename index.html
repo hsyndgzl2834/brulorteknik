@@ -253,10 +253,16 @@
         width: calc(100% - 30px) !important;
         z-index: 1050 !important;
         border: 1px solid rgba(255,255,255,0.1);
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
       }
       
       .navbar-collapse.show {
         display: block !important;
+        opacity: 1;
+        transform: translateY(0);
       }
       
       .navbar-nav .nav-link {
@@ -266,11 +272,13 @@
         text-align: center;
         display: block !important;
         color: rgba(255,255,255,0.9) !important;
+        transition: all 0.3s ease;
       }
       
       .navbar-nav .nav-link:hover {
         background: rgba(52, 152, 219, 0.2) !important;
         color: #3498db !important;
+        transform: translateX(5px);
       }
       
       .navbar-nav {
@@ -288,6 +296,11 @@
       .navbar-toggler {
         z-index: 1060 !important;
         position: relative !important;
+        padding: 8px 12px !important;
+      }
+      
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
       }
       
       body {
@@ -1830,9 +1843,28 @@
         .then(html => { 
           document.getElementById('navbar').innerHTML = html;
           console.log('Navbar yüklendi');
+          
+          // Bootstrap yüklendikten sonra navbar'ı initialize et
+          setTimeout(function() {
+            if (typeof bootstrap !== 'undefined') {
+              // Navbar toggle button'ını kontrol et
+              const navbarToggler = document.querySelector('.navbar-toggler');
+              const navbarCollapse = document.querySelector('.navbar-collapse');
+              
+              console.log('Navbar toggler:', navbarToggler);
+              console.log('Navbar collapse:', navbarCollapse);
+              
+              if (navbarToggler && navbarCollapse) {
+                // Manuel click event ekle
+                navbarToggler.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  console.log('Hamburger menü tıklandı');
+                  navbarCollapse.classList.toggle('show');
+                });
+              }
+            }
+          }, 100);
         })
-        .catch(error => console.error('Navbar yüklenemedi:', error));
-    });
         .catch(error => console.error('Navbar yüklenemedi:', error));
     });
     
