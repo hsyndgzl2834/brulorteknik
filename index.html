@@ -2853,13 +2853,111 @@
     }
   </script>
   <script>
-    // Açılış loader'ı otomatik gizle
+    // Gelişmiş loader ve error handling
     window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
+      // Error recovery için loader'ı daha uzun süre bekleme
+      let loaderTimeout = setTimeout(function() {
         var loader = document.getElementById('intro-loader');
-        if(loader) loader.classList.add('hide');
-        setTimeout(function(){ if(loader) loader.remove(); }, 700);
-      }, 1200);
+        if(loader) {
+          loader.classList.add('hide');
+          setTimeout(function(){ 
+            if(loader) loader.remove(); 
+          }, 700);
+        }
+      }, 800); // Daha hızlı loading
+      
+      // Tüm kritik kaynaklar yüklendiğinde loader'ı hemen gizle
+      window.addEventListener('load', function() {
+        clearTimeout(loaderTimeout);
+        var loader = document.getElementById('intro-loader');
+        if(loader) {
+          loader.classList.add('hide');
+          setTimeout(function(){ 
+            if(loader) loader.remove(); 
+          }, 300);
+        }
+      });
+      
+      // Service Worker güncelleme kontrolü başlat
+      if (typeof checkForSWUpdate === 'function') {
+        checkForSWUpdate();
+      }
+    });
+    
+    // Ödeme sonrası sayfa yenileme kontrolü
+    if (localStorage.getItem('payment_completed')) {
+      // Ödeme tamamlandı, cache'i temizle
+      localStorage.removeItem('payment_completed');
+      if (typeof clearAppCache === 'function') {
+        console.log('Ödeme sonrası cache temizleniyor...');
+        clearAppCache();
+      }
+    }
+  </script>
+  <!-- CDN Fallback Sistemi -->
+  <script>
+    // Bootstrap yükleme kontrolü ve fallback
+    if (typeof bootstrap === 'undefined') {
+      console.warn('Bootstrap CDN failed, loading fallback...');
+      const fallbackScript = document.createElement('script');
+      fallbackScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js';
+      fallbackScript.onerror = function() {
+        console.error('Bootstrap fallback also failed');
+        showErrorToast('Bileşenler yüklenemedi. Sayfayı yenileyin.');
+      };
+      document.head.appendChild(fallbackScript);
+    }
+    
+    // Font Awesome yükleme kontrolü
+    function checkFontAwesome() {
+      const testElement = document.createElement('i');
+      testElement.className = 'fas fa-home';
+      testElement.style.cssText = 'position: absolute; top: -9999px; left: -9999px;';
+      document.body.appendChild(testElement);
+      
+      const styles = window.getComputedStyle(testElement);
+      const fontFamily = styles.getPropertyValue('font-family');
+      
+      document.body.removeChild(testElement);
+      
+      if (fontFamily.indexOf('Font Awesome') === -1) {
+        console.warn('Font Awesome failed, loading fallback...');
+        const fallbackLink = document.createElement('link');
+        fallbackLink.rel = 'stylesheet';
+        fallbackLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        fallbackLink.onerror = function() {
+          console.error('Font Awesome fallback failed');
+        };
+        document.head.appendChild(fallbackLink);
+      }
+    }
+    
+    // Sayfa yüklendikten sonra Font Awesome'ı kontrol et
+    window.addEventListener('load', function() {
+      setTimeout(checkFontAwesome, 1000);
+    });
+    
+    // Debug için keyboard shortcut (Ctrl+Shift+D)
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.shiftKey && e.code === 'KeyD') {
+        e.preventDefault();
+        console.log('=== BRÜLÖR TEKNİK DEBUG ===');
+        console.log('Service Worker State:', navigator.serviceWorker?.controller ? 'Active' : 'Inactive');
+        console.log('Bootstrap loaded:', typeof bootstrap !== 'undefined');
+        console.log('Cache API:', 'caches' in window);
+        console.log('Online status:', navigator.onLine);
+        console.log('Payment flag:', localStorage.getItem('payment_completed'));
+        
+        // Cache temizleme butonu göster
+        if (confirm('Cache temizlensin mi? (Ödeme sonrası sorun çözümü)')) {
+          if (typeof clearAppCache === 'function') {
+            clearAppCache();
+          } else {
+            localStorage.setItem('payment_completed', 'true');
+            window.location.reload();
+          }
+        }
+      }
     });
   </script>
 </body>

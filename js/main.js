@@ -1,5 +1,18 @@
 // Modern DOM Content Loaded Handler
 document.addEventListener("DOMContentLoaded", function () {
+  // Hata yakalama sistemi
+  window.addEventListener('error', function(e) {
+    console.error('JavaScript Error:', e.error);
+    showErrorToast('Bir hata oluştu. Sayfayı yenilemeyi deneyin.');
+  });
+  
+  // Promise rejection yakalama
+  window.addEventListener('unhandledrejection', function(e) {
+    console.error('Unhandled Promise Rejection:', e.reason);
+    e.preventDefault();
+    showErrorToast('Bağlantı sorunu. Lütfen internet bağlantınızı kontrol edin.');
+  });
+  
   // Initialize modern features
   initializeModernNavbar();
   initializeScrollEffects();
@@ -403,3 +416,117 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
+
+// Hata bildirimi fonksiyonu
+function showErrorToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'error-toast';
+  toast.innerHTML = `
+    <div class="toast-content">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span>${message}</span>
+      <button onclick="this.parentElement.parentElement.remove()" class="toast-close">×</button>
+    </div>
+  `;
+  
+  toast.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 300px;
+  `;
+  
+  document.body.appendChild(toast);
+  
+  setTimeout(() => toast.style.transform = 'translateX(0)', 100);
+  setTimeout(() => {
+    if (toast.parentElement) {
+      toast.style.transform = 'translateX(100%)';
+      setTimeout(() => toast.remove(), 300);
+    }
+  }, 5000);
+}
+
+// Service Worker güncelleme kontrolü
+function checkForSWUpdate() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // Yeni versiyon mevcut
+            showUpdateToast();
+          }
+        });
+      });
+    });
+  }
+}
+
+// Güncelleme bildirimi
+function showUpdateToast() {
+  const toast = document.createElement('div');
+  toast.innerHTML = `
+    <div class="update-toast">
+      <i class="fas fa-sync-alt"></i>
+      <span>Yeni versiyon mevcut!</span>
+      <button onclick="refreshApp()" class="btn btn-sm btn-light">Güncelle</button>
+    </div>
+  `;
+  
+  toast.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 25px;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  `;
+  
+  document.body.appendChild(toast);
+}
+
+// Uygulamayı yenileme
+function refreshApp() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration().then(reg => {
+      if (reg && reg.waiting) {
+        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        window.location.reload();
+      }
+    });
+  } else {
+    window.location.reload();
+  }
+}
+
+// Cache temizleme fonksiyonu
+function clearAppCache() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration().then(reg => {
+      if (reg && reg.active) {
+        const messageChannel = new MessageChannel();
+        messageChannel.port1.onmessage = function(event) {
+          if (event.data.success) {
+            showErrorToast('Cache temizlendi. Sayfa yenileniyor...');
+            setTimeout(() => window.location.reload(), 1000);
+          }
+        };
+        reg.active.postMessage({ type: 'CLEAR_CACHE' }, [messageChannel.port2]);
+      }
+    });
+  }
+}
