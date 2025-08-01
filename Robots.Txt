@@ -1,6 +1,6 @@
 # Robots.txt for Brülör Teknik Hizmetler - SEO Optimized 2025
 # https://brulorteknik.com/robots.txt
-# Last Updated: 2025-07-28
+# Last Updated: 2025-01-28
 
 # ============================================================================
 # 🤖 GLOBAL ROBOT RULES - BRÜLÖR TEKNİK HİZMETLER

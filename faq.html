@@ -3,30 +3,36 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title data-i18n="faq.title">Sıkça Sorulan Sorular | Brülör Teknik Hizmetler</title>
+  <title>Sıkça Sorulan Sorular | Brülör Teknik Hizmetler</title>
   <meta name="description" content="Brülör Teknik Hizmetler sıkça sorulan sorular: brülör bakımı, servis talebi, fiyat teklifi ve hizmet bölgeleri hakkında en güncel yanıtlar."/>
   <meta name="keywords" content="SSS, sıkça sorulan sorular, brülör teknik, brülör bakım, teklif, destek"/>
   <meta name="author" content="Brülör Teknik Hizmetler"/>
   <link rel="canonical" href="https://www.brulorteknik.com/faq.html" />
-  <meta name="theme-color" content="#667eea" />
-  <link rel="manifest" href="/manifest.json">
-
+  
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sıkça Sorulan Sorular | Brülör Teknik Hizmetler" />
   <meta property="og:description" content="Brülör Teknik Hizmetler: Brülör bakımı, servis, yedek parça ve fiyat teklifleriyle ilgili en çok merak edilen soruların cevapları burada!" />
   <meta property="og:image" content="https://www.brulorteknik.com/images/burner-faq.webp" />
   <meta property="og:url" content="https://www.brulorteknik.com/faq.html" />
   <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sıkça Sorulan Sorular | Brülör Teknik Hizmetler" />
+  <meta name="twitter:description" content="Brülör Teknik Hizmetler: Brülör bakımı, servis, yedek parça ve fiyat teklifleriyle ilgili en çok merak edilen soruların cevapları burada!" />
+  <meta name="twitter:image" content="https://www.brulorteknik.com/images/burner-faq.webp" />
 
-  <!-- Modern CSS Libraries -->
+  <!-- CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link href="css/style.min.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <link rel="stylesheet" href="css/main.css">
   
   <style>
+    /* Mobile First CSS for FAQ Page */
     :root {
       --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -38,11 +44,13 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       overflow-x: hidden;
+      padding-top: 70px;
     }
     
     .hero-section {
       background: var(--primary-gradient);
-      padding: 100px 0 80px;
+      padding: 60px 0 40px;
+      min-height: 50vh;
       position: relative;
       overflow: hidden;
     }
@@ -58,10 +66,26 @@
       background-size: cover;
     }
     
+    .page-title {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    
     .faq-container {
-      margin-top: -50px;
+      margin-top: -30px;
       position: relative;
       z-index: 2;
+      padding: 60px 0;
     }
     
     .faq-card {
@@ -89,528 +113,323 @@
       text-align: left;
       display: flex;
       align-items: center;
-      justify-content: between;
+      justify-content: space-between;
       transition: all 0.3s ease;
       position: relative;
+      min-height: 44px;
     }
     
     .faq-header:hover {
       background: #f8f9fa;
     }
     
-    .faq-header.active {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
+    .faq-header:focus {
+      outline: 2px solid #3498db;
+      outline-offset: 2px;
     }
     
     .faq-question {
       font-weight: 600;
-      font-size: 1.1rem;
+      color: #2c3e50;
       margin: 0;
-      flex: 1;
-      padding-right: 20px;
+      font-size: clamp(1rem, 4vw, 1.1rem);
+      line-height: 1.4;
     }
     
     .faq-icon {
-      width: 30px;
-      height: 30px;
-      background: var(--primary-gradient);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      transition: all 0.3s ease;
-      margin-right: 15px;
-    }
-    
-    .faq-header.active .faq-icon {
-      background: rgba(255, 255, 255, 0.2);
-      transform: rotate(180deg);
-    }
-    
-    .faq-toggle {
-      transition: transform 0.3s ease;
-      color: #667eea;
+      color: #3498db;
       font-size: 1.2rem;
+      transition: transform 0.3s ease;
     }
     
-    .faq-header.active .faq-toggle {
+    .faq-card.active .faq-icon {
       transform: rotate(180deg);
-      color: white;
     }
     
     .faq-content {
-      padding: 0 25px 25px;
-      background: white;
-      display: none;
-      animation: fadeInUp 0.3s ease;
-    }
-    
-    .faq-content.show {
-      display: block;
-    }
-    
-    .search-box {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(102, 126, 234, 0.2);
-      border-radius: 50px;
-      padding: 15px 25px;
-      font-size: 1.1rem;
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
       transition: all 0.3s ease;
-      width: 100%;
-      max-width: 500px;
     }
     
-    .search-box:focus {
-      outline: none;
-      border-color: #667eea;
-      box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-      background: white;
+    .faq-card.active .faq-content {
+      padding: 20px 25px;
+      max-height: 500px;
     }
     
-    .category-pills {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px 0;
+    .faq-answer {
+      color: #6c757d;
+      line-height: 1.6;
+      margin: 0;
     }
     
-    .category-pill {
-      background: rgba(255, 255, 255, 0.9);
-      border: 2px solid rgba(102, 126, 234, 0.2);
-      border-radius: 25px;
-      padding: 8px 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      font-size: 0.9rem;
+    .faq-category {
+      margin-bottom: 3rem;
     }
     
-    .category-pill:hover,
-    .category-pill.active {
-      background: var(--primary-gradient);
-      color: white;
-      border-color: transparent;
-      transform: translateY(-2px);
+    .category-title {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
     
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Responsive Breakpoints */
+    @media (min-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+      
+      .hero-section {
+        padding: 80px 0 60px;
+        min-height: 60vh;
+      }
+      
+      .faq-container {
+        margin-top: -50px;
+        padding: 80px 0;
+      }
+      
+      .faq-header {
+        padding: 25px 30px;
+      }
+      
+      .faq-card.active .faq-content {
+        padding: 25px 30px;
+      }
     }
     
-    @media (max-width: 768px) {
-      .hero-section { padding: 80px 0 60px; }
-      .faq-container { margin-top: -30px; }
-      .faq-header { padding: 15px 20px; }
-      .faq-content { padding: 0 20px 20px; }
-      .faq-question { font-size: 1rem; }
-    }
-
-    html, body {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      box-sizing: border-box;
-    }
-    .container, .container-fluid, .row, .content-section, .card, .universal-card {
-      overflow: visible !important;
-      box-sizing: border-box;
+    @media (min-width: 992px) {
+      .hero-section {
+        padding: 100px 0 80px;
+        min-height: 70vh;
+      }
+      
+      .faq-container {
+        padding: 100px 0;
+      }
+      
+      .faq-header {
+        padding: 30px 35px;
+      }
+      
+      .faq-card.active .faq-content {
+        padding: 30px 35px;
+      }
     }
   </style>
-  <!-- Schema.org mikro veri -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Brülör bakım periyodu ne kadar sıklıktadır?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Brülör performansını korumak için yıllık bakım öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Servis talebimi nasıl oluştururum?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Web sitemizdeki 'İletişim' formunu doldurarak veya 7/24 WhatsApp hattımızdan talebinizi iletebilirsiniz. Hızlı geri dönüş alırsınız."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Acil arıza durumunda ne yapmalıyım?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Acil durum formunu işaretleyin veya 0531 625 06 94’ü arayın. Saha ekibimiz en kısa sürede müdahale edecektir."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hizmet bölgeleriniz nelerdir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Türkiye genelinde hizmet veriyoruz. İstanbul, Ankara, İzmir ve çevresinde hızlı saha desteği sunuyoruz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Fiyat teklifi nasıl alınır?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "'Teklif Al' butonuna tıklayıp ihtiyaç bilgilerini paylaştığınızda 24 saat içinde detaylı teklif sunuyoruz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Eğitim ve kullanıcı eğitimi hizmetiniz var mı?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Evet, brülör kullanımı ve bakımı için sertifikalı eğitim hizmetimiz mevcuttur. Tarih ve içerik detayları için bizimle iletişime geçin."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
-<body>
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section position-relative">
-    <div class="container position-relative z-index-2">
-      <div class="text-center text-white" data-aos="fade-up">
-        <h1 class="display-4 fw-bold mb-4" data-i18n="faq.title">Sıkça Sorulan Sorular</h1>
-        <p class="lead mb-4 opacity-90" data-i18n="faq.description">
-          Brülör sistemleri ve hizmetlerimizle ilgili merak ettiklerinizi burada bulun
-        </p>
-        
-        <!-- Search Box -->
-        <div class="d-flex justify-content-center mb-4">
-          <input type="text" class="search-box" placeholder="Soru ara..." id="searchFAQ">
-        </div>
-        
-        <!-- Category Pills -->
-        <div class="category-pills">
-          <div class="category-pill active" data-category="all">Tümü</div>
-          <div class="category-pill" data-category="bakim">Bakım</div>
-          <div class="category-pill" data-category="servis">Servis</div>
-          <div class="category-pill" data-category="fiyat">Fiyat</div>
-          <div class="category-pill" data-category="teknik">Teknik</div>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="page-title" data-aos="fade-up">Sıkça Sorulan Sorular</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Brülör sistemleri, bakım, servis ve fiyatlandırma hakkında en çok merak edilen soruların cevapları
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ CONTENT -->
-  <main class="container">
-    <div class="faq-container" data-aos="fade-up">
+  <!-- FAQ Content -->
+  <section class="faq-container">
+    <div class="container">
+      <!-- Genel Sorular -->
+      <div class="faq-category" data-aos="fade-up">
+        <h2 class="category-title">Genel Sorular</h2>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Brülör bakımı ne sıklıkla yapılmalıdır?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Brülör bakımı genellikle yılda bir kez yapılmalıdır. Ancak kullanım yoğunluğuna ve çalışma koşullarına bağlı olarak 6 ayda bir de kontrol edilebilir. Düzenli bakım, sistemin verimliliğini artırır ve arıza riskini azaltır.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Hangi bölgelerde hizmet veriyorsunuz?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              İstanbul ve çevre illerde hizmet vermekteyiz. Ana hizmet bölgelerimiz: İstanbul (tüm ilçeler), Kocaeli, Bursa, Yalova, Sakarya ve Tekirdağ. Diğer bölgeler için özel anlaşma yapılabilir.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">7/24 acil servis hizmetiniz var mı?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Evet, 7/24 acil servis hizmetimiz bulunmaktadır. Kritik arızalar için gece ve hafta sonu dahil her zaman müdahale edebiliriz. Acil durumlar için +90 531 625 06 94 numaralı telefondan bize ulaşabilirsiniz.
+            </p>
+          </div>
+        </div>
+      </div>
       
-      <!-- FAQ Item 1 -->
-      <div class="faq-card" data-category="bakim">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-tools"></i>
+      <!-- Teknik Sorular -->
+      <div class="faq-category" data-aos="fade-up">
+        <h2 class="category-title">Teknik Sorular</h2>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Brülör arızası nasıl tespit edilir?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Brülör arızaları genellikle şu belirtilerle kendini gösterir: Ateşleme sorunları, düşük verimlilik, aşırı yakıt tüketimi, düzensiz yanma, ses değişiklikleri. Bu durumlarda hemen teknik destek almanız önerilir.
+            </p>
           </div>
-          <h5 class="faq-question" data-i18n="faq.q1.question">
-            Brülör bakım periyodu ne kadar sıklıktadır?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p data-i18n="faq.q1.answer">
-            Brülör performansını korumak için <strong>yıllık bakım</strong> öneriyoruz. Yoğun kullanımda altı aylık ara bakımlar planlanabilir. 
-            Düzenli bakım sayesinde enerji verimliliği artar ve arıza riskleri minimuma iner.
-          </p>
-          <div class="mt-3">
-            <span class="badge bg-primary">Bakım</span>
-            <span class="badge bg-secondary">Periyodik</span>
+        </div>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Yedek parça değişimi ne kadar sürer?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Yedek parça değişimi genellikle 2-4 saat sürer. Ancak parçanın türüne ve sistemin karmaşıklığına bağlı olarak bu süre değişebilir. Basit parça değişimleri aynı gün tamamlanırken, kompleks sistemler için daha uzun süre gerekebilir.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Otomasyon sistemi kurulumu ne kadar sürer?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Otomasyon sistemi kurulumu projenin kapsamına göre 1-3 gün sürer. Basit sistemler için 1 gün, kompleks sistemler için 2-3 gün yeterlidir. Kurulum sonrası test ve personel eğitimi de dahildir.
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- FAQ Item 2 -->
-      <div class="faq-card" data-category="servis">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h5 class="faq-question" data-i18n="faq.q2.question">
-            Servis talebimi nasıl oluştururum?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p data-i18n="faq.q2.answer">
-            Servis talebi oluşturmak için birkaç seçeneğiniz var:
-          </p>
-          <ul>
-            <li><strong>WhatsApp:</strong> +90 531 625 06 94 (7/24 aktif)</li>
-            <li><strong>Web Formu:</strong> <a href="contact.html">İletişim sayfamız</a>dan</li>
-            <li><strong>E-posta:</strong> info@brulorteknik.com</li>
-          </ul>
-          <p>Talebinizi aldıktan sonra <strong>2 saat içinde</strong> size dönüş yapıyoruz.</p>
-          <div class="mt-3">
-            <span class="badge bg-success">7/24</span>
-            <span class="badge bg-info">Hızlı Dönüş</span>
+      
+      <!-- Fiyatlandırma -->
+      <div class="faq-category" data-aos="fade-up">
+        <h2 class="category-title">Fiyatlandırma</h2>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Fiyat teklifi nasıl alabilirim?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Fiyat teklifi almak için iletişim sayfamızdaki formu doldurabilir, telefon ile arayabilir veya WhatsApp üzerinden mesaj gönderebilirsiniz. Detaylı bilgi verdiğinizde en uygun fiyat teklifini sunarız.
+            </p>
           </div>
         </div>
-      </div>
-
-      <!-- FAQ Item 3 -->
-      <div class="faq-card" data-category="servis">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-exclamation-triangle"></i>
-          </div>
-          <h5 class="faq-question" data-i18n="faq.q3.question">
-            Acil arıza durumunda ne yapmalıyım?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p>Acil durumlarda şu adımları izleyin:</p>
-          <ol>
-            <li><strong>Güvenlik:</strong> Gaz vanasını kapatın</li>
-            <li><strong>İletişim:</strong> Bizi hemen arayın: <a href="tel:+905316250694">0531 625 06 94</a></li>
-            <li><strong>WhatsApp:</strong> Arıza fotoğrafını gönderin</li>
-          </ol>
-          <div class="alert alert-warning mt-3">
-            <i class="fas fa-info-circle me-2"></i>
-            Acil müdahale ekibimiz <strong>2 saat içinde</strong> sahada olur.
-          </div>
-          <div class="mt-3">
-            <span class="badge bg-danger">Acil</span>
-            <span class="badge bg-warning">2 Saat</span>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Ödeme koşulları nasıldır?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Ödeme koşulları hizmet türüne göre değişir. Genellikle %50 peşin, %50 iş tamamlandıktan sonra ödeme alırız. Büyük projeler için özel ödeme planları da sunabiliriz.
+            </p>
           </div>
         </div>
-      </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="faq-card" data-category="fiyat">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-calculator"></i>
+        
+        <div class="faq-card" data-aos="fade-up">
+          <button class="faq-header" onclick="toggleFAQ(this)">
+            <h3 class="faq-question">Garanti süreleri nedir?</h3>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-content">
+            <p class="faq-answer">
+              Bakım hizmetlerimiz için 6 ay, yeni kurulumlar için 1 yıl garanti veririz. Yedek parçalar için üretici garantisi geçerlidir. Garanti kapsamı detayları sözleşmede belirtilir.
+            </p>
           </div>
-          <h5 class="faq-question" data-i18n="faq.q4.question">
-            Fiyat teklifi nasıl alabilirim?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p>Ücretsiz fiyat teklifi için:</p>
-          <ul>
-            <li><strong>Online Form:</strong> <a href="contact.html">Teklif formu</a>nu doldurun</li>
-            <li><strong>WhatsApp:</strong> Proje detaylarını gönderin</li>
-            <li><strong>Telefon:</strong> Direkt görüşme yapın</li>
-          </ul>
-          <p>Tekliflerimiz <strong>24 saat içinde</strong> hazırlanır ve size ulaştırılır.</p>
-          <div class="mt-3">
-            <a href="contact.html" class="btn btn-primary btn-sm rounded-pill">
-              <i class="fas fa-file-signature me-1"></i> Teklif Al
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 -->
-      <div class="faq-card" data-category="teknik">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-map-marked-alt"></i>
-          </div>
-          <h5 class="faq-question" data-i18n="faq.q5.question">
-            Hizmet bölgeleriniz nelerdir?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p><strong>Türkiye genelinde</strong> hizmet veriyoruz:</p>
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <h6><i class="fas fa-star text-warning me-1"></i> Öncelikli Bölgeler:</h6>
-              <ul>
-                <li>İstanbul ve çevresi</li>
-                <li>Ankara ve çevresi</li>
-                <li>İzmir ve çevresi</li>
-                <li>Bursa ve çevresi</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h6><i class="fas fa-check text-success me-1"></i> Diğer İller:</h6>
-              <ul>
-                <li>Kocaeli, Sakarya</li>
-                <li>Eskişehir, Konya</li>
-                <li>Manisa, Denizli</li>
-                <li>Ve tüm Türkiye</li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-3">
-            <span class="badge bg-success">Türkiye Geneli</span>
-            <span class="badge bg-primary">Hızlı Servis</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 6 -->
-      <div class="faq-card" data-category="fiyat">
-        <button class="faq-header">
-          <div class="faq-icon">
-            <i class="fas fa-credit-card"></i>
-          </div>
-          <h5 class="faq-question">
-            Ödeme seçenekleriniz nelerdir?
-          </h5>
-          <i class="fas fa-chevron-down faq-toggle"></i>
-        </button>
-        <div class="faq-content">
-          <p>Esnek ödeme seçenekleri sunuyoruz:</p>
-          <div class="row">
-            <div class="col-md-6">
-              <h6><i class="fas fa-money-bill text-success me-1"></i> Nakit/Havale:</h6>
-              <ul>
-                <li>Peşin ödeme indirimi</li>
-                <li>Banka havalesi</li>
-                <li>Nakit ödeme</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h6><i class="fas fa-calendar text-info me-1"></i> Vadeli Ödeme:</h6>
-              <ul>
-                <li>Taksitli ödeme planları</li>
-                <li>Kurumsal anlaşmalar</li>
-                <li>Bakım paketleri</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-    <!-- Contact CTA -->
-    <div class="text-center py-5" data-aos="fade-up">
-      <div class="contact-cta-container">
-        <h3 class="fw-bold mb-3">Sorunuzun cevabını bulamadınız mı?</h3>
-        <p class="text-muted mb-4">Uzman ekibimiz size yardımcı olmaya hazır!</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="https://wa.me/905316250694" target="_blank" class="btn btn-success btn-lg rounded-pill px-4">
-            <i class="fab fa-whatsapp me-2"></i>WhatsApp'ta Sor
-          </a>
-          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
-            <i class="fas fa-envelope me-2"></i>İletişim Formu
-          </a>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- FOOTER -->
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
 
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Modular JavaScript System -->
+  <script type="module" src="js/main.js"></script>
+  
+  <!-- Custom JavaScript -->
   <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
+    // Load navbar and footer
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
+      
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    });
+    
+    // FAQ Toggle Function
+    function toggleFAQ(button) {
+      const faqCard = button.parentElement;
+      const isActive = faqCard.classList.contains('active');
+      
+      // Close all FAQ cards
+      document.querySelectorAll('.faq-card').forEach(card => {
+        card.classList.remove('active');
       });
+      
+      // Open clicked card if it wasn't active
+      if (!isActive) {
+        faqCard.classList.add('active');
+      }
+    }
   </script>
   
-  <!-- Modern Scripts -->
-  <script src="js/include.js"></script>
-  <script src="js/language.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     // Initialize AOS
     AOS.init({ 
       once: true,
       duration: 800,
-      easing: 'ease-out-cubic'
-    });
-
-    // FAQ Accordion functionality
-    document.querySelectorAll('.faq-header').forEach(header => {
-      header.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        const isActive = this.classList.contains('active');
-        
-        // Close all other FAQ items
-        document.querySelectorAll('.faq-header.active').forEach(activeHeader => {
-          if (activeHeader !== this) {
-            activeHeader.classList.remove('active');
-            activeHeader.nextElementSibling.classList.remove('show');
-          }
-        });
-        
-        // Toggle current item
-        if (isActive) {
-          this.classList.remove('active');
-          content.classList.remove('show');
-        } else {
-          this.classList.add('active');
-          content.classList.add('show');
-        }
-      });
-    });
-
-    // Search functionality
-    document.getElementById('searchFAQ').addEventListener('input', function() {
-      const searchTerm = this.value.toLowerCase();
-      const faqCards = document.querySelectorAll('.faq-card');
-      
-      faqCards.forEach(card => {
-        const question = card.querySelector('.faq-question').textContent.toLowerCase();
-        const answer = card.querySelector('.faq-content').textContent.toLowerCase();
-        
-        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-
-    // Category filtering
-    document.querySelectorAll('.category-pill').forEach(pill => {
-      pill.addEventListener('click', function() {
-        const category = this.getAttribute('data-category');
-        
-        // Update active pill
-        document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Filter FAQ items
-        document.querySelectorAll('.faq-card').forEach(card => {
-          if (category === 'all' || card.getAttribute('data-category') === category) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
+      easing: 'ease-out-cubic',
+      offset: 100
     });
   </script>
-  <script src="js/language.js"></script>
-
-  <style>
-    .contact-cta-container {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      padding: 50px 30px;
-      border-radius: 25px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-    }
-  </style>
 </body>
 </html>

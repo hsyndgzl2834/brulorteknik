@@ -1,0 +1,483 @@
+/* ===================================
+   MODULAR CSS SYSTEM - COMPONENTS MODULE
+   =================================== */
+
+/* ===== CARD COMPONENTS ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--light-gray);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+}
+
+.card-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--light-gray);
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.service-card .service-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-secondary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.5rem;
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card h3 {
+  color: var(--dark-gray);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card p {
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-features li {
+  padding: var(--spacing-xs) 0;
+  color: var(--gray);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.service-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.service-link:hover {
+  color: var(--primary-dark);
+  transform: translateX(5px);
+}
+
+.service-link i {
+  margin-left: var(--spacing-xs);
+  transition: transform var(--transition-fast);
+}
+
+.service-link:hover i {
+  transform: translateX(3px);
+}
+
+/* Quick Service Card */
+.quick-service-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.quick-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.quick-service-card:hover::before {
+  left: 100%;
+}
+
+.quick-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.quick-service-card .service-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--gradient-secondary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  font-size: 1.8rem;
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-service-card h4 {
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.quick-service-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.quick-service-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--white);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.quick-service-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+/* ===== BUTTON COMPONENTS ===== */
+.btn-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-custom:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== STICKY WHATSAPP ===== */
+.sticky-whatsapp {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: var(--z-whatsapp);
+  transition: all var(--transition-normal);
+}
+
+.sticky-whatsapp a {
+  display: flex;
+  align-items: center;
+  background: #25d366;
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.sticky-whatsapp a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.sticky-whatsapp a:hover::before {
+  left: 100%;
+}
+
+.sticky-whatsapp a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+  background: #128c7e;
+}
+
+.sticky-whatsapp i {
+  font-size: 1.5rem;
+  margin-right: var(--spacing-sm);
+}
+
+.sticky-whatsapp .whatsapp-text {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.sticky-whatsapp:hover .whatsapp-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== PAGE TRANSITION ===== */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-slow);
+}
+
+.page-transition.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-transition .loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-up {
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInFromRight 0.8s ease-out;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .sticky-whatsapp {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+  
+  .sticky-whatsapp a {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .sticky-whatsapp i {
+    font-size: 1.3rem;
+    margin-right: 0;
+  }
+  
+  .sticky-whatsapp .whatsapp-text {
+    display: none;
+  }
+  
+  .service-card,
+  .quick-service-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+.sticky-whatsapp a:focus {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
+.service-link:focus,
+.quick-service-link:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  .service-card,
+  .quick-service-card {
+    background: var(--white);
+    border: 2px solid var(--black);
+  }
+  
+  .sticky-whatsapp a {
+    background: #128c7e;
+    border: 2px solid var(--white);
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .quick-service-card,
+  .sticky-whatsapp a,
+  .service-link,
+  .quick-service-link {
+    transition: none;
+  }
+  
+  .service-card:hover,
+  .quick-service-card:hover,
+  .sticky-whatsapp a:hover {
+    transform: none;
+  }
+  
+  .service-link:hover,
+  .quick-service-link:hover {
+    transform: none;
+  }
+  
+  .page-transition .loader {
+    animation: none;
+  }
+} 

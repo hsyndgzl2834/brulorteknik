@@ -1,22 +1,17 @@
 {
-  "name": "Brülör Teknik Hizmetler - Endüstriyel Brülör Servisi",
+  "name": "Brülör Teknik Hizmetler",
   "short_name": "Brülör Teknik",
-  "description": "İstanbul'da endüstriyel brülör servisi, bakım ve arıza giderme hizmetleri",
+  "description": "İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi. 7/24 acil servis, bakım, arıza giderme ve montaj hizmetleri.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#3498db",
   "orientation": "portrait-primary",
-  "theme_color": "#2C3E50",
-  "background_color": "#F8F9FA",
-  "lang": "tr-TR",
+  "scope": "/",
+  "lang": "tr",
   "dir": "ltr",
+  "categories": ["business", "industrial", "services"],
   "icons": [
-    {
-      "src": "images/favicon.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any"
-    },
     {
       "src": "images/logo.webp",
       "sizes": "192x192",
@@ -32,33 +27,98 @@
   ],
   "screenshots": [
     {
-      "src": "images/hero1-1600.webp",
-      "sizes": "1600x900",
+      "src": "images/hero1.webp",
+      "sizes": "1280x720",
       "type": "image/webp",
       "form_factor": "wide",
-      "label": "Brülör Teknik Ana Sayfa"
+      "label": "Ana Sayfa - Hero Bölümü"
+    },
+    {
+      "src": "images/hero2.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Hizmetler Bölümü"
     }
   ],
-  "categories": ["business", "utilities", "productivity"],
   "shortcuts": [
     {
-      "name": "İletişim",
+      "name": "Hemen Ara",
+      "short_name": "Ara",
+      "description": "7/24 acil servis için hemen ara",
       "url": "/contact.html",
-      "description": "İletişim sayfası"
+      "icons": [
+        {
+          "src": "images/logo.webp",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
-      "name": "Hizmetler",
-      "url": "/hizmetler.html", 
-      "description": "Tüm hizmetlerimiz"
+      "name": "Hizmetlerimiz",
+      "short_name": "Hizmetler",
+      "description": "Tüm hizmetlerimizi incele",
+      "url": "/hizmetler.html",
+      "icons": [
+        {
+          "src": "images/logo.webp",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
-      "name": "Ürünler",
-      "url": "/products.html",
-      "description": "Brülör ürünleri"
+      "name": "WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "WhatsApp ile iletişim",
+      "url": "https://wa.me/905316250694",
+      "icons": [
+        {
+          "src": "images/logo.webp",
+          "sizes": "96x96"
+        }
+      ]
     }
   ],
+  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
-  }
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate",
+  "file_handlers": [
+    {
+      "action": "/contact.html",
+      "accept": {
+        "text/html": [".html", ".htm"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+brulorteknik",
+      "url": "/contact.html?source=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/contact.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "permissions": [
+    "geolocation"
+  ],
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "window-controls-overlay"
+  ]
 }
