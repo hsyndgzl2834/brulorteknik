@@ -1,123 +1,93 @@
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Navbar script başlatıldı');
-  
-  // Enhanced scroll effect
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar-custom');
-    if (navbar) {
-      if (window.scrollY > 20) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    }
-  });
-
-  // Auto-detect active page
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
-
-  // Close mobile menu when clicking on nav link
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      if (window.innerWidth < 992) {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-          // Bootstrap 5 way to hide collapse
-          const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-          bsCollapse.hide();
-        }
-      }
-    });
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-});
-</script>
-
-<!-- Modern Professional Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+<!-- Modern Navbar - Mobile First -->
+<nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Ana navigasyon">
   <div class="container">
-    <!-- Enhanced Brand with Animation -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo.webp" alt="Brülör Teknik Logo" class="me-2" style="width: 40px; height: 40px; border-radius: 8px;">
-      <div>
-        <div style="font-size: 1.2rem; font-weight: 700; color: #ffffff;">Brülör Teknik</div>
-        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">Endüstriyel Brülör Uzmanı</div>
+    <!-- Brand -->
+    <a class="navbar-brand" href="index.html" aria-label="Ana sayfaya git">
+      <div class="brand-wrapper">
+        <img src="images/logo.webp" alt="Brülör Teknik Logo" loading="eager" width="40" height="40" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Brülör Teknik</span>
+          <span class="brand-subtitle">Endüstriyel Çözümler</span>
+        </div>
       </div>
     </a>
     
-    <!-- Simple Bootstrap Hamburger Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Menü">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler modern-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </button>
     
-    <!-- Enhanced Navigation Menu -->
+    <!-- Navigation Menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+      <!-- Mobile Menu Close Button -->
+      <button class="mobile-menu-close" type="button" aria-label="Menüyü kapat">
+        <span class="sr-only">Kapat</span>
+      </button>
+      
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-home me-1"></i>
-            Ana Sayfa
+          <a class="nav-link modern-link" href="index.html" role="menuitem" aria-current="page">
+            <div class="link-content">
+              <i class="fas fa-home" aria-hidden="true"></i>
+              <span>Ana Sayfa</span>
+            </div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">
-            <i class="fas fa-info-circle me-1"></i>
-            Hakkımızda
+          <a class="nav-link modern-link" href="about.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-info-circle" aria-hidden="true"></i>
+              <span>Hakkımızda</span>
+            </div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="products.html">
-            <i class="fas fa-cogs me-1"></i>
-            Ürünler
+          <a class="nav-link modern-link" href="hizmetler.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-cogs" aria-hidden="true"></i>
+              <span>Hizmetler</span>
+            </div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="hizmetler.html">
-            <i class="fas fa-tools me-1"></i>
-            Hizmetler
+          <a class="nav-link modern-link" href="products.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-box" aria-hidden="true"></i>
+              <span>Ürünler</span>
+            </div>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">
-            <i class="fas fa-envelope me-1"></i>
-            İletişim
+          <a class="nav-link modern-link" href="contact.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>İletişim</span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="faq.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-question-circle" aria-hidden="true"></i>
+              <span>SSS</span>
+            </div>
           </a>
         </li>
       </ul>
       
-      <!-- Action Buttons -->
-      <div class="navbar-actions d-flex align-items-center gap-2">
-        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
-           class="btn btn-success btn-sm" target="_blank">
-          <i class="fab fa-whatsapp me-1"></i>
-          WhatsApp
+      <div class="navbar-actions">
+        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum."
+           class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span>WhatsApp</span>
         </a>
-        <a href="contact.html" class="btn btn-primary btn-sm">
-          <i class="fas fa-calculator me-1"></i>
-          Teklif Al
+        <a href="contact.html" class="btn btn-quote" aria-label="Teklif al">
+          <i class="fas fa-calculator" aria-hidden="true"></i>
+          <span>Teklif Al</span>
         </a>
       </div>
     </div>

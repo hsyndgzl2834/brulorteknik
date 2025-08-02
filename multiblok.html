@@ -74,10 +74,10 @@
 
   <!-- Modern CSS Libraries & Custom Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <link rel="stylesheet" href="css/main.css">
   
   <!-- Schema.org: Product mikro veri -->
   <script type="application/ld+json">
@@ -359,22 +359,40 @@
   </script>
 
   <!-- Scripts -->
-  <script src="js/include.js"></script>
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
-      // AOS başlat
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 800,
-          easing: 'ease-in-out',
-          once: true
-        });
-      }
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
+      
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    });
+
+    // AOS Animasyonlarını Başlat
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
     });
   </script>
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
 </body>
 </html>

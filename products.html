@@ -3,30 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="products.pageTitle">Ürünlerimiz | Brülör Teknik Hizmetler</title>
+  <title>Ürünlerimiz | Brülör Teknik Hizmetler</title>
   <meta name="description" content="Brülör Teknik Hizmetler'in monoblok ve duoblok brülörler, emniyet kapama valfi, prosesstat ve daha birçok endüstriyel ürününü keşfedin. Modern tasarım, hızlı yükleme ve SEO uyumu!" />
   <meta name="keywords" content="Brülör, Monoblok Brülör, Duoblok Brülör, Emniyet Kapama Valfi, ProsesStat, Endüstriyel Ürünler" />
   <link rel="canonical" href="https://www.brulorteknik.com/products.html" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- External Resources - OPTIMIZE EDILDI -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" /></noscript>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ürünlerimiz | Brülör Teknik Hizmetler" />
+  <meta property="og:description" content="Endüstriyel brülör sistemleri ve yedek parçalar. Monoblok, duoblok brülörler ve otomasyon ürünleri." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/product1.webp" />
+  <meta property="og:url" content="https://www.brulorteknik.com/products.html" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
   
-  <!-- Harici CSS dosyalarını render-blocking olmadan yükle -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"></noscript>
-  
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-  <noscript><link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"></noscript>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ürünlerimiz | Brülör Teknik Hizmetler" />
+  <meta name="twitter:description" content="Endüstriyel brülör sistemleri ve yedek parçalar. Monoblok, duoblok brülörler ve otomasyon ürünleri." />
+  <meta name="twitter:image" content="https://www.brulorteknik.com/images/product1.webp" />
 
-  <!-- Özel CSS -->
-  <link href="css/style.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="css/style.min.css" rel="stylesheet"></noscript>
+  <!-- CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Modular CSS System -->
+  <link rel="stylesheet" href="css/main.css">
+  
   <style>
+    /* Mobile First CSS for Products Page */
     :root {
       --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -39,11 +45,13 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       overflow-x: hidden;
+      padding-top: 70px;
     }
     
     .hero-section {
       background: var(--primary-gradient);
-      padding: 100px 0 80px;
+      padding: 60px 0 40px;
+      min-height: 50vh;
       position: relative;
       overflow: hidden;
     }
@@ -59,6 +67,26 @@
       background-size: cover;
     }
     
+    .page-title {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    
+    .products-grid {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
     .product-card {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -68,6 +96,8 @@
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       position: relative;
+      height: 100%;
+      margin-bottom: 1.5rem;
     }
     
     .product-card::before {
@@ -94,6 +124,7 @@
     
     .product-img {
       height: 200px;
+      width: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
@@ -102,574 +133,355 @@
       transform: scale(1.05);
     }
     
-    .category-title {
-      font-size: 2.5rem;
+    .product-content {
+      padding: 1.5rem;
+    }
+    
+    .product-title {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
       font-weight: 700;
-      background: var(--primary-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    
-    .product-badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: var(--secondary-gradient);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      z-index: 2;
-    }
-    
-    .section-divider {
-      height: 2px;
-      background: var(--primary-gradient);
-      border-radius: 1px;
-      margin: 60px auto;
-      width: 100px;
-    }
-    
-    /* Mobile-First Products Page Optimizations */
-    
-    /* Base Mobile Styles */
-    .hero-section {
-      padding: 60px 0 40px;
-      min-height: 50vh;
-    }
-    
-    .hero-section .display-4 {
-      font-size: clamp(1.8rem, 6vw, 3rem);
-      line-height: 1.2;
-    }
-    
-    .hero-section .lead {
-      font-size: clamp(1rem, 3.5vw, 1.25rem);
-      line-height: 1.4;
-    }
-    
-    .section-spacing {
-      padding: 3rem 0;
-    }
-    
-    .product-card {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      margin-bottom: 1.5rem;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-    
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .card-body {
-      padding: 15px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .card-title {
-      font-size: clamp(1.1rem, 4vw, 1.4rem);
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-      line-height: 1.3;
-    }
-    
-    .card-text {
-      font-size: clamp(0.85rem, 3vw, 1rem);
-      line-height: 1.5;
-      color: #6b7280;
-      flex: 1;
+      color: #2c3e50;
       margin-bottom: 1rem;
     }
     
-    .btn-primary-custom {
-      background: var(--primary-gradient);
-      border: none;
-      border-radius: 25px;
-      padding: 10px 20px;
-      font-size: clamp(0.8rem, 3vw, 0.9rem);
-      font-weight: 600;
-      color: white;
+    .product-description {
+      color: #6c757d;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .product-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    
+    .product-features li {
+      padding: 0.5rem 0;
+      color: #6c757d;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .product-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+    
+    .product-link {
+      color: #3498db;
       text-decoration: none;
-      transition: all 0.3s ease;
-      text-align: center;
-      margin-top: auto;
-      min-height: 40px;
-      display: flex;
+      font-weight: 600;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
     }
     
-    .btn-primary-custom:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-      color: white;
+    .product-link:hover {
+      color: #2980b9;
+      transform: translateX(5px);
     }
     
-    .section-title {
-      font-size: clamp(1.5rem, 5vw, 2.5rem);
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #2d3748;
+    .category-title {
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 700;
-    }
-    
-    .section-subtitle {
-      font-size: clamp(1rem, 3.5vw, 1.2rem);
-      text-align: center;
-      color: #6b7280;
+      color: #2c3e50;
       margin-bottom: 2rem;
+      text-align: center;
     }
     
-    /* Mobile Grid Adjustments */
-    @media (max-width: 768px) {
+    /* Responsive Breakpoints */
+    @media (min-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+      
       .hero-section {
-        padding: 50px 0 30px;
-        min-height: 40vh;
+        padding: 80px 0 60px;
+        min-height: 60vh;
       }
       
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
+      .products-grid {
+        padding: 80px 0;
       }
       
-      .section-spacing {
-        padding: 2rem 0;
-      }
-      
-      .product-card {
-        margin-bottom: 1rem;
-        border-radius: 12px;
-      }
-      
-      .product-card img {
-        height: 180px;
-      }
-      
-      .card-body {
-        padding: 12px;
-      }
-      
-      .card-title {
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
-      }
-      
-      .card-text {
-        font-size: 0.9rem;
-        margin-bottom: 0.8rem;
-      }
-      
-      .btn-primary-custom {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-        min-height: 38px;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .row.g-4 {
-        gap: 1rem !important;
-      }
-      
-      .col-lg-4,
-      .col-md-6 {
-        margin-bottom: 1rem;
+      .product-content {
+        padding: 2rem;
       }
     }
     
-    @media (max-width: 576px) {
+    @media (min-width: 992px) {
       .hero-section {
-        padding: 40px 0 25px;
+        padding: 100px 0 80px;
+        min-height: 70vh;
       }
       
-      .container {
-        padding-left: 10px;
-        padding-right: 10px;
+      .products-grid {
+        padding: 100px 0;
       }
       
-      .section-spacing {
-        padding: 1.5rem 0;
+      .product-content {
+        padding: 2.5rem;
       }
-      
-      .product-card {
-        margin-bottom: 0.8rem;
-        border-radius: 10px;
-      }
-      
-      .product-card img {
-        height: 160px;
-      }
-      
-      .card-body {
-        padding: 10px;
-      }
-      
-      .card-title {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      
-      .card-text {
-        font-size: 0.8rem;
-        margin-bottom: 0.6rem;
-        line-height: 1.4;
-      }
-      
-      .btn-primary-custom {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        min-height: 36px;
-        border-radius: 20px;
-      }
-      
-      .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      
-      .section-subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-      
-      /* Single column layout on mobile */
-      .row > .col-lg-4,
-      .row > .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .hero-section {
-        padding: 35px 0 20px;
-      }
-      
-      .container {
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-      
-      .product-card img {
-        height: 140px;
-      }
-      
-      .card-body {
-        padding: 8px;
-      }
-      
-      .card-title {
-        font-size: 0.95rem;
-        margin-bottom: 0.4rem;
-      }
-      
-      .card-text {
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-      }
-      
-      .btn-primary-custom {
-        padding: 5px 10px;
-        font-size: 0.75rem;
-        min-height: 34px;
-      }
-      
-      .section-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
-      }
-      
-      .section-subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 0.8rem;
-      }
-    }
-    
-    /* Touch Device Optimizations */
-    @media (hover: none) and (pointer: coarse) {
-      .product-card:hover {
-        transform: none;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      }
-      
-      .product-card:active {
-        transform: scale(0.98);
-        transition: transform 0.1s ease;
-      }
-      
-      .btn-primary-custom:hover {
-        transform: none;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
-      }
-      
-      .btn-primary-custom:active {
-        transform: scale(0.95);
-        transition: transform 0.1s ease;
-      }
-    }
-    
-    /* Ensure consistent card heights on larger screens */
-    @media (min-width: 769px) {
-      .row-equal-height {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      
-      .row-equal-height > [class*='col-'] {
-        display: flex;
-      }
-      
-      .product-card {
-        width: 100%;
-      }
-    }
-
-    html, body {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      box-sizing: border-box;
-    }
-    .container, .container-fluid, .row, .content-section, .card, .universal-card {
-      overflow: visible !important;
-      box-sizing: border-box;
     }
   </style>
 </head>
-<body class="page-wrapper">
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
 
-  <!-- HERO SECTION -->
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <div class="text-center text-white" data-aos="fade-up">
-        <h1 class="page-title" data-i18n="products.heroTitle">Ürünlerimiz</h1>
-        <p class="page-subtitle" data-i18n="products.heroSubtitle">
-          Endüstriyel brülörler ve tamamlayıcı parçalar: kalite ve performansın adresi
-        </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="page-title" data-aos="fade-up">Ürünlerimiz</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Endüstriyel brülör sistemleri ve yedek parçalar. Monoblok, duoblok brülörler ve otomasyon ürünleri.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-content">
+  <!-- Products Grid -->
+  <section class="products-grid">
     <div class="container">
-      <!-- Brülör Tipleri -->
-      <div class="content-section" data-aos="fade-up">
-        <h2 class="section-title" data-i18n="products.section1Title">Brülör Tipleri</h2>
-        <div class="row g-4 row-equal-height">
-        <!-- Monoblok -->
-        <div class="col-lg-4 col-md-6">
-          <div class="universal-card text-center" data-aos="fade-up">
-            <div class="product-badge">Popüler</div>
-            <img src="images/product1.webp" alt="Monoblok Brülör" class="product-img w-100 mb-3" style="height: 200px; object-fit: cover; border-radius: 10px;">
-            <h5 class="fw-bold mb-2">Monoblok Brülörler</h5>
-            <p class="text-muted mb-3">Kompakt tasarım, yüksek verimlilik</p>
-            <a href="monoblok.html" class="btn-primary-custom">
-              <i class="fas fa-arrow-right me-1"></i> Detaylar
-            </a>
-          </div>
+      <!-- Brülör Sistemleri -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="category-title" data-aos="fade-up">Brülör Sistemleri</h2>
         </div>
         
-        <!-- Duoblok -->
-        <div class="col-lg-4 col-md-6">
-          <div class="universal-card text-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="product-badge">Güvenilir</div>
-            <img src="images/product22.webp" alt="Duoblok Brülör" class="product-img w-100 mb-3" style="height: 200px; object-fit: cover; border-radius: 10px;">
-            <h5 class="fw-bold mb-2">Duoblok Brülörler</h5>
-            <p class="text-muted mb-3">İki kademe yakma sistemi</p>
-              <a href="duoblok.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Multiblok -->
-        <div class="col-sm-6 col-lg-4">
-          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="product-badge">Endüstriyel</div>
-            <img src="images/product33.webp" alt="Multiblok Brülör" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Multiblok Brülörler</h5>
-              <p class="text-muted mb-3">Çok kademeli yüksek kapasite</p>
-              <a href="multiblok.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <!-- Emniyet Sistemleri -->
-    <div class="mb-5" data-aos="fade-up">
-      <h2 class="category-title" data-i18n="products.section2Title">Emniyet Sistemleri</h2>
-      <div class="row g-4">
-        <!-- Emniyet Valfi -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up">
-            <div class="product-badge">Güvenlik</div>
-            <img src="images/product7.webp" alt="Emniyet Kapama Valfi" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Emniyet Kapama Valfi</h5>
-              <p class="text-muted mb-3">Otomatik güvenlik sistemi</p>
-              <a href="emniyet-valfi.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product1.webp" alt="Monoblok Brülör" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Monoblok Brülör</h3>
+              <p class="product-description">
+                Kompakt tasarım ve yüksek verimlilik ile endüstriyel uygulamalar için ideal monoblok brülör sistemleri.
+              </p>
+              <ul class="product-features">
+                <li>Kompakt tasarım</li>
+                <li>Yüksek verimlilik</li>
+                <li>Kolay montaj</li>
+                <li>Düşük bakım maliyeti</li>
+              </ul>
+              <a href="monoblok.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         
-        <!-- Valf Aktüatörü -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="product-badge">Kontrol</div>
-            <img src="images/product8.webp" alt="Valf Aktüatörü" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Valf Aktüatörü</h5>
-              <p class="text-muted mb-3">Hassas valf kontrolü</p>
-              <a href="valf-aktuatoru.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product22.webp" alt="Duoblok Brülör" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Duoblok Brülör</h3>
+              <p class="product-description">
+                Büyük kapasiteli uygulamalar için tasarlanmış duoblok brülör sistemleri.
+              </p>
+              <ul class="product-features">
+                <li>Yüksek kapasite</li>
+                <li>Modüler yapı</li>
+                <li>Esnek konfigürasyon</li>
+                <li>Güvenilir performans</li>
+              </ul>
+              <a href="duoblok.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         
-        <!-- Prosesstat -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="product-badge">Ölçüm</div>
-            <img src="images/prosesstat.webp" alt="Prosesstat" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Prosesstat</h5>
-              <p class="text-muted mb-3">Basınç ve sıcaklık kontrolü</p>
-              <a href="prosesstat.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product33.webp" alt="Multiblok Brülör" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Multiblok Brülör</h3>
+              <p class="product-description">
+                Çoklu brülör uygulamaları için özel tasarlanmış multiblok sistemler.
+              </p>
+              <ul class="product-features">
+                <li>Çoklu brülör</li>
+                <li>Senkronize çalışma</li>
+                <li>Merkezi kontrol</li>
+                <li>Enerji tasarrufu</li>
+              </ul>
+              <a href="multiblok.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <!-- Ek Ürünler -->
-    <div class="mb-5" data-aos="fade-up">
-      <h2 class="category-title" data-i18n="products.section3Title">Ek Ürünler</h2>
-      <div class="row g-4">
-        <!-- Filtre -->
-        <div class="col-sm-6 col-lg-4">
+      
+      <!-- Güvenlik Sistemleri -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="category-title" data-aos="fade-up">Güvenlik Sistemleri</h2>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up">
-            <div class="product-badge">Temizlik</div>
-            <img src="images/product88.webp" alt="Gaz Filtresi" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Gaz Filtresi</h5>
-              <p class="text-muted mb-3">Yüksek filtrasyon kapasitesi</p>
-              <a href="filtre.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product7.webp" alt="Emniyet Kapama Valfi" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Emniyet Kapama Valfi</h3>
+              <p class="product-description">
+                Güvenlik standartlarına uygun emniyet kapama valfleri ile sistem güvenliği.
+              </p>
+              <ul class="product-features">
+                <li>Hızlı kapanma</li>
+                <li>Güvenlik standartları</li>
+                <li>Otomatik kontrol</li>
+                <li>Yüksek güvenilirlik</li>
+              </ul>
+              <a href="emniyet-valfi.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         
-        <!-- Gaz Basınç Regülatörü -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="product-badge">Regülasyon</div>
-            <img src="images/product9.webp" alt="Gaz Basınç Regülatörü" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Gaz Basınç Regülatörü</h5>
-              <p class="text-muted mb-3">Sabit basınç kontrolü</p>
-              <a href="gaz-basinç-regulatoru.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product8.webp" alt="Valf Aktüatörü" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Valf Aktüatörü</h3>
+              <p class="product-description">
+                Hassas kontrol için tasarlanmış valf aktüatörleri ve kontrol sistemleri.
+              </p>
+              <ul class="product-features">
+                <li>Hassas kontrol</li>
+                <li>Otomatik çalışma</li>
+                <li>Düşük bakım</li>
+                <li>Uzun ömür</li>
+              </ul>
+              <a href="valf-aktuatoru.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-
-        <!-- Yanma Analizörü -->
-        <div class="col-sm-6 col-lg-4">
+        
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="product-badge">Analiz</div>
-            <img src="images/product9.webp" alt="Yanma Analizörü" class="product-img w-100">
-            <div class="p-4">
-              <h5 class="fw-bold mb-2">Yanma Analizörü</h5>
-              <p class="text-muted mb-3">O₂/CO ölçümü ve verimlilik analizi</p>
-              <a href="yanma-analizoru.html" class="btn btn-primary btn-sm rounded-pill">
-                <i class="fas fa-arrow-right me-1"></i> Detaylar
-              </a>
+            <img src="images/product9.webp" alt="Gaz Basınç Regülatörü" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Gaz Basınç Regülatörü</h3>
+              <p class="product-description">
+                Sabit basınç sağlayan gaz basınç regülatörleri ile optimal yanma.
+              </p>
+              <ul class="product-features">
+                <li>Sabit basınç</li>
+                <li>Otomatik ayarlama</li>
+                <li>Yüksek hassasiyet</li>
+                <li>Güvenli çalışma</li>
+              </ul>
+              <a href="gaz-basinç-regulatoru.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Otomasyon Sistemleri -->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="category-title" data-aos="fade-up">Otomasyon Sistemleri</h2>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="product-card" data-aos="fade-up">
+            <img src="images/prosesstat.webp" alt="ProsesStat" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">ProsesStat</h3>
+              <p class="product-description">
+                Endüstriyel süreç kontrolü için gelişmiş ProsesStat otomasyon sistemleri.
+              </p>
+              <ul class="product-features">
+                <li>Gelişmiş kontrol</li>
+                <li>Uzaktan izleme</li>
+                <li>Veri kaydı</li>
+                <li>Alarm sistemi</li>
+              </ul>
+              <a href="prosesstat.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/product12.webp" alt="Yanma Analizörü" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Yanma Analizörü</h3>
+              <p class="product-description">
+                Yanma verimliliğini ölçen ve optimize eden yanma analizörleri.
+              </p>
+              <ul class="product-features">
+                <li>Verimlilik ölçümü</li>
+                <li>Gerçek zamanlı analiz</li>
+                <li>Otomatik optimizasyon</li>
+                <li>Enerji tasarrufu</li>
+              </ul>
+              <a href="yanma-analizoru.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/product88.webp" alt="Filtre Sistemleri" class="product-img">
+            <div class="product-content">
+              <h3 class="product-title">Filtre Sistemleri</h3>
+              <p class="product-description">
+                Yakıt ve hava filtreleme sistemleri ile temiz ve verimli yanma.
+              </p>
+              <ul class="product-features">
+                <li>Temiz yakıt</li>
+                <li>Yüksek filtreleme</li>
+                <li>Kolay bakım</li>
+                <li>Uzun ömür</li>
+              </ul>
+              <a href="filtre.html" class="product-link">Detaylar <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- CTA Section -->
-    <div class="text-center py-5" data-aos="fade-up">
-      <div class="cta-container">
-        <h3 class="fw-bold mb-3" style="color: #2d3748;">Aradığınız ürünü bulamadınız mı?</h3>
-        <p class="text-muted mb-4">Özel projeleriniz için kişiselleştirilmiş çözümler sunuyoruz.</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
-            <i class="fas fa-file-signature me-2"></i>Özel Teklif Al
-          </a>
-          <a href="https://wa.me/905316250694" target="_blank" class="btn btn-success btn-lg rounded-pill px-4">
-            <i class="fab fa-whatsapp me-2"></i>WhatsApp'tan Sor
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
 
-
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Modular JavaScript System -->
+  <script type="module" src="js/main.js"></script>
+  
+  <!-- Custom JavaScript -->
   <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
-      });
+    // Load navbar and footer
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
+      
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    });
   </script>
   
-  <!-- Modern Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/include.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     // Initialize AOS
@@ -679,18 +491,6 @@
       easing: 'ease-out-cubic',
       offset: 100
     });
-
-    // Product card interactions
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
-    });
   </script>
-  <script src="js/language.js"></script>
 </body>
 </html>

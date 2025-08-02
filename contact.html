@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="tr" prefix="og: https://ogp.me/ns#">
+<html lang="tr">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   
-  <!-- Enhanced Meta Tags - MODERN SEO -->
-  <title>📞 İletişim & Ücretsiz Teklif Al | Brülör Teknik Hizmetler İstanbul</title>
-  <meta name="description" content="📋 Brülör Teknik Hizmetler ile iletişime geçin | ✅ Ücretsiz keşif ve teklif ✅ 7/24 müşteri hizmetleri ✅ Hızlı dönüş ✅ İstanbul geneli hizmet ☎️ +90 531 625 06 94"/>
+  <!-- Enhanced Meta Tags -->
+  <title>İletişim & Ücretsiz Teklif Al | Brülör Teknik Hizmetler İstanbul</title>
+  <meta name="description" content="Brülör Teknik Hizmetler ile iletişime geçin. Ücretsiz keşif ve teklif, 7/24 müşteri hizmetleri, hızlı dönüş. İstanbul geneli hizmet."/>
   <meta name="keywords" content="brülör teknik iletişim, endüstriyel brülör teklif, istanbul brülör servisi iletişim, brülör montaj teklifi, ücretsiz keşif"/>
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   
@@ -16,53 +16,161 @@
   <meta name="business:contact_data:phone_number" content="+905316250694" />
   <meta name="business:contact_data:email" content="info@brulorteknik.com" />
   
-  <meta name="theme-color" content="#667eea" />
   <link rel="canonical" href="https://brulorteknik.com/contact.html" />
-  <link rel="manifest" href="/manifest.json">
   <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="İletişim & Ücretsiz Teklif Al | Brülör Teknik Hizmetler" />
+  <meta property="og:description" content="Brülör Teknik Hizmetler ile iletişime geçin. Ücretsiz keşif ve teklif, 7/24 müşteri hizmetleri." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/hero1.webp" />
+  <meta property="og:url" content="https://www.brulorteknik.com/contact.html" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="İletişim & Ücretsiz Teklif Al | Brülör Teknik Hizmetler" />
+  <meta name="twitter:description" content="Brülör Teknik Hizmetler ile iletişime geçin. Ücretsiz keşif ve teklif, 7/24 müşteri hizmetleri." />
+  <meta name="twitter:image" content="https://www.brulorteknik.com/images/hero1.webp" />
   
   <!-- CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link href="css/style.min.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <link rel="stylesheet" href="css/main.css">
   
   <style>
-    /* Mobile-First Contact Page Optimizations */
+    /* Mobile First CSS for Contact Page */
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+      padding-top: 70px;
+    }
     
-    /* Base Mobile Styles */
-    .contact-page .hero-section {
-      padding: 80px 0 60px;
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 60px 0 40px;
       min-height: 50vh;
+      position: relative;
+      overflow: hidden;
     }
     
-    .contact-page .display-4 {
-      font-size: clamp(1.8rem, 6vw, 3rem);
+    .page-title {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
     
-    .contact-page .lead {
-      font-size: clamp(1rem, 3.5vw, 1.25rem);
-      line-height: 1.4;
+    .page-subtitle {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.5;
     }
     
-    .content-section {
-      padding: 3rem 0;
+    .contact-section {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     }
     
-    .universal-card {
-      padding: 20px;
+    .contact-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid rgba(52, 152, 219, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .contact-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #3498db, #2ecc71);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .contact-card h3 {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-card p {
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .contact-info {
+      list-style: none;
       margin-bottom: 1.5rem;
     }
     
-    .section-title {
-      font-size: clamp(1.3rem, 4vw, 1.8rem);
-      margin-bottom: 1.5rem !important;
+    .contact-info li {
+      padding: 0.5rem 0;
+      color: #6c757d;
+      position: relative;
+      padding-left: 1.5rem;
     }
     
-    .form-label {
-      font-size: clamp(0.9rem, 3vw, 1rem);
-      margin-bottom: 0.5rem;
+    .contact-info li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+    
+    .contact-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-link:hover {
+      color: #2980b9;
+      transform: translateX(5px);
     }
     
     .form-control,
@@ -77,12 +185,12 @@
     
     .form-control:focus,
     .form-select:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
     }
     
     .btn-submit {
-      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
       border: none;
       border-radius: 25px;
       padding: 12px 30px;
@@ -98,495 +206,280 @@
     
     .btn-submit:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
     }
     
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding: 10px;
-      border-radius: 10px;
-      background: rgba(59, 130, 246, 0.05);
-    }
-    
-    .contact-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      margin-right: 15px;
-      flex-shrink: 0;
-    }
-    
-    .contact-text {
-      font-size: clamp(0.9rem, 3vw, 1rem);
-      line-height: 1.4;
-    }
-    
-    /* Mobile Responsive Improvements */
-    @media (max-width: 768px) {
-      .contact-page .hero-section {
-        padding: 60px 0 40px;
-        min-height: 40vh;
+    /* Responsive Breakpoints */
+    @media (min-width: 768px) {
+      body {
+        padding-top: 80px;
       }
       
-      .content-section {
-        padding: 2rem 0;
+      .hero-section {
+        padding: 80px 0 60px;
+        min-height: 60vh;
       }
       
-      .universal-card {
-        padding: 15px;
-        margin-bottom: 1rem;
+      .contact-section {
+        padding: 80px 0;
       }
       
-      .row.g-5 {
-        gap: 1rem !important;
-      }
-      
-      .col-lg-8,
-      .col-lg-4 {
-        margin-bottom: 1rem;
-      }
-      
-      .form-control,
-      .form-select {
-        padding: 10px 12px;
-        font-size: 0.9rem;
-        min-height: 44px;
-      }
-      
-      .btn-submit {
-        padding: 10px 25px;
-        font-size: 0.95rem;
-        min-height: 44px;
-      }
-      
-      .contact-icon {
-        width: 35px;
-        height: 35px;
-        margin-right: 12px;
-      }
-      
-      .contact-text {
-        font-size: 0.9rem;
-      }
-      
-      .form-check-label {
-        font-size: 0.85rem;
+      .contact-card {
+        padding: 2rem;
       }
     }
     
-    @media (max-width: 576px) {
-      .contact-page .hero-section {
-        padding: 50px 0 30px;
+    @media (min-width: 992px) {
+      .hero-section {
+        padding: 100px 0 80px;
+        min-height: 70vh;
       }
       
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
+      .contact-section {
+        padding: 100px 0;
       }
       
-      .universal-card {
-        padding: 12px;
-        border-radius: 12px;
+      .contact-card {
+        padding: 2.5rem;
       }
-      
-      .section-title {
-        font-size: 1.2rem;
-        margin-bottom: 1rem !important;
-      }
-      
-      .form-label {
-        font-size: 0.85rem;
-        margin-bottom: 0.3rem;
-      }
-      
-      .form-control,
-      .form-select {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-        min-height: 42px;
-        border-radius: 8px;
-      }
-      
-      .btn-submit {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-        min-height: 42px;
-        border-radius: 20px;
-      }
-      
-      .contact-item {
-        padding: 8px;
-        margin-bottom: 0.8rem;
-        border-radius: 8px;
-      }
-      
-      .contact-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 10px;
-        border-radius: 8px;
-      }
-      
-      .contact-text {
-        font-size: 0.8rem;
-      }
-      
-      .form-check-label {
-        font-size: 0.8rem;
-      }
-      
-      .row.g-3 > * {
-        margin-bottom: 0.8rem;
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .contact-page .hero-section {
-        padding: 40px 0 25px;
-      }
-      
-      .container {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      
-      .universal-card {
-        padding: 10px;
-      }
-      
-      .form-control,
-      .form-select {
-        padding: 6px 8px;
-        font-size: 0.8rem;
-        min-height: 40px;
-      }
-      
-      .btn-submit {
-        padding: 6px 15px;
-        font-size: 0.85rem;
-        min-height: 40px;
-      }
-      
-      .contact-icon {
-        width: 28px;
-        height: 28px;
-        margin-right: 8px;
-      }
-      
-      .contact-text {
-        font-size: 0.75rem;
-      }
-    }
-    
-    /* Touch Device Optimizations */
-    @media (hover: none) and (pointer: coarse) {
-      .form-control:hover,
-      .form-select:hover {
-        border-color: #e2e8f0;
-      }
-      
-      .btn-submit:hover {
-        transform: none;
-        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
-      }
-      
-      .btn-submit:active {
-        transform: scale(0.98);
-        transition: transform 0.1s ease;
-      }
-    }
-    
-    /* Global Overflow Fix */
-    html, body {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      box-sizing: border-box;
-    }
-    .container, .container-fluid, .row, .content-section, .card, .universal-card {
-      overflow: visible !important;
-      box-sizing: border-box;
     }
   </style>
 </head>
 
-<body class="contact-page">
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
-
-  <!-- HERO SECTION -->
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <div class="text-center text-white" data-aos="fade-up">
-        <h1 class="display-4 fw-bold mb-4">İletişim & Teklif</h1>
-        <p class="lead mb-0 opacity-90">
-          Projeniz için profesyonel çözümler alın. Size en uygun teklifi hazırlayalım.
-        </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="page-title" data-aos="fade-up">İletişim & Teklif Al</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Brülör sistemleriniz için ücretsiz keşif ve teklif alın. 7/24 müşteri hizmetlerimizle yanınızdayız.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-content">
+  <!-- Contact Section -->
+  <section class="contact-section">
     <div class="container">
-      <!-- Contact Form -->
-      <div class="content-section">
-        <div class="row g-5 row-equal-height">
-          <div class="col-lg-8">
-            <div class="universal-card">
-              <h3 class="section-title text-start mb-4" style="color: #2d3748;">Teklif Formu</h3>
-          <form id="contactForm" class="modern-form">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="firstName" class="form-label fw-semibold">Ad *</label>
-                <input type="text" class="form-control" id="firstName" required>
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8 mb-4">
+          <div class="contact-card" data-aos="fade-up">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>İletişim Formu</h3>
+            <p>Brülör sistemleriniz için ücretsiz keşif ve teklif almak için formu doldurun.</p>
+            
+            <form id="contactForm" action="#" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">Ad *</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Soyad *</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
               </div>
-              <div class="col-md-6">
-                <label for="lastName" class="form-label fw-semibold">Soyad *</label>
-                <input type="text" class="form-control" id="lastName" required>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">E-posta *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Telefon *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
               </div>
-              <div class="col-md-6">
-                <label for="company" class="form-label fw-semibold">Firma Adı</label>
-                <input type="text" class="form-control" id="company">
+              
+              <div class="mb-3">
+                <label for="company" class="form-label">Firma Adı</label>
+                <input type="text" class="form-control" id="company" name="company">
               </div>
-              <div class="col-md-6">
-                <label for="phone" class="form-label fw-semibold">Telefon *</label>
-                <input type="tel" class="form-control" id="phone" required>
-              </div>
-              <div class="col-12">
-                <label for="email" class="form-label fw-semibold">E-posta *</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="col-12">
-                <label for="service" class="form-label fw-semibold">Hizmet Türü</label>
-                <select class="form-select" id="service">
-                  <option value="">Seçiniz...</option>
-                  <option value="kurulum">Brülör Kurulumu</option>
-                  <option value="bakim">Periyodik Bakım</option>
-                  <option value="otomasyon">Otomasyon Sistemleri</option>
-                  <option value="yedek-parca">Yedek Parça</option>
+              
+              <div class="mb-3">
+                <label for="service" class="form-label">Hizmet Türü *</label>
+                <select class="form-select" id="service" name="service" required>
+                  <option value="">Seçiniz</option>
+                  <option value="bakim">Brülör Bakımı</option>
+                  <option value="servis">Brülör Servisi</option>
+                  <option value="montaj">Brülör Montajı</option>
+                  <option value="ariza">Arıza Giderme</option>
+                  <option value="enerji">Enerji Analizi</option>
+                  <option value="otomasyon">Otomasyon Sistemi</option>
                   <option value="diger">Diğer</option>
                 </select>
               </div>
-              <div class="col-12">
-                <label for="message" class="form-label fw-semibold">Mesajınız</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Projeniz hakkında detayları paylaşın..."></textarea>
+              
+              <div class="mb-3">
+                <label for="message" class="form-label">Mesajınız *</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Projeniz hakkında detaylı bilgi verin..."></textarea>
               </div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="consent" required>
-                  <label class="form-check-label small text-muted" for="consent">
-                    Kişisel verilerimin işlenmesini kabul ediyorum.
-                  </label>
-                </div>
-              </div>
-              <div class="col-12 text-center">
-                <button type="submit" class="btn-submit text-white">
-                  <i class="fas fa-paper-plane me-2"></i>
-                  Teklif Gönder
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>        <div class="col-lg-4">
-          <div class="universal-card">
-            <h3 class="section-title text-start mb-4" style="color: #2d3748;">İletişim Bilgileri</h3>
-            
-            <!-- Contact Info Items -->
-            <div class="contact-info-item mb-4">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt text-white fa-lg"></i>
-              </div>
-              <h6 class="fw-bold mb-2">Telefon</h6>
-              <p class="text-muted mb-2">7/24 Acil Destek</p>
-              <a href="tel:+905316250694" class="fw-bold text-primary text-decoration-none">
-                +90 531 625 06 94
-              </a>
-            </div>
-            
-            <div class="contact-info-item mb-4">
-              <div class="contact-icon">
-                <i class="fas fa-envelope text-white fa-lg"></i>
-              </div>
-              <h6 class="fw-bold mb-2">E-posta</h6>
-              <p class="text-muted mb-2">Teklifler için</p>
-              <a href="mailto:info@brulorteknik.com" class="fw-bold text-primary text-decoration-none">
-                info@brulorteknik.com
-              </a>
-            </div>
-            
-            <div class="contact-info-item mb-4">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt text-white fa-lg"></i>
-              </div>
-              <h6 class="fw-bold mb-2">Adres</h6>
-              <p class="text-muted mb-2">Merkez Ofis</p>
-              <span class="fw-bold" style="color: #2d3748;">İstanbul, Türkiye</span>
-            </div>
-            
-            <div class="contact-info-item">
-              <div class="contact-icon">
-                <i class="fas fa-clock text-white fa-lg"></i>
-              </div>
-              <h6 class="fw-bold mb-2">Çalışma Saatleri</h6>
-              <p class="text-muted mb-1">Pazartesi - Cuma: 08:00 - 18:00</p>
-              <p class="text-muted mb-0">Cumartesi: 09:00 - 15:00</p>
-            </div>
+              
+              <button type="submit" class="btn btn-submit">
+                <i class="fas fa-paper-plane me-2"></i>Teklif Al
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Quick Contact Section -->
-    <div class="content-section">
-      <div class="row g-4 justify-content-center row-equal-height">
-        <div class="col-lg-5 col-md-6">
-          <div class="universal-card text-center">
-            <div class="quick-contact-icon whatsapp">
-              <i class="fab fa-whatsapp fa-2x"></i>
+        
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
             </div>
-            <h5 class="fw-bold mb-2">WhatsApp ile Hızlı İletişim</h5>
-            <p class="text-muted mb-3">Anında yanıt alın</p>
-            <a href="https://wa.me/905316250694" target="_blank" class="btn-primary-custom">
-              <i class="fab fa-whatsapp me-2"></i>WhatsApp'ta Aç
-            </a>
+            <h3>İletişim Bilgileri</h3>
+            <p>7/24 müşteri hizmetlerimizle size yardımcı olmaya hazırız.</p>
+            
+            <ul class="contact-info">
+              <li><strong>Telefon:</strong> +90 531 625 06 94</li>
+              <li><strong>E-posta:</strong> info@brulorteknik.com</li>
+              <li><strong>Adres:</strong> İstanbul, Türkiye</li>
+              <li><strong>Çalışma Saatleri:</strong> 7/24</li>
+            </ul>
+            
+            <div class="d-grid gap-2">
+              <a href="tel:+905316250694" class="contact-link">
+                <i class="fas fa-phone"></i>Hemen Ara
+              </a>
+              <a href="https://wa.me/905316250694" target="_blank" class="contact-link">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+              </a>
+              <a href="mailto:info@brulorteknik.com" class="contact-link">
+                <i class="fas fa-envelope"></i>E-posta Gönder
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-5 col-md-6">
-          <div class="universal-card text-center">
-            <div class="quick-contact-icon phone">
-              <i class="fas fa-phone-alt fa-2x"></i>
+          
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
-            <h5 class="fw-bold mb-2">Acil Durum Hattı</h5>
-            <p class="text-muted mb-3">7/24 Teknik Destek</p>
-            <a href="tel:+905316250694" class="btn-secondary-custom">
-              <i class="fas fa-phone-alt me-2"></i>Hemen Ara
+            <h3>Hizmet Bölgeleri</h3>
+            <p>İstanbul ve çevre illerde hizmet vermekteyiz.</p>
+            
+            <ul class="contact-info">
+              <li>İstanbul (Tüm İlçeler)</li>
+              <li>Kocaeli</li>
+              <li>Bursa</li>
+              <li>Yalova</li>
+              <li>Sakarya</li>
+              <li>Tekirdağ</li>
+            </ul>
+            
+            <a href="hizmetler.html" class="contact-link">
+              <i class="fas fa-info-circle"></i>Hizmet Detayları
             </a>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Map Section -->
-    <div class="content-section">
-      <h3 class="section-title">Konum</h3>
-      <div class="universal-card">
-        <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps?q=Mehmet+Akif+Ersoy,+Etibank+Cd.+No:74,+34400+Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul&output=embed"
-            width="100%" 
-            height="400" 
-            style="border:0; border-radius: 15px;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
   </div>
-  </main>
 
-  <!-- FOOTER -->
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" id="pageTransition">
+    <div class="loader"></div>
+  </div>
 
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
-  <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
-      });
-  </script>
-  
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/include.js"></script>
-  <script src="js/language.js"></script>
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   
+  <!-- Modular JavaScript System -->
+  <script type="module" src="js/main.js"></script>
+  
+  <!-- Custom JS -->
   <script>
-    // Debug log
-    console.log('Contact page loading...');
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
     
-    // Initialize when DOM is ready
+    // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM Content Loaded');
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
       
-      // Check if navbar and footer are loaded
-      setTimeout(() => {
-        const navbar = document.getElementById('navbar');
-        const footer = document.getElementById('footer');
-        console.log('Navbar loaded:', navbar && navbar.innerHTML.length > 0);
-        console.log('Footer loaded:', footer && footer.innerHTML.length > 0);
-      }, 1000);
-      
-      // Initialize AOS
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ 
-          once: true,
-          duration: 800,
-          easing: 'ease-out-cubic'
-        });
-        console.log('AOS initialized');
-      } else {
-        console.error('AOS not loaded');
-      }
-
-      // Form handling
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    });
+    
+    // Form validation
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
           e.preventDefault();
           
-          // Validate required fields
-          const firstName = document.getElementById('firstName').value.trim();
-          const lastName = document.getElementById('lastName').value.trim();
-          const phone = document.getElementById('phone').value.trim();
-          const email = document.getElementById('email').value.trim();
-          const consent = document.getElementById('consent').checked;
+          // Basic validation
+          const name = form.querySelector('input[name="name"]');
+          const email = form.querySelector('input[name="email"]');
+          const phone = form.querySelector('input[name="phone"]');
+          const message = form.querySelector('textarea[name="message"]');
           
-      // Scroll to top button
-      const scrollBtn = document.getElementById('scrollTopBtn');
-      if(scrollBtn) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 300) {
-            scrollBtn.classList.add('show');
-          } else {
-            scrollBtn.classList.remove('show');
-          }
-        });
-        scrollBtn.addEventListener('click', function() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-          if (!firstName || !lastName || !phone || !email || !consent) {
-            alert('Lütfen gerekli alanları doldurun ve izin verdiğinizi onaylayın.');
+          if (!name.value || !email.value || !phone.value || !message.value) {
+            alert('Lütfen tüm alanları doldurun.');
             return;
           }
           
-          // Show success animation
-          const submitBtn = this.querySelector('.btn-submit');
-          const originalText = submitBtn.innerHTML;
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email.value)) {
+            alert('Lütfen geçerli bir e-posta adresi girin.');
+            return;
+          }
           
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Gönderiliyor...';
-          submitBtn.disabled = true;
+          // Phone validation
+          const phoneRegex = /^[0-9+\-\s()]+$/;
+          if (!phoneRegex.test(phone.value)) {
+            alert('Lütfen geçerli bir telefon numarası girin.');
+            return;
+          }
           
-          // Simulate form submission
-          setTimeout(() => {
-            alert('Talebiniz başarıyla gönderildi! En kısa sürede dönüş yapacağız.');
-            this.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          }, 2000);
+          // Success message
+          alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+          form.reset();
         });
       }
     });

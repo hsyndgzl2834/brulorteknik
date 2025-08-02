@@ -1,14 +1,84 @@
-# .htaccess for Brülör Teknik Hizmetler
-# SEO and Performance Optimization
+# ============================================================================
+# 🚀 BRÜLÖR TEKNİK HİZMETLER - .HTACCESS 2025
+# ============================================================================
+# Modern SEO, Security & Performance Optimizations
+# Last Updated: 2025-01-28
+# ============================================================================
 
-# Security Headers
-Header always set X-Content-Type-Options nosniff
-Header always set X-Frame-Options DENY
-Header always set X-XSS-Protection "1; mode=block"
-Header always set Referrer-Policy "strict-origin-when-cross-origin"
+# ============================================================================
+# 🔒 SECURITY HEADERS - MODERN SECURITY STANDARDS
+# ============================================================================
 
-# Compression
+# Content Security Policy - Modern CSP
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-ancestors 'none';"
+    
+    # XSS Protection
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Modern Security Headers
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Cross-Origin-Embedder-Policy "require-corp"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+</IfModule>
+
+# ============================================================================
+# 📈 PERFORMANCE OPTIMIZATION - CACHE CONTROL
+# ============================================================================
+
+# HTML Files - Short Cache
+<FilesMatch "\.(html|htm)$">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 1 hour"
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </IfModule>
+</FilesMatch>
+
+# CSS & JS Files - Long Cache
+<FilesMatch "\.(css|js)$">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 1 year"
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </IfModule>
+</FilesMatch>
+
+# Images - Very Long Cache
+<FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico)$">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 2 years"
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=63072000, immutable"
+    </IfModule>
+</FilesMatch>
+
+# Fonts - Very Long Cache
+<FilesMatch "\.(woff|woff2|ttf|eot)$">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 2 years"
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=63072000, immutable"
+    </IfModule>
+</FilesMatch>
+
+# ============================================================================
+# 🗜️ COMPRESSION - GZIP OPTIMIZATION
+# ============================================================================
+
 <IfModule mod_deflate.c>
+    # Enable compression
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
     AddOutputFilterByType DEFLATE text/xml
@@ -19,53 +89,125 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
     AddOutputFilterByType DEFLATE application/json
+    
+    # Remove browser bugs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
 </IfModule>
 
-# Browser Caching
-<IfModule mod_expires.c>
-    ExpiresActive on
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
+# ============================================================================
+# 🔍 SEO OPTIMIZATION - URL REWRITES
+# ============================================================================
 
-# Remove trailing slash for SEO
+# Enable URL Rewriting
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
 
-# Force HTTPS (uncomment when SSL is ready)
+# Force HTTPS (Uncomment when SSL is available)
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Force www (or non-www based on preference)
-# RewriteCond %{HTTP_HOST} !^www\.
-# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-# Error Pages
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Canonical redirects for SEO
+RewriteCond %{HTTP_HOST} ^www\.brulorteknik\.com [NC]
+RewriteRule ^(.*)$ https://brulorteknik.com/$1 [L,R=301]
+
+# ============================================================================
+# 🚫 SECURITY - BLOCK MALICIOUS REQUESTS
+# ============================================================================
+
+# Block bad bots
+RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|scraper) [NC]
+RewriteCond %{HTTP_USER_AGENT} (AhrefsBot|SemrushBot|MJ12bot|DotBot|BLEXBot) [NC]
+RewriteRule .* - [F,L]
 
 # Block access to sensitive files
-<Files ~ "^\.ht">
-    Order allow,deny
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql|py|ps1)$">
+    Order Allow,Deny
     Deny from all
-</Files>
+</FilesMatch>
 
-# Redirect old URLs (add as needed)
-# Redirect 301 /old-page.html /new-page.html
+# Block access to directories
+RedirectMatch 403 ^/admin/?$
+RedirectMatch 403 ^/includes/?$
+RedirectMatch 403 ^/backup/?$
+RedirectMatch 403 ^/temp/?$
+RedirectMatch 403 ^/cache/?$
+RedirectMatch 403 ^/logs/?$
 
-# Allow cross-origin fonts
+# ============================================================================
+# 📱 MOBILE OPTIMIZATION
+# ============================================================================
+
+# Mobile redirect for old devices (optional)
+# RewriteCond %{HTTP_USER_AGENT} "Mobile|Android|iPhone|iPad" [NC]
+# RewriteCond %{REQUEST_URI} !^/mobile/
+# RewriteRule ^(.*)$ /mobile/$1 [L]
+
+# ============================================================================
+# 🌐 INTERNATIONALIZATION
+# ============================================================================
+
+# Language redirects
+RewriteCond %{HTTP:Accept-Language} ^tr [NC]
+RewriteRule ^$ /tr/ [L,R=302]
+
+# ============================================================================
+# 📊 ANALYTICS & MONITORING
+# ============================================================================
+
+# Custom error pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+
+# ============================================================================
+# ⚡ PERFORMANCE - BROWSER HINTS
+# ============================================================================
+
 <IfModule mod_headers.c>
-    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font\.css)$">
-        Header set Access-Control-Allow-Origin "*"
+    # Preload critical resources
+    <FilesMatch "\.html$">
+        Header add Link "</css/main.css>; rel=preload; as=style"
     </FilesMatch>
 </IfModule>
+
+# ============================================================================
+# 🔗 SOCIAL MEDIA OPTIMIZATION
+# ============================================================================
+
+# Open Graph and Twitter Card support
+<IfModule mod_headers.c>
+    <FilesMatch "\.html$">
+        Header set X-Robots-Tag "index, follow"
+    </FilesMatch>
+</IfModule>
+
+# ============================================================================
+# 📋 SITE INFORMATION
+# ============================================================================
+
+# Company: Brülör Teknik Hizmetler
+# Industry: Industrial Burner Services & Automation
+# Location: Kağıthane, İstanbul, Turkey
+# Phone: +90 531 625 06 94
+# Email: info@brulorteknik.com
+# 
+# Features:
+# - Modern security headers
+# - Performance optimization
+# - SEO-friendly URL structure
+# - Mobile-first approach
+# - Compression and caching
+# - Bot protection
+# - Internationalization support
+# - Social media optimization
+# - Updated for 2025 standards

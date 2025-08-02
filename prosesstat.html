@@ -77,8 +77,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <!-- Preload kritik kaynaklar -->
   <link rel="preload" href="images/prosesstat.webp" as="image" />
-  <link rel="preload" href="css/style.min.css" as="style" />
 
   <!-- Modern CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -387,10 +387,34 @@
   </script>
 
   <!-- Scripts -->
-  <script src="js/include.js"></script>
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Load navbar and footer
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
+      
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
       // AOS başlat
       if (typeof AOS !== 'undefined') {
@@ -402,7 +426,5 @@
       }
     });
   </script>
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/</loc>
-    <lastmod>2025-07-28T14:30:00+03:00</lastmod>
+    <lastmod>2025-01-28T14:30:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <mobile:mobile/>
@@ -22,11 +22,11 @@
   </url>
 
   <!-- ============================================================================
-       � KURUMSAL SAYFALAR - HIGH PRIORITY
+       🏢 KURUMSAL SAYFALAR - HIGH PRIORITY
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/about.html</loc>
-    <lastmod>2025-07-28T14:00:00+03:00</lastmod>
+    <lastmod>2025-01-28T14:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <mobile:mobile/>
@@ -39,7 +39,7 @@
 
   <url>
     <loc>https://brulorteknik.com/brulor-hakkinda.html</loc>
-    <lastmod>2025-07-28T14:00:00+03:00</lastmod>
+    <lastmod>2025-01-28T14:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <mobile:mobile/>
@@ -50,7 +50,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/hizmetler.html</loc>
-    <lastmod>2025-07-28T13:45:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:45:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <mobile:mobile/>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet-brulor-servisi.html</loc>
-    <lastmod>2025-07-28T13:45:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:45:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
     <mobile:mobile/>
@@ -71,7 +71,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet1.html</loc>
-    <lastmod>2025-07-28T13:40:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:40:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <mobile:mobile/>
@@ -84,7 +84,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet2.html</loc>
-    <lastmod>2025-07-28T13:40:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:40:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <mobile:mobile/>
@@ -97,7 +97,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet3.html</loc>
-    <lastmod>2025-07-28T13:40:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:40:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
     <mobile:mobile/>
@@ -110,7 +110,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet4.html</loc>
-    <lastmod>2025-07-28T13:40:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:40:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <mobile:mobile/>
@@ -123,7 +123,7 @@
 
   <url>
     <loc>https://brulorteknik.com/hizmet5.html</loc>
-    <lastmod>2025-07-28T13:40:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:40:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
     <mobile:mobile/>
@@ -139,7 +139,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/products.html</loc>
-    <lastmod>2025-07-28T13:30:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:30:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <mobile:mobile/>
@@ -147,7 +147,7 @@
 
   <url>
     <loc>https://brulorteknik.com/monoblok.html</loc>
-    <lastmod>2025-07-28T13:30:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:30:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <mobile:mobile/>
@@ -160,7 +160,7 @@
 
   <url>
     <loc>https://brulorteknik.com/duoblok.html</loc>
-    <lastmod>2025-07-28T13:30:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:30:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <mobile:mobile/>
@@ -173,7 +173,7 @@
 
   <url>
     <loc>https://brulorteknik.com/multiblok.html</loc>
-    <lastmod>2025-07-28T13:30:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:30:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <mobile:mobile/>
@@ -189,7 +189,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/yanma-analizoru.html</loc>
-    <lastmod>2025-07-28T13:25:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:25:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
     <mobile:mobile/>
@@ -202,7 +202,7 @@
 
   <url>
     <loc>https://brulorteknik.com/prosesstat.html</loc>
-    <lastmod>2025-07-28T13:25:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:25:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
     <mobile:mobile/>
@@ -218,7 +218,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/valf-aktuatoru.html</loc>
-    <lastmod>2025-07-28T13:25:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:25:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <mobile:mobile/>
@@ -231,7 +231,7 @@
 
   <url>
     <loc>https://brulorteknik.com/gaz-basinç-regulatoru.html</loc>
-    <lastmod>2025-07-28T13:25:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:25:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <mobile:mobile/>
@@ -247,7 +247,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/emniyet-valfi.html</loc>
-    <lastmod>2025-07-28T13:20:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:20:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
     <mobile:mobile/>
@@ -260,7 +260,7 @@
 
   <url>
     <loc>https://brulorteknik.com/filtre.html</loc>
-    <lastmod>2025-07-28T13:20:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:20:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <mobile:mobile/>
@@ -271,7 +271,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/contact.html</loc>
-    <lastmod>2025-07-28T13:15:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:15:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <mobile:mobile/>
@@ -282,7 +282,7 @@
        ============================================================================ -->
   <url>
     <loc>https://brulorteknik.com/faq.html</loc>
-    <lastmod>2025-07-28T13:10:00+03:00</lastmod>
+    <lastmod>2025-01-28T13:10:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <mobile:mobile/>
@@ -291,337 +291,6 @@
       <image:caption>Brülör Sistemleri Sık Sorulan Sorular</image:caption>
       <image:title>SSS - Brülör Teknik Destek Merkezi</image:title>
     </image:image>
-  </url>
-
-  <!-- ============================================================================
-       🔗 DİĞER SAYFALAR
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/sticky-wp.html</loc>
-    <lastmod>2025-07-28T13:00:00+03:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
-    <mobile:mobile/>
-  </url>
-
-</urlset>
-  </url>
-
-  <!-- ============================================================================
-       🔧 HİZMETLER - CORE BUSINESS PAGES
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/hizmetler</loc>
-    <lastmod>2024-12-20T11:00:00+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- Öncelikli Servis Hizmetleri -->
-  <url>
-    <loc>https://brulorteknik.com/brulor-servisi</loc>
-    <lastmod>2024-12-20T11:15:00+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/brulor-servisi.webp</image:loc>
-      <image:caption>7/24 Brülör Servisi İstanbul - Acil Müdahale ve Onarım</image:caption>
-      <image:title>Profesyonel Brülör Servis Hizmetleri</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/periyodik-bakim</loc>
-    <lastmod>2024-12-20T11:20:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/periyodik-bakim.webp</image:loc>
-      <image:caption>Yıllık Periyodik Bakım Hizmeti - Preventif Bakım Çözümleri</image:caption>
-      <image:title>Profesyonel Brülör Bakım Hizmeti</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/ariza-giderme</loc>
-    <lastmod>2024-12-20T11:25:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/ariza-giderme.webp</image:loc>
-      <image:caption>Brülör Arıza Giderme - Hızlı Tanı ve Çözüm</image:caption>
-      <image:title>Uzman Arıza Giderme Hizmeti</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/ilk-devreye-alma</loc>
-    <lastmod>2024-12-20T11:30:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/devreye-alma.webp</image:loc>
-      <image:caption>İlk Devreye Alma Hizmeti - Güvenli Kurulum</image:caption>
-      <image:title>Profesyonel Sistem Devreye Alma</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/enerji-verimliligi</loc>
-    <lastmod>2024-12-20T11:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/enerji-verimlilik.webp</image:loc>
-      <image:caption>Enerji Verimliliği Optimizasyonu - Yakıt Tasarrufu</image:caption>
-      <image:title>Enerji Tasarrufu Çözümleri</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/danismanlik</loc>
-    <lastmod>2024-12-20T11:40:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/danismanlik.webp</image:loc>
-      <image:caption>Teknik Danışmanlık Hizmeti - Uzman Görüş</image:caption>
-      <image:title>Profesyonel Teknik Danışmanlık</image:title>
-    </image:image>
-  </url>
-
-  <!-- ============================================================================
-       🏭 ÜRÜNLER - PRODUCT CATALOG
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/urunler</loc>
-    <lastmod>2024-12-20T12:00:00+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- Ana Brülör Ürünleri -->
-  <url>
-    <loc>https://brulorteknik.com/monoblok-brulor</loc>
-    <lastmod>2024-12-20T12:05:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/monoblok-brulor.webp</image:loc>
-      <image:caption>Monoblok Brülör Sistemleri - Kompakt ve Enerji Verimli</image:caption>
-      <image:title>Monoblok Endüstriyel Brülörler</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/duoblok-brulor</loc>
-    <lastmod>2024-12-20T12:10:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/duoblok-brulor.webp</image:loc>
-      <image:caption>Duoblok Brülör Sistemleri - Yüksek Performans ve Güvenilirlik</image:caption>
-      <image:title>Duoblok Endüstriyel Brülörler</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/multiblok-brulor</loc>
-    <lastmod>2024-12-20T12:15:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/multiblok-brulor.webp</image:loc>
-      <image:caption>Multiblok Brülör Sistemleri - Modüler ve Esnek Çözümler</image:caption>
-      <image:title>Multiblok Endüstriyel Brülörler</image:title>
-    </image:image>
-  </url>
-
-  <!-- Ölçüm ve Analiz Cihazları -->
-  <url>
-    <loc>https://brulorteknik.com/yanma-analizoru</loc>
-    <lastmod>2024-12-20T12:20:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/yanma-analizoru.webp</image:loc>
-      <image:caption>Yanma Analizörü Cihazları - Hassas Verimlilik Ölçümü</image:caption>
-      <image:title>Profesyonel Yanma Analizörü</image:title>
-    </image:image>
-  </url>
-
-  <!-- Kontrol ve Otomasyon -->
-  <url>
-    <loc>https://brulorteknik.com/valf-aktuatoru</loc>
-    <lastmod>2024-12-20T12:25:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/valf-aktuatoru.webp</image:loc>
-      <image:caption>Valf Aktüatörü Sistemleri - Otomatik Kontrol Çözümleri</image:caption>
-      <image:title>Akıllı Valf Kontrol Sistemleri</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/prosesstat-regulator</loc>
-    <lastmod>2024-12-20T12:30:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/prosesstat-regulator.webp</image:loc>
-      <image:caption>ProsesStat Draft Regülatörü - Hassas Basınç Kontrolü</image:caption>
-      <image:title>Gelişmiş Basınç Kontrol Sistemleri</image:title>
-    </image:image>
-  </url>
-
-  <!-- Güvenlik ve Yardımcı Ekipmanlar -->
-  <url>
-    <loc>https://brulorteknik.com/emniyet-valfi</loc>
-    <lastmod>2024-12-20T12:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/emniyet-valfi.webp</image:loc>
-      <image:caption>Emniyet Valfi Sistemleri - Maksimum Güvenlik Öncelikli</image:caption>
-      <image:title>Güvenlik Valfleri ve Koruma Sistemleri</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/gaz-filtresi</loc>
-    <lastmod>2024-12-20T12:40:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/gaz-filtresi.webp</image:loc>
-      <image:caption>Gaz Filtresi Sistemleri - Temiz ve Güvenli Yakıt Beslemesi</image:caption>
-      <image:title>Yüksek Verimli Gaz Filtreleri</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/gaz-basinc-regulatoru</loc>
-    <lastmod>2024-12-20T12:45:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/gaz-basinc-regulatoru.webp</image:loc>
-      <image:caption>Gaz Basınç Regülatörü - Güvenli ve Stabil Gaz Beslemesi</image:caption>
-      <image:title>Hassas Basınç Regülasyon Sistemleri</image:title>
-    </image:image>
-  </url>
-
-  <!-- ============================================================================
-       📞 İLETİŞİM VE DESTEK SAYFALARI
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/iletisim</loc>
-    <lastmod>2024-12-20T13:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/teklif-al</loc>
-    <lastmod>2024-12-20T13:05:00+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.82</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- ============================================================================
-       ❓ DESTEK VE BİLGİ SAYFALARI
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/sss</loc>
-    <lastmod>2024-12-20T13:10:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-    <mobile:mobile/>
-    <image:image>
-      <image:loc>https://brulorteknik.com/images/sss-brulor.webp</image:loc>
-      <image:caption>Brülör Sistemleri Sık Sorulan Sorular - Teknik Destek</image:caption>
-      <image:title>SSS - Brülör Teknik Destek Merkezi</image:title>
-    </image:image>
-  </url>
-
-  <!-- ============================================================================
-       📁 REFERANSLAR VE PROJELER
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/referanslar</loc>
-    <lastmod>2024-12-20T13:15:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/projeler</loc>
-    <lastmod>2024-12-20T13:20:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.72</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- ============================================================================
-       📰 BLOG VE HABERLER (If Available)
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/blog</loc>
-    <lastmod>2024-12-20T13:25:00+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.68</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- ============================================================================
-       🏆 SERTİFİKALAR VE KALİTE
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/sertifikalar</loc>
-    <lastmod>2024-12-20T13:30:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-    <mobile:mobile/>
-  </url>
-
-  <!-- ============================================================================
-       📍 HİZMET BÖLGELERİ
-       ============================================================================ -->
-  <url>
-    <loc>https://brulorteknik.com/hizmet-bolgeleri</loc>
-    <lastmod>2024-12-20T13:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
-    <mobile:mobile/>
-  </url>
-
-  <url>
-    <loc>https://brulorteknik.com/istanbul-brulor-servisi</loc>
-    <lastmod>2024-12-20T13:40:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <mobile:mobile/>
   </url>
 
 </urlset>

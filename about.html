@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" prefix="og: https://ogp.me/ns#">
+<html lang="tr">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -36,8 +36,6 @@
   <meta property="twitter:image" content="https://www.brulorteknik.com/images/about-us.webp" />
   
   <!-- Additional Meta -->
-  <meta name="theme-color" content="#667eea" />
-  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
   
@@ -51,8 +49,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link href="css/style.min.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <link rel="stylesheet" href="css/main.css">
+  
   <style>
+    /* Mobile First CSS for About Page */
     :root {
       --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -68,11 +69,13 @@
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       overflow-x: hidden;
       overflow-y: auto;
+      padding-top: 70px;
     }
     
     .hero-section {
       background: var(--primary-gradient);
-      padding: 80px 0 60px;
+      padding: 60px 0 40px;
+      min-height: 50vh;
       position: relative;
       overflow: visible;
     }
@@ -88,13 +91,49 @@
       background-size: cover;
     }
     
+    .page-title {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    
+    .about-section {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
     .glass-card {
       background: var(--glass-bg);
       backdrop-filter: blur(10px);
       border: 1px solid var(--glass-border);
       border-radius: 20px;
       box-shadow: var(--shadow-soft);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
     }
     
     .glass-card:hover {
@@ -102,662 +141,360 @@
       box-shadow: var(--shadow-hover);
     }
     
-    .modern-btn {
-      background: var(--secondary-gradient);
-      border: none;
-      border-radius: 50px;
-      padding: 12px 30px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: visible;
+    .glass-card:hover::before {
+      transform: scaleX(1);
     }
     
-    .modern-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.5s;
-    }
-    
-    .modern-btn:hover::before {
-      left: 100%;
-    }
-    
-    .modern-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
-    .stats-card {
-      background: white;
+    .about-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #3498db, #2ecc71);
       border-radius: 15px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      border: 1px solid #f0f0f0;
-    }
-    
-    .stats-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
-    
-    .contact-cta-section {
-      background: var(--dark-gradient);
-      border-radius: 30px 30px 0 0;
-      margin-top: 80px;
-      padding: 60px 0;
-      position: relative;
-      overflow: visible;
-    }
-    
-    .contact-cta-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-    }
-    
-    .feature-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--primary-gradient);
-      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      margin-bottom: 1rem;
+      color: white;
+      font-size: 1.5rem;
     }
     
-    .section-title {
-      font-size: 3rem;
+    .glass-card h3 {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
       font-weight: 700;
-      background: var(--primary-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-    }
-    
-    /* Mobile-First About Page Optimizations */
-    
-    /* Base Mobile Styles */
-    .hero-section {
-      padding: 60px 0 40px;
-      min-height: 50vh;
-    }
-    
-    .hero-section .display-4 {
-      font-size: clamp(1.8rem, 6vw, 3rem);
-      line-height: 1.2;
-    }
-    
-    .hero-section .lead {
-      font-size: clamp(1rem, 3.5vw, 1.25rem);
-      line-height: 1.4;
-    }
-    
-    .glass-card {
-      padding: 20px;
-      margin-bottom: 1.5rem;
-      border-radius: 15px;
-    }
-    
-    .section-title {
-      font-size: clamp(1.5rem, 5vw, 2.5rem);
-      margin-bottom: 1.5rem;
-    }
-    
-    .glass-card h4 {
-      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      color: #2c3e50;
       margin-bottom: 1rem;
     }
     
     .glass-card p {
-      font-size: clamp(0.9rem, 3vw, 1rem);
-      line-height: 1.5;
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .about-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    
+    .about-features li {
+      padding: 0.5rem 0;
+      color: #6c757d;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .about-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+    
+    .about-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .about-link:hover {
+      color: #2980b9;
+      transform: translateX(5px);
     }
     
     .stats-section {
-      padding: 3rem 0;
+      background: var(--dark-gradient);
+      color: white;
+      padding: 60px 0;
     }
     
     .stat-item {
       text-align: center;
-      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+      margin-bottom: 1rem;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
     }
     
     .stat-number {
-      font-size: clamp(2rem, 8vw, 4rem);
-      font-weight: 800;
-      color: #667eea;
-      display: block;
-      line-height: 1;
+      font-size: clamp(2rem, 8vw, 3rem);
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 0.5rem;
     }
     
     .stat-label {
-      font-size: clamp(0.9rem, 3vw, 1.1rem);
-      color: #6b7280;
-      margin-top: 0.5rem;
-    }
-    
-    .timeline-item {
-      padding: 15px;
-      margin-bottom: 1rem;
-      border-radius: 12px;
-    }
-    
-    .timeline-year {
-      font-size: clamp(1.1rem, 4vw, 1.3rem);
-      font-weight: 700;
-      color: #667eea;
-    }
-    
-    .timeline-content {
       font-size: clamp(0.9rem, 3vw, 1rem);
-      line-height: 1.4;
+      opacity: 0.9;
     }
     
-    /* Mobile Responsive Improvements */
-    @media (max-width: 768px) {
+    /* Responsive Breakpoints */
+    @media (min-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+      
       .hero-section {
-        padding: 50px 0 30px;
-        min-height: 40vh;
+        padding: 80px 0 60px;
+        min-height: 60vh;
       }
       
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-      
-      .glass-card {
-        padding: 15px;
-        margin-bottom: 1rem;
-        border-radius: 12px;
-      }
-      
-      .glass-card:hover {
-        transform: translateY(-5px);
+      .about-section {
+        padding: 80px 0;
       }
       
       .stats-section {
-        padding: 2rem 0;
+        padding: 80px 0;
+      }
+      
+      .glass-card {
+        padding: 2rem;
       }
       
       .stat-item {
-        margin-bottom: 1rem;
-      }
-      
-      .timeline-item {
-        padding: 12px;
-        margin-bottom: 0.8rem;
-      }
-      
-      .row.g-4 {
-        gap: 1rem !important;
-      }
-      
-      .col-lg-6,
-      .col-lg-4 {
-        margin-bottom: 1rem;
+        padding: 2rem;
       }
     }
     
-    @media (max-width: 576px) {
+    @media (min-width: 992px) {
       .hero-section {
-        padding: 40px 0 25px;
+        padding: 100px 0 80px;
+        min-height: 70vh;
       }
       
-      .container {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      
-      .glass-card {
-        padding: 12px;
-        border-radius: 10px;
-        backdrop-filter: blur(8px);
-      }
-      
-      .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-      }
-      
-      .glass-card h4 {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
-      }
-      
-      .glass-card p {
-        font-size: 0.85rem;
-        line-height: 1.4;
+      .about-section {
+        padding: 100px 0;
       }
       
       .stats-section {
-        padding: 1.5rem 0;
-      }
-      
-      .stat-number {
-        font-size: 2.5rem;
-      }
-      
-      .stat-label {
-        font-size: 0.8rem;
-      }
-      
-      .timeline-item {
-        padding: 10px;
-        border-radius: 8px;
-      }
-      
-      .timeline-year {
-        font-size: 1rem;
-      }
-      
-      .timeline-content {
-        font-size: 0.8rem;
-      }
-    }
-    
-    @media (max-width: 360px) {
-      .hero-section {
-        padding: 35px 0 20px;
-      }
-      
-      .container {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding: 100px 0;
       }
       
       .glass-card {
-        padding: 10px;
-        border-radius: 8px;
+        padding: 2.5rem;
       }
       
-      .section-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
+      .stat-item {
+        padding: 2.5rem;
       }
-      
-      .glass-card h4 {
-        font-size: 1rem;
-        margin-bottom: 0.6rem;
-      }
-      
-      .glass-card p {
-        font-size: 0.8rem;
-      }
-      
-      .stat-number {
-        font-size: 2rem;
-      }
-      
-      .stat-label {
-        font-size: 0.75rem;
-      }
-      
-      .timeline-year {
-        font-size: 0.9rem;
-      }
-      
-      .timeline-content {
-        font-size: 0.75rem;
-      }
-    }
-    
-    /* Touch Device Optimizations */
-    @media (hover: none) and (pointer: coarse) {
-      .glass-card:hover {
-        transform: none;
-        box-shadow: var(--shadow-soft);
-      }
-      
-      .glass-card:active {
-        transform: scale(0.98);
-        transition: transform 0.1s ease;
-      }
-    }
-    
-    /* Improve readability on mobile */
-    @media (max-width: 768px) {
-      .text-justify {
-        text-align: left;
-      }
-      
-      .lead {
-        text-align: center;
-      }
-    }
-    
-    html, body {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      box-sizing: border-box;
-    }
-    .container, .container-fluid, .row, .content-section, .card, .universal-card {
-      overflow: visible !important;
-      box-sizing: border-box;
     }
   </style>
-  <!-- Schema.org mikro veri -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Brülör Teknik Hizmetler",
-  "url": "https://www.brulorteknik.com",
-  "description": "Endüstriyel brülör sistemlerinde kurulum, bakım, otomasyon ve yedek parça hizmeti.",
-  "image": "https://www.brulorteknik.com/images/about-us.webp",
-  "email": "info@brulorteknik.com",
-  "telephone": "+90 531 625 06 94",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "İstanbul",
-    "addressCountry": "Türkiye"
-  }
-}
- </script>
-  </script><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLV53JFE6K">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-SLV53JFE6K');
-    </script>
-    
 </head>
-<body class="page-wrapper">
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
 
-  <!-- HERO SECTION -->
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <div class="text-center text-white" data-aos="fade-up">
-        <h1 class="page-title" data-i18n="about.heading">Hakkımızda</h1>
-        <p class="page-subtitle" data-i18n="about.text">
-          Brülör Teknik Hizmetler, endüstriyel brülör sistemleri konusunda uzmanlaşmış bir mühendislik firmasıdır. 
-          Türkiye genelinde kurulum, bakım ve servis hizmetleri sunar.
-        </p>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="page-title" data-aos="fade-up">Hakkımızda</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            20+ yıllık deneyim ile Türkiye'nin önde gelen endüstriyel brülör sistemi uzmanı
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT CONTENT -->
-  <main class="page-content">
+  <!-- About Section -->
+  <section class="about-section">
     <div class="container">
-      <div class="content-section">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4" data-aos="fade-right">
-            <div class="position-relative">
-              <img
-                src="images/about-us.webp"
-                alt="Brülör Teknik Hizmetler Hakkında"
-                class="img-fluid rounded-4 shadow-lg"
-                style="max-width:100%;height:auto;"
-                loading="lazy"
-              />
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="glass-card" data-aos="fade-up">
+            <div class="about-icon">
+              <i class="fas fa-history"></i>
             </div>
+            <h3>Kurumsal Tarihçe</h3>
+            <p>
+              2003 yılında İstanbul'da kurulan Brülör Teknik Hizmetler, endüstriyel brülör sistemleri alanında uzmanlaşmış bir firma olarak faaliyet göstermektedir. 20 yılı aşkın deneyimimizle, Türkiye'nin önde gelen endüstriyel tesislerine hizmet vermekteyiz.
+            </p>
+            <ul class="about-features">
+              <li>20+ yıl sektör deneyimi</li>
+              <li>1000+ başarılı proje</li>
+              <li>Uzman teknik kadro</li>
+              <li>Kaliteli hizmet anlayışı</li>
+            </ul>
+            <a href="hizmetler.html" class="about-link">Hizmetlerimiz <i class="fas fa-arrow-right"></i></a>
           </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <h2 class="section-title" data-i18n="about.who">Biz Kimiz?</h2>
-        <p class="text-muted mb-4" data-i18n="about.whoDesc">
-          Brülör Teknik Hizmetler, sektörde yılların deneyimine sahip mühendis kadrosuyla yüksek kaliteli çözümler sunar. 
-          Müşteri memnuniyetini ve hızlı müdahaleyi ön planda tutuyoruz.
-        </p>
+        </div>
         
-        <div class="row g-4 mb-4">
-          <div class="col-md-6">
-            <div class="feature-icon">
-              <i class="fas fa-eye fa-2x text-white"></i>
+        <div class="col-lg-6 mb-4">
+          <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-icon">
+              <i class="fas fa-users"></i>
             </div>
-            <h4 class="fw-bold mb-2" data-i18n="about.vision">Vizyonumuz</h4>
-            <p class="text-muted small" data-i18n="about.visionDesc">
-              Endüstriyel brülör sistemlerinde lider, yenilikçi ve güvenilir bir çözüm ortağı olmak.
+            <h3>Ekibimiz</h3>
+            <p>
+              Deneyimli mühendisler, teknisyenler ve uzman kadromuzla, brülör sistemleri konusunda en güncel teknolojileri kullanarak müşterilerimize en iyi hizmeti sunuyoruz. Sürekli eğitim ve gelişim ile kendimizi yeniliyoruz.
             </p>
+            <ul class="about-features">
+              <li>Uzman mühendisler</li>
+              <li>Deneyimli teknisyenler</li>
+              <li>Sürekli eğitim</li>
+              <li>Teknoloji takibi</li>
+            </ul>
+            <a href="contact.html" class="about-link">İletişim <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="col-md-6">
-            <div class="feature-icon">
-              <i class="fas fa-bullseye fa-2x text-white"></i>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-icon">
+              <i class="fas fa-award"></i>
             </div>
-            <h4 class="fw-bold mb-2" data-i18n="about.mission">Misyonumuz</h4>
-            <p class="text-muted small" data-i18n="about.missionDesc">
-              En yeni teknolojileri kullanarak verimli, çevre dostu ve sürdürülebilir hizmetler sunmak.
+            <h3>Kalite Politikamız</h3>
+            <p>
+              Müşteri memnuniyeti odaklı çalışma prensibi ile, her projede en yüksek kalite standartlarını hedefliyoruz. ISO standartlarına uygun çalışma metodları ve sürekli kalite kontrol süreçleri ile hizmet kalitemizi garanti ediyoruz.
             </p>
+            <ul class="about-features">
+              <li>ISO standartları</li>
+              <li>Kalite kontrol</li>
+              <li>Müşteri memnuniyeti</li>
+              <li>Sürekli iyileştirme</li>
+            </ul>
+            <a href="products.html" class="about-link">Ürünlerimiz <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- STATS SECTION -->
-    <div class="row g-4 mb-5" data-aos="fade-up">
-      <div class="col-md-3 col-6">
-        <div class="stats-card">
-          <div class="display-4 fw-bold text-primary mb-2">15+</div>
-          <h6 class="text-muted mb-0">Yıl Deneyim</h6>
-        </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stats-card">
-          <div class="display-4 fw-bold text-success mb-2">500+</div>
-          <h6 class="text-muted mb-0">Tamamlanan Proje</h6>
-        </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stats-card">
-          <div class="display-4 fw-bold text-warning mb-2">24/7</div>
-          <h6 class="text-muted mb-0">Teknik Destek</h6>
-        </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stats-card">
-          <div class="display-4 fw-bold text-info mb-2">100%</div>
-          <h6 class="text-muted mb-0">Müşteri Memnuniyeti</h6>
-        </div>
-      </div>
-    </div>
-
-    <!-- VALUES SECTION -->
-    <div class="row g-4" data-aos="fade-up">
-      <div class="col-lg-4">
-        <div class="glass-card p-4 h-100 text-center">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt fa-2x text-white"></i>
-          </div>
-          <h5 class="fw-bold mb-3">Güvenilirlik</h5>
-          <p class="text-muted mb-0">Yüksek kalite standartları ve güvenilir hizmet anlayışı ile çalışıyoruz.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="glass-card p-4 h-100 text-center">
-          <div class="feature-icon">
-            <i class="fas fa-lightbulb fa-2x text-white"></i>
-          </div>
-          <h5 class="fw-bold mb-3">İnovasyon</h5>
-          <p class="text-muted mb-0">Sürekli gelişim ve yenilikçi çözümlerle sektöre öncülük ediyoruz.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="glass-card p-4 h-100 text-center">
-          <div class="feature-icon">
-            <i class="fas fa-handshake fa-2x text-white"></i>
-          </div>
-          <h5 class="fw-bold mb-3">Güven</h5>
-          <p class="text-muted mb-0">Müşterilerimizle uzun vadeli ortaklıklar kurarak karşılıklı güven oluşturuyoruz.</p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- MODERN CONTACT CTA SECTION -->
-  <section class="contact-cta-section position-relative">
-    <div class="container position-relative z-index-2">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-8 text-white">
-          <h3 class="display-6 fw-bold mb-3" style="letter-spacing: -0.02em;">
-            Projeniz için hemen teklif alın
-          </h3>
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="d-flex align-items-center">
-                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
-                  <i class="fas fa-envelope text-white"></i>
-                </div>
-                <div>
-                  <small class="opacity-75 d-block">E-posta</small>
-                  <a href="mailto:info@brulorteknik.com" class="text-white fw-semibold text-decoration-none">
-                    info@brulorteknik.com
-                  </a>
-                </div>
-              </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-icon">
+              <i class="fas fa-globe"></i>
             </div>
-            <div class="col-md-4">
-              <div class="d-flex align-items-center">
-                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
-                  <i class="fas fa-phone-alt text-white"></i>
-                </div>
-                <div>
-                  <small class="opacity-75 d-block">Telefon</small>
-                  <a href="tel:+905316250694" class="text-white fw-semibold text-decoration-none">
-                    +90 531 625 06 94
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="d-flex align-items-center">
-                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
-                  <i class="fas fa-map-marker-alt text-white"></i>
-                </div>
-                <div>
-                  <small class="opacity-75 d-block">Lokasyon</small>
-                  <span class="fw-semibold">İstanbul, Türkiye</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-lg-end text-center">
-          <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-center justify-content-lg-end">
-            <a href="https://wa.me/905316250694" target="_blank" class="modern-btn text-white text-decoration-none d-inline-flex align-items-center justify-content-center">
-              <i class="fab fa-whatsapp me-2"></i> WhatsApp İletişim
-            </a>
-            <a href="contact.html" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">
-              <i class="fas fa-paper-plane me-2"></i> Teklif Formu
-            </a>
+            <h3>Hizmet Alanımız</h3>
+            <p>
+              İstanbul ve çevre illerde hizmet vermekteyiz. Ana hizmet bölgelerimiz İstanbul, Kocaeli, Bursa, Yalova, Sakarya ve Tekirdağ'dır. Diğer bölgeler için özel anlaşma yapılabilir.
+            </p>
+            <ul class="about-features">
+              <li>İstanbul (Tüm İlçeler)</li>
+              <li>Kocaeli</li>
+              <li>Bursa</li>
+              <li>Yalova</li>
+              <li>Sakarya</li>
+              <li>Tekirdağ</li>
+            </ul>
+            <a href="contact.html" class="about-link">Teklif Al <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="text-white" data-aos="fade-up">Rakamlarla Brülör Teknik</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-item" data-aos="fade-up">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Yıl Deneyim</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Başarılı Proje</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number">7/24</div>
+            <div class="stat-label">Teknik Destek</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number">%100</div>
+            <div class="stat-label">Müşteri Memnuniyeti</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
-  <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
-      });
-  </script>
-  <!-- Scroll to top button (sticky-wp.html için) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollBtn = document.getElementById('scrollTopBtn');
-      if(scrollBtn) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 300) {
-            scrollBtn.classList.add('show');
-          } else {
-            scrollBtn.classList.remove('show');
-          }
-        });
-        scrollBtn.addEventListener('click', function() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-    });
-  </script>
-  <!-- Modern Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/include.js"></script>
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" id="pageTransition">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Modular JavaScript System -->
+  <script type="module" src="js/main.js"></script>
+  
+  <!-- Custom JS -->
   <script>
-    // Initialize AOS with modern settings
-    AOS.init({ 
-      once: true,
+    // Initialize AOS
+    AOS.init({
       duration: 800,
-      easing: 'ease-out-cubic',
+      easing: 'ease-in-out',
+      once: true,
       offset: 100
     });
-
-    // Modern scroll animations
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallax = document.querySelector('.hero-section');
-      if (parallax) {
-        const speed = scrolled * 0.5;
-        parallax.style.transform = `translateY(${speed}px)`;
-      }
-    });
-
-    // Counter animation for stats
-    const observerOptions = {
-      threshold: 0.7,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counters = entry.target.querySelectorAll('[data-count]');
-          counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-count'));
-            const increment = target / 100;
-            let current = 0;
-            
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              counter.textContent = Math.floor(current);
-            }, 20);
-          });
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.stats-card').forEach(card => {
-      observer.observe(card);
+    
+    // Load navbar and footer
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          // Navbar module will auto-initialize when elements are available
+        })
+        .catch(error => console.error('Navbar yüklenirken hata:', error));
+      
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+          // Re-initialize footer after loading
+          if (window.App && window.App.modules.footer) {
+            window.App.modules.footer.init();
+          }
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
     });
   </script>
-  <script src="js/language.js"></script>
 </body>
 </html>
