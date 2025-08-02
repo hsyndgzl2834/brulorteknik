@@ -3,64 +3,89 @@
   <div class="container">
     <!-- Brand -->
     <a class="navbar-brand" href="index.html" aria-label="Ana sayfaya git">
-      <img src="images/logo.webp" alt="Brülör Teknik Logo" loading="eager" width="40" height="40">
-      <span>Brülör Teknik</span>
+      <div class="brand-wrapper">
+        <img src="images/logo.webp" alt="Brülör Teknik Logo" loading="eager" width="40" height="40" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Brülör Teknik</span>
+          <span class="brand-subtitle">Endüstriyel Çözümler</span>
+        </div>
+      </div>
     </a>
     
     <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    <button class="navbar-toggler modern-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </button>
     
     <!-- Navigation Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav" role="navigation" aria-label="Ana menü">
-      <ul class="navbar-nav mx-auto" role="menubar">
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="index.html" role="menuitem" aria-current="page">
-            <i class="fas fa-home" aria-hidden="true"></i>
-            <span>Ana Sayfa</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Mobile Menu Close Button -->
+      <button class="mobile-menu-close" type="button" aria-label="Menüyü kapat">
+        <span class="sr-only">Kapat</span>
+      </button>
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="index.html" role="menuitem" aria-current="page">
+            <div class="link-content">
+              <i class="fas fa-home" aria-hidden="true"></i>
+              <span>Ana Sayfa</span>
+            </div>
           </a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="about.html" role="menuitem">
-            <i class="fas fa-info-circle" aria-hidden="true"></i>
-            <span>Hakkımızda</span>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="about.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-info-circle" aria-hidden="true"></i>
+              <span>Hakkımızda</span>
+            </div>
           </a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="products.html" role="menuitem">
-            <i class="fas fa-cogs" aria-hidden="true"></i>
-            <span>Ürünler</span>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="hizmetler.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-cogs" aria-hidden="true"></i>
+              <span>Hizmetler</span>
+            </div>
           </a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="hizmetler.html" role="menuitem">
-            <i class="fas fa-tools" aria-hidden="true"></i>
-            <span>Hizmetler</span>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="products.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-box" aria-hidden="true"></i>
+              <span>Ürünler</span>
+            </div>
           </a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="faq.html" role="menuitem">
-            <i class="fas fa-question-circle" aria-hidden="true"></i>
-            <span>SSS</span>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="contact.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>İletişim</span>
+            </div>
           </a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link" href="contact.html" role="menuitem">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <span>İletişim</span>
+        <li class="nav-item">
+          <a class="nav-link modern-link" href="faq.html" role="menuitem">
+            <div class="link-content">
+              <i class="fas fa-question-circle" aria-hidden="true"></i>
+              <span>SSS</span>
+            </div>
           </a>
         </li>
       </ul>
       
-      <!-- Action Buttons -->
-      <div class="navbar-actions" role="group" aria-label="Hızlı işlemler">
-        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
-           class="btn btn-primary" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <div class="navbar-actions">
+        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum."
+           class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
-        <a href="contact.html" class="btn btn-outline" aria-label="Teklif al">
+        <a href="contact.html" class="btn btn-quote" aria-label="Teklif al">
           <i class="fas fa-calculator" aria-hidden="true"></i>
           <span>Teklif Al</span>
         </a>

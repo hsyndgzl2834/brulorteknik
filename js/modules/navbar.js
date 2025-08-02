@@ -30,7 +30,8 @@ const Navbar = {
     navbarCollapse: null,
     navbarLinks: null,
     navbarActions: null,
-    logo: null
+    navbarBrand: null,
+    brandLogo: null
   },
 
   /**
@@ -55,8 +56,8 @@ const Navbar = {
       
       // Check if elements exist
       const navbar = document.querySelector('.navbar-custom');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const navbarToggler = document.querySelector('.modern-toggler');
+      const navbarCollapse = document.querySelector('.collapse.navbar-collapse');
       
       if (navbar && navbarToggler && navbarCollapse) {
         console.log('Navbar elements found, initializing...');
@@ -91,21 +92,24 @@ const Navbar = {
    * Cache DOM elements for performance
    */
   cacheElements() {
-    this.elements.navbar = document.querySelector('.navbar-custom');
-    this.elements.navbarToggler = document.querySelector('.navbar-toggler');
-    this.elements.navbarCollapse = document.querySelector('.navbar-collapse');
-    this.elements.navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    this.elements.navbarActions = document.querySelectorAll('.navbar-actions .btn');
-    this.elements.logo = document.querySelector('.navbar-brand img');
+    this.elements = {
+      navbar: document.querySelector('.navbar-custom'),
+      navbarToggler: document.querySelector('.modern-toggler'),
+      navbarCollapse: document.querySelector('.collapse.navbar-collapse'),
+      navbarLinks: document.querySelectorAll('.modern-link'),
+      navbarActions: document.querySelectorAll('.navbar-actions .btn'),
+      navbarBrand: document.querySelector('.navbar-brand'),
+      brandLogo: document.querySelector('.brand-logo')
+    };
     
-    // Debug logging
     console.log('Cached elements:', {
       navbar: !!this.elements.navbar,
       navbarToggler: !!this.elements.navbarToggler,
       navbarCollapse: !!this.elements.navbarCollapse,
       navbarLinks: this.elements.navbarLinks.length,
       navbarActions: this.elements.navbarActions.length,
-      logo: !!this.elements.logo
+      navbarBrand: !!this.elements.navbarBrand,
+      brandLogo: !!this.elements.brandLogo
     });
   },
 
@@ -158,15 +162,60 @@ const Navbar = {
    * Initialize mobile menu
    */
   initMobileMenu() {
-    if (!this.config.enableMobileMenu) return;
-
-    // Ensure mobile menu is hidden by default
-    if (this.elements.navbarCollapse) {
-      this.elements.navbarCollapse.classList.remove('show');
-      this.elements.navbarCollapse.style.display = 'none';
-      this.elements.navbarCollapse.style.opacity = '0';
-      this.elements.navbarCollapse.style.visibility = 'hidden';
+    if (!this.elements.navbarToggler) return;
+    
+    // Mobile menu toggle
+    this.elements.navbarToggler.addEventListener('click', (event) => {
+      this.toggleMobileMenu(event);
+    });
+    
+    // Mobile menu close button
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener('click', (event) => {
+        this.hideMobileMenu();
+      });
     }
+    
+    // Close menu when clicking on links
+    this.elements.navbarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 991) {
+          setTimeout(() => {
+            this.hideMobileMenu();
+          }, 300);
+        }
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (window.innerWidth <= 991) {
+        const navbar = this.elements.navbar;
+        const navbarToggler = this.elements.navbarToggler;
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        if (!navbar.contains(event.target) && 
+            !navbarToggler.contains(event.target) && 
+            !mobileMenuClose?.contains(event.target)) {
+          this.hideMobileMenu();
+        }
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && window.innerWidth <= 991) {
+        this.hideMobileMenu();
+      }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991) {
+        this.hideMobileMenu();
+      }
+    });
   },
 
   /**
@@ -264,20 +313,14 @@ const Navbar = {
    * Toggle mobile menu
    */
   toggleMobileMenu(event) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+    event.preventDefault();
+    event.stopPropagation();
     
-    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
-      console.log('Navbar elements not found');
-      return;
-    }
-
-    const isOpen = this.elements.navbarCollapse.classList.contains('show');
-    console.log('Mobile menu toggle - Current state:', isOpen);
+    if (!this.elements.navbarCollapse) return;
     
-    if (isOpen) {
+    const isExpanded = this.elements.navbarToggler.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
       this.hideMobileMenu();
     } else {
       this.showMobileMenu();
@@ -288,53 +331,54 @@ const Navbar = {
    * Show mobile menu
    */
   showMobileMenu() {
-    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
-      console.log('Cannot show mobile menu - elements not found');
-      return;
-    }
-
-    console.log('Showing mobile menu');
-    this.elements.navbarCollapse.classList.add('show');
+    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+    
+    // Show menu
     this.elements.navbarCollapse.style.display = 'flex';
     this.elements.navbarCollapse.style.opacity = '1';
     this.elements.navbarCollapse.style.visibility = 'visible';
+    this.elements.navbarCollapse.classList.add('show');
+    
+    // Update toggler state
     this.elements.navbarToggler.setAttribute('aria-expanded', 'true');
     
-    this.state.isMobileMenuOpen = true;
-    
-    // Add body scroll lock
-    document.body.style.overflow = 'hidden';
-    
     // Focus management
-    const firstLink = this.elements.navbarCollapse.querySelector('a');
+    const firstLink = this.elements.navbarCollapse.querySelector('.modern-link');
     if (firstLink) {
-      firstLink.focus();
+      setTimeout(() => firstLink.focus(), 100);
     }
+    
+    console.log('Mobile menu opened');
   },
 
   /**
    * Hide mobile menu
    */
   hideMobileMenu() {
-    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
-      console.log('Cannot hide mobile menu - elements not found');
-      return;
-    }
-
-    console.log('Hiding mobile menu');
-    this.elements.navbarCollapse.classList.remove('show');
-    this.elements.navbarCollapse.style.display = 'none';
-    this.elements.navbarCollapse.style.opacity = '0';
-    this.elements.navbarCollapse.style.visibility = 'hidden';
-    this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
     
-    this.state.isMobileMenuOpen = false;
-    
-    // Remove body scroll lock
+    // Restore body scroll
     document.body.style.overflow = '';
     
-    // Return focus to toggler
-    this.elements.navbarToggler.focus();
+    // Hide menu
+    this.elements.navbarCollapse.style.opacity = '0';
+    this.elements.navbarCollapse.style.visibility = 'hidden';
+    this.elements.navbarCollapse.classList.remove('show');
+    
+    // Update toggler state
+    this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+    
+    // Hide after animation
+    setTimeout(() => {
+      if (!this.elements.navbarToggler.getAttribute('aria-expanded') === 'true') {
+        this.elements.navbarCollapse.style.display = 'none';
+      }
+    }, 500);
+    
+    console.log('Mobile menu closed');
   },
 
   /**
@@ -513,7 +557,8 @@ const Navbar = {
       navbarCollapse: null,
       navbarLinks: null,
       navbarActions: null,
-      logo: null
+      navbarBrand: null,
+      brandLogo: null
     };
     
     console.log('Navbar destroyed');

@@ -39,12 +39,6 @@
         Header set Cache-Control "public, max-age=3600, must-revalidate"
     </IfModule>
 </FilesMatch>
-    # End of Selection
-# End of Selection
-    <IfModule mod_headers.c>
-        Header set Cache-Control "public, max-age=3600, must-revalidate"
-    </IfModule>
-</FilesMatch>
 
 # CSS & JS Files - Long Cache
 <FilesMatch "\.(css|js)$">
@@ -52,10 +46,6 @@
         ExpiresActive On
         ExpiresDefault "access plus 1 year"
     </IfModule>
-    <IfModule mod_headers.c>
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </IfModule>
-</FilesMatch>
     <IfModule mod_headers.c>
         Header set Cache-Control "public, max-age=31536000, immutable"
     </IfModule>
