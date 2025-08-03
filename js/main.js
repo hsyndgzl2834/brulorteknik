@@ -3,18 +3,13 @@
  * Orchestrates all site functionality
  */
 
-// Import modules
-import Core from './modules/core.js';
-import Navbar from './modules/navbar.js';
-import Footer from './modules/footer.js';
-
 // Main application class
 class App {
   constructor() {
     this.modules = {
-      core: Core,
-      navbar: Navbar,
-      footer: Footer
+      core: window.Core,
+      navbar: window.Navbar,
+      footer: window.Footer
     };
     
     this.state = {
@@ -103,7 +98,7 @@ class App {
           }
         });
       });
-
+      
       images.forEach(img => imageObserver.observe(img));
     }
   }
@@ -113,17 +108,16 @@ class App {
    */
   preloadCriticalResources() {
     const criticalResources = [
-      'images/logo.webp',
       'css/main.css',
-      'js/main.js'
+      'js/modules/navbar.js',
+      'js/modules/footer.js'
     ];
-
+    
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 
-                resource.endsWith('.js') ? 'script' : 'image';
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
       document.head.appendChild(link);
     });
   }
@@ -135,17 +129,17 @@ class App {
     let ticking = false;
     
     const updateScroll = () => {
-      // Update scroll-based animations
+      // Scroll-based animations and effects
       ticking = false;
     };
-
+    
     const requestTick = () => {
       if (!ticking) {
         requestAnimationFrame(updateScroll);
         ticking = true;
       }
     };
-
+    
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
@@ -153,13 +147,8 @@ class App {
    * Initialize accessibility features
    */
   initAccessibility() {
-    // Skip to main content
     this.initSkipLinks();
-    
-    // Focus management
     this.initFocusManagement();
-    
-    // Keyboard navigation
     this.initKeyboardNavigation();
   }
 
@@ -167,64 +156,56 @@ class App {
    * Initialize skip links
    */
   initSkipLinks() {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Ana içeriğe geç';
-    skipLink.className = 'skip-link sr-only';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      z-index: 10000;
-      background: #000;
-      color: #fff;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: top 0.3s;
-    `;
+    const skipLinks = document.querySelectorAll('.skip-link');
     
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+    skipLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.focus();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
-    
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-    
-    document.body.insertBefore(skipLink, document.body.firstChild);
   }
 
   /**
    * Initialize focus management
    */
   initFocusManagement() {
-    // Trap focus in modals
+    // Track focus changes
+    document.addEventListener('focusin', (e) => {
+      const target = e.target;
+      if (target.classList.contains('modern-link') || 
+          target.classList.contains('modern-btn') ||
+          target.classList.contains('modern-toggler')) {
+        target.classList.add('focused');
+      }
+    });
+    
+    document.addEventListener('focusout', (e) => {
+      const target = e.target;
+      target.classList.remove('focused');
+    });
+    
+    // Handle focus trap for modals
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab') {
-        const modals = document.querySelectorAll('.modal.show');
-        modals.forEach(modal => {
-          const focusableElements = modal.querySelectorAll(
-            'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
-          );
-          
-          if (focusableElements.length) {
-            const firstElement = focusableElements[0];
-            const lastElement = focusableElements[focusableElements.length - 1];
-            
-            if (e.shiftKey) {
-              if (document.activeElement === firstElement) {
-                e.preventDefault();
-                lastElement.focus();
-              }
-            } else {
-              if (document.activeElement === lastElement) {
-                e.preventDefault();
-                firstElement.focus();
-              }
-            }
-          }
-        });
+      if (e.key === 'Tab' && e.target.closest('.modal')) {
+        const focusableElements = e.target.closest('.modal').querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        if (e.shiftKey && e.target === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        } else if (!e.shiftKey && e.target === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
       }
     });
   }
@@ -233,16 +214,21 @@ class App {
    * Initialize keyboard navigation
    */
   initKeyboardNavigation() {
-    // Escape key to close modals
+    // Handle escape key for modals and menus
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        const openModals = document.querySelectorAll('.modal.show');
-        openModals.forEach(modal => {
-          const closeButton = modal.querySelector('.close, [data-dismiss="modal"]');
-          if (closeButton) {
-            closeButton.click();
-          }
-        });
+        const openModal = document.querySelector('.modal.show');
+        const openMenu = document.querySelector('.navbar-collapse.show');
+        
+        if (openModal) {
+          // Close modal
+          const closeBtn = openModal.querySelector('[data-dismiss="modal"]');
+          if (closeBtn) closeBtn.click();
+        } else if (openMenu) {
+          // Close mobile menu
+          const closeBtn = document.querySelector('.mobile-menu-close');
+          if (closeBtn) closeBtn.click();
+        }
       }
     });
   }
@@ -252,43 +238,35 @@ class App {
    */
   getState() {
     return {
-      ...this.state,
-      modules: Array.from(this.state.modulesLoaded)
+      isInitialized: this.state.isInitialized,
+      modulesLoaded: Array.from(this.state.modulesLoaded),
+      modules: Object.keys(this.modules)
     };
   }
 
   /**
-   * Destroy the application
+   * Destroy application
    */
   destroy() {
-    // Destroy all modules
-    Object.values(this.modules).forEach(module => {
-      if (module && typeof module.destroy === 'function') {
-        module.destroy();
-      }
-    });
-    
     this.state.isInitialized = false;
     this.state.modulesLoaded.clear();
-    
     console.log('🗑️ Application destroyed');
   }
 }
 
-// Create global app instance
-const app = new App();
+// Create global instance
+window.App = new App();
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    app.init();
+    window.App.init();
   });
 } else {
-  app.init();
+  window.App.init();
 }
 
-// Make app globally available
-window.App = app;
-
-// Export for use in other modules
-export default app; 
+// Export for module systems (if needed)
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = App;
+} 

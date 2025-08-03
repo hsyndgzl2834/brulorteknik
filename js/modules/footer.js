@@ -3,7 +3,8 @@
  * Handles footer interactions, animations, and functionality
  */
 
-const Footer = {
+// Make Footer globally available
+window.Footer = {
   // Configuration
   config: {
     backToTopThreshold: 300,
@@ -563,5 +564,5 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Export for use in other modules
-export default Footer; 
+// Make Footer available globally
+window.Footer = window.Footer; 

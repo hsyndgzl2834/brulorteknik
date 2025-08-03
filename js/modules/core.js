@@ -3,7 +3,8 @@
  * Provides utility functions and core functionality
  */
 
-const Core = {
+// Make Core globally available
+window.Core = {
   // Configuration
   config: {
     debug: false,
@@ -412,5 +413,5 @@ const Core = {
   }
 };
 
-// Export for use in other modules
-export default Core; 
+// Make Core available globally
+window.Core = window.Core; 

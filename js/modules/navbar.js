@@ -3,7 +3,8 @@
  * Handles navbar interactions, mobile menu, and navigation
  */
 
-const Navbar = {
+// Make Navbar globally available
+window.Navbar = {
   // Configuration
   config: {
     scrollThreshold: 100,
@@ -590,5 +591,5 @@ const Navbar = {
   }
 };
 
-// Export for use in other modules
-export default Navbar; 
+// Make Navbar available globally
+window.Navbar = window.Navbar; 
