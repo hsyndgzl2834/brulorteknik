@@ -128,15 +128,19 @@ const Navbar = {
       this.elements.navbarToggler.addEventListener('touchstart', this.toggleMobileMenu.bind(this), { passive: false });
     }
 
-    // Navbar link clicks
-    this.elements.navbarLinks.forEach(link => {
-      link.addEventListener('click', this.handleLinkClick.bind(this));
-    });
+    // Navbar link clicks - check if elements exist
+    if (this.elements.navbarLinks && this.elements.navbarLinks.length > 0) {
+      this.elements.navbarLinks.forEach(link => {
+        link.addEventListener('click', this.handleLinkClick.bind(this));
+      });
+    }
 
-    // Action button clicks
-    this.elements.navbarActions.forEach(button => {
-      button.addEventListener('click', this.handleActionClick.bind(this));
-    });
+    // Action button clicks - check if elements exist
+    if (this.elements.navbarActions && this.elements.navbarActions.length > 0) {
+      this.elements.navbarActions.forEach(button => {
+        button.addEventListener('click', this.handleActionClick.bind(this));
+      });
+    }
 
     // Window resize
     window.addEventListener('resize', this.handleResize.bind(this), { passive: true });
@@ -180,15 +184,17 @@ const Navbar = {
     }
     
     // Close menu when clicking on links
-    this.elements.navbarLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 991) {
-          setTimeout(() => {
-            this.hideMobileMenu();
-          }, 300);
-        }
+    if (this.elements.navbarLinks && this.elements.navbarLinks.length > 0) {
+      this.elements.navbarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 991) {
+            setTimeout(() => {
+              this.hideMobileMenu();
+            }, 300);
+          }
+        });
       });
-    });
+    }
     
     // Close menu when clicking outside
     document.addEventListener('click', (event) => {
@@ -318,9 +324,16 @@ const Navbar = {
     event.preventDefault();
     event.stopPropagation();
     
-    if (!this.elements.navbarCollapse) return;
+    console.log('Toggle mobile menu clicked');
+    
+    if (!this.elements.navbarCollapse) {
+      console.error('Navbar collapse element not found');
+      return;
+    }
     
     const isExpanded = this.elements.navbarToggler.getAttribute('aria-expanded') === 'true';
+    
+    console.log('Current state:', { isExpanded, isMobileMenuOpen: this.state.isMobileMenuOpen });
     
     if (isExpanded) {
       this.hideMobileMenu();
@@ -335,6 +348,8 @@ const Navbar = {
   showMobileMenu() {
     if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
     
+    console.log('Showing mobile menu');
+    
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
     
@@ -346,6 +361,9 @@ const Navbar = {
     
     // Update toggler state
     this.elements.navbarToggler.setAttribute('aria-expanded', 'true');
+    
+    // Update internal state
+    this.state.isMobileMenuOpen = true;
     
     // Focus management
     const firstLink = this.elements.navbarCollapse.querySelector('.modern-link');
@@ -362,6 +380,8 @@ const Navbar = {
   hideMobileMenu() {
     if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
     
+    console.log('Hiding mobile menu');
+    
     // Restore body scroll
     document.body.style.overflow = '';
     
@@ -373,9 +393,12 @@ const Navbar = {
     // Update toggler state
     this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
     
+    // Update internal state
+    this.state.isMobileMenuOpen = false;
+    
     // Hide after animation
     setTimeout(() => {
-      if (!this.elements.navbarToggler.getAttribute('aria-expanded') === 'true') {
+      if (this.elements.navbarToggler.getAttribute('aria-expanded') !== 'true') {
         this.elements.navbarCollapse.style.display = 'none';
       }
     }, 500);
