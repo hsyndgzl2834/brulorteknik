@@ -15,6 +15,17 @@
    ADDITIONAL GLOBAL STYLES
    =================================== */
 
+/* Body padding for fixed navbar */
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
 /* Page Header Styles */
 .page-header {
   padding: var(--spacing-3xl) 0 var(--spacing-2xl);
