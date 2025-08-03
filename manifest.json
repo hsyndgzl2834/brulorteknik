@@ -67,10 +67,10 @@
       ]
     },
     {
-      "name": "WhatsApp",
-      "short_name": "WhatsApp",
-      "description": "WhatsApp ile iletişim",
-      "url": "https://wa.me/905316250694",
+      "name": "SSS",
+      "short_name": "SSS",
+      "description": "Sık sorulan sorular",
+      "url": "/faq.html",
       "icons": [
         {
           "src": "images/logo.webp",
@@ -95,12 +95,6 @@
       "accept": {
         "text/html": [".html", ".htm"]
       }
-    }
-  ],
-  "protocol_handlers": [
-    {
-      "protocol": "web+brulorteknik",
-      "url": "/contact.html?source=%s"
     }
   ],
   "share_target": {

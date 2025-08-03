@@ -97,7 +97,7 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <div id="navbar"></div>
+  <div id="navbar-container"></div>
 
   <!-- HERO SECTION -->
   <section class="hero-section py-5 position-relative overflow-hidden">
@@ -496,18 +496,17 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
 
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
-  <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
-      });
-  </script>
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
 
   <!-- Scripts -->
   <!-- Load JavaScript Modules First -->
@@ -526,7 +525,7 @@
       fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-          document.getElementById('navbar').innerHTML = data;
+          document.getElementById('navbar-container').innerHTML = data;
           // Navbar module will auto-initialize when elements are available
         })
         .catch(error => console.error('Navbar yüklenirken hata:', error));
@@ -535,7 +534,7 @@
       fetch('footer.html')
         .then(response => response.text())
         .then(data => {
-          document.getElementById('footer').innerHTML = data;
+          document.getElementById('footer-container').innerHTML = data;
           // Re-initialize footer after loading
           if (window.App && window.App.modules.footer) {
             window.App.modules.footer.init();
