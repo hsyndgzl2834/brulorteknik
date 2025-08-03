@@ -47,6 +47,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <!-- Custom CSS First -->
+  <link rel="stylesheet" href="css/modules/navbar.css">
+  
   <!-- Modular CSS System -->
   <link rel="stylesheet" href="css/main.css">
   
@@ -740,9 +743,6 @@
 </head>
 
 <body>
-  <!-- Include Navbar -->
-  <div id="navbar-container"></div>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLV53JFE6K"></script>
   <script>
@@ -761,21 +761,11 @@
     ]
   }
   </script>
-  <!-- NAVBAR -->
-  <div id="navbar" role="navigation" aria-label="Ana menü"></div>
+
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
 
   <script>
-    // Navbar'ı dinamik olarak yükle
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => { 
-          document.getElementById('navbar').innerHTML = html;
-          console.log('Navbar yüklendi - Bootstrap otomatik başlatılacak');
-        })
-        .catch(error => console.error('Navbar yüklenemedi:', error));
-    });
-    
     // Mobile scroll optimizations
     function optimizeMobileScroll() {
       // Prevent horizontal scroll
@@ -798,25 +788,6 @@
     document.addEventListener('DOMContentLoaded', optimizeMobileScroll);
   </script>
 
-  <!-- HERO SLIDER -->
-  <section id="hero" class="position-relative" aria-label="Tanıtım Sliderı">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <picture>
-            <source srcset="images/hero1.webp" type="image/webp" />
-            <img src="images/hero1.jpg" alt="Endüstriyel Brülör Sistemleri - Brülör Teknik Hizmetler" class="d-block w-100" loading="lazy" />
-          </picture>
-          <div class="carousel-caption text-center">
-            <h1>Endüstriyel Brülör Sistemlerinde Uzman Çözüm Ortağınız</h1>
-            <p>20+ yıl deneyim, Türkiye genelinde hızlı servis ve enerji verimliliği odaklı çözümler</p>
-=======
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
@@ -825,7 +796,6 @@
           <div class="hero-content" data-aos="fade-right">
             <h1 class="hero-title">Endüstriyel Brülör Sistemleri</h1>
             <p class="hero-subtitle">20+ yıl deneyimle İstanbul'da profesyonel brülör servisi. 7/24 acil servis, bakım, arıza giderme ve montaj hizmetleri.</p>
->>>>>>> cursor/uygulama-neden-a-lm-yor-soru-turmas-5d9b
             
             <!-- Hero Stats -->
             <div class="hero-stats">
@@ -1197,12 +1167,24 @@
   <script>
     // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, loading navbar...');
+      
       // Load navbar
       fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
+          console.log('Navbar HTML loaded, inserting...');
           document.getElementById('navbar-container').innerHTML = data;
-          // Navbar module will auto-initialize when elements are available
+          
+          // Initialize navbar after loading
+          setTimeout(() => {
+            if (window.App && window.App.modules.navbar) {
+              console.log('Initializing navbar module...');
+              window.App.modules.navbar.init();
+            } else {
+              console.error('Navbar module not found');
+            }
+          }, 100);
         })
         .catch(error => console.error('Navbar yüklenirken hata:', error));
       

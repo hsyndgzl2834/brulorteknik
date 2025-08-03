@@ -59,6 +59,8 @@ const Navbar = {
       const navbarToggler = document.querySelector('.modern-toggler');
       const navbarCollapse = document.querySelector('.collapse.navbar-collapse');
       
+      console.log(`Attempt ${attempts}: navbar=${!!navbar}, toggler=${!!navbarToggler}, collapse=${!!navbarCollapse}`);
+      
       if (navbar && navbarToggler && navbarCollapse) {
         console.log('Navbar elements found, initializing...');
         this.initializeNavbar();
