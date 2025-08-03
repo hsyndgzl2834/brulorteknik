@@ -7,9 +7,9 @@
 class App {
   constructor() {
     this.modules = {
-      core: window.Core,
-      navbar: window.Navbar,
-      footer: window.Footer
+      core: null,
+      navbar: null,
+      footer: null
     };
     
     this.state = {
@@ -24,6 +24,9 @@ class App {
   async init() {
     try {
       console.log('🚀 Initializing application...');
+      
+      // Wait for modules to be available
+      await this.waitForModules();
       
       // Initialize core functionality first
       await this.initModule('core');
@@ -52,6 +55,29 @@ class App {
   }
 
   /**
+   * Wait for modules to be available
+   */
+  async waitForModules() {
+    const maxAttempts = 50; // 5 seconds max
+    let attempts = 0;
+    
+    while (attempts < maxAttempts) {
+      if (window.Core && window.Navbar && window.Footer) {
+        this.modules.core = window.Core;
+        this.modules.navbar = window.Navbar;
+        this.modules.footer = window.Footer;
+        console.log('✅ All modules loaded');
+        return;
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 100));
+      attempts++;
+    }
+    
+    throw new Error('Modules failed to load within timeout');
+  }
+
+  /**
    * Initialize a specific module
    */
   async initModule(moduleName) {
@@ -61,6 +87,8 @@ class App {
         await module.init();
         this.state.modulesLoaded.add(moduleName);
         console.log(`✅ ${moduleName} module initialized`);
+      } else {
+        console.warn(`⚠️ ${moduleName} module not found or init method missing`);
       }
     } catch (error) {
       console.error(`❌ Failed to initialize ${moduleName} module:`, error);
@@ -108,16 +136,17 @@ class App {
    */
   preloadCriticalResources() {
     const criticalResources = [
-      'css/main.css',
-      'js/modules/navbar.js',
-      'js/modules/footer.js'
+      '/css/main.css',
+      '/js/main.js',
+      '/images/logo.webp'
     ];
     
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith('.css') ? 'style' : 
+                 resource.endsWith('.js') ? 'script' : 'image';
       document.head.appendChild(link);
     });
   }
@@ -174,39 +203,40 @@ class App {
    * Initialize focus management
    */
   initFocusManagement() {
-    // Track focus changes
+    // Track focus for better UX
     document.addEventListener('focusin', (e) => {
-      const target = e.target;
-      if (target.classList.contains('modern-link') || 
-          target.classList.contains('modern-btn') ||
-          target.classList.contains('modern-toggler')) {
-        target.classList.add('focused');
-      }
+      e.target.classList.add('focused');
     });
     
     document.addEventListener('focusout', (e) => {
-      const target = e.target;
-      target.classList.remove('focused');
+      e.target.classList.remove('focused');
     });
     
-    // Handle focus trap for modals
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab' && e.target.closest('.modal')) {
-        const focusableElements = e.target.closest('.modal').querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-        
-        if (e.shiftKey && e.target === firstElement) {
-          e.preventDefault();
-          lastElement.focus();
-        } else if (!e.shiftKey && e.target === lastElement) {
-          e.preventDefault();
-          firstElement.focus();
+    // Trap focus in modals
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach(modal => {
+      const focusableElements = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      
+      modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              e.preventDefault();
+              lastElement.focus();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              e.preventDefault();
+              firstElement.focus();
+            }
+          }
         }
-      }
+      });
     });
   }
 
@@ -214,21 +244,23 @@ class App {
    * Initialize keyboard navigation
    */
   initKeyboardNavigation() {
-    // Handle escape key for modals and menus
+    // Escape key handling
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        const openModal = document.querySelector('.modal.show');
-        const openMenu = document.querySelector('.navbar-collapse.show');
-        
-        if (openModal) {
-          // Close modal
-          const closeBtn = openModal.querySelector('[data-dismiss="modal"]');
-          if (closeBtn) closeBtn.click();
-        } else if (openMenu) {
-          // Close mobile menu
-          const closeBtn = document.querySelector('.mobile-menu-close');
-          if (closeBtn) closeBtn.click();
-        }
+        // Close modals, dropdowns, etc.
+        const modals = document.querySelectorAll('[role="dialog"]');
+        modals.forEach(modal => {
+          if (modal.style.display !== 'none') {
+            modal.style.display = 'none';
+          }
+        });
+      }
+    });
+    
+    // Enter key handling for custom elements
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && e.target.hasAttribute('role')) {
+        e.target.click();
       }
     });
   }
@@ -240,7 +272,7 @@ class App {
     return {
       isInitialized: this.state.isInitialized,
       modulesLoaded: Array.from(this.state.modulesLoaded),
-      modules: Object.keys(this.modules)
+      modules: Object.keys(this.modules).filter(key => this.modules[key])
     };
   }
 
@@ -248,25 +280,26 @@ class App {
    * Destroy application
    */
   destroy() {
+    // Cleanup event listeners
+    window.removeEventListener('scroll', this.optimizeScrollPerformance);
+    
+    // Reset state
     this.state.isInitialized = false;
     this.state.modulesLoaded.clear();
+    
     console.log('🗑️ Application destroyed');
   }
 }
 
-// Create global instance
+// Create global App instance
 window.App = new App();
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    window.App.init();
-  });
-} else {
+document.addEventListener('DOMContentLoaded', () => {
   window.App.init();
-}
+});
 
-// Export for module systems (if needed)
+// Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = App;
 } 

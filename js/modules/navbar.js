@@ -123,26 +123,6 @@ window.Navbar = {
     // Scroll events
     window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
     
-    // Mobile menu toggle
-    if (this.elements.navbarToggler) {
-      this.elements.navbarToggler.addEventListener('click', this.toggleMobileMenu.bind(this));
-      this.elements.navbarToggler.addEventListener('touchstart', this.toggleMobileMenu.bind(this), { passive: false });
-    }
-
-    // Navbar link clicks - check if elements exist
-    if (this.elements.navbarLinks && this.elements.navbarLinks.length > 0) {
-      this.elements.navbarLinks.forEach(link => {
-        link.addEventListener('click', this.handleLinkClick.bind(this));
-      });
-    }
-
-    // Action button clicks - check if elements exist
-    if (this.elements.navbarActions && this.elements.navbarActions.length > 0) {
-      this.elements.navbarActions.forEach(button => {
-        button.addEventListener('click', this.handleActionClick.bind(this));
-      });
-    }
-
     // Window resize
     window.addEventListener('resize', this.handleResize.bind(this), { passive: true });
 
@@ -169,10 +149,16 @@ window.Navbar = {
    * Initialize mobile menu
    */
   initMobileMenu() {
-    if (!this.elements.navbarToggler) return;
+    if (!this.elements.navbarToggler) {
+      console.error('Navbar toggler not found');
+      return;
+    }
     
-    // Mobile menu toggle
+    console.log('Initializing mobile menu...');
+    
+    // Mobile menu toggle - use arrow function to preserve context
     this.elements.navbarToggler.addEventListener('click', (event) => {
+      console.log('Toggler clicked');
       this.toggleMobileMenu(event);
     });
     
@@ -180,13 +166,17 @@ window.Navbar = {
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
     if (mobileMenuClose) {
       mobileMenuClose.addEventListener('click', (event) => {
+        console.log('Close button clicked');
         this.hideMobileMenu();
       });
     }
     
-    // Close menu when clicking on links
+    // Navbar link clicks
     if (this.elements.navbarLinks && this.elements.navbarLinks.length > 0) {
       this.elements.navbarLinks.forEach(link => {
+        link.addEventListener('click', this.handleLinkClick.bind(this));
+        
+        // Close menu when clicking on links (mobile only)
         link.addEventListener('click', () => {
           if (window.innerWidth <= 991) {
             setTimeout(() => {
@@ -196,21 +186,13 @@ window.Navbar = {
         });
       });
     }
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-      if (window.innerWidth <= 991) {
-        const navbar = this.elements.navbar;
-        const navbarToggler = this.elements.navbarToggler;
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        
-        if (!navbar.contains(event.target) && 
-            !navbarToggler.contains(event.target) && 
-            !mobileMenuClose?.contains(event.target)) {
-          this.hideMobileMenu();
-        }
-      }
-    });
+
+    // Action button clicks
+    if (this.elements.navbarActions && this.elements.navbarActions.length > 0) {
+      this.elements.navbarActions.forEach(button => {
+        button.addEventListener('click', this.handleActionClick.bind(this));
+      });
+    }
     
     // Close menu on escape key
     document.addEventListener('keydown', (event) => {
@@ -225,6 +207,8 @@ window.Navbar = {
         this.hideMobileMenu();
       }
     });
+    
+    console.log('Mobile menu initialized');
   },
 
   /**
@@ -332,6 +316,11 @@ window.Navbar = {
       return;
     }
     
+    if (!this.elements.navbarToggler) {
+      console.error('Navbar toggler element not found');
+      return;
+    }
+    
     const isExpanded = this.elements.navbarToggler.getAttribute('aria-expanded') === 'true';
     
     console.log('Current state:', { isExpanded, isMobileMenuOpen: this.state.isMobileMenuOpen });
@@ -347,7 +336,10 @@ window.Navbar = {
    * Show mobile menu
    */
   showMobileMenu() {
-    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
+    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
+      console.error('Required elements not found for showing mobile menu');
+      return;
+    }
     
     console.log('Showing mobile menu');
     
@@ -372,7 +364,7 @@ window.Navbar = {
       setTimeout(() => firstLink.focus(), 100);
     }
     
-    console.log('Mobile menu opened');
+    console.log('Mobile menu opened successfully');
   },
 
   /**
