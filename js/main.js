@@ -276,16 +276,19 @@ class App {
 }
 
 // Create global app instance
-window.App = new App();
+const app = new App();
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    window.App.init();
+    app.init();
   });
 } else {
-  window.App.init();
+  app.init();
 }
 
+// Make app globally available
+window.App = app;
+
 // Export for use in other modules
-export default window.App; 
+export default app; 
