@@ -386,8 +386,13 @@
     </a>
   </div>
 
-  <!-- Modular JavaScript System -->
-  <script type="module" src="js/main.js" defer></script>
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  <script src="js/modules/footer.js"></script>
+  
+  <!-- Main Application -->
+  <script src="js/main.js"></script>
   
   <!-- Load navbar and footer -->
   <script>

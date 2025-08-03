@@ -28,14 +28,23 @@ class App {
       // Wait for modules to be available
       await this.waitForModules();
       
-      // Initialize core functionality first
-      await this.initModule('core');
+      // Initialize available modules
+      const modulePromises = [];
       
-      // Initialize navbar
-      await this.initModule('navbar');
+      if (this.modules.core) {
+        modulePromises.push(this.initModule('core'));
+      }
       
-      // Initialize footer
-      await this.initModule('footer');
+      if (this.modules.navbar) {
+        modulePromises.push(this.initModule('navbar'));
+      }
+      
+      if (this.modules.footer) {
+        modulePromises.push(this.initModule('footer'));
+      }
+      
+      // Wait for all modules to initialize
+      await Promise.allSettled(modulePromises);
       
       // Initialize performance optimizations
       this.initPerformanceOptimizations();
@@ -51,6 +60,11 @@ class App {
       
     } catch (error) {
       console.error('❌ Application initialization failed:', error);
+      
+      // Try to continue with basic functionality
+      console.log('🔄 Attempting to continue with basic functionality...');
+      this.initPerformanceOptimizations();
+      this.initAccessibility();
     }
   }
 
@@ -58,15 +72,25 @@ class App {
    * Wait for modules to be available
    */
   async waitForModules() {
-    const maxAttempts = 50; // 5 seconds max
+    const maxAttempts = 200; // 20 seconds max
     let attempts = 0;
     
+    console.log('🔄 Waiting for modules to load...');
+    
     while (attempts < maxAttempts) {
-      if (window.Core && window.Navbar && window.Footer) {
+      const coreLoaded = !!window.Core;
+      const navbarLoaded = !!window.Navbar;
+      const footerLoaded = !!window.Footer;
+      
+      if (attempts % 10 === 0) { // Log every 10th attempt to reduce spam
+        console.log(`Attempt ${attempts + 1}: Core=${coreLoaded}, Navbar=${navbarLoaded}, Footer=${footerLoaded}`);
+      }
+      
+      if (coreLoaded && navbarLoaded && footerLoaded) {
         this.modules.core = window.Core;
         this.modules.navbar = window.Navbar;
         this.modules.footer = window.Footer;
-        console.log('✅ All modules loaded');
+        console.log('✅ All modules loaded successfully');
         return;
       }
       
@@ -74,7 +98,23 @@ class App {
       attempts++;
     }
     
-    throw new Error('Modules failed to load within timeout');
+    // If modules didn't load, try to continue with available ones
+    console.warn('⚠️ Some modules failed to load, continuing with available ones');
+    
+    if (window.Core) {
+      this.modules.core = window.Core;
+      console.log('✅ Core module loaded');
+    }
+    
+    if (window.Navbar) {
+      this.modules.navbar = window.Navbar;
+      console.log('✅ Navbar module loaded');
+    }
+    
+    if (window.Footer) {
+      this.modules.footer = window.Footer;
+      console.log('✅ Footer module loaded');
+    }
   }
 
   /**

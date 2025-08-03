@@ -42,7 +42,7 @@
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="images/about-us.webp" as="image" />
+
 
   <!-- Modern CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -459,8 +459,13 @@
   <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   
-  <!-- Modular JavaScript System -->
-  <script type="module" src="js/main.js"></script>
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  <script src="js/modules/footer.js"></script>
+  
+  <!-- Main Application -->
+  <script src="js/main.js"></script>
   
   <!-- Custom JS -->
   <script>

@@ -36,7 +36,7 @@
         ExpiresDefault "access plus 1 hour"
     </IfModule>
     <IfModule mod_headers.c>
-        Header set Cache-Control "public, max-age=3600, must-revalidate"
+        Header set Cache-Control "public, max-age=3600"
     </IfModule>
 </FilesMatch>
 
