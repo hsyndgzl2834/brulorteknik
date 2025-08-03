@@ -15,8 +15,15 @@
    ADDITIONAL GLOBAL STYLES
    =================================== */
 
-/* Body padding for fixed navbar */
+/* Prevent horizontal scroll */
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
+  overflow-x: hidden;
+  width: 100%;
   padding-top: 80px;
 }
 
@@ -24,6 +31,13 @@ body {
   body {
     padding-top: 70px;
   }
+}
+
+/* Container overflow fix */
+.container,
+.container-fluid {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Page Header Styles */

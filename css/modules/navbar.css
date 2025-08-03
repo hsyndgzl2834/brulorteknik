@@ -35,6 +35,8 @@
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Brand Styles */
@@ -364,6 +366,8 @@
   
   .navbar-custom .container {
     min-height: 70px;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   .modern-toggler {
@@ -463,6 +467,7 @@
     box-shadow: none;
     max-height: none;
     overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 0;
     margin: 0;
   }
