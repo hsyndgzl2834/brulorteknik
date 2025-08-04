@@ -1,5 +1,17 @@
 /* Modern Footer Styles - Mobile First */
 
+/* Hide scrollbars in footer */
+.footer,
+.footer * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+.footer::-webkit-scrollbar,
+.footer *::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+}
+
 /* Force footer visibility */
 .footer {
   display: block !important;
@@ -9,6 +21,7 @@
   z-index: 1 !important;
   min-height: auto !important;
   padding-bottom: 1rem !important;
+  overflow: hidden !important;
 }
 
 /* Force all footer sections to be visible */

@@ -2,6 +2,18 @@
    MODERN NAVBAR STYLES
    =================================== */
 
+/* Hide scrollbars in navbar */
+.navbar-custom,
+.navbar-custom * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+.navbar-custom::-webkit-scrollbar,
+.navbar-custom *::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+}
+
 /* Force navbar visibility */
 .navbar-custom {
   display: block !important;
