@@ -1,27 +1,28 @@
 /**
  * Modern Navbar JavaScript Module
- * Handles navbar interactions, mobile menu, and navigation
+ * Handles mobile menu toggle, scroll effects, and accessibility
  */
 
 // Make Navbar globally available
 window.Navbar = {
   // Configuration
   config: {
-    scrollThreshold: 100,
     mobileBreakpoint: 991,
+    scrollThreshold: 100,
     animationDuration: 300,
-    enableSticky: true,
-    enableMobileMenu: true,
-    enableScrollHide: true
+    enableScrollEffects: true,
+    enableAccessibility: true,
+    enableKeyboardNav: true,
+    enableTouchGestures: true
   },
 
   // State
   state: {
     isInitialized: false,
-    isScrolled: false,
     isMobileMenuOpen: false,
-    lastScrollPosition: 0,
-    isSticky: false
+    isScrolled: false,
+    currentFocusIndex: -1,
+    lastScrollPosition: 0
   },
 
   // Elements cache
@@ -31,8 +32,8 @@ window.Navbar = {
     navbarCollapse: null,
     navbarLinks: null,
     navbarActions: null,
-    navbarBrand: null,
-    brandLogo: null
+    mobileMenuClose: null,
+    brand: null
   },
 
   /**
@@ -41,291 +42,302 @@ window.Navbar = {
   init() {
     if (this.state.isInitialized) return;
     
-    // Wait for navbar elements to be available
-    this.waitForElements();
-  },
-
-  /**
-   * Wait for navbar elements to be available in DOM
-   */
-  waitForElements() {
-    const maxAttempts = 50; // 5 seconds max
-    let attempts = 0;
+    console.log('🚀 Initializing navbar...');
     
-    const checkElements = () => {
-      attempts++;
-      
-      // Check if elements exist
-      const navbar = document.querySelector('.navbar-custom');
-      const navbarToggler = document.querySelector('.modern-toggler');
-      const navbarCollapse = document.querySelector('.collapse.navbar-collapse');
-      
-      console.log(`Attempt ${attempts}: navbar=${!!navbar}, toggler=${!!navbarToggler}, collapse=${!!navbarCollapse}`);
-      
-      if (navbar && navbarToggler && navbarCollapse) {
-        console.log('Navbar elements found, initializing...');
-        this.initializeNavbar();
-      } else if (attempts < maxAttempts) {
-        // Try again in 100ms
-        setTimeout(checkElements, 100);
-      } else {
-        console.error('Navbar elements not found after maximum attempts');
-      }
-    };
-    
-    checkElements();
-  },
-
-  /**
-   * Initialize navbar after elements are available
-   */
-  initializeNavbar() {
     this.cacheElements();
     this.bindEvents();
-    this.initStickyNavbar();
-    this.initMobileMenu();
-    this.initScrollEffects();
+    this.ensureInitialState();
     this.initAccessibility();
+    this.initKeyboardNavigation();
+    this.initTouchGestures();
+    this.debugNavbarElements();
     
     this.state.isInitialized = true;
-    console.log('Navbar initialized successfully');
+    console.log('✅ Navbar initialized successfully');
+  },
+
+  /**
+   * Debug navbar elements
+   */
+  debugNavbarElements() {
+    console.log('🔍 Navbar Debug Bilgileri:');
+    
+    // Navbar elementini kontrol et
+    const navbar = document.querySelector('.navbar-custom');
+    if (navbar) {
+      const navbarStyle = window.getComputedStyle(navbar);
+      console.log('✅ Navbar elementi bulundu');
+      console.log('   Display:', navbarStyle.display);
+      console.log('   Visibility:', navbarStyle.visibility);
+      console.log('   Opacity:', navbarStyle.opacity);
+      console.log('   Position:', navbarStyle.position);
+      console.log('   Z-index:', navbarStyle.zIndex);
+    } else {
+      console.log('❌ Navbar elementi bulunamadı!');
+    }
+    
+    // Navbar collapse'ı kontrol et
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse) {
+      const collapseStyle = window.getComputedStyle(navbarCollapse);
+      console.log('✅ Navbar Collapse bulundu');
+      console.log('   Display:', collapseStyle.display);
+      console.log('   Visibility:', collapseStyle.visibility);
+      console.log('   Opacity:', collapseStyle.opacity);
+      console.log('   Position:', collapseStyle.position);
+      console.log('   Transform:', collapseStyle.transform);
+    } else {
+      console.log('❌ Navbar Collapse bulunamadı!');
+    }
+    
+    // Navbar toggler'ı kontrol et
+    const navbarToggler = document.querySelector('.modern-toggler');
+    if (navbarToggler) {
+      const togglerStyle = window.getComputedStyle(navbarToggler);
+      console.log('✅ Navbar Toggler bulundu');
+      console.log('   Display:', togglerStyle.display);
+      console.log('   Visibility:', togglerStyle.visibility);
+      console.log('   Opacity:', togglerStyle.opacity);
+      console.log('   Aria-expanded:', navbarToggler.getAttribute('aria-expanded'));
+    } else {
+      console.log('❌ Navbar Toggler bulunamadı!');
+    }
+    
+    // Navbar nav'ı kontrol et
+    const navbarNav = document.querySelector('.navbar-nav');
+    if (navbarNav) {
+      const navStyle = window.getComputedStyle(navbarNav);
+      console.log('✅ Navbar Nav bulundu');
+      console.log('   Display:', navStyle.display);
+      console.log('   Visibility:', navStyle.visibility);
+      console.log('   Flex-direction:', navStyle.flexDirection);
+    } else {
+      console.log('❌ Navbar Nav bulunamadı!');
+    }
+    
+    // Navbar actions'ı kontrol et
+    const navbarActions = document.querySelector('.navbar-actions');
+    if (navbarActions) {
+      const actionsStyle = window.getComputedStyle(navbarActions);
+      console.log('✅ Navbar Actions bulundu');
+      console.log('   Display:', actionsStyle.display);
+      console.log('   Visibility:', actionsStyle.visibility);
+    } else {
+      console.log('❌ Navbar Actions bulunamadı!');
+    }
+    
+    // Ekran genişliğini kontrol et
+    const screenWidth = window.innerWidth;
+    console.log(`📱 Ekran genişliği: ${screenWidth}px`);
+    console.log(`📱 Mobil mod: ${screenWidth <= this.config.mobileBreakpoint ? 'Evet' : 'Hayır'}`);
+    
+    // Navbar links sayısını kontrol et
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    console.log(`🔗 Navbar links: ${navbarLinks.length} adet`);
+    
+    // Navbar actions sayısını kontrol et
+    const actions = document.querySelectorAll('.navbar-actions .btn');
+    console.log(`🔘 Navbar actions: ${actions.length} adet`);
   },
 
   /**
    * Cache DOM elements for performance
    */
   cacheElements() {
-    this.elements = {
-      navbar: document.querySelector('.navbar-custom'),
-      navbarToggler: document.querySelector('.modern-toggler'),
-      navbarCollapse: document.querySelector('.collapse.navbar-collapse'),
-      navbarLinks: document.querySelectorAll('.modern-link'),
-      navbarActions: document.querySelectorAll('.navbar-actions .btn'),
-      navbarBrand: document.querySelector('.navbar-brand'),
-      brandLogo: document.querySelector('.brand-logo')
-    };
+    this.elements.navbar = document.querySelector('.navbar-custom');
+    this.elements.navbarToggler = document.querySelector('.modern-toggler');
+    this.elements.navbarCollapse = document.querySelector('.navbar-collapse');
+    this.elements.navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    this.elements.navbarActions = document.querySelectorAll('.navbar-actions .btn');
+    this.elements.mobileMenuClose = document.querySelector('.mobile-menu-close');
+    this.elements.brand = document.querySelector('.navbar-brand');
     
-    console.log('Cached elements:', {
+    // Log cached elements
+    console.log('📋 Cached elements:', {
       navbar: !!this.elements.navbar,
       navbarToggler: !!this.elements.navbarToggler,
       navbarCollapse: !!this.elements.navbarCollapse,
       navbarLinks: this.elements.navbarLinks.length,
-      navbarActions: this.elements.navbarActions.length,
-      navbarBrand: !!this.elements.navbarBrand,
-      brandLogo: !!this.elements.brandLogo
+      navbarActions: this.elements.navbarActions.length
     });
+    
+    // Debug element details
+    console.log('🔍 Navbar element:', this.elements.navbar);
+    console.log('🔍 Toggler element:', this.elements.navbarToggler);
+    console.log('🔍 Collapse element:', this.elements.navbarCollapse);
   },
 
   /**
    * Bind event listeners
    */
   bindEvents() {
-    // Scroll events
-    window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
-    
+    // Mobile menu toggle
+    if (this.elements.navbarToggler) {
+      this.elements.navbarToggler.addEventListener('click', this.toggleMobileMenu.bind(this));
+      console.log('📱 Mobile menu toggle event bound');
+      console.log('🔍 Toggler element details:', this.elements.navbarToggler);
+    } else {
+      console.error('❌ Navbar toggler element not found!');
+    }
+
+    // Mobile menu close button
+    if (this.elements.mobileMenuClose) {
+      this.elements.mobileMenuClose.addEventListener('click', this.hideMobileMenu.bind(this));
+      console.log('❌ Mobile menu close event bound');
+    }
+
+    // Scroll effects
+    if (this.config.enableScrollEffects) {
+      window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
+      console.log('📜 Scroll effects enabled');
+    }
+
     // Window resize
     window.addEventListener('resize', this.handleResize.bind(this), { passive: true });
+    console.log('🔄 Resize event bound');
 
-    // Touch events for mobile
-    if (this.config.enableMobileMenu) {
-      this.initTouchEvents();
-    }
-
-    // Close mobile menu when clicking outside
+    // Click outside to close mobile menu
     document.addEventListener('click', this.handleOutsideClick.bind(this));
+    console.log('🖱️ Outside click event bound');
+
+    // Keyboard navigation
+    if (this.config.enableKeyboardNav) {
+      document.addEventListener('keydown', this.handleKeyboard.bind(this));
+      console.log('⌨️ Keyboard navigation enabled');
+    }
+
+    // Touch gestures for mobile
+    if (this.config.enableTouchGestures) {
+      this.initTouchGestures();
+      console.log('👆 Touch gestures enabled');
+    }
   },
 
   /**
-   * Initialize sticky navbar
+   * Ensure initial state
    */
-  initStickyNavbar() {
-    if (!this.config.enableSticky) return;
-
-    // Check initial scroll position
-    this.handleScroll();
-  },
-
-  /**
-   * Initialize mobile menu
-   */
-  initMobileMenu() {
-    if (!this.elements.navbarToggler) {
-      console.error('Navbar toggler not found');
-      return;
+  ensureInitialState() {
+    // Ensure mobile menu is closed initially
+    if (this.elements.navbarCollapse) {
+      this.elements.navbarCollapse.classList.remove('show');
     }
     
-    console.log('Initializing mobile menu...');
-    
-    // Mobile menu toggle - use arrow function to preserve context
-    this.elements.navbarToggler.addEventListener('click', (event) => {
-      console.log('Toggler clicked');
-      this.toggleMobileMenu(event);
-    });
-    
-    // Mobile menu close button
-    const mobileMenuClose = document.querySelector('.mobile-menu-close');
-    if (mobileMenuClose) {
-      mobileMenuClose.addEventListener('click', (event) => {
-        console.log('Close button clicked');
-        this.hideMobileMenu();
-      });
+    if (this.elements.navbarToggler) {
+      this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
     }
     
-    // Navbar link clicks
-    if (this.elements.navbarLinks && this.elements.navbarLinks.length > 0) {
-      this.elements.navbarLinks.forEach(link => {
-        link.addEventListener('click', this.handleLinkClick.bind(this));
-        
-        // Close menu when clicking on links (mobile only)
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 991) {
-            setTimeout(() => {
-              this.hideMobileMenu();
-            }, 300);
-          }
-        });
-      });
-    }
-
-    // Action button clicks
-    if (this.elements.navbarActions && this.elements.navbarActions.length > 0) {
-      this.elements.navbarActions.forEach(button => {
-        button.addEventListener('click', this.handleActionClick.bind(this));
-      });
-    }
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && window.innerWidth <= 991) {
-        this.hideMobileMenu();
-      }
-    });
-    
-    // Handle window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 991) {
-        this.hideMobileMenu();
-      }
-    });
-    
-    console.log('Mobile menu initialized');
-  },
-
-  /**
-   * Initialize scroll effects
-   */
-  initScrollEffects() {
-    if (!this.config.enableScrollHide) return;
-
-    // Add scroll-based navbar hide/show
-    let lastScrollTop = 0;
-    const navbar = this.elements.navbar;
-    
-    if (navbar) {
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > this.config.scrollThreshold) {
-          // Scrolling down - hide navbar
-          navbar.style.transform = 'translateY(-100%)';
-        } else {
-          // Scrolling up - show navbar
-          navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-      }, { passive: true });
-    }
+    this.state.isMobileMenuOpen = false;
+    console.log('🔧 Initial state ensured');
   },
 
   /**
    * Initialize accessibility features
    */
   initAccessibility() {
-    // Add ARIA attributes
+    if (!this.config.enableAccessibility) return;
+
+    // Add ARIA labels
     if (this.elements.navbarToggler) {
-      this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+      this.elements.navbarToggler.setAttribute('aria-label', 'Menüyü aç/kapat');
       this.elements.navbarToggler.setAttribute('aria-controls', 'navbarNav');
+      this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+    }
+
+    // Add role attributes
+    if (this.elements.navbar) {
+      this.elements.navbar.setAttribute('role', 'navigation');
+      this.elements.navbar.setAttribute('aria-label', 'Ana navigasyon');
     }
 
     // Add focus management
-    this.elements.navbarLinks.forEach(link => {
-      link.addEventListener('focus', this.handleLinkFocus.bind(this));
-      link.addEventListener('blur', this.handleLinkBlur.bind(this));
+    this.elements.navbarLinks.forEach((link, index) => {
+      link.setAttribute('role', 'menuitem');
+      link.setAttribute('tabindex', '0');
     });
 
-    // Add keyboard navigation
-    document.addEventListener('keydown', this.handleKeyboard.bind(this));
+    console.log('♿ Accessibility features initialized');
   },
 
   /**
-   * Initialize touch events for mobile
+   * Initialize keyboard navigation
    */
-  initTouchEvents() {
-    if (!this.elements.navbarCollapse) return;
+  initKeyboardNavigation() {
+    if (!this.config.enableKeyboardNav) return;
 
-    this.touchStartY = 0;
-    this.touchEndY = 0;
+    // Focus management for mobile menu
+    this.elements.navbarLinks.forEach((link, index) => {
+      link.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          link.click();
+        }
+      });
+    });
 
-    this.elements.navbarCollapse.addEventListener('touchstart', (e) => {
-      this.touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-
-    this.elements.navbarCollapse.addEventListener('touchend', (e) => {
-      this.touchEndY = e.changedTouches[0].screenY;
-      this.handleTouchSwipe();
-    }, { passive: true });
+    console.log('⌨️ Keyboard navigation initialized');
   },
 
   /**
-   * Handle scroll events
+   * Initialize touch gestures
    */
-  handleScroll() {
-    const scrollPosition = window.pageYOffset;
-    const navbar = this.elements.navbar;
-    
-    if (!navbar) return;
+  initTouchGestures() {
+    if (!this.config.enableTouchGestures) return;
 
-    // Update sticky state
-    if (scrollPosition > this.config.scrollThreshold) {
-      if (!this.state.isScrolled) {
-        this.state.isScrolled = true;
-        navbar.classList.add('navbar-scrolled');
-      }
-    } else {
-      if (this.state.isScrolled) {
-        this.state.isScrolled = false;
-        navbar.classList.remove('navbar-scrolled');
-      }
-    }
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
 
-    this.state.lastScrollPosition = scrollPosition;
+    // Touch start
+    document.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isDragging = false;
+    }, { passive: true });
+
+    // Touch move
+    document.addEventListener('touchmove', (e) => {
+      if (!isDragging) {
+        const deltaX = Math.abs(e.touches[0].clientX - startX);
+        const deltaY = Math.abs(e.touches[0].clientY - startY);
+        
+        if (deltaX > 10 || deltaY > 10) {
+          isDragging = true;
+        }
+      }
+    }, { passive: true });
+
+    // Touch end
+    document.addEventListener('touchend', (e) => {
+      if (isDragging) {
+        const deltaX = e.changedTouches[0].clientX - startX;
+        const deltaY = e.changedTouches[0].clientY - startY;
+        
+        // Swipe right to open menu (only on mobile)
+        if (window.innerWidth <= this.config.mobileBreakpoint && 
+            deltaX > 50 && Math.abs(deltaY) < 50 && 
+            !this.state.isMobileMenuOpen) {
+          this.showMobileMenu();
+        }
+        
+        // Swipe left to close menu
+        if (deltaX < -50 && Math.abs(deltaY) < 50 && 
+            this.state.isMobileMenuOpen) {
+          this.hideMobileMenu();
+        }
+      }
+    }, { passive: true });
+
+    console.log('👆 Touch gestures initialized');
   },
 
   /**
    * Toggle mobile menu
    */
-  toggleMobileMenu(event) {
-    event.preventDefault();
-    event.stopPropagation();
+  toggleMobileMenu() {
+    console.log('🔄 Toggling mobile menu...');
+    console.log('📱 Current state:', this.state.isMobileMenuOpen);
     
-    console.log('Toggle mobile menu clicked');
-    
-    if (!this.elements.navbarCollapse) {
-      console.error('Navbar collapse element not found');
-      return;
-    }
-    
-    if (!this.elements.navbarToggler) {
-      console.error('Navbar toggler element not found');
-      return;
-    }
-    
-    const isExpanded = this.elements.navbarToggler.getAttribute('aria-expanded') === 'true';
-    
-    console.log('Current state:', { isExpanded, isMobileMenuOpen: this.state.isMobileMenuOpen });
-    
-    if (isExpanded) {
+    if (this.state.isMobileMenuOpen) {
       this.hideMobileMenu();
     } else {
       this.showMobileMenu();
@@ -336,115 +348,93 @@ window.Navbar = {
    * Show mobile menu
    */
   showMobileMenu() {
+    console.log('📱 Showing mobile menu...');
+    
     if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
-      console.error('Required elements not found for showing mobile menu');
+      console.error('❌ Required elements not found for mobile menu');
       return;
     }
+
+    // Add show class and force display
+    this.elements.navbarCollapse.classList.add('show');
+    this.elements.navbarCollapse.style.display = 'block';
+    this.elements.navbarCollapse.style.visibility = 'visible';
+    this.elements.navbarCollapse.style.opacity = '1';
+    this.elements.navbarCollapse.style.transform = 'translateX(0)';
     
-    console.log('Showing mobile menu');
+    // Update aria-expanded
+    this.elements.navbarToggler.setAttribute('aria-expanded', 'true');
+    
+    // Update state
+    this.state.isMobileMenuOpen = true;
     
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
     
-    // Show menu
-    this.elements.navbarCollapse.style.display = 'flex';
-    this.elements.navbarCollapse.style.opacity = '1';
-    this.elements.navbarCollapse.style.visibility = 'visible';
-    this.elements.navbarCollapse.classList.add('show');
-    
-    // Update toggler state
-    this.elements.navbarToggler.setAttribute('aria-expanded', 'true');
-    
-    // Update internal state
-    this.state.isMobileMenuOpen = true;
-    
     // Focus management
-    const firstLink = this.elements.navbarCollapse.querySelector('.modern-link');
-    if (firstLink) {
-      setTimeout(() => firstLink.focus(), 100);
-    }
+    setTimeout(() => {
+      const firstLink = this.elements.navbarCollapse.querySelector('.nav-link');
+      if (firstLink) {
+        firstLink.focus();
+      }
+    }, 100);
     
-    console.log('Mobile menu opened successfully');
+    console.log('✅ Mobile menu shown');
+    console.log('📱 Menu state:', this.state.isMobileMenuOpen);
+    console.log('🔧 Aria-expanded:', this.elements.navbarToggler.getAttribute('aria-expanded'));
   },
 
   /**
    * Hide mobile menu
    */
   hideMobileMenu() {
-    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) return;
+    console.log('📱 Hiding mobile menu...');
     
-    console.log('Hiding mobile menu');
+    if (!this.elements.navbarCollapse || !this.elements.navbarToggler) {
+      console.error('❌ Required elements not found for mobile menu');
+      return;
+    }
+
+    // Remove show class and hide
+    this.elements.navbarCollapse.classList.remove('show');
+    this.elements.navbarCollapse.style.display = 'none';
+    this.elements.navbarCollapse.style.visibility = 'hidden';
+    this.elements.navbarCollapse.style.opacity = '0';
+    this.elements.navbarCollapse.style.transform = 'translateX(-100%)';
+    
+    // Update aria-expanded
+    this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+    
+    // Update state
+    this.state.isMobileMenuOpen = false;
     
     // Restore body scroll
     document.body.style.overflow = '';
     
-    // Hide menu
-    this.elements.navbarCollapse.style.opacity = '0';
-    this.elements.navbarCollapse.style.visibility = 'hidden';
-    this.elements.navbarCollapse.classList.remove('show');
+    // Return focus to toggler
+    this.elements.navbarToggler.focus();
     
-    // Update toggler state
-    this.elements.navbarToggler.setAttribute('aria-expanded', 'false');
+    console.log('✅ Mobile menu hidden');
+    console.log('📱 Menu state:', this.state.isMobileMenuOpen);
+    console.log('🔧 Aria-expanded:', this.elements.navbarToggler.getAttribute('aria-expanded'));
+  },
+
+  /**
+   * Handle scroll events
+   */
+  handleScroll() {
+    const scrollPosition = window.pageYOffset;
+    const shouldBeScrolled = scrollPosition > this.config.scrollThreshold;
     
-    // Update internal state
-    this.state.isMobileMenuOpen = false;
-    
-    // Hide after animation
-    setTimeout(() => {
-      if (this.elements.navbarToggler.getAttribute('aria-expanded') !== 'true') {
-        this.elements.navbarCollapse.style.display = 'none';
+    if (shouldBeScrolled !== this.state.isScrolled) {
+      this.state.isScrolled = shouldBeScrolled;
+      
+      if (this.elements.navbar) {
+        this.elements.navbar.classList.toggle('navbar-scrolled', shouldBeScrolled);
       }
-    }, 500);
-    
-    console.log('Mobile menu closed');
-  },
-
-  /**
-   * Handle outside click
-   */
-  handleOutsideClick(event) {
-    const navbar = this.elements.navbar;
-    const navbarToggler = this.elements.navbarToggler;
-    
-    if (this.state.isMobileMenuOpen && 
-        navbar && 
-        !navbar.contains(event.target) && 
-        !navbarToggler?.contains(event.target)) {
-      this.hideMobileMenu();
-    }
-  },
-
-  /**
-   * Handle link clicks
-   */
-  handleLinkClick(event) {
-    const link = event.currentTarget;
-    const href = link.getAttribute('href');
-    
-    // Close mobile menu if open
-    if (this.state.isMobileMenuOpen) {
-      this.hideMobileMenu();
     }
     
-    // Add click effect
-    this.createClickEffect(event);
-    
-    // Log navigation
-    console.log(`Navigation: ${href}`);
-  },
-
-  /**
-   * Handle action button clicks
-   */
-  handleActionClick(event) {
-    const button = event.currentTarget;
-    const action = button.getAttribute('data-action') || 'contact';
-    
-    // Add click effect
-    this.createClickEffect(event);
-    
-    // Log action
-    console.log(`Action clicked: ${action}`);
+    this.state.lastScrollPosition = scrollPosition;
   },
 
   /**
@@ -453,79 +443,57 @@ window.Navbar = {
   handleResize() {
     const isMobile = window.innerWidth <= this.config.mobileBreakpoint;
     
-    // Hide mobile menu on desktop
+    // Close mobile menu when switching to desktop
     if (!isMobile && this.state.isMobileMenuOpen) {
       this.hideMobileMenu();
     }
     
-    // Update navbar classes
+    // Update navbar classes based on screen size
     if (this.elements.navbar) {
       this.elements.navbar.classList.toggle('navbar-mobile', isMobile);
+      this.elements.navbar.classList.toggle('navbar-desktop', !isMobile);
     }
   },
 
   /**
-   * Handle touch swipe
+   * Handle clicks outside mobile menu
    */
-  handleTouchSwipe() {
-    const swipeThreshold = 50;
-    const diff = this.touchStartY - this.touchEndY;
+  handleOutsideClick(event) {
+    if (!this.state.isMobileMenuOpen) return;
     
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        // Swipe up - close menu
-        this.hideMobileMenu();
-      } else {
-        // Swipe down - open menu
-        this.showMobileMenu();
-      }
+    const isClickInsideNavbar = this.elements.navbar && this.elements.navbar.contains(event.target);
+    const isClickOnToggler = this.elements.navbarToggler && this.elements.navbarToggler.contains(event.target);
+    
+    if (!isClickInsideNavbar && !isClickOnToggler) {
+      this.hideMobileMenu();
     }
   },
 
   /**
-   * Handle link focus
-   */
-  handleLinkFocus(event) {
-    const link = event.currentTarget;
-    link.classList.add('nav-link-focused');
-  },
-
-  /**
-   * Handle link blur
-   */
-  handleLinkBlur(event) {
-    const link = event.currentTarget;
-    link.classList.remove('nav-link-focused');
-  },
-
-  /**
-   * Handle keyboard navigation
+   * Handle keyboard events
    */
   handleKeyboard(event) {
     // Escape key to close mobile menu
     if (event.key === 'Escape' && this.state.isMobileMenuOpen) {
       this.hideMobileMenu();
+      return;
     }
     
-    // Enter key to activate focused element
-    if (event.key === 'Enter') {
-      const focusedElement = document.activeElement;
-      if (focusedElement && focusedElement.classList.contains('nav-link')) {
-        focusedElement.click();
+    // Arrow keys for navigation
+    if (this.state.isMobileMenuOpen) {
+      const focusableElements = this.elements.navbarCollapse.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+      const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
+      
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % focusableElements.length;
+        focusableElements[nextIndex].focus();
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
+        focusableElements[prevIndex].focus();
       }
     }
-  },
-
-  /**
-   * Create click effect
-   */
-  createClickEffect(event) {
-    const element = event.currentTarget;
-    element.style.transform = 'scale(0.95)';
-    
-    setTimeout(() => {
-      element.style.transform = '';
-    }, 150);
   },
 
   /**
@@ -536,19 +504,22 @@ window.Navbar = {
       this.elements.navbar.innerHTML = newContent;
       this.cacheElements();
       this.bindEvents();
+      this.ensureInitialState();
     }
   },
 
   /**
-   * Get navbar state
+   * Get navbar statistics
    */
-  getState() {
+  getStats() {
     return {
       isInitialized: this.state.isInitialized,
-      isScrolled: this.state.isScrolled,
       isMobileMenuOpen: this.state.isMobileMenuOpen,
-      isSticky: this.state.isSticky,
-      lastScrollPosition: this.state.lastScrollPosition
+      isScrolled: this.state.isScrolled,
+      linksCount: this.elements.navbarLinks.length,
+      actionsCount: this.elements.navbarActions.length,
+      screenWidth: window.innerWidth,
+      isMobile: window.innerWidth <= this.config.mobileBreakpoint
     };
   },
 
@@ -557,6 +528,14 @@ window.Navbar = {
    */
   destroy() {
     // Remove event listeners
+    if (this.elements.navbarToggler) {
+      this.elements.navbarToggler.removeEventListener('click', this.toggleMobileMenu);
+    }
+    
+    if (this.elements.mobileMenuClose) {
+      this.elements.mobileMenuClose.removeEventListener('click', this.hideMobileMenu);
+    }
+    
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     document.removeEventListener('click', this.handleOutsideClick);
@@ -564,9 +543,8 @@ window.Navbar = {
     
     // Reset state
     this.state.isInitialized = false;
-    this.state.isScrolled = false;
     this.state.isMobileMenuOpen = false;
-    this.state.isSticky = false;
+    this.state.isScrolled = false;
     
     // Clear elements cache
     this.elements = {
@@ -575,13 +553,18 @@ window.Navbar = {
       navbarCollapse: null,
       navbarLinks: null,
       navbarActions: null,
-      navbarBrand: null,
-      brandLogo: null
+      mobileMenuClose: null,
+      brand: null
     };
     
-    console.log('Navbar destroyed');
+    console.log('🗑️ Navbar destroyed');
   }
 };
 
 // Make Navbar available globally
-window.Navbar = window.Navbar; 
+window.Navbar = Navbar;
+
+// Test function to verify module loading
+console.log('🚀 Navbar module loaded successfully');
+console.log('Navbar object:', Navbar);
+console.log('window.Navbar:', window.Navbar); 

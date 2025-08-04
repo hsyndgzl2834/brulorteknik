@@ -1,7 +1,7 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 1.0.2 - Ödeme Sonrası Fix
+// Version: 1.0.3 - Cache Temizleme
 
-const CACHE_NAME = 'brulor-teknik-v1.0.2';
+const CACHE_NAME = 'brulor-teknik-v1.0.3';
 const urlsToCache = [
   '/',
   '/index.html',

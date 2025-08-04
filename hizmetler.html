@@ -80,7 +80,6 @@
       line-height: 1.6;
       color: #333;
       overflow-x: hidden;
-      padding-top: 70px;
     }
     
     .hero-section {
@@ -208,9 +207,6 @@
     
     /* Responsive Breakpoints */
     @media (min-width: 768px) {
-      body {
-        padding-top: 80px;
-      }
       
       .hero-section {
         padding: 80px 0 60px;
@@ -390,12 +386,24 @@
   <script>
     // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, loading navbar...');
+      
       // Load navbar
       fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
+          console.log('Navbar HTML loaded, inserting...');
           document.getElementById('navbar-container').innerHTML = data;
-          // Navbar module will auto-initialize when elements are available
+          
+          // Initialize navbar after loading
+          setTimeout(() => {
+            if (window.Navbar && typeof window.Navbar.init === 'function') {
+              console.log('Initializing navbar module...');
+              window.Navbar.init();
+            } else {
+              console.error('Navbar module not found');
+            }
+          }, 100);
         })
         .catch(error => console.error('Navbar yüklenirken hata:', error));
       

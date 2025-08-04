@@ -1,345 +1,281 @@
 /**
- * Main JavaScript Module
- * Orchestrates all site functionality
+ * Main Application Module
+ * Temiz, anlaşılır ve modüler ana uygulama sistemi
  */
 
-// Main application class
-class App {
-  constructor() {
-    this.modules = {
-      core: null,
-      navbar: null,
-      footer: null
-    };
-    
-    this.state = {
-      isInitialized: false,
-      modulesLoaded: new Set()
-    };
-  }
+window.App = (function() {
+  'use strict';
+
+  // Private variables
+  let modules = {};
+  let state = {
+    isInitialized: false,
+    isOnline: navigator.onLine,
+    currentPage: window.location.pathname
+  };
+
+  // Configuration
+  const config = {
+    cacheName: 'brulor-teknik-v1.0.3',
+    cacheVersion: '1.0.3',
+    enableServiceWorker: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true
+  };
 
   /**
    * Initialize the application
    */
-  async init() {
+  function init() {
+    console.log('🚀 Sayfa yüklendi, sistem kontrol ediliyor...');
+    
     try {
-      console.log('🚀 Initializing application...');
+      // Initialize core features
+      initPerformanceOptimizations();
+      initAccessibility();
+      initCacheManagement();
       
-      // Wait for modules to be available
-      await this.waitForModules();
+      // Mark as initialized
+      state.isInitialized = true;
       
-      // Initialize available modules
-      const modulePromises = [];
-      
-      if (this.modules.core) {
-        modulePromises.push(this.initModule('core'));
-      }
-      
-      if (this.modules.navbar) {
-        modulePromises.push(this.initModule('navbar'));
-      }
-      
-      if (this.modules.footer) {
-        modulePromises.push(this.initModule('footer'));
-      }
-      
-      // Wait for all modules to initialize
-      await Promise.allSettled(modulePromises);
-      
-      // Initialize performance optimizations
-      this.initPerformanceOptimizations();
-      
-      // Initialize accessibility features
-      this.initAccessibility();
-      
-      this.state.isInitialized = true;
-      console.log('✅ Application initialized successfully');
-      
-      // Dispatch custom event
-      window.dispatchEvent(new CustomEvent('app:initialized'));
-      
+      console.log('✅ Ana uygulama başarıyla başlatıldı');
     } catch (error) {
-      console.error('❌ Application initialization failed:', error);
-      
-      // Try to continue with basic functionality
-      console.log('🔄 Attempting to continue with basic functionality...');
-      this.initPerformanceOptimizations();
-      this.initAccessibility();
-    }
-  }
-
-  /**
-   * Wait for modules to be available
-   */
-  async waitForModules() {
-    const maxAttempts = 200; // 20 seconds max
-    let attempts = 0;
-    
-    console.log('🔄 Waiting for modules to load...');
-    
-    while (attempts < maxAttempts) {
-      const coreLoaded = !!window.Core;
-      const navbarLoaded = !!window.Navbar;
-      const footerLoaded = !!window.Footer;
-      
-      if (attempts % 10 === 0) { // Log every 10th attempt to reduce spam
-        console.log(`Attempt ${attempts + 1}: Core=${coreLoaded}, Navbar=${navbarLoaded}, Footer=${footerLoaded}`);
-      }
-      
-      if (coreLoaded && navbarLoaded && footerLoaded) {
-        this.modules.core = window.Core;
-        this.modules.navbar = window.Navbar;
-        this.modules.footer = window.Footer;
-        console.log('✅ All modules loaded successfully');
-        return;
-      }
-      
-      await new Promise(resolve => setTimeout(resolve, 100));
-      attempts++;
-    }
-    
-    // If modules didn't load, try to continue with available ones
-    console.warn('⚠️ Some modules failed to load, continuing with available ones');
-    
-    if (window.Core) {
-      this.modules.core = window.Core;
-      console.log('✅ Core module loaded');
-    }
-    
-    if (window.Navbar) {
-      this.modules.navbar = window.Navbar;
-      console.log('✅ Navbar module loaded');
-    }
-    
-    if (window.Footer) {
-      this.modules.footer = window.Footer;
-      console.log('✅ Footer module loaded');
-    }
-  }
-
-  /**
-   * Initialize a specific module
-   */
-  async initModule(moduleName) {
-    try {
-      const module = this.modules[moduleName];
-      if (module && typeof module.init === 'function') {
-        await module.init();
-        this.state.modulesLoaded.add(moduleName);
-        console.log(`✅ ${moduleName} module initialized`);
-      } else {
-        console.warn(`⚠️ ${moduleName} module not found or init method missing`);
-      }
-    } catch (error) {
-      console.error(`❌ Failed to initialize ${moduleName} module:`, error);
+      console.error('❌ Ana uygulama başlatılırken hata:', error);
     }
   }
 
   /**
    * Initialize performance optimizations
    */
-  initPerformanceOptimizations() {
-    // Lazy load images
-    this.initLazyLoading();
-    
-    // Preload critical resources
-    this.preloadCriticalResources();
-    
-    // Optimize scroll performance
-    this.optimizeScrollPerformance();
-  }
+  function initPerformanceOptimizations() {
+    if (!config.enablePerformanceMonitoring) return;
 
-  /**
-   * Initialize lazy loading
-   */
-  initLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src || img.src;
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-          }
-        });
-      });
+    // Monitor page load performance
+    window.addEventListener('load', function() {
+      const loadTime = performance.now();
+      const domContentLoaded = performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0;
+      const loadEvent = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
       
-      images.forEach(img => imageObserver.observe(img));
-    }
-  }
-
-  /**
-   * Preload critical resources
-   */
-  preloadCriticalResources() {
-    const criticalResources = [
-      '/css/main.css',
-      '/js/main.js',
-      '/images/logo.webp'
-    ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 
-                 resource.endsWith('.js') ? 'script' : 'image';
-      document.head.appendChild(link);
+      console.log('⚡ Sayfa Yükleme Performansı:');
+      console.log('  - DOM Content Loaded:', domContentLoaded - performance.getEntriesByType('navigation')[0]?.domContentLoadedEventStart, 'ms');
+      console.log('  - Load Event:', loadEvent - performance.getEntriesByType('navigation')[0]?.loadEventStart, 'ms');
+      console.log('  - Toplam Yükleme:', loadTime, 'ms');
     });
-  }
 
-  /**
-   * Optimize scroll performance
-   */
-  optimizeScrollPerformance() {
+    // Optimize scroll performance
     let ticking = false;
-    
-    const updateScroll = () => {
-      // Scroll-based animations and effects
+    function updateScroll() {
       ticking = false;
-    };
-    
-    const requestTick = () => {
+    }
+
+    function requestTick() {
       if (!ticking) {
         requestAnimationFrame(updateScroll);
         ticking = true;
       }
-    };
-    
+    }
+
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
   /**
    * Initialize accessibility features
    */
-  initAccessibility() {
-    this.initSkipLinks();
-    this.initFocusManagement();
-    this.initKeyboardNavigation();
+  function initAccessibility() {
+    if (!config.enableAccessibility) return;
+
+    // Add skip to content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Ana içeriğe geç';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 10000;
+      transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', function() {
+      this.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', function() {
+      this.style.top = '-40px';
+    });
+
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Add main content landmark
+    const mainContent = document.querySelector('main') || document.querySelector('.main-content');
+    if (mainContent && !mainContent.id) {
+      mainContent.id = 'main-content';
+    }
   }
 
   /**
-   * Initialize skip links
+   * Initialize cache management
    */
-  initSkipLinks() {
-    const skipLinks = document.querySelectorAll('.skip-link');
-    
-    skipLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.focus();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  }
-
-  /**
-   * Initialize focus management
-   */
-  initFocusManagement() {
-    // Track focus for better UX
-    document.addEventListener('focusin', (e) => {
-      e.target.classList.add('focused');
-    });
-    
-    document.addEventListener('focusout', (e) => {
-      e.target.classList.remove('focused');
-    });
-    
-    // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
-      const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-      
-      modal.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              e.preventDefault();
-              lastElement.focus();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              e.preventDefault();
-              firstElement.focus();
-            }
-          }
-        }
-      });
-    });
-  }
-
-  /**
-   * Initialize keyboard navigation
-   */
-  initKeyboardNavigation() {
-    // Escape key handling
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        // Close modals, dropdowns, etc.
-        const modals = document.querySelectorAll('[role="dialog"]');
-        modals.forEach(modal => {
-          if (modal.style.display !== 'none') {
-            modal.style.display = 'none';
+  function initCacheManagement() {
+    // Check existing caches
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        console.log('📦 Mevcut cache\'ler:', cacheNames);
+        
+        // Clean up old caches
+        cacheNames.forEach(cacheName => {
+          if (cacheName !== config.cacheName) {
+            caches.delete(cacheName);
+            console.log('🗑️ Eski cache silindi:', cacheName);
           }
         });
+      });
+    }
+
+    // Monitor storage
+    console.log('💾 Local Storage:', Object.keys(localStorage).length, 'öğe');
+    console.log('💾 Session Storage:', Object.keys(sessionStorage).length, 'öğe');
+  }
+
+  /**
+   * Load modules
+   */
+  function loadModules() {
+    return new Promise((resolve) => {
+      const modulePromises = [];
+
+      // Load Core module
+      if (window.Core) {
+        modules.core = window.Core;
+        console.log('📦 Module core loaded successfully');
       }
-    });
-    
-    // Enter key handling for custom elements
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && e.target.hasAttribute('role')) {
-        e.target.click();
+
+      // Load Navbar module
+      if (window.Navbar) {
+        modules.navbar = window.Navbar;
+        console.log('📦 Module navbar loaded successfully');
       }
+
+      // Load Footer module
+      if (window.Footer) {
+        modules.footer = window.Footer;
+        console.log('📦 Module footer loaded successfully');
+      }
+
+      // Wait for all modules to be available
+      Promise.allSettled(modulePromises).then(() => {
+        console.log('📦 Tüm modüller yüklendi');
+        resolve();
+      });
     });
   }
 
   /**
-   * Get application state
+   * Initialize modules
    */
-  getState() {
-    return {
-      isInitialized: this.state.isInitialized,
-      modulesLoaded: Array.from(this.state.modulesLoaded),
-      modules: Object.keys(this.modules).filter(key => this.modules[key])
-    };
+  function initModules() {
+    // Initialize navbar if available
+    if (modules.navbar && typeof modules.navbar.init === 'function') {
+      modules.navbar.init();
+    }
+
+    // Initialize footer if available
+    if (modules.footer && typeof modules.footer.init === 'function') {
+      modules.footer.init();
+    }
   }
 
   /**
-   * Destroy application
+   * Clear all caches (for development)
    */
-  destroy() {
-    // Cleanup event listeners
-    window.removeEventListener('scroll', this.optimizeScrollPerformance);
-    
-    // Reset state
-    this.state.isInitialized = false;
-    this.state.modulesLoaded.clear();
-    
-    console.log('🗑️ Application destroyed');
-  }
-}
+  function clearAllCaches() {
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        cacheNames.forEach(cacheName => {
+          caches.delete(cacheName);
+        });
+        console.log('🗑️ Tüm cache\'ler temizlendi');
+        location.reload();
+      });
+    }
 
-// Create global App instance
-window.App = new App();
+    // Clear localStorage and sessionStorage
+    localStorage.clear();
+    sessionStorage.clear();
+    console.log('🗑️ Local ve Session Storage temizlendi');
+  }
+
+  /**
+   * Handle online/offline status
+   */
+  function handleOnlineStatus() {
+    window.addEventListener('online', function() {
+      state.isOnline = true;
+      console.log('🌐 Çevrimiçi');
+    });
+
+    window.addEventListener('offline', function() {
+      state.isOnline = false;
+      console.log('📴 Çevrimdışı');
+    });
+  }
+
+  /**
+   * Public API
+   */
+  return {
+    /**
+     * Initialize the application
+     */
+    init: function() {
+      init();
+    },
+
+    /**
+     * Load and initialize modules
+     */
+    loadModules: async function() {
+      await loadModules();
+      initModules();
+    },
+
+    /**
+     * Get application state
+     */
+    getState: function() {
+      return { ...state };
+    },
+
+    /**
+     * Get loaded modules
+     */
+    getModules: function() {
+      return { ...modules };
+    },
+
+    /**
+     * Clear all caches
+     */
+    clearAllCaches: function() {
+      clearAllCaches();
+    },
+
+    /**
+     * Handle online status
+     */
+    handleOnlineStatus: function() {
+      handleOnlineStatus();
+    }
+  };
+})();
 
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   window.App.init();
-});
-
-// Export for module systems
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = App;
-} 
+  window.App.handleOnlineStatus();
+}); 

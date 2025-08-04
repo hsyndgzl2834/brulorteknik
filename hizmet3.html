@@ -228,7 +228,7 @@
 </head>
 <body class="page-wrapper">
   <!-- NAVBAR -->
-  <div id="navbar"></div>
+  <div id="navbar-container"></div>
 
   <!-- HERO SECTION -->
   <section class="hero-section">
@@ -531,17 +531,16 @@
   </section>
 
   <!-- FOOTER -->
+  <div id="footer-container"></div>
 
-  <!-- Sticky WhatsApp & Scroll Top Include -->
-  <div id="sticky-wp"></div>
-  <div id="footer"></div>
-  <script>
-    fetch('sticky-wp.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sticky-wp').innerHTML = html;
-      });
-  </script>
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
 
   <!-- Scripts -->
   <!-- Load JavaScript Modules First -->
@@ -551,7 +550,7 @@
   
   <!-- Main Application -->
   <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Load navbar and footer
@@ -560,8 +559,19 @@
       fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-          // Navbar module will auto-initialize when elements are available
+          document.getElementById('navbar-container').innerHTML = data;
+          
+          console.log('Navbar HTML loaded, inserting...');
+          
+          // Initialize navbar module after HTML is loaded
+          setTimeout(() => {
+            if (window.Navbar && typeof window.Navbar.init === 'function') {
+              console.log('Initializing navbar module...');
+              window.Navbar.init();
+            } else {
+              console.error('Navbar module not found');
+            }
+          }, 100);
         })
         .catch(error => console.error('Navbar yüklenirken hata:', error));
       
@@ -569,18 +579,15 @@
       fetch('footer.html')
         .then(response => response.text())
         .then(data => {
-          document.getElementById('footer').innerHTML = data;
-          // Re-initialize footer after loading
-          if (window.App && window.App.modules.footer) {
-            window.App.modules.footer.init();
-          }
+          document.getElementById('footer-container').innerHTML = data;
         })
         .catch(error => console.error('Footer yüklenirken hata:', error));
     });
 
-    // AOS Animasyonlarını Başlat
+    // Initialize AOS
     AOS.init({
       duration: 800,
+      easing: 'ease-in-out',
       once: true,
       offset: 100
     });

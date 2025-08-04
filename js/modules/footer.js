@@ -46,9 +46,80 @@ window.Footer = {
     this.initTooltips();
     this.initRegionInteractions();
     this.initSocialEffects();
+    this.debugFooterElements();
     
     this.state.isInitialized = true;
     console.log('Footer initialized successfully');
+  },
+
+  /**
+   * Debug footer elements
+   */
+  debugFooterElements() {
+    console.log('🔍 Footer Debug Bilgileri:');
+    
+    // Footer elementini kontrol et
+    const footer = document.querySelector('.footer');
+    if (footer) {
+      const footerStyle = window.getComputedStyle(footer);
+      console.log('✅ Footer elementi bulundu');
+      console.log('   Display:', footerStyle.display);
+      console.log('   Visibility:', footerStyle.visibility);
+      console.log('   Opacity:', footerStyle.opacity);
+      console.log('   Height:', footerStyle.height);
+    } else {
+      console.log('❌ Footer elementi bulunamadı!');
+    }
+    
+    // Service areas bölümünü kontrol et
+    const serviceAreas = document.querySelector('.footer-service-areas');
+    if (serviceAreas) {
+      const serviceStyle = window.getComputedStyle(serviceAreas);
+      console.log('✅ Service Areas bulundu');
+      console.log('   Display:', serviceStyle.display);
+      console.log('   Visibility:', serviceStyle.visibility);
+      console.log('   Height:', serviceStyle.height);
+    } else {
+      console.log('❌ Service Areas bulunamadı!');
+    }
+    
+    // Region groups'ları kontrol et
+    const regionGroups = document.querySelectorAll('.region-group');
+    console.log(`📊 Region Groups: ${regionGroups.length} adet bulundu`);
+    
+    // Cities'leri kontrol et
+    const cities = document.querySelectorAll('.city');
+    console.log(`🏙️ Cities: ${cities.length} adet bulundu`);
+    
+    // İlk birkaç şehri listele
+    if (cities.length > 0) {
+      console.log('📍 İlk 5 şehir:');
+      for (let i = 0; i < Math.min(5, cities.length); i++) {
+        console.log(`   - ${cities[i].textContent}`);
+      }
+    }
+    
+    // Service areas header'ını kontrol et
+    const serviceHeader = document.querySelector('.service-areas-header');
+    if (serviceHeader) {
+      const headerStyle = window.getComputedStyle(serviceHeader);
+      console.log('✅ Service Areas Header bulundu');
+      console.log('   Display:', headerStyle.display);
+      console.log('   Visibility:', headerStyle.visibility);
+    } else {
+      console.log('❌ Service Areas Header bulunamadı!');
+    }
+    
+    // Service areas subtitle'ını kontrol et
+    const serviceSubtitle = document.querySelector('.service-areas-subtitle');
+    if (serviceSubtitle) {
+      const subtitleStyle = window.getComputedStyle(serviceSubtitle);
+      console.log('✅ Service Areas Subtitle bulundu');
+      console.log('   Display:', subtitleStyle.display);
+      console.log('   Visibility:', subtitleStyle.visibility);
+    } else {
+      console.log('❌ Service Areas Subtitle bulunamadı!');
+    }
   },
 
   /**
