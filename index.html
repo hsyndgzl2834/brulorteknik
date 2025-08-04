@@ -20,6 +20,8 @@
   <meta name="business:contact_data:region" content="Türkiye" />
   <link rel="canonical" href="https://www.brulorteknik.com/" />
   <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <meta name="theme-color" content="#0d1b2a" />
 
   <meta name="mobile-web-app-capable" content="yes">
@@ -185,11 +187,17 @@
   <link rel="dns-prefetch" href="https://googletagmanager.com" />
   
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="css/main.css" as="style" />
+  <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="js/main.js" as="script">
-  <link rel="preload" href="images/hero1.webp" as="image" />
-  <link rel="preload" href="images/hero2.webp" as="image" />
-  <link rel="preload" href="images/hero3.webp" as="image" />
+  <link rel="preload" href="images/hero1-400.webp" as="image" media="(max-width: 480px)">
+  <link rel="preload" href="images/hero1-800.webp" as="image" media="(max-width: 768px)">
+  <link rel="preload" href="images/hero1.webp" as="image" media="(min-width: 769px)">
+  
+  <!-- Non-critical CSS - Async Load -->
+  <noscript>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modules/navbar.css">
+  </noscript>
   
   <!-- Critical CSS Inline -->
   <style>
@@ -374,10 +382,10 @@
   </style>
 
   <!-- Modern CSS Libraries -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
   
-  <!-- Navbar CSS - Doğrudan yükle -->
-  <link rel="stylesheet" href="css/modules/navbar.css">
+  <!-- Navbar CSS - Async Load -->
+  <link rel="stylesheet" href="css/modules/navbar.css" media="print" onload="this.media='all'">
   
   <!-- Custom CSS -->
   <style>
@@ -1168,49 +1176,64 @@
               <!-- Carousel Items -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="images/hero1.webp" alt="Endüstriyel Brülör Sistemleri - Ana Görsel" class="d-block w-100 hero-carousel-img">
+                  <picture>
+                    <source srcset="images/hero1-400.webp" media="(max-width: 480px)" type="image/webp">
+                    <source srcset="images/hero1-800.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="images/hero1-1600.webp" media="(max-width: 1200px)" type="image/webp">
+                    <img src="images/hero1.webp" alt="Endüstriyel Brülör Sistemleri - Ana Görsel" class="d-block w-100 hero-carousel-img" loading="lazy">
+                  </picture>
                   <div class="carousel-caption">
                     <h3>Endüstriyel Brülör Sistemleri</h3>
                     <p>Profesyonel brülör servisi ve bakım hizmetleri</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/hero2.webp" alt="Brülör Bakım ve Servis Hizmetleri" class="d-block w-100 hero-carousel-img">
+                  <picture>
+                    <source srcset="images/hero2-400.webp" media="(max-width: 480px)" type="image/webp">
+                    <source srcset="images/hero2-800.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="images/hero2-1600.webp" media="(max-width: 1200px)" type="image/webp">
+                    <img src="images/hero2.webp" alt="Brülör Bakım ve Servis Hizmetleri" class="d-block w-100 hero-carousel-img" loading="lazy">
+                  </picture>
                   <div class="carousel-caption">
                     <h3>Kapsamlı Brülör Bakım</h3>
                     <p>Periyodik bakım ve verimlilik optimizasyonu</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/hero3.webp" alt="Endüstriyel Brülör Montaj ve Kurulum" class="d-block w-100 hero-carousel-img">
+                  <picture>
+                    <source srcset="images/hero3-400.webp" media="(max-width: 480px)" type="image/webp">
+                    <source srcset="images/hero3-800.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="images/hero3-1600.webp" media="(max-width: 1200px)" type="image/webp">
+                    <img src="images/hero3.webp" alt="Endüstriyel Brülör Montaj ve Kurulum" class="d-block w-100 hero-carousel-img" loading="lazy">
+                  </picture>
                   <div class="carousel-caption">
                     <h3>Profesyonel Montaj</h3>
                     <p>Yeni sistem kurulumları ve modernizasyon</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/20250523_1604_Endüstriyel_Brülör_Montajı_simple_compose_01jvykvw6sf22tvn9hnz8x18k4_1.webp" alt="Endüstriyel Brülör Montaj Görseli" class="d-block w-100 hero-carousel-img">
+                  <img src="images/20250523_1604_Endüstriyel_Brülör_Montajı_simple_compose_01jvykvw6sf22tvn9hnz8x18k4_1.webp" alt="Endüstriyel Brülör Montaj Görseli" class="d-block w-100 hero-carousel-img" loading="lazy">
                   <div class="carousel-caption">
                     <h3>Endüstriyel Montaj</h3>
                     <p>Büyük ölçekli tesisler için özel çözümler</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/20250523_1645_Endüstriyel_Brülör_Tasarımı_simple_compose_01jvyp5resfbgs62q3sekbrjxb.webp" alt="Endüstriyel Brülör Tasarım" class="d-block w-100 hero-carousel-img">
+                  <img src="images/20250523_1645_Endüstriyel_Brülör_Tasarımı_simple_compose_01jvyp5resfbgs62q3sekbrjxb.webp" alt="Endüstriyel Brülör Tasarım" class="d-block w-100 hero-carousel-img" loading="lazy">
                   <div class="carousel-caption">
                     <h3>Yenilikçi Tasarım</h3>
                     <p>Enerji verimli ve çevre dostu sistemler</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/20250602_1342_Modern Brülör Bakımı_simple_compose_01jwr3q56rfpjrha4qtr6kbcer.png" alt="Modern Brülör Bakımı" class="d-block w-100 hero-carousel-img">
+                  <img src="images/20250602_1342_Modern Brülör Bakımı_simple_compose_01jwr3q56rfpjrha4qtr6kbcer.png" alt="Modern Brülör Bakımı" class="d-block w-100 hero-carousel-img" loading="lazy">
                   <div class="carousel-caption">
                     <h3>Modern Bakım Teknikleri</h3>
                     <p>En son teknoloji ile performans optimizasyonu</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/20250602_1344_Brülör_Bakım_Görselliği_simple_compose_01jwr3tgycfkp8yznhqq8edatk.webp" alt="Brülör Bakım Görselliği" class="d-block w-100 hero-carousel-img">
+                  <img src="images/20250602_1344_Brülör_Bakım_Görselliği_simple_compose_01jwr3tgycfkp8yznhqq8edatk.webp" alt="Brülör Bakım Görselliği" class="d-block w-100 hero-carousel-img" loading="lazy">
                   <div class="carousel-caption">
                     <h3>Detaylı Bakım</h3>
                     <p>Profesyonel inceleme ve müdahale</p>
@@ -1451,7 +1474,10 @@
               </div>
               
               <div class="col-lg-6">
-                <img src="images/about-us.webp" alt="Brülör Teknik Hakkımızda" class="img-fluid rounded" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <picture>
+                  <source srcset="images/about-us.webp" media="(max-width: 768px)" type="image/webp">
+                  <img src="images/about-us.webp" alt="Brülör Teknik Hakkımızda" class="img-fluid rounded" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1);" loading="lazy">
+                </picture>
               </div>
             </div>
           </div>
@@ -1493,6 +1519,9 @@
   <!-- Main Application -->
   <script src="js/main.js" defer></script>
   
+  <!-- Cloudflare Rocket Loader - Async -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rocket-loader/1.0.0/rocket-loader.min.js" defer></script>
+  
   <!-- Ensure navbar module is loaded -->
   <script>
     // Wait for navbar module to be available
@@ -1514,6 +1543,19 @@
   
   <!-- Custom JS -->
   <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('✅ Service Worker registered:', registration.scope);
+          })
+          .catch(error => {
+            console.log('❌ Service Worker registration failed:', error);
+          });
+      });
+    }
+    
     // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
       console.log('DOM loaded, loading navbar...');
