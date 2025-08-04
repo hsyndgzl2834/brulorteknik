@@ -2,10 +2,10 @@
    MODULAR CSS SYSTEM - MAIN STYLESHEET
    =================================== */
 
-/* Import Base Styles */
+/* Import Base Styles - Must be at the top */
 @import url('modules/base.css');
 
-/* Import Component Modules */
+/* Import Component Modules - Must be at the top */
 @import url('modules/navbar.css');
 @import url('modules/footer.css');
 @import url('modules/hero.css');

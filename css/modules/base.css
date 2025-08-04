@@ -99,7 +99,9 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Modern text-size-adjust support - only supported prefixes */
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
@@ -111,6 +113,9 @@ body {
   background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Modern color-adjust support - only supported prefixes */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 /* Typography */
@@ -230,6 +235,10 @@ li {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+/* Modern text-align support - only supported prefixes */
+.text-match-parent { 
+  text-align: -webkit-match-parent;
+}
 
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: var(--spacing-xs); }
