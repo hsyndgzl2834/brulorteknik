@@ -1,5 +1,0 @@
-[33m3a7aed7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mcursor/uygulama-neden-a-lm-yor-soru-turmas-5d9b[m[33m, [m[1;31morigin/cursor/uygulama-neden-a-lm-yor-soru-turmas-5d9b[m[33m)[m  Modern navbar tasarımı tamamlandı - Profesyonel fontlar, mobil optimizasyon ve glassmorphism efektleri eklendi
-[33m17b0e40[m  .htaccess'te main.js preload header'ı kaldırıldı
-[33m18ac544[m  Duplicate main.js script tags kaldırıldı
-[33mb067967[m  Preload uyarıları düzeltildi
-[33m1c5857d[m  Mobil hamburger menü sorunu çözüldü - Tüm sayfalar güncellendi
