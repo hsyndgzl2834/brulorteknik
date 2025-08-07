@@ -1,0 +1,59 @@
+/* Ultra Modern Footer 2025 - Clean CSS Reset */
+
+/* Remove all conflicting footer styles */
+.footer,
+.modern-footer,
+.footer-section,
+.footer-top,
+.footer-bottom,
+.footer-service-areas {
+  all: unset !important;
+}
+
+/* Only keep essential layout and visibility styles */
+.ultra-modern-footer {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure no conflicting margins or paddings */
+.ultra-modern-footer * {
+  box-sizing: border-box !important;
+}
+
+/* Reset any inherited styles that might conflict */
+.ultra-modern-footer,
+.ultra-modern-footer * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.ultra-modern-footer::-webkit-scrollbar,
+.ultra-modern-footer *::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Ensure footer appears at bottom without extra spacing */
+body {
+  margin-bottom: 0 !important;
+}
+
+/* Clear any floating elements before footer */
+.ultra-modern-footer::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Prevent layout shift issues */
+.ultra-modern-footer {
+  contain: layout style paint;
+}
