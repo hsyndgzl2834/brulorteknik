@@ -35,7 +35,7 @@ const DYNAMIC_ASSETS = [
   'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
   'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
-  'https://unpkg.com/aos@2.3.1/dist/aos.css',
+  'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
   'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
   'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js'
 ];
