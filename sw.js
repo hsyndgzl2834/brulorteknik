@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 1.0.4 - Error Handling
+// Version: 1.0.5 - Response Error Fix
 
-const CACHE_NAME = 'brulor-teknik-v2.0.1';
-const STATIC_CACHE = 'brulor-static-v2.0.1';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.0.1';
+const CACHE_NAME = 'brulor-teknik-v2.0.2';
+const STATIC_CACHE = 'brulor-static-v2.0.2';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.0.2';
 
 const STATIC_ASSETS = [
   '/',
@@ -123,8 +123,13 @@ self.addEventListener('fetch', event => {
         
         return fetch(request)
           .then(response => {
+            // Check if response is valid
+            if (!response) {
+              throw new Error('No response received');
+            }
+            
             // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            if (response.status !== 200 || (response.type !== 'basic' && response.type !== 'cors')) {
               return response;
             }
             
@@ -149,16 +154,40 @@ self.addEventListener('fetch', event => {
             // Return offline page for navigation requests
             if (request.destination === 'document') {
               return caches.match('/offline.html').catch(() => {
-                return new Response('Offline - Lütfen internet bağlantınızı kontrol edin', {
+                return new Response(`
+                  <!DOCTYPE html>
+                  <html lang="tr">
+                  <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Offline - Brülör Teknik</title>
+                    <style>
+                      body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+                      .offline-message { max-width: 500px; margin: 0 auto; }
+                      .retry-btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+                    </style>
+                  </head>
+                  <body>
+                    <div class="offline-message">
+                      <h1>🔌 Bağlantı Yok</h1>
+                      <p>İnternet bağlantınızı kontrol edin ve tekrar deneyin.</p>
+                      <button class="retry-btn" onclick="window.location.reload()">Tekrar Dene</button>
+                    </div>
+                  </body>
+                  </html>
+                `, {
                   status: 503,
-                  statusText: 'Service Unavailable'
+                  statusText: 'Service Unavailable',
+                  headers: { 'Content-Type': 'text/html; charset=utf-8' }
                 });
               });
             }
             
+            // For other resources, return a simple error response
             return new Response('Network error', {
               status: 503,
-              statusText: 'Service Unavailable'
+              statusText: 'Service Unavailable',
+              headers: { 'Content-Type': 'text/plain; charset=utf-8' }
             });
           });
       })
@@ -166,7 +195,8 @@ self.addEventListener('fetch', event => {
         console.error('❌ Cache match failed:', error);
         return new Response('Cache error', {
           status: 503,
-          statusText: 'Service Unavailable'
+          statusText: 'Service Unavailable',
+          headers: { 'Content-Type': 'text/plain; charset=utf-8' }
         });
       })
   );
