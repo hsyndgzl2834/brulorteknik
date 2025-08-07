@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 1.0.3 - Cache Temizleme
+// Version: 1.0.4 - Error Handling
 
-const CACHE_NAME = 'brulor-teknik-v2.0.0';
-const STATIC_CACHE = 'brulor-static-v2.0.0';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.0.0';
+const CACHE_NAME = 'brulor-teknik-v2.0.1';
+const STATIC_CACHE = 'brulor-static-v2.0.1';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.0.1';
 
 const STATIC_ASSETS = [
   '/',
@@ -49,16 +49,30 @@ self.addEventListener('install', event => {
       caches.open(STATIC_CACHE)
         .then(cache => {
           console.log('📦 Caching static assets...');
-          return cache.addAll(STATIC_ASSETS);
+          return cache.addAll(STATIC_ASSETS).catch(error => {
+            console.warn('⚠️ Some static assets failed to cache:', error);
+            return Promise.resolve();
+          });
         }),
       caches.open(DYNAMIC_CACHE)
         .then(cache => {
           console.log('🌐 Caching dynamic assets...');
-          return cache.addAll(DYNAMIC_ASSETS);
+          // Cache dynamic assets one by one to handle failures gracefully
+          return Promise.allSettled(
+            DYNAMIC_ASSETS.map(url => 
+              cache.add(url).catch(error => {
+                console.warn(`⚠️ Failed to cache: ${url}`, error);
+                return Promise.resolve();
+              })
+            )
+          );
         })
     ]).then(() => {
       console.log('✅ Service Worker installed successfully');
       return self.skipWaiting();
+    }).catch(error => {
+      console.error('❌ Service Worker installation failed:', error);
+      return Promise.resolve();
     })
   );
 });
@@ -84,7 +98,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch Event - Cache First Strategy
+// Fetch Event - Cache First Strategy with Error Handling
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
@@ -117,11 +131,14 @@ self.addEventListener('fetch', event => {
             // Clone the response
             const responseToCache = response.clone();
             
-            // Cache the response
+            // Cache the response with error handling
             caches.open(DYNAMIC_CACHE)
               .then(cache => {
                 console.log('💾 Caching new resource:', request.url);
-                cache.put(request, responseToCache);
+                return cache.put(request, responseToCache);
+              })
+              .catch(error => {
+                console.warn('⚠️ Failed to cache response:', request.url, error);
               });
             
             return response;
@@ -131,7 +148,12 @@ self.addEventListener('fetch', event => {
             
             // Return offline page for navigation requests
             if (request.destination === 'document') {
-              return caches.match('/offline.html');
+              return caches.match('/offline.html').catch(() => {
+                return new Response('Offline - Lütfen internet bağlantınızı kontrol edin', {
+                  status: 503,
+                  statusText: 'Service Unavailable'
+                });
+              });
             }
             
             return new Response('Network error', {
@@ -139,6 +161,13 @@ self.addEventListener('fetch', event => {
               statusText: 'Service Unavailable'
             });
           });
+      })
+      .catch(error => {
+        console.error('❌ Cache match failed:', error);
+        return new Response('Cache error', {
+          status: 503,
+          statusText: 'Service Unavailable'
+        });
       })
   );
 });
