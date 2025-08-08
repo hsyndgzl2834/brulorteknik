@@ -10,6 +10,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--spacing-3xl) 0;
+  margin-top: 80px; /* Navbar için üst boşluk */
 }
 
 .hero-section::before {
@@ -216,6 +217,10 @@
 
 /* Responsive Design */
 @media (min-width: 768px) {
+  .hero-section {
+    margin-top: 90px; /* Tablet için navbar boşluğu */
+  }
+  
   .hero-stats {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
@@ -229,6 +234,7 @@
 @media (min-width: 992px) {
   .hero-section {
     padding: var(--spacing-3xl) 0;
+    margin-top: 100px; /* Desktop için navbar boşluğu */
   }
   
   .hero-carousel-img {

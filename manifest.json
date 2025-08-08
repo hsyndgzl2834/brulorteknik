@@ -13,15 +13,26 @@
   "categories": ["business", "industrial", "services"],
   "icons": [
     {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
       "src": "images/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "images/favicon.ico",
-      "sizes": "32x32",
-      "type": "image/x-icon"
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "screenshots": [
@@ -41,7 +52,7 @@
       "icons": [
         {
           "src": "images/favicon.png",
-          "sizes": "96x96"
+          "sizes": "32x32"
         }
       ]
     },
@@ -53,7 +64,7 @@
       "icons": [
         {
           "src": "images/favicon.png",
-          "sizes": "96x96"
+          "sizes": "32x32"
         }
       ]
     }
