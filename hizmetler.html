@@ -26,120 +26,150 @@
   <meta name="twitter:image" content="https://www.brulorteknik.com/images/logo1.webp" />
   
   <!-- Modern CSS Libraries & Performance Optimizations -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://google-analytics.com" />
-  <link rel="dns-prefetch" href="https://googletagmanager.com" />
-  
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" href="js/main.js" as="script">
-  
-  <!-- Non-critical CSS - Async Load -->
-  <noscript>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/modules/navbar.css">
-  </noscript>
   
   <!-- Modular CSS System -->
   <link rel="stylesheet" href="css/main.css">
   
   <!-- Schema.org -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Brülör Teknik Hizmetler",
-  "url": "https://www.brulorteknik.com/",
-  "logo": "https://www.brulorteknik.com/images/logo1.webp",
-  "sameAs": [
-    "https://www.facebook.com/brulorteknik",
-    "https://www.linkedin.com/company/brulorteknik"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+90-531-625-0694",
-    "contactType": "customer service",
-    "areaServed": "TR",
-    "availableLanguage": ["Turkish", "English"]
-  }]
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Yıllık Periyodik Bakım",
-  "provider": {
+  {
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Brülör Teknik Hizmetler",
-    "url": "https://www.brulorteknik.com/"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Türkiye"
-  },
-  "description": "Endüstriyel brülör sistemlerinde düzenli yıllık bakım ve kontrol hizmetleri."
-}
-</script>
+    "url": "https://www.brulorteknik.com/",
+    "logo": "https://www.brulorteknik.com/images/logo1.webp",
+    "sameAs": [
+      "https://www.facebook.com/brulorteknik",
+      "https://www.linkedin.com/company/brulorteknik"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+90-531-625-0694",
+      "contactType": "customer service",
+      "areaServed": "TR",
+      "availableLanguage": ["Turkish", "English"]
+    }]
+  }
+  </script>
   
   <style>
-    /* Mobile First CSS for Services Page */
+    /* Modern CSS Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
-      color: #333;
+      color: #1a1a1a;
+      background-color: #ffffff;
       overflow-x: hidden;
     }
     
+    /* Layout Structure */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .page-content {
+      flex: 1;
+    }
+    
+    /* Hero Section */
     .hero-section {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 60px 0 40px;
-      min-height: 50vh;
+      padding: 120px 0 80px;
       position: relative;
       overflow: hidden;
-      margin-top: 80px; /* Navbar için üst boşluk */
+      margin-top: 80px;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
     }
     
     .page-title {
-      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-size: clamp(2.5rem, 8vw, 4rem);
       font-weight: 800;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      text-align: center;
     }
     
     .page-subtitle {
-      font-size: clamp(1rem, 4vw, 1.25rem);
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 2rem;
-      line-height: 1.5;
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 0;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
-    .services-grid {
-      padding: 60px 0;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /* Services Section */
+    .services-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     }
     
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Service Cards */
     .service-card {
-      background: white;
-      border-radius: 20px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border: 1px solid rgba(52, 152, 219, 0.1);
-      transition: all 0.3s ease;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.5rem;
+      height: 100%;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
-      height: 100%;
     }
     
     .service-card::before {
@@ -149,14 +179,15 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, #3498db, #2ecc71);
+      background: linear-gradient(90deg, #667eea, #764ba2);
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
     
     .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: rgba(102, 126, 234, 0.2);
     }
     
     .service-card:hover::before {
@@ -164,97 +195,155 @@
     }
     
     .service-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #3498db, #2ecc71);
-      border-radius: 15px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       color: white;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
     }
     
     .service-card h3 {
-      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #2c3e50;
+      color: #1a1a1a;
       margin-bottom: 1rem;
+      line-height: 1.3;
     }
     
     .service-card p {
-      color: #6c757d;
+      color: #64748b;
       margin-bottom: 1.5rem;
       line-height: 1.6;
+      font-size: 1rem;
     }
     
     .service-features {
       list-style: none;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
     
     .service-features li {
-      padding: 0.5rem 0;
-      color: #6c757d;
+      padding: 0.75rem 0;
+      color: #64748b;
       position: relative;
-      padding-left: 1.5rem;
+      padding-left: 2rem;
+      font-size: 0.95rem;
     }
     
     .service-features li::before {
       content: '✓';
       position: absolute;
       left: 0;
-      color: #3498db;
+      color: #667eea;
       font-weight: bold;
+      font-size: 1.1rem;
     }
     
     .service-link {
-      color: #3498db;
+      color: #667eea;
       text-decoration: none;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #667eea;
+      border-radius: 12px;
+      background: transparent;
     }
     
     .service-link:hover {
-      color: #2980b9;
+      color: #ffffff;
+      background: #667eea;
       transform: translateX(5px);
     }
     
-    /* Responsive Breakpoints */
-    @media (min-width: 768px) {
-      
+    /* Footer Container */
+    #footer-container {
+      margin-top: auto;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
       .hero-section {
-        padding: 80px 0 60px;
-        min-height: 60vh;
-        margin-top: 90px; /* Tablet için navbar boşluğu */
+        padding: 100px 0 60px;
+        margin-top: 70px;
       }
       
-      .services-grid {
+      .services-section {
         padding: 80px 0;
       }
       
       .service-card {
         padding: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-section {
+        margin-top: 90px;
       }
     }
     
     @media (min-width: 992px) {
       .hero-section {
-        padding: 100px 0 80px;
-        min-height: 70vh;
-        margin-top: 100px; /* Desktop için navbar boşluğu */
+        margin-top: 100px;
       }
-      
-      .services-grid {
-        padding: 100px 0;
+    }
+    
+    /* Animation Classes */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    
+    .fade-up.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Loading States */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    
+    /* Accessibility */
+    .service-link:focus {
+      outline: 2px solid #667eea;
+      outline-offset: 2px;
+    }
+    
+    /* Print Styles */
+    @media print {
+      .hero-section {
+        background: #ffffff !important;
+        color: #000000 !important;
       }
       
       .service-card {
-        padding: 2.5rem;
+        box-shadow: none !important;
+        border: 1px solid #000000 !important;
       }
     }
   </style>
@@ -268,10 +357,10 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
             <h1 class="page-title" data-aos="fade-up">Hizmetlerimiz</h1>
-            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
               Endüstriyel brülör sistemlerinde <strong>kurulum</strong>, <strong>bakım</strong>, <strong>otomasyon</strong> ve <strong>yedek parça</strong> dahil tüm ihtiyaçlarınızda yanınızdayız.
             </p>
           </div>
@@ -279,12 +368,18 @@
       </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-grid">
+    <!-- Services Section -->
+    <section class="services-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Profesyonel Hizmetlerimiz</h2>
+          <p class="section-subtitle">20+ yıllık deneyimimizle endüstriyel brülör sistemleriniz için kapsamlı çözümler sunuyoruz</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Periyodik Bakım -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-calendar-check"></i>
               </div>
@@ -296,12 +391,13 @@
                 <li>Verimlilik artırma</li>
                 <li>Detaylı raporlama</li>
               </ul>
-              <a href="hizmet1.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet1.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <!-- Brülör Servisi -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-wrench"></i>
               </div>
@@ -313,12 +409,13 @@
                 <li>Uzman teknik kadro</li>
                 <li>Garantili hizmet</li>
               </ul>
-              <a href="hizmet-brulor-servisi.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet-brulor-servisi.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <!-- Arıza Giderme -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-bug"></i>
               </div>
@@ -330,12 +427,13 @@
                 <li>Yedek parça değişimi</li>
                 <li>Test ve kontrol</li>
               </ul>
-              <a href="hizmet2.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet2.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <!-- İlk Devreye Alma -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-play-circle"></i>
               </div>
@@ -347,12 +445,13 @@
                 <li>Test ve ayarlama</li>
                 <li>Personel eğitimi</li>
               </ul>
-              <a href="hizmet3.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet3.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <!-- Enerji Verimliliği -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-leaf"></i>
               </div>
@@ -364,12 +463,13 @@
                 <li>Maliyet optimizasyonu</li>
                 <li>Çevre dostu çözümler</li>
               </ul>
-              <a href="hizmet4.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet4.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <!-- Otomasyon Sistemleri -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-cogs"></i>
               </div>
@@ -381,7 +481,7 @@
                 <li>Uzaktan izleme</li>
                 <li>Akıllı kontrol</li>
               </ul>
-              <a href="hizmet5.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+              <a href="hizmet5.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -392,7 +492,7 @@
   <!-- Include Footer -->
   <div id="footer-container"></div>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   
   <!-- Load JavaScript Modules First -->
@@ -407,22 +507,18 @@
   <script>
     // Load navbar and footer
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM loaded, loading navbar...');
-      
       // Load navbar
       fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-          console.log('Navbar HTML loaded, inserting...');
           document.getElementById('navbar-container').innerHTML = data;
           
           // Initialize navbar after loading
           setTimeout(() => {
             if (window.Navbar && typeof window.Navbar.init === 'function') {
-              console.log('Initializing navbar module...');
               window.Navbar.init();
-            } else {
-              console.error('Navbar module not found');
+            } else if (window.App && window.App.modules && window.App.modules.navbar) {
+              window.App.modules.navbar.init();
             }
           }, 100);
         })
@@ -433,20 +529,13 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-container').innerHTML = data;
-          // Re-initialize footer after loading
+          
+          // Initialize footer after loading
           setTimeout(() => {
             if (window.Footer && typeof window.Footer.init === 'function') {
               window.Footer.init();
             } else if (window.App && window.App.modules && window.App.modules.footer) {
               window.App.modules.footer.init();
-            } else {
-              console.log('Footer modülü henüz yüklenmedi, tekrar deneniyor...');
-              // Retry after a short delay
-              setTimeout(() => {
-                if (window.Footer && typeof window.Footer.init === 'function') {
-                  window.Footer.init();
-                }
-              }, 500);
             }
           }, 100);
         })
@@ -462,7 +551,8 @@
       once: true,
       duration: 800,
       easing: 'ease-out-cubic',
-      offset: 100
+      offset: 100,
+      delay: 0
     });
   </script>
 </body>
