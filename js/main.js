@@ -259,6 +259,11 @@ window.App = (function() {
     },
 
     /**
+     * Access modules directly
+     */
+    modules: modules,
+
+    /**
      * Clear all caches
      */
     clearAllCaches: function() {

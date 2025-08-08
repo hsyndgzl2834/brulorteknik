@@ -272,11 +272,20 @@
                     
                     // Initialize navbar after loading
                     setTimeout(() => {
-                        if (window.App && window.App.modules.navbar) {
+                        if (window.Navbar && typeof window.Navbar.init === 'function') {
+                            console.log('Initializing navbar module...');
+                            window.Navbar.init();
+                        } else if (window.App && window.App.modules && window.App.modules.navbar) {
                             console.log('Initializing navbar module...');
                             window.App.modules.navbar.init();
                         } else {
-                            console.error('Navbar module not found');
+                            console.log('Navbar modülü henüz yüklenmedi, tekrar deneniyor...');
+                            // Retry after a short delay
+                            setTimeout(() => {
+                                if (window.Navbar && typeof window.Navbar.init === 'function') {
+                                    window.Navbar.init();
+                                }
+                            }, 500);
                         }
                     }, 100);
                 })
@@ -292,6 +301,22 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-container').innerHTML = data;
+                    // Re-initialize footer after loading
+                    setTimeout(() => {
+                        if (window.Footer && typeof window.Footer.init === 'function') {
+                            window.Footer.init();
+                        } else if (window.App && window.App.modules && window.App.modules.footer) {
+                            window.App.modules.footer.init();
+                        } else {
+                            console.log('Footer modülü henüz yüklenmedi, tekrar deneniyor...');
+                            // Retry after a short delay
+                            setTimeout(() => {
+                                if (window.Footer && typeof window.Footer.init === 'function') {
+                                    window.Footer.init();
+                                }
+                            }, 500);
+                        }
+                    }, 100);
                 })
                 .catch(error => console.error('Footer yüklenirken hata:', error));
         });
