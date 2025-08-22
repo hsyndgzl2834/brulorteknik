@@ -1,0 +1,30 @@
+{
+  "name": "brulor-teknik",
+  "version": "2.1.0",
+  "description": "İstanbul Endüstriyel Brülör Servisi - Mobile-First Responsive Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "brülör servisi",
+    "istanbul",
+    "endüstriyel",
+    "bakım",
+    "onarım",
+    "montaj",
+    "otomasyon"
+  ],
+  "author": "Brülör Teknik Hizmetler",
+  "license": "Private",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsyndgzl2834/brulorteknik.git"
+  },
+  "homepage": "https://brulorteknik.com",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
