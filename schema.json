@@ -1,0 +1,195 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://brulorteknik.com/#organization",
+      "name": "Brülör Teknik Hizmetler",
+      "alternateName": "Brülör Teknik",
+      "url": "https://brulorteknik.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://brulorteknik.com/#logo",
+        "url": "https://brulorteknik.com/images/logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "Brülör Teknik Hizmetler Logo"
+      },
+      "image": {
+        "@id": "https://brulorteknik.com/#logo"
+      },
+      "description": "İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi, bakım, onarım ve montaj hizmetleri. 7/24 acil servis.",
+      "founder": {
+        "@type": "Person",
+        "name": "Brülör Teknik Kurucular"
+      },
+      "foundingDate": "2000",
+      "numberOfEmployees": "15-50",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "İstanbul",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+90-XXX-XXX-XXXX",
+          "contactType": "customer service",
+          "availableLanguage": "Turkish",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday", 
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+90-XXX-XXX-XXXX",
+          "contactType": "emergency",
+          "availableLanguage": "Turkish",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday", 
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/brulorteknik",
+        "https://www.instagram.com/brulorteknik",
+        "https://www.linkedin.com/company/brulorteknik",
+        "https://twitter.com/brulorteknik"
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.0082,
+          "longitude": 28.9784
+        },
+        "geoRadius": "100000"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://brulorteknik.com/#localbusiness",
+      "name": "Brülör Teknik Hizmetler",
+      "image": "https://brulorteknik.com/images/logo.png",
+      "telephone": "+90-XXX-XXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "İstanbul Merkez",
+        "addressLocality": "İstanbul",
+        "addressRegion": "İstanbul",
+        "postalCode": "34000",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0082,
+        "longitude": 28.9784
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday", 
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "$$",
+      "servedCuisine": "Industrial Services",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://brulorteknik.com/#service",
+      "name": "Endüstriyel Brülör Servisi",
+      "description": "Profesyonel endüstriyel brülör bakım, onarım, montaj ve otomasyon hizmetleri. 20+ yıl deneyim.",
+      "provider": {
+        "@id": "https://brulorteknik.com/#organization"
+      },
+      "serviceType": [
+        "Brülör Bakım",
+        "Brülör Onarım", 
+        "Brülör Montaj",
+        "Otomasyon Sistemleri",
+        "Acil Servis",
+        "Preventif Bakım",
+        "Teknik Danışmanlık"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Turkey"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "availableLanguage": "Turkish",
+        "servicePhone": "+90-XXX-XXX-XXXX",
+        "serviceUrl": "https://brulorteknik.com/contact.html"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://brulorteknik.com/#website",
+      "url": "https://brulorteknik.com/",
+      "name": "Brülör Teknik Hizmetler",
+      "description": "İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi",
+      "publisher": {
+        "@id": "https://brulorteknik.com/#organization"
+      },
+      "inLanguage": "tr-TR",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://brulorteknik.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://brulorteknik.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://brulorteknik.com/"
+        }
+      ]
+    }
+  ]
+}

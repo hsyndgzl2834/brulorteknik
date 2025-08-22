@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Brülör Teknik</ShortName>
+  <Description>İstanbul'da endüstriyel brülör servisi arayın</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://brulorteknik.com/favicon.ico</Image>
+  <Image width="32" height="32" type="image/png">https://brulorteknik.com/seo-icons/favicon-32x32.png</Image>
+  <Url type="text/html" template="https://brulorteknik.com/?s={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://brulorteknik.com/opensearch.xml"/>
+  <Contact>info@brulorteknik.com</Contact>
+  <Tags>brülör servisi istanbul endüstriyel</Tags>
+  <Language>tr-TR</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+</OpenSearchDescription>

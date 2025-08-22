@@ -65,12 +65,9 @@
   <link rel="preload" href="js/main.js" as="script">
   
   <!-- Non-critical CSS - Async Load -->
-  <noscript>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/modules/navbar.css">
-  </noscript>
-  
-  <!-- Modular CSS System -->
+    <noscript>
+      <link rel="stylesheet" href="css/main.css">
+    </noscript>  <!-- Modular CSS System -->
   <link rel="stylesheet" href="css/main.css">
   
   <!-- Schema.org Structured Data -->
@@ -505,8 +502,8 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   
   <!-- Modular JavaScript System - Optimized -->
-  <script src="js/main.js" defer></script>
   <script src="js/modules/navbar.js" defer></script>
+  <script src="js/components.js" defer></script>
   
   <!-- Service Worker Registration -->
   <script>
@@ -519,63 +516,7 @@
     }
   </script>
   
-  <script>
-    // Optimized Loading with Performance Monitoring
-    document.addEventListener('DOMContentLoaded', async function() {
-      const startTime = performance.now();
-      console.log('🚀 Contact sayfası yüklendi...');
-      
-      try {
-        // Parallel loading of navbar and footer
-        const [navbarResponse, footerResponse] = await Promise.all([
-          fetch('navbar.html'),
-          fetch('footer.html')
-        ]);
-        
-        const [navbarHtml, footerHtml] = await Promise.all([
-          navbarResponse.text(),
-          footerResponse.text()
-        ]);
-        
-        // Parallel DOM updates
-        const navbarContainer = document.getElementById('navbar-container');
-        const footerContainer = document.getElementById('footer-container');
-        
-        if (navbarContainer) navbarContainer.innerHTML = navbarHtml;
-        if (footerContainer) footerContainer.innerHTML = footerHtml;
-        
-        // Initialize modules with error handling
-        setTimeout(() => {
-          if (window.Navbar) {
-            window.Navbar.init();
-            console.log('✅ Navbar modülü başlatıldı');
-          }
-          
-          if (window.Footer) {
-            window.Footer.init();
-            console.log('✅ Footer modülü başlatıldı');
-          }
-          
-          // Initialize AOS with optimized settings
-          if (typeof AOS !== 'undefined') {
-            AOS.init({
-              duration: 600,
-              easing: 'ease-out-cubic',
-              once: true,
-              offset: 50,
-              delay: 0
-            });
-            console.log('✅ AOS animasyonları başlatıldı');
-          }
-          
-          const loadTime = performance.now() - startTime;
-          console.log(`✅ Contact sayfası başarıyla yüklendi (${loadTime.toFixed(2)}ms)`);
-        }, 100);
-        
-      } catch (error) {
-        console.error('❌ Hata:', error);
-      }
-    });
-  </script>
 </body>
 </html>
+
+

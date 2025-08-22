@@ -32,15 +32,12 @@ window.Navbar = {
   init() {
     if (this.state.isInitialized) return;
     
-    // Wait for DOM to be fully loaded
-    setTimeout(() => {
-      this.cacheElements();
-      this.bindEvents();
-      this.checkScreenSize();
-      this.state.isInitialized = true;
-      
-      console.log('🚀 Navbar initialized (mobile-first)');
-    }, 100);
+    this.cacheElements();
+    this.bindEvents();
+    this.checkScreenSize();
+    this.state.isInitialized = true;
+    
+    console.log('🚀 Navbar initialized (mobile-first)');
   },
 
   /**
@@ -51,14 +48,6 @@ window.Navbar = {
     this.elements.toggler = document.querySelector('.navbar-toggler');
     this.elements.collapse = document.querySelector('.navbar-collapse');
     this.elements.links = document.querySelectorAll('.nav-link');
-    
-    // Debug element caching
-    console.log('🔍 Elements cached:', {
-      navbar: !!this.elements.navbar,
-      toggler: !!this.elements.toggler,
-      collapse: !!this.elements.collapse,
-      links: this.elements.links.length
-    });
   },
 
   /**
@@ -71,22 +60,16 @@ window.Navbar = {
         e.preventDefault();
         this.toggleMobileMenu();
       });
-      console.log('✅ Navbar toggler event bound');
-    } else {
-      console.log('❌ Navbar toggler element not found!');
     }
 
     // Close menu on link click (mobile)
-    if (this.elements.links && this.elements.links.length > 0) {
-      this.elements.links.forEach(link => {
-        link.addEventListener('click', () => {
-          if (this.state.isMobile && this.state.isMobileMenuOpen) {
-            this.closeMobileMenu();
-          }
-        });
+    this.elements.links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (this.state.isMobile && this.state.isMobileMenuOpen) {
+          this.closeMobileMenu();
+        }
       });
-      console.log(`✅ ${this.elements.links.length} nav links events bound`);
-    }
+    });
 
     // Close menu on outside click
     document.addEventListener('click', (e) => {
@@ -142,10 +125,7 @@ window.Navbar = {
 
     this.state.isMobileMenuOpen = true;
     this.elements.collapse.classList.add('show');
-    
-    if (this.elements.toggler) {
-      this.elements.toggler.setAttribute('aria-expanded', 'true');
-    }
+    this.elements.toggler.setAttribute('aria-expanded', 'true');
     
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
@@ -161,10 +141,7 @@ window.Navbar = {
 
     this.state.isMobileMenuOpen = false;
     this.elements.collapse.classList.remove('show');
-    
-    if (this.elements.toggler) {
-      this.elements.toggler.setAttribute('aria-expanded', 'false');
-    }
+    this.elements.toggler.setAttribute('aria-expanded', 'false');
     
     // Restore body scroll
     document.body.style.overflow = '';

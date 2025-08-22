@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <!-- SEO Meta Tags -->
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="keywords" content="{{KEYWORDS}}">
+  
+  <!-- Meta Info -->
+  <meta name="author" content="Brülör Teknik Hizmetler">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="language" content="Turkish">
+  
+  <!-- Canonical & Icons -->
+  <link rel="canonical" href="https://brulorteknik.com/{{PAGE_URL}}">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="images/logo.webp" sizes="32x32" type="image/webp">
+  <link rel="apple-touch-icon" href="images/logo.webp">
+  
+  <!-- Theme -->
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="msapplication-TileColor" content="#0d1b2a">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://brulorteknik.com/images/hero1.webp">
+  <meta property="og:url" content="https://brulorteknik.com/{{PAGE_URL}}">
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler">
+  <meta property="og:locale" content="tr_TR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="https://brulorteknik.com/images/hero1.webp">
+  
+  <!-- Geographic -->
+  <meta name="geo.region" content="TR-34">
+  <meta name="geo.placename" content="İstanbul">
+  <meta name="geo.position" content="41.0082;28.9784">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
+  
+  <!-- Fallback CSS -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </noscript>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div id="navbar-container"></div>
+  
+  <!-- Main Content -->
+  <main>
+    {{CONTENT}}
+  </main>
+  
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="js/modules/core.js" defer></script>
+  <script src="js/modules/navbar.js" defer></script>
+  <script src="js/main.js" defer></script>
+  
+  <!-- Component Loader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Load navbar and footer in parallel
+        const [navbarResponse, footerResponse] = await Promise.all([
+          fetch('navbar.html'),
+          fetch('footer.html')
+        ]);
+        
+        const [navbarHTML, footerHTML] = await Promise.all([
+          navbarResponse.text(),
+          footerResponse.text()
+        ]);
+        
+        // Insert components
+        document.getElementById('navbar-container').innerHTML = navbarHTML;
+        document.getElementById('footer-container').innerHTML = footerHTML;
+        
+        // Initialize navbar
+        if (window.Navbar) {
+          window.Navbar.init();
+        }
+        
+        console.log('✅ Components loaded successfully');
+        
+      } catch (error) {
+        console.error('❌ Component loading error:', error);
+      }
+    });
+    
+    // AOS initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }
+    });
+  </script>
+  
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('✅ Service Worker registered');
+          })
+          .catch(function(error) {
+            console.log('❌ Service Worker registration failed');
+          });
+      });
+    }
+  </script>
+</body>
+</html>
+
+
