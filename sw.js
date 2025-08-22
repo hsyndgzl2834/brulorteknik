@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 2.1.0 - Redirect Fix
+// Version: 2.1.1 - Redirect Fix
 
-const CACHE_NAME = 'brulor-teknik-v2.1.1';
-const STATIC_CACHE = 'brulor-static-v2.1.1';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.1';
+const CACHE_NAME = 'brulor-teknik-v2.1.2';
+const STATIC_CACHE = 'brulor-static-v2.1.2';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.2';
 
 const STATIC_ASSETS = [
   '/',
@@ -114,30 +114,53 @@ self.addEventListener('fetch', event => {
           return cachedResponse;
         }
         
-        return fetch(request, { redirect: 'follow' })
+        return fetch(request, { 
+            redirect: 'follow',
+            mode: 'cors',
+            credentials: 'same-origin'
+          })
           .then(response => {
             // Check if response is valid
             if (!response) {
               throw new Error('No response received');
             }
             
-            // Don't cache non-successful responses
-            if (response.status !== 200 || (response.type !== 'basic' && response.type !== 'cors')) {
+            // Handle redirected responses properly
+            if (response.redirected && response.url !== request.url) {
+              console.log('🔄 Handling redirected response from:', request.url, 'to:', response.url);
+              // Create a new request for the redirected URL
+              const redirectedRequest = new Request(response.url, {
+                method: request.method,
+                headers: request.headers,
+                mode: 'cors',
+                credentials: 'same-origin',
+                redirect: 'follow'
+              });
+              
+              // Return the response as-is for redirected responses
               return response;
             }
             
-            // Clone the response
-            const responseToCache = response.clone();
+            // Don't cache non-successful responses or opaque responses
+            if (response.status < 200 || response.status >= 300) {
+              return response;
+            }
             
-            // Cache the response with error handling
-            caches.open(DYNAMIC_CACHE)
-              .then(cache => {
-                console.log('💾 Caching new resource:', request.url);
-                return cache.put(request, responseToCache);
-              })
-              .catch(error => {
-                console.warn('⚠️ Failed to cache response:', request.url, error);
-              });
+            // Only cache basic and cors responses that are successful
+            if (response.type === 'basic' || response.type === 'cors') {
+              // Clone the response before caching
+              const responseToCache = response.clone();
+              
+              // Cache the response with error handling
+              caches.open(DYNAMIC_CACHE)
+                .then(cache => {
+                  console.log('💾 Caching new resource:', request.url);
+                  return cache.put(request, responseToCache);
+                })
+                .catch(error => {
+                  console.warn('⚠️ Failed to cache response:', request.url, error);
+                });
+            }
             
             return response;
           })
