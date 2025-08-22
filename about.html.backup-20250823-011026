@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta Tags -->
+  <title>🏢 Hakkımızda | Brülör Teknik Hizmetler - #1 Endüstriyel Brülör Uzmanı ⚡</title>
+  <meta name="title" content="🏢 Hakkımızda | Brülör Teknik Hizmetler - #1 Endüstriyel Brülör Uzmanı ⚡" />
+  <meta name="description" content="🚀 20+ yıllık deneyim ile Türkiye'nin #1 endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, uzman ekibimiz ve kalite politikamız hakkında detaylı bilgi alın. ⚡ Hızlı servis, 💰 uygun fiyat!"/>
+  <meta name="keywords" content="brülör teknik hizmetler, hakkımızda, kurumsal, endüstriyel brülör uzmanı, deneyim, kalite, mühendislik, Türkiye, istanbul, brülör servisi, brülör bakımı, brülör montajı, endüstriyel brülör, brülör tamiri"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Geographic SEO -->
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="İstanbul" />
+  <meta name="geo.position" content="41.0082;28.9784" />
+  <meta name="ICBM" content="41.0082, 28.9784" />
+  <meta name="business:contact_data:phone_number" content="+905316250694" />
+  <meta name="business:contact_data:email" content="info@brulorteknik.com" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/about.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/about.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/about.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.brulorteknik.com/about.html" />
+  <meta property="og:title" content="🏢 Hakkımızda | Brülör Teknik Hizmetler - #1 Endüstriyel Brülör Uzmanı ⚡" />
+  <meta property="og:description" content="🚀 20+ yıllık deneyim ile Türkiye'nin #1 endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, uzman ekibimiz ve kalite politikamız hakkında detaylı bilgi alın. ⚡ Hızlı servis, 💰 uygun fiyat!" />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/about-us.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="🏢 Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı Ekibi" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="fb:app_id" content="123456789" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/about.html" />
+  <meta property="twitter:title" content="🏢 Hakkımızda | Brülör Teknik Hizmetler - #1 Endüstriyel Brülör Uzmanı ⚡" />
+  <meta property="twitter:description" content="🚀 20+ yıllık deneyim ile Türkiye'nin #1 endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, uzman ekibimiz ve kalite politikamız hakkında detaylı bilgi alın. ⚡ Hızlı servis, 💰 uygun fiyat!" />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/about-us.webp" />
+  <meta property="twitter:image:alt" content="🏢 Brülör Teknik Hizmetler - Endüstriyel Brülör Uzmanı Ekibi" />
+  <meta property="twitter:site" content="@brulorteknik" />
+  <meta property="twitter:creator" content="@brulorteknik" />
+  
+  <!-- Additional Meta -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  <meta name="theme-color" content="#667eea" />
+  
+  <!-- Modern CSS Libraries & Performance Optimizations -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://google-analytics.com" />
+  <link rel="dns-prefetch" href="https://googletagmanager.com" />
+  
+  <!-- Preload Critical Resources -->
+  <!-- Non-critical CSS - Async Load -->
+  <noscript>
+    </noscript>
+  
+  <!-- Modular CSS System -->
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "🏢 Hakkımızda | Brülör Teknik Hizmetler",
+    "description": "🚀 20+ yıllık deneyim ile Türkiye'nin #1 endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, uzman ekibimiz ve kalite politikamız hakkında detaylı bilgi alın.",
+    "url": "https://www.brulorteknik.com/about.html",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "🏢 Brülör Teknik Hizmetler",
+      "description": "🚀 Endüstriyel brülör sistemleri uzmanı - 20+ yıllık deneyim",
+      "url": "https://www.brulorteknik.com",
+      "telephone": "+905316250694",
+      "email": "info@brulorteknik.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "İstanbul",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0082,
+        "longitude": 28.9784
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "156"
+      },
+      "sameAs": [
+        "https://www.facebook.com/brulorteknik",
+        "https://www.instagram.com/brulorteknik",
+        "https://www.linkedin.com/company/brulorteknik"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "🏠 Ana Sayfa",
+          "item": "https://www.brulorteknik.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "🏢 Hakkımızda",
+          "item": "https://www.brulorteknik.com/about.html"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <style>
+    /* Mobile First CSS for About Page */
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --dark-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+      --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    .hero-section {
+      background: var(--primary-gradient);
+      padding: 60px 0 40px;
+      min-height: 50vh;
+      position: relative;
+      overflow: visible;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 0,0 1000,0"/></svg>');
+      background-size: cover;
+    }
+    
+    .page-title {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    
+    .about-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .about-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+    
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .about-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+    
+    .about-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .about-text {
+      color: #4a5568;
+      line-height: 1.7;
+      text-align: center;
+    }
+    
+    .team-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .team-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+    }
+    
+    .team-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .team-role {
+      font-size: 1rem;
+      opacity: 0.9;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .team-description {
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .values-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .value-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .value-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    
+    .value-description {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    
+    .cta-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-text {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .btn-primary-custom {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+      color: white;
+      text-decoration: none;
+    }
+    
+    .sticky-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .sticky-whatsapp:hover {
+      transform: scale(1.1);
+      color: white;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 40px 0 30px;
+        min-height: 40vh;
+      }
+      
+      .about-section,
+      .team-section,
+      .values-section,
+      .cta-section {
+        padding: 60px 0;
+      }
+      
+      .about-card,
+      .team-card,
+      .value-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Container -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="page-title">🏢 Hakkımızda</h1>
+          <p class="page-subtitle">🚀 20+ yıllık deneyim ile Türkiye'nin #1 endüstriyel brülör sistemi uzmanı. Kurumsal tarihçemiz, uzman ekibimiz ve kalite politikamız hakkında detaylı bilgi alın.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-4 fw-bold text-primary">🏢 Şirketimiz Hakkında</h2>
+          <p class="lead text-muted">🚀 Endüstriyel brülör sistemleri konusunda uzmanlaşmış, güvenilir ve kaliteli hizmet sunan bir firmayız.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-history"></i>
+            </div>
+            <h3 class="about-title">📅 Deneyim</h3>
+            <p class="about-text">🚀 20+ yıllık sektör deneyimi ile endüstriyel brülör sistemleri konusunda uzmanlaşmış ekibimiz, her projede mükemmellik hedefiyle çalışır.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="about-title">👥 Uzman Ekip</h3>
+            <p class="about-text">👨‍🔧 Sektörün en deneyimli mühendisleri ve teknisyenlerinden oluşan ekibimiz, her türlü brülör sistemi için profesyonel çözümler sunar.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3 class="about-title">🏆 Kalite</h3>
+            <p class="about-text">✅ En yüksek kalite standartlarında hizmet veriyor, müşteri memnuniyetini her zaman ön planda tutuyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-4 fw-bold text-white">👥 Uzman Ekibimiz</h2>
+          <p class="lead text-white-50">🚀 Deneyimli ve uzman ekibimiz ile her projede mükemmellik hedefiyle çalışıyoruz.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3 class="team-name">👨‍💼 Mehmet Yılmaz</h3>
+            <p class="team-role">🏢 Genel Müdür</p>
+            <p class="team-description">🚀 15+ yıllık endüstriyel brülör deneyimi ile şirketimizin vizyonunu yönlendiriyor ve müşteri memnuniyetini en üst seviyede tutuyor.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">
+              <i class="fas fa-user-cog"></i>
+            </div>
+            <h3 class="team-name">👨‍🔧 Ahmet Demir</h3>
+            <p class="team-role">⚙️ Teknik Müdür</p>
+            <p class="team-description">🔧 Endüstriyel brülör sistemleri konusunda uzman mühendis, tüm teknik operasyonları yönetiyor ve kalite standartlarını garanti ediyor.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 class="team-name">👨‍🎓 Ali Kaya</h3>
+            <p class="team-role">📚 Müşteri İlişkileri</p>
+            <p class="team-description">💼 Müşteri ihtiyaçlarını anlayan ve en uygun çözümleri sunan deneyimli ekibimizin önemli bir parçası.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-4 fw-bold text-primary">⭐ Değerlerimiz</h2>
+          <p class="lead text-muted">🚀 Şirketimizin temel değerleri ve çalışma prensipleri.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="value-title">🤝 Güvenilirlik</h3>
+            <p class="value-description">✅ Müşterilerimizle güvene dayalı, uzun vadeli ilişkiler kuruyoruz.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="value-title">💡 İnovasyon</h3>
+            <p class="value-description">🚀 En son teknolojileri takip ediyor ve yenilikçi çözümler sunuyoruz.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="value-title">⏰ Hız</h3>
+            <p class="value-description">⚡ Müşterilerimizin ihtiyaçlarına hızlı ve etkili çözümler sunuyoruz.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="value-title">⭐ Kalite</h3>
+            <p class="value-description">🏆 En yüksek kalite standartlarında hizmet veriyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="cta-title">🚀 Hemen İletişime Geçin</h2>
+          <p class="cta-text">💼 Endüstriyel brülör sistemleri konusunda uzman ekibimizle tanışın ve projeleriniz için profesyonel çözümler alın.</p>
+          <a href="contact.html" class="btn btn-primary-custom btn-lg">📞 İletişime Geç</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp -->
+  <a href="https://wa.me/905316250694?text=Hakkımızda sayfasından yazıyorum." class="sticky-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- JavaScript Libraries - Optimized Loading -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  
+  <!-- Modular JavaScript System - Optimized -->
+  <script src="js/modules/navbar.js" defer></script>
+  <script src="js/components.js" defer></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('✅ SW registered'))
+          .catch(error => console.log('❌ SW registration failed'));
+      });
+    }
+  </script>
+  
+</body>
+</html>
+
+
+

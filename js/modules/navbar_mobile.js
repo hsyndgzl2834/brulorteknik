@@ -1,9 +1,9 @@
 /**
- * Mobile First Navbar JavaScript Module
+ * Mobile First Navbar JavaScript Modul          console.log('📱 Mobile Navbar initialized');
  * Optimized for fast transitions and mobile performance
  */
 
-window.Navbar = {
+window.MobileNavbar = {
   // Mobile-first configuration
   config: {
     mobileBreakpoint: 992,
@@ -32,20 +32,35 @@ window.Navbar = {
   init() {
     if (this.state.isInitialized) return;
     
-    this.cacheElements();
-    this.bindEvents();
-    this.checkScreenSize();
-    this.state.isInitialized = true;
-    
-    console.log('🚀 Navbar initialized (mobile-first)');
+    // Only initialize on mobile
+    if (window.innerWidth < this.config.mobileBreakpoint) {
+      const initializeWhenReady = () => {
+        this.cacheElements();
+        
+        // Only initialize if navbar elements exist
+        if (this.elements.navbar) {
+          this.bindEvents();
+          this.checkScreenSize();
+          this.state.isInitialized = true;
+          console.log('� Mobile Navbar initialized');
+        } else {
+          console.log('⏳ Mobile Navbar elements not ready, retrying...');
+          setTimeout(initializeWhenReady, 200);
+        }
+      };
+      
+      setTimeout(initializeWhenReady, 100);
+    } else {
+      // Skip desktop log to reduce console noise
+    }
   },
 
   /**
    * Cache DOM elements for performance
    */
   cacheElements() {
-    this.elements.navbar = document.querySelector('.navbar-custom');
-    this.elements.toggler = document.querySelector('.navbar-toggler');
+    this.elements.navbar = document.querySelector('.navbar-professional');
+    this.elements.toggler = document.querySelector('.modern-toggler');
     this.elements.collapse = document.querySelector('.navbar-collapse');
     this.elements.links = document.querySelectorAll('.nav-link');
   },
@@ -62,21 +77,33 @@ window.Navbar = {
       });
     }
 
-    // Close menu on link click (mobile)
+    // Smart menu closing on link clicks
     this.elements.links.forEach(link => {
-      link.addEventListener('click', () => {
-        if (this.state.isMobile && this.state.isMobileMenuOpen) {
-          this.closeMobileMenu();
+      link.addEventListener('click', (e) => {
+        // Don't close menu if it's a dropdown toggle
+        if (link.classList.contains('dropdown-toggle')) {
+          return; // Let Bootstrap handle dropdown toggle
+        }
+        
+        // Close menu only for actual navigation links
+        if (this.state.isMobile && this.state.isMobileMenuOpen && link.getAttribute('href') !== '#') {
+          setTimeout(() => this.closeMobileMenu(), 100); // Small delay for UX
         }
       });
     });
 
-    // Close menu on outside click
+    // Close menu on outside click (but not on dropdown items)
     document.addEventListener('click', (e) => {
-      if (this.state.isMobileMenuOpen && 
-          !this.elements.collapse.contains(e.target) && 
-          !this.elements.toggler.contains(e.target)) {
-        this.closeMobileMenu();
+      if (this.state.isMobileMenuOpen) {
+        // Don't close if clicking on navbar content, toggler, or dropdown items
+        const isNavbarClick = this.elements.collapse.contains(e.target) || 
+                             this.elements.toggler.contains(e.target) ||
+                             e.target.closest('.dropdown-menu') ||
+                             e.target.closest('.nav-link');
+        
+        if (!isNavbarClick) {
+          this.closeMobileMenu();
+        }
       }
     });
 

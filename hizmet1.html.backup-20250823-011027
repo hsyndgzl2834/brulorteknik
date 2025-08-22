@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  
+  <!-- Enhanced Title & Meta - MODERN SEO -->
+  <title>Yıllık Periyodik Bakım Hizmeti | Endüstriyel Brülör Bakım ve Servis - İstanbul</title>
+  <meta name="description" content="🔧 Endüstriyel brülörlerinizin güvenliği, verimliliği ve uzun ömrü için profesyonel yıllık periyodik bakım hizmetleri. ✅ 20+ yıl deneyim ✅ Garantili servis ✅ İstanbul geneli hızlı müdahale" />
+  <meta name="keywords" content="periyodik bakım istanbul, brülör bakımı, endüstriyel brülör bakım, güvenlik kontrolü, verimlilik analizi, brülör servisi istanbul, yıllık bakım, profesyonel brülör bakımı" />
+  <meta name="author" content="Brülör Teknik Hizmetler" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Geographic & Business SEO -->
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="İstanbul" />
+  <meta name="geo.position" content="41.0851;28.9784" />
+  <meta name="ICBM" content="41.0851, 28.9784" />
+  <meta name="business:contact_data:locality" content="İstanbul" />
+  <meta name="business:contact_data:region" content="Türkiye" />
+  
+  <!-- Technical SEO -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  
+  <link rel="canonical" href="https://brulorteknik.com/hizmet1.html" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  
+  <!-- Enhanced Open Graph - MODERN SEO -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Yıllık Periyodik Bakım | Endüstriyel Brülör Servisi İstanbul" />
+  <meta property="og:description" content="Profesyonel yıllık periyodik bakım hizmetleriyle brülörlerinizin maksimum güvenlik ve performans. 20+ yıl deneyim, garantili servis, İstanbul geneli hızlı müdahale." />
+  <meta property="og:image" content="https://brulorteknik.com/images/hizmet1.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Endüstriyel brülör periyodik bakım hizmeti" />
+  <meta property="og:url" content="https://brulorteknik.com/hizmet1.html" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="article:author" content="Brülör Teknik Hizmetler" />
+  <meta property="article:section" content="Endüstriyel Brülör Hizmetleri" />
+  <meta property="article:tag" content="periyodik bakım, brülör servisi, endüstriyel bakım" />
+  
+  <!-- Enhanced Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yıllık Periyodik Bakım | Endüstriyel Brülör Servisi İstanbul" />
+  <meta name="twitter:description" content="Profesyonel yıllık periyodik bakım hizmetleriyle brülörlerinizin maksimum güvenlik ve performans. 20+ yıl deneyim, garantili servis." />
+  <meta name="twitter:image" content="https://brulorteknik.com/images/hizmet1.webp" />
+  <meta name="twitter:image:alt" content="Endüstriyel brülör periyodik bakım hizmeti" />
+  <meta name="twitter:site" content="@brulorteknik" />
+  <meta name="twitter:creator" content="@brulorteknik" />
+  <meta name="twitter:image" content="https://brulorteknik.com/images/hizmet1.webp" />
+  <meta name="theme-color" content="#0d1b2a" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik">
+
+  <!-- Preconnect for Performance - OPTIMIZE EDILDI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  
+  <!-- Preload kritik kaynaklar -->
+  <link rel="preload" href="images/hizmet1.webp" as="image" />
+  <!-- Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" /></noscript>
+  
+  <!-- K R İ T İ K   C S S  - OPTIMIZE EDILDI -->
+  <style>
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #DEE2E6 100%);
+      color: #2C3E50;
+      scroll-behavior: smooth;
+    }
+    .container, .container-fluid, .row, .content-section, .card, .service-card, .universal-card {
+      overflow-x: visible !important;
+      overflow-y: hidden !important;
+      box-sizing: border-box;
+    }
+    .service-card, .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.08);
+      border: 1px solid rgba(52, 152, 219, 0.1);
+      position: relative;
+      max-width: 100%;
+      will-change: transform;
+    }
+    .navbar {
+      background: #2C3E50;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .hero-section { 
+      contain: layout style paint; 
+      margin-top: 80px; /* Navbar için üst boşluk */
+    }
+  </style>
+  
+  <!-- Modular CSS System -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >`n  <link rel="stylesheet" href="css/main.css">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">`n  <link rel="stylesheet" href="css/main.css"></noscript>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"  />
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"></noscript>
+  
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" >
+  <noscript><link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"></noscript>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" >
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"></noscript>
+  
+  <!-- Advanced Service Schema - MODERN SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://brulorteknik.com/hizmet1.html#service",
+    "name": "Yıllık Periyodik Bakım Hizmeti",
+    "alternateName": "Endüstriyel Brülör Periyodik Bakım",
+    "description": "Endüstriyel brülörlerinizin güvenliği, verimliliği ve uzun ömrü için profesyonel yıllık periyodik bakım hizmetleri. Kapsamlı güvenlik kontrolü, performans analizi ve garantili servis.",
+    "serviceType": "Endüstriyel Brülör Bakım Hizmeti",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Brülör Teknik Hizmetler",
+      "url": "https://brulorteknik.com",
+      "telephone": "+905316250694",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR",
+        "addressRegion": "İstanbul",
+        "addressLocality": "Kağıthane"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Türkiye"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Periyodik Bakım Hizmetleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Güvenlik Kontrolleri",
+            "description": "Kapsamlı güvenlik analizi ve risk değerlendirmesi"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Performans Optimizasyonu",
+            "description": "Verimlilik analizi ve optimizasyon çalışmaları"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "TRY",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "TRY",
+        "description": "Ücretsiz keşif ve detaylı fiyat teklifi"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "84",
+      "bestRating": "5"
+    },
+    "category": "Endüstriyel Brülör Hizmetleri",
+    "keywords": "periyodik bakım, brülör bakımı, endüstriyel bakım, güvenlik kontrolü, istanbul brülör servisi",
+    "areaServed": "Türkiye",
+    "serviceType": "Endüstriyel Brülör Bakımı",
+    "description": "Endüstriyel brülör sistemleri için kapsamlı yıllık bakım, güvenlik kontrolü ve verimlilik analizi hizmeti.",
+    "image": "https://www.brulorteknik.com/images/hizmet1.webp",
+    "telephone": "+90 531 625 06 94",
+    "email": "info@brulorteknik.com"
+  }
+  </script>
+
+  <style>
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+    }
+    .container, .container-fluid, .row, .content-section, .card, .universal-card {
+      overflow: visible !important;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="page-wrapper">
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <main class="page-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="page-title" data-aos="fade-up">Yıllık Periyodik Bakım</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Endüstriyel brülörlerinizin <strong>güvenliği</strong>, <strong>verimliliği</strong> ve <strong>uzun ömrü</strong> için profesyonel yıllık bakım hizmetlerimiz.
+            </p>
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+              <a href="hizmetler.html" class="btn-secondary-custom">
+                <i class="fas fa-arrow-left me-2"></i>Hizmetlerimize Geri Dön
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-right">
+              <div class="card-image">
+                <img src="images/hizmet1.webp" alt="Yıllık Periyodik Bakım - Brülör Güvenlik Kontrolü" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-left">
+              <div class="card-content">
+                <h2 class="section-title">Neden Periyodik Bakım?</h2>
+                <ul class="feature-list">
+                  <li>
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <strong>Güvenlik:</strong> Potansiyel tehlikelerin erken tespiti
+                  </li>
+                  <li>
+                    <i class="fas fa-leaf text-primary me-2"></i>
+                    <strong>Verimlilik:</strong> Optimal yanma performansı
+                  </li>
+                  <li>
+                    <i class="fas fa-coins text-warning me-2"></i>
+                    <strong>Tasarruf:</strong> Enerji ve bakım maliyetlerinde düşüş
+                  </li>
+                  <li>
+                    <i class="fas fa-clock text-info me-2"></i>
+                    <strong>Uzun Ömür:</strong> Sistemin yaşam süresini uzatır
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Process Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="universal-card" data-aos="fade-up">
+          <div class="card-content">
+            <h2 class="section-title">Hizmet İçeriği</h2>
+            <p class="mb-4">
+              Brülör Teknik Hizmetler'in yıllık periyodik bakım hizmetiyle, brülörünüzün tüm kritik noktalarında <strong>maksimum verim</strong> ve <strong>güvenlik</strong> garanti edilir. Özellikle baca gazı analizine öncelik vererek sisteminizin performansını artırıyoruz.
+            </p>
+            
+            <h3 class="h4 mb-3">Adım Adım Süreç:</h3>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-number">1</div>
+                  <h4>Ön İnceleme</h4>
+                  <p>Tesis kayıtlarının ve önceki bakım raporlarının analizi ile mevcut durumun değerlendirilmesi.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-number">2</div>
+                  <h4>Temizlik ve Bakım</h4>
+                  <p>Brülör komponentlerinin temizlenmesi, filtre ve nozül değişimi ve mekanik bakımların yapılması.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-number">3</div>
+                  <h4>Güvenlik Kontrolleri</h4>
+                  <p>Emniyet vanaları, basınç anahtarları, sensörler ve emniyet sistemlerinin testi ve doğrulanması.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-number">4</div>
+                  <h4>Baca Gazı Analizi</h4>
+                  <p>Yakıt-hava ayarlarının optimizasyonu, emisyon ölçümleri ve performans değerlendirmesi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-right">
+              <div class="card-content">
+                <h3 class="section-title">Faydalar</h3>
+                <ul class="feature-list">
+                  <li>
+                    <i class="fas fa-gas-pump text-success me-2"></i>
+                    Yakıt tüketiminde azalma ve enerji verimliliği artışı
+                  </li>
+                  <li>
+                    <i class="fas fa-chart-line text-primary me-2"></i>
+                    Baca gazı analizine dayalı optimizasyon ile emisyon düşüşü
+                  </li>
+                  <li>
+                    <i class="fas fa-search text-warning me-2"></i>
+                    Olası arızaların erken tespiti ile maliyet önleme
+                  </li>
+                  <li>
+                    <i class="fas fa-clock text-info me-2"></i>
+                    Sistem dayanıklılığı ve ekipman ömrünün uzatılması
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Yasal düzenlemelere uygunluk ve emniyet standartları
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-left">
+              <div class="card-content">
+                <h3 class="section-title">Teklif Alın</h3>
+                <p class="mb-4">
+                  Hizmet bedeli ve detaylı teklif almak için bizimle iletişime geçin. Profesyonel ekibimiz en kısa sürede dönüş yapacaktır.
+                </p>
+                <a href="contact.html" class="btn-primary-custom">
+                  <i class="fas fa-paper-plane me-2"></i>Teklif Al / Bilgi İste
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  <script src="js/components.js" defer></script>
+
+  <!-- Main Application -->
+  <script src="js/main.js"></script>  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animation Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
+
+
+

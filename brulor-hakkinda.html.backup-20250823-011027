@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta Tags -->
+  <title>Brülörler Hakkında Teknik Soru-Cevap Rehberi | Brülör Teknik Hizmetler</title>
+  <meta name="description" content="Brülör bakımı, enerji verimliliği, arıza çözümü ve brülör seçimi hakkında en kapsamlı soru-cevap rehberi. Endüstriyel brülörlerle ilgili pratik bilgiler ve teknik ipuçları."/>
+  <meta name="keywords" content="Brülör, Brülör Bakımı, Brülör Seçimi, Endüstriyel Brülör, Enerji Verimliliği, Arıza Çözümü, Brülör Bilgi Merkezi, Teknik Rehber, İstanbul"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/brulor-hakkinda.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/brulor-hakkinda.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/brulor-hakkinda.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.brulorteknik.com/brulor-hakkinda.html" />
+  <meta property="og:title" content="Brülörler Hakkında Teknik Soru-Cevap Rehberi | Brülör Teknik Hizmetler" />
+  <meta property="og:description" content="Brülör bakımı, enerji verimliliği, arıza çözümü ve brülör seçimi hakkında en kapsamlı soru-cevap rehberi." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/burner-faq.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/brulor-hakkinda.html" />
+  <meta property="twitter:title" content="Brülörler Hakkında Teknik Soru-Cevap Rehberi | Brülör Teknik Hizmetler" />
+  <meta property="twitter:description" content="Brülör bakımı, enerji verimliliği, arıza çözümü ve brülör seçimi hakkında en kapsamlı soru-cevap rehberi." />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/burner-faq.webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="images/burner-faq.webp" as="image" />
+
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <!-- Schema.org FAQ mikro veri -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Brülör bakımını neden düzenli olarak yapmalıyız?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brülörlerin düzenli bakımı, cihazın verimli ve güvenli çalışması için kritik önem taşır. Düzenli bakım enerji tasarrufu sağlar, arıza riskini ve işletme maliyetlerini düşürür, cihazın ömrünü uzatır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Brülör bakımı ne sıklıkla yapılmalı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bakım periyodu kullanım yoğunluğuna ve tipine göre değişir; genel olarak yılda en az bir kez bakım önerilir. Sürekli çalışan tesislerde ise 6 ayda bir bakım tavsiye edilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Brülör bakımında hangi işlemler yapılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temizlik, filtre ve fan kontrolü, ateşleme sistemi kontrolü, yakıt ve gaz ayarları, baca ve emisyon kontrolü, elektrik bağlantılarının gözden geçirilmesi ve genel test çalıştırması gibi birçok adımı içerir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Doğru brülör seçimi için nelere dikkat edilmeli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kullanım alanı, yakıt tipi, kapasite, enerji verimliliği, kontrol şekli, fiziksel uyumluluk, marka, servis ve güvenlik sertifikaları göz önünde bulundurulmalıdır."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section py-5 position-relative overflow-hidden">
+    <div class="hero-bg position-absolute w-100 h-100"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8 col-md-10" data-aos="fade-up">
+          <div class="hero-content text-white">
+            <nav aria-label="breadcrumb" class="mb-3">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="text-light">Ana Sayfa</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Brülörler Hakkında</li>
+              </ol>
+            </nav>
+            <h1 class="display-4 fw-bold mb-4" data-i18n="burner.about.pageHeading">Brülör Sistemleri Teknik Soru-Cevap Rehberi</h1>
+            <p class="lead mb-4">Endüstriyel ve ticari tesislerin ısıtma sistemlerinin kalbi olan brülörler hakkında kapsamlı teknik rehber.</p>
+            <div class="hero-buttons">
+              <a href="#faq-content" class="btn btn-light btn-lg me-3">
+                <i class="fas fa-question-circle me-2"></i>SSS'leri İncele
+              </a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-phone me-2"></i>Teknik Destek
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="glass-card p-5 text-center">
+            <div class="row align-items-center">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="images/burner-faq.webp" alt="Brülör Soru-Cevap Rehberi" class="img-fluid rounded-4 shadow" loading="lazy" width="300" height="200">
+              </div>
+              <div class="col-lg-8">
+                <h2 class="h3 fw-bold mb-3 text-primary">Brülör Uzmanlarından Profesyonel Rehber</h2>
+                <p class="text-muted mb-0">Brülör bakımı, enerji verimliliği, arıza çözümü ve doğru brülör seçimi konularında en sık merak edilen soruları sade ve teknik detaylarla cevaplıyoruz. Bu rehber, fabrika yöneticilerinden teknik personellere kadar herkes için hazırlanmıştır.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <main class="py-5" id="faq-content">
+    <div class="container">
+      <!-- 1. BAKIM -->
+      <section class="mb-5" data-aos="fade-up">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title text-center mb-5">
+              <i class="fas fa-tools text-primary me-3"></i>
+              Brülör Bakımı
+            </h2>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="accordion glass-card p-4" id="accordionBakim">
+              <!-- S1 -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#bakim1">
+                    <i class="fas fa-wrench text-primary me-3"></i>
+                    Brülör bakımını neden düzenli olarak yapmalıyız?
+                  </button>
+                </h3>
+                <div id="bakim1" class="accordion-collapse collapse show" data-bs-parent="#accordionBakim">
+                  <div class="accordion-body">
+                    <p>Brülörlerin düzenli bakımı, cihazın verimli ve güvenli çalışması için kritik önem taşır. Bakımı ihmal edilen bir brülör zamanla verim kaybına uğrar, daha fazla yakıt tüketir ve arıza riski yükselir.</p>
+                    <div class="alert alert-info">
+                      <strong>Faydaları:</strong> Enerji tasarrufu, arıza riskinin azalması, işletme maliyetlerinin düşmesi ve cihaz ömrünün uzaması.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- S2 -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#bakim2">
+                    <i class="fas fa-calendar-alt text-success me-3"></i>
+                    Brülör bakımı ne sıklıkla yapılmalı?
+                  </button>
+                </h3>
+                <div id="bakim2" class="accordion-collapse collapse" data-bs-parent="#accordionBakim">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-check text-success me-2"></i><strong>Genel kullanım:</strong> Yılda en az bir kez</li>
+                      <li><i class="fas fa-check text-success me-2"></i><strong>Sürekli çalışan tesisler:</strong> 6 ayda bir</li>
+                      <li><i class="fas fa-check text-success me-2"></i><strong>Mevsimsel kullanım:</strong> Kış öncesi bakım</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- S3 -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#bakim3">
+                    <i class="fas fa-list-check text-warning me-3"></i>
+                    Brülör bakımında hangi işlemler yapılır?
+                  </button>
+                </h3>
+                <div id="bakim3" class="accordion-collapse collapse" data-bs-parent="#accordionBakim">
+                  <div class="accordion-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-broom text-primary me-2"></i>Temizlik işlemleri</li>
+                          <li><i class="fas fa-filter text-primary me-2"></i>Filtre ve fan kontrolü</li>
+                          <li><i class="fas fa-bolt text-primary me-2"></i>Ateşleme sistemi kontrolü</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-fire text-danger me-2"></i>Yakıt ve gaz ayarları</li>
+                          <li><i class="fas fa-wind text-info me-2"></i>Baca ve emisyon kontrolü</li>
+                          <li><i class="fas fa-play text-success me-2"></i>Test çalıştırması</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- S4 -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#bakim4">
+                    <i class="fas fa-user-cog text-info me-3"></i>
+                    Brülör bakımını kendim yapabilir miyim?
+                  </button>
+                </h3>
+                <div id="bakim4" class="accordion-collapse collapse" data-bs-parent="#accordionBakim">
+                  <div class="accordion-body">
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <div class="card bg-success bg-opacity-10 border-success">
+                          <div class="card-body">
+                            <h5 class="card-title text-success"><i class="fas fa-user me-2"></i>Kullanıcı Yapabilir</h5>
+                            <ul class="list-unstyled mb-0">
+                              <li><i class="fas fa-check text-success me-2"></i>Cihaz etrafının temizliği</li>
+                              <li><i class="fas fa-check text-success me-2"></i>Yakıt seviyesi kontrolü</li>
+                              <li><i class="fas fa-check text-success me-2"></i>Yüzeysel filtre temizliği</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card bg-danger bg-opacity-10 border-danger">
+                          <div class="card-body">
+                            <h5 class="card-title text-danger"><i class="fas fa-user-tie me-2"></i>Uzman Gerekli</h5>
+                            <ul class="list-unstyled mb-0">
+                              <li><i class="fas fa-times text-danger me-2"></i>Kapsamlı bakım</li>
+                              <li><i class="fas fa-times text-danger me-2"></i>Yanma ayarları</li>
+                              <li><i class="fas fa-times text-danger me-2"></i>Elektriksel kontroller</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- S5 -->
+              <div class="accordion-item border-0">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#bakim5">
+                    <i class="fas fa-shield-alt text-danger me-3"></i>
+                    Bakım sırasında güvenlik önlemleri nelerdir?
+                  </button>
+                </h3>
+                <div id="bakim5" class="accordion-collapse collapse" data-bs-parent="#accordionBakim">
+                  <div class="accordion-body">
+                    <div class="alert alert-danger">
+                      <h6><i class="fas fa-exclamation-triangle me-2"></i>Kritik Güvenlik Adımları:</h6>
+                      <ul class="mb-0">
+                        <li>Gaz ve elektrik bağlantılarını mutlaka kapatın</li>
+                        <li>Cihaz soğuyana kadar bekleyin</li>
+                        <li>Kişisel koruyucu ekipman kullanın</li>
+                        <li>Bakım sonunda kaçak testi yapın</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ENERJİ VERİMLİLİĞİ -->
+      <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title text-center mb-5">
+              <i class="fas fa-leaf text-success me-3"></i>
+              Enerji Verimliliği
+            </h2>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="accordion glass-card p-4" id="accordionEnerji">
+              <!-- Enerji verimliliği soruları... -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#enerji1">
+                    <i class="fas fa-chart-line text-success me-3"></i>
+                    Enerji verimliliğini artırmak için neler yapılabilir?
+                  </button>
+                </h3>
+                <div id="enerji1" class="accordion-collapse collapse show" data-bs-parent="#accordionEnerji">
+                  <div class="accordion-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="feature-item p-3 bg-light rounded-3">
+                          <i class="fas fa-wrench text-primary mb-2"></i>
+                          <h6>Düzenli Bakım</h6>
+                          <small class="text-muted">Temiz ve ayarlı brülör daha verimli çalışır</small>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="feature-item p-3 bg-light rounded-3">
+                          <i class="fas fa-balance-scale text-warning mb-2"></i>
+                          <h6>Doğru Hava/Yakıt Ayarı</h6>
+                          <small class="text-muted">Optimum yanma için kritik ayar</small>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="feature-item p-3 bg-light rounded-3">
+                          <i class="fas fa-sliders-h text-info mb-2"></i>
+                          <h6>Modülasyonlu Brülör</h6>
+                          <small class="text-muted">Kademesiz kapasite kontrolü</small>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="feature-item p-3 bg-light rounded-3">
+                          <i class="fas fa-robot text-success mb-2"></i>
+                          <h6>Otomasyon Sistemleri</h6>
+                          <small class="text-muted">Akıllı kontrol ve izleme</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ARIZA ÇÖZÜM -->
+      <section class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title text-center mb-5">
+              <i class="fas fa-tools text-danger me-3"></i>
+              Arıza Çözüm Yöntemleri
+            </h2>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="accordion glass-card p-4" id="accordionAriza">
+              <!-- Arıza çözüm soruları... -->
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#ariza1">
+                    <i class="fas fa-power-off text-danger me-3"></i>
+                    Brülör hiç çalışmıyorsa ne yapmalıyım?
+                  </button>
+                </h3>
+                <div id="ariza1" class="accordion-collapse collapse show" data-bs-parent="#accordionAriza">
+                  <div class="accordion-body">
+                    <div class="checklist">
+                      <h6 class="fw-bold mb-3">Kontrol Listesi:</h6>
+                      <div class="row g-2">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1">
+                            <label class="form-check-label" for="check1">Yakıt bağlantıları</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check2">
+                            <label class="form-check-label" for="check2">Elektrik bağlantıları</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check3">
+                            <label class="form-check-label" for="check3">Gaz vanaları</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check4">
+                            <label class="form-check-label" for="check4">Yakıt seviyesi</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check5">
+                            <label class="form-check-label" for="check5">Sigortalar</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check6">
+                            <label class="form-check-label" for="check6">Termostat ayarları</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-warning mt-3">
+                        <strong>Önemli:</strong> Sorun devam ederse cihazı zorlamadan teknik servis çağırın.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SEÇİM REHBERİ -->
+      <section class="mb-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title text-center mb-5">
+              <i class="fas fa-search text-primary me-3"></i>
+              Brülör Seçimi Rehberi
+            </h2>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="glass-card p-4">
+              <div class="row g-4">
+                <div class="col-lg-4">
+                  <div class="selection-card h-100 p-4 bg-primary bg-opacity-10 rounded-4">
+                    <i class="fas fa-fire text-primary fs-1 mb-3"></i>
+                    <h5 class="fw-bold mb-3">Yakıt Tipi</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-check text-success me-2"></i>Doğalgaz</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Mazot/Fuel-oil</li>
+                      <li><i class="fas fa-check text-success me-2"></i>LPG</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Çift yakıtlı</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="selection-card h-100 p-4 bg-success bg-opacity-10 rounded-4">
+                    <i class="fas fa-tachometer-alt text-success fs-1 mb-3"></i>
+                    <h5 class="fw-bold mb-3">Kapasite</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-check text-success me-2"></i>Sistem ihtiyacı</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Modülasyon aralığı</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Gelecek planlar</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Verimlilik</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="selection-card h-100 p-4 bg-warning bg-opacity-10 rounded-4">
+                    <i class="fas fa-cogs text-warning fs-1 mb-3"></i>
+                    <h5 class="fw-bold mb-3">Kontrol Tipi</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-check text-success me-2"></i>Tek kademeli</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Çift kademeli</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Modülasyonlu</li>
+                      <li><i class="fas fa-check text-success me-2"></i>Dijital kontrol</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="cta-section py-5 position-relative overflow-hidden">
+    <div class="cta-bg position-absolute w-100 h-100"></div>
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <div class="cta-content text-white">
+            <h2 class="h3 fw-bold mb-3">Brülör Sorunlarınız için Uzman Desteği</h2>
+            <p class="lead mb-4">Teknik sorularınız mı var? Profesyonel brülör uzmanlarımız sizin için burada. Hemen iletişime geçin!</p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-light btn-lg me-3">
+                <i class="fas fa-headset me-2"></i>Teknik Destek Al
+              </a>
+              <a href="tel:+902125551234" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-phone me-2"></i>Hemen Arayın
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  
+  
+  <script src="js/components.js" defer></script><!-- Main Application -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+</body>
+</html>
+
+
+

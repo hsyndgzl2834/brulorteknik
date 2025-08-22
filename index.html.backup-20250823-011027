@@ -1,0 +1,770 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <!-- 🎯 SEO Meta Tags -->
+  <title>🚀 Brülör Teknik | İstanbul Endüstriyel Brülör Servisi 7/24 | 20+ Yıl Deneyim</title>
+  <meta name="description" content="🚀 İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi | ⚡ 7/24 acil servis ⚡ Bakım & onarım ⚡ Montaj & kurulum ⚡ Otomasyon sistemleri">
+  <meta name="keywords" content="brülör servisi istanbul, endüstriyel brülör bakım, brülör arıza giderme, brülör montaj, otomasyon sistemleri, brülör teknik servis">
+  
+  <!-- 📝 Meta Info -->
+  <meta name="author" content="Brülör Teknik Hizmetler">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="language" content="Turkish">
+  
+  <!-- 🔗 Canonical & Icons -->
+  <link rel="canonical" href="https://brulorteknik.com/">
+  
+  <!-- 🎨 Favicon Set - All Sizes -->
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+  <link rel="icon" href="images/logo.webp" sizes="32x32" type="image/webp">
+  <link rel="icon" href="images/logo.webp" sizes="192x192" type="image/webp">
+  <link rel="apple-touch-icon" href="images/logo.webp" sizes="180x180">
+  <link rel="apple-touch-icon-precomposed" href="images/logo.webp">
+  
+  <!-- 🤖 Android/Chrome -->
+  <link rel="shortcut icon" href="images/logo.webp">
+  <link rel="icon" href="images/logo.webp" sizes="512x512" type="image/webp">
+  
+  <!-- 🍎 iOS Safari -->
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik">
+  <link rel="mask-icon" href="images/logo.webp" color="#0d1b2a">
+  
+  <!-- 🪟 Windows -->
+  <meta name="msapplication-TileImage" content="images/logo.webp">
+  <meta name="msapplication-square150x150logo" content="images/logo.webp">
+  <meta name="msapplication-square310x310logo" content="images/logo.webp">
+  
+  <!-- 🎨 Theme -->
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="msapplication-TileColor" content="#0d1b2a">
+  
+  <!-- 📱 PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik">
+  
+  <!-- 📊 Enhanced Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="🚀 Brülör Teknik | İstanbul Endüstriyel Brülör Servisi 7/24">
+  <meta property="og:description" content="🚀 İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi | ⚡ 7/24 acil servis ⚡ Bakım & onarım">
+  <meta property="og:image" content="https://brulorteknik.com/images/hero1.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brülör Teknik - Endüstriyel Brülör Servisi">
+  <meta property="og:url" content="https://brulorteknik.com/">
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- 🏢 Business Info -->
+  <meta property="business:contact_data:street_address" content="Kağıthane">
+  <meta property="business:contact_data:locality" content="İstanbul">
+  <meta property="business:contact_data:postal_code" content="34000">
+  <meta property="business:contact_data:country_name" content="Türkiye">
+  <meta property="business:contact_data:phone_number" content="+905316250694">
+  <meta property="business:contact_data:website" content="https://brulorteknik.com">
+  
+  <!-- 🎯 Additional SEO -->
+  <meta name="rating" content="5.0">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="target" content="all">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="audience" content="business owners, factory managers, maintenance teams">
+  <meta name="revisit-after" content="1 days">
+  <meta name="expires" content="never">
+  
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🚀 Brülör Teknik | İstanbul Endüstriyel Brülör Servisi 7/24">
+  <meta name="twitter:description" content="🚀 İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi">
+  <meta name="twitter:image" content="https://brulorteknik.com/images/hero1.webp">
+  
+  <!-- 🌍 Geographic -->
+  <meta name="geo.region" content="TR-34">
+  <meta name="geo.placename" content="İstanbul">
+  <meta name="geo.position" content="41.0082;28.9784">
+  
+  <!-- 🔍 JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Brülör Teknik Hizmetler",
+    "description": "İstanbul'da 20+ yıl deneyimle endüstriyel brülör servisi",
+    "url": "https://brulorteknik.com/",
+    "telephone": "+905316250694",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kağıthane",
+      "addressLocality": "İstanbul",
+      "postalCode": "34000",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0082,
+      "longitude": 28.9784
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.facebook.com/brulorteknik",
+      "https://www.instagram.com/brulorteknik"
+    ]
+  }
+  </script>
+  
+  <!-- 🔍 Search Integration -->
+  <link rel="search" type="application/opensearchdescription+xml" title="Brülör Teknik Arama" href="opensearch.xml">
+  
+  <!-- ⚡ Performance Optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <!-- 🎨 Critical CSS -->
+  <style>
+    :root {
+      --primary: #667eea;
+      --secondary: #764ba2;
+      --dark: #2d3748;
+      --white: #ffffff;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    html::-webkit-scrollbar {
+      display: none;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      overflow: visible;
+    }
+    
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: opacity 0.5s ease;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .loading-screen.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: var(--transition);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(31, 38, 135, 0.4);
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .hero-section {
+        padding: 100px 0 60px;
+        text-align: center;
+      }
+    }
+  </style>
+  
+  <!-- 📚 External Libraries (Async) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >`n  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" >
+  
+  <!-- 🎨 Custom CSS Modules -->
+  <!-- Fallback for disabled JavaScript -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">`n  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+  <!-- ⏳ Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- 📊 Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLV53JFE6K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLV53JFE6K');
+  </script>
+  
+  <!-- 🧭 Navigation -->
+  <div id="navbar-container"></div>
+  
+  <!-- 🦸 Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-content" data-aos="fade-right">
+            <h1 class="hero-title">🚀 Endüstriyel Brülör Sistemleri</h1>
+            <p class="hero-subtitle">⚡ 20+ yıl deneyimle İstanbul'da profesyonel brülör servisi. 7/24 acil servis, bakım, arıza giderme ve montaj hizmetleri.</p>
+            
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+              <a href="tel:+905316250694" class="btn btn-primary me-3">
+                <i class="fas fa-phone me-2"></i>Hemen Ara
+              </a>
+              <a href="contact.html" class="btn btn-outline-light">
+                <i class="fas fa-envelope me-2"></i>Teklif Al
+              </a>
+            </div>
+            
+            <!-- Hero Stats -->
+            <div class="row mt-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="col-4">
+                <div class="stat-item text-center">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Yıl Deneyim</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-item text-center">
+                  <div class="stat-number">7/24</div>
+                  <div class="stat-label">Acil Servis</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-item text-center">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">Mutlu Müşteri</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+            <picture>
+              <source media="(max-width: 768px)" srcset="images/hero1-400.webp">
+              <source media="(max-width: 1200px)" srcset="images/hero1-800.webp">
+              <img src="images/hero1-1600.webp" alt="Endüstriyel Brülör Servisi" class="img-fluid rounded shadow-lg">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🏢 Hizmetler Section -->
+  <section class="services-section py-5" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title" data-aos="fade-up">🔧 Hizmetlerimiz</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Profesyonel endüstriyel brülör hizmetleri</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h5 class="service-title">Brülör Servisi</h5>
+            <p class="service-desc">Tüm marka brülörlerin bakım ve onarım hizmetleri</p>
+            <a href="hizmet-brulor-servisi.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h5 class="service-title">Bakım & Onarım</h5>
+            <p class="service-desc">Preventif bakım ve arıza giderme hizmetleri</p>
+            <a href="hizmet1.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h5 class="service-title">Montaj & Kurulum</h5>
+            <p class="service-desc">Yeni sistem kurulumu ve montaj hizmetleri</p>
+            <a href="hizmet2.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h5 class="service-title">7/24 Acil Servis</h5>
+            <p class="service-desc">Acil durumlarda hızlı müdahale hizmeti</p>
+            <a href="hizmet4.html" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🏆 Neden Bizi Seçmelisiniz Section -->
+  <section class="why-choose-us-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title" data-aos="fade-up">🏆 Neden Brülör Teknik?</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">İstanbul'un en güvenilir brülör servisi olmamızın nedenleri</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h5 class="feature-title">20+ Yıl Deneyim</h5>
+            <p class="feature-desc">İstanbul'da 2000 yılından beri endüstriyel brülör sektöründe hizmet veriyoruz. Uzman ekibimizle binlerce başarılı proje tamamladık.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h5 class="feature-title">7/24 Hızlı Servis</h5>
+            <p class="feature-desc">Acil durumlar için 7 gün 24 saat hizmet veriyoruz. Arıza durumunda ortalama 2 saat içinde yerinde müdahale garantisi.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5 class="feature-title">Garantili Hizmet</h5>
+            <p class="feature-desc">Tüm işçilik ve parçalarımız için 2 yıl garanti veriyoruz. Müşteri memnuniyeti bizim önceliğimizdir.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h5 class="feature-title">Profesyonel Ekip</h5>
+            <p class="feature-desc">Sertifikalı teknisyenlerimiz sürekli eğitim alarak en güncel teknolojileri takip eder ve uygular.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h5 class="feature-title">Uygun Fiyat</h5>
+            <p class="feature-desc">Kaliteli hizmeti en uygun fiyatlarla sunuyoruz. Ücretsiz keşif ve detaylı fiyat teklifi alın.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h5 class="feature-title">İstanbul Geneli</h5>
+            <p class="feature-desc">İstanbul'un tüm ilçelerinde hizmet veriyoruz. Anadolu ve Avrupa yakası için hızlı ulaşım ağımız mevcuttur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🔥 Ürünler Section -->
+  <section class="products-section py-5" style="background: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title" data-aos="fade-up">🔥 Brülör Ürünlerimiz</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">En kaliteli brülör sistemleri ve yedek parçalar</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/product1.webp" alt="Monoblok Brülör" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Monoblok Brülör</h5>
+              <p class="product-desc">Tek parça yapısıyla kolay montaj ve bakım imkanı sunan güvenilir brülör sistemleri.</p>
+              <a href="monoblok.html" class="btn btn-outline-primary">Detaylar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-image">
+              <img src="images/product22.webp" alt="Duoblok Brülör" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Duoblok Brülör</h5>
+              <p class="product-desc">İki kademeli yakma sistemi ile yüksek verimlilik ve enerji tasarrufu sağlayan brülörler.</p>
+              <a href="duoblok.html" class="btn btn-outline-primary">Detaylar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-image">
+              <img src="images/product33.webp" alt="Gaz Basınç Regülatörü" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Gaz Basınç Regülatörü</h5>
+              <p class="product-desc">Güvenli gaz beslemesi için hassas basınç kontrolü yapan regülatör sistemleri.</p>
+              <a href="gaz-basinç-regulatoru.html" class="btn btn-outline-primary">Detaylar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <a href="products.html" class="btn btn-primary btn-lg" data-aos="fade-up">
+            <i class="fas fa-box me-2"></i>Tüm Ürünleri Görüntüle
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 📊 İstatistikler Section -->
+  <section class="stats-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title text-white" data-aos="fade-up">📊 Rakamlarla Brülör Teknik</h2>
+          <p class="section-subtitle text-white-50" data-aos="fade-up" data-aos-delay="100">Başarılarımızı gösteren önemli rakamlar</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Stat 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Mutlu Müşteri</div>
+          </div>
+        </div>
+        
+        <!-- Stat 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card text-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Tamamlanan Proje</div>
+          </div>
+        </div>
+        
+        <!-- Stat 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card text-center" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-number">2 Saat</div>
+            <div class="stat-label">Ortalama Müdahale</div>
+          </div>
+        </div>
+        
+        <!-- Stat 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card text-center" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Müşteri Memnuniyeti</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 💬 Müşteri Yorumları Section -->
+  <section class="testimonials-section py-5" style="background: #f8f9fa;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title" data-aos="fade-up">💬 Müşteri Yorumları</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Müşterilerimizin bizim hakkımızdaki görüşleri</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-content">
+              <div class="stars mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text">"Fabrikamızdaki brülör arızası için aradığımızda hemen müdahale ettiler. Çok profesyonel ve güvenilir bir ekip. Kesinlikle tavsiye ederim."</p>
+              <div class="testimonial-author">
+                <strong>Mehmet Özkan</strong>
+                <small class="text-muted">- Tekstil Fabrikası Sahibi</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-content">
+              <div class="stars mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text">"20 yıldır çalıştığımız en güvenilir brülör servisi. Bakım hizmetleri sayesinde hiç arıza yaşamıyoruz. Fiyatları da çok uygun."</p>
+              <div class="testimonial-author">
+                <strong>Ayşe Demir</strong>
+                <small class="text-muted">- Üretim Müdürü</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-content">
+              <div class="stars mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text">"Acil durumda gece saatlerinde bile hemen gelip sorunu çözdüler. Bu kadar hızlı ve etkili bir servis hiç görmedim. Teşekkürler!"</p>
+              <div class="testimonial-author">
+                <strong>Ali Kaya</strong>
+                <small class="text-muted">- Hastane Teknik Müdürü</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 📞 İletişim CTA -->
+  <section class="cta-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="cta-card text-center" data-aos="zoom-in">
+            <h3 class="cta-title">Acil Servis İhtiyacınız mı Var?</h3>
+            <p class="cta-subtitle">7/24 hizmetinizdeyiz. Hemen arayın, anında çözüm bulalım!</p>
+            <div class="cta-actions">
+              <a href="tel:+905316250694" class="btn btn-primary btn-lg me-3">
+                <i class="fas fa-phone me-2"></i>+90 531 625 0694
+              </a>
+              <a href="https://wa.me/905316250694" class="btn btn-success btn-lg" target="_blank">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🦶 Footer Container -->
+  <div id="footer-container"></div>
+  
+  <!-- 📚 JavaScript Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="js/modules/navbar.js" defer></script>
+  <script src="js/components.js" defer></script>
+  
+  <!-- Loading Screen Handler -->
+  <script>
+    // Hide loading screen when page is fully loaded
+    window.addEventListener('load', function() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      if (loadingScreen) {
+        setTimeout(() => {
+          loadingScreen.classList.add('fade-out');
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 300);
+      }
+    });
+  </script>
+  
+  <!-- 🔧 Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('✅ Service Worker registered');
+          })
+          .catch(error => {
+            console.log('❌ Service Worker registration failed');
+          });
+      });
+    }
+  </script>
+  
+</body>
+</html>
+
+
+

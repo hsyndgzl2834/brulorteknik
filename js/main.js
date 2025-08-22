@@ -34,6 +34,7 @@ window.App = (function() {
       initPerformanceOptimizations();
       initAccessibility();
       initCacheManagement();
+      loadModules();
       
       // Mark as initialized
       state.isInitialized = true;
@@ -41,6 +42,17 @@ window.App = (function() {
       console.log('✅ Ana uygulama başarıyla başlatıldı');
     } catch (error) {
       console.error('❌ Ana uygulama başlatılırken hata:', error);
+    }
+  }
+
+  /**
+   * Load and initialize modules
+   */
+  function loadModules() {
+    // Initialize navbar module if available
+    if (window.Navbar && typeof window.Navbar.init === 'function') {
+      window.Navbar.init();
+      console.log('✅ Navbar modülü yüklendi');
     }
   }
 

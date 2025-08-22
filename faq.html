@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8"/>
@@ -25,12 +25,10 @@
 
   <!-- CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>`n  <link rel="stylesheet" href="css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <!-- Modular CSS System -->
-  <link rel="stylesheet" href="css/main.css">
-  
   <style>
     /* Modern FAQ Page Styles */
     :root {
@@ -767,35 +765,11 @@
   <!-- Modular JavaScript System -->
   <script src="js/main.js"></script>
   <script src="js/modules/navbar.js"></script>
-  
 
-  <script>
+  <script src="js/components.js" defer></script><script>
     // Load navbar and footer
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-          // Initialize navbar after loading
-          setTimeout(() => {
-            if (window.Navbar) {
-              window.Navbar.init();
-            }
-          }, 100);
-        })
-        .catch(error => console.error('Navbar yüklenirken hata:', error));
-      // Load footer
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-          // Footer modülü başlatılacaksa burada eklenebilir
-        })
-        .catch(error => console.error('Footer yüklenirken hata:', error));
-    });
-    
-    // Simple FAQ Toggle Function
+
+    // Simple FAQ Toggle Functio
     function toggleAnswer(element) {
       const faqItem = element.parentElement;
       const answer = faqItem.querySelector('.faq-answer');
@@ -843,7 +817,7 @@
       }
     }
     
-    // FAQ Search Function
+    // FAQ Search Functio
     function searchFAQ() {
       const searchInput = document.getElementById('faqSearch');
       const searchTerm = searchInput.value.toLowerCase().trim();

@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hizmetlerimiz | Brülör Teknik</title>
+  <meta name="description" content="Endüstriyel brülör sistemlerinde yıllık bakım, kurulum, otomasyon, enerji verimliliği ve yedek parça temini dahil tüm hizmetlerimizi inceleyin." />
+  <meta name="keywords" content="brülör servis, brülör kurulumu, otomasyon, endüstriyel bakım, enerji verimliliği, yedek parça" />
+  <meta name="author" content="Brülör Teknik Hizmetler" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.brulorteknik.com/hizmetler.html" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Brülör Teknik | Hizmetlerimiz" />
+  <meta property="og:description" content="Endüstriyel brülör sistemlerinde profesyonel hizmetlerimiz hakkında detaylı bilgi alın." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/logo1.webp" />
+  <meta property="og:url" content="https://www.brulorteknik.com/hizmetler.html" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brülör Teknik | Hizmetlerimiz" />
+  <meta name="twitter:description" content="Endüstriyel brülör sistemlerinde profesyonel hizmetlerimiz hakkında detaylı bilgi alın." />
+  <meta name="twitter:image" content="https://www.brulorteknik.com/images/logo1.webp" />
+  
+  <!-- CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Brülör Teknik Hizmetler",
+    "url": "https://www.brulorteknik.com/",
+    "logo": "https://www.brulorteknik.com/images/logo1.webp",
+    "sameAs": [
+      "https://www.facebook.com/brulorteknik",
+      "https://www.linkedin.com/company/brulorteknik"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+90-531-625-0694",
+      "contactType": "customer service",
+      "areaServed": "TR",
+      "availableLanguage": ["Turkish", "English"]
+    }]
+  }
+  </script>
+  
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    
+    /* Layout Structure */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .page-content {
+      flex: 1;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 80px;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .page-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      text-align: center;
+    }
+    
+    .page-subtitle {
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 0;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 100px 0 400px; /* Much more bottom padding to prevent footer overlap */
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      position: relative;
+      margin-bottom: 200px; /* Much more margin */
+      min-height: 100vh; /* Ensure minimum height */
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Service Cards */
+    .service-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.5rem;
+      height: 100%;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: rgba(102, 126, 234, 0.2);
+    }
+    
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      color: white;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+    
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    .service-card p {
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+    
+    .service-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .service-features li {
+      padding: 0.75rem 0;
+      color: #64748b;
+      position: relative;
+      padding-left: 2rem;
+      font-size: 0.95rem;
+    }
+    
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    .service-link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #667eea;
+      border-radius: 12px;
+      background: transparent;
+    }
+    
+    .service-link:hover {
+      color: #ffffff;
+      background: #667eea;
+      transform: translateX(5px);
+    }
+    
+    /* Footer Container */
+    #footer-container {
+      margin-top: auto;
+      position: static;
+      z-index: 1;
+      clear: both;
+      padding-top: 100px; /* Much more top padding */
+      margin-top: 100px; /* Additional margin from content */
+    }
+    
+    /* Mobile Footer Override */
+    @media (max-width: 768px) {
+      #footer-container {
+        padding-top: 150px;
+        margin-top: 150px;
+      }
+      
+      .footer {
+        position: static !important;
+        margin-top: 150px !important;
+      }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 100px 0 60px;
+        margin-top: 70px;
+      }
+      
+      .services-section {
+        padding: 80px 0 500px; /* Much more padding for mobile */
+        margin-bottom: 200px;
+        min-height: 100vh;
+      }
+      
+      .service-card {
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-section {
+        margin-top: 90px;
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .hero-section {
+        margin-top: 100px;
+      }
+      
+      .services-section {
+        padding: 100px 0 450px; /* Much more padding for desktop */
+        margin-bottom: 250px;
+        min-height: 100vh;
+      }
+    }
+    
+    /* Animation Classes */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    
+    .fade-up.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Loading States */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    
+    /* Accessibility */
+    .service-link:focus {
+      outline: 2px solid #667eea;
+      outline-offset: 2px;
+    }
+    
+    /* Footer Override */
+    .footer {
+      position: static !important;
+      margin-top: 100px !important;
+    }
+    
+    /* Print Styles */
+    @media print {
+      .hero-section {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      
+      .service-card {
+        box-shadow: none !important;
+        border: 1px solid #000000 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="page-wrapper">
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  
+  <main class="page-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h1 class="page-title" data-aos="fade-up">Hizmetlerimiz</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Endüstriyel brülör sistemlerinde <strong>kurulum</strong>, <strong>bakım</strong>, <strong>otomasyon</strong> ve <strong>yedek parça</strong> dahil tüm ihtiyaçlarınızda yanınızdayız.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Profesyonel Hizmetlerimiz</h2>
+          <p class="section-subtitle">20+ yıllık deneyimimizle endüstriyel brülör sistemleriniz için kapsamlı çözümler sunuyoruz</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Periyodik Bakım -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <h3>Periyodik Bakım</h3>
+              <p>Düzenli bakım ve kontrol hizmetleri ile brülör sistemlerinizin verimliliğini artırıyoruz.</p>
+              <ul class="service-features">
+                <li>Yıllık periyodik kontroller</li>
+                <li>Yakıt sistemi optimizasyonu</li>
+                <li>Verimlilik artırma</li>
+                <li>Detaylı raporlama</li>
+              </ul>
+              <a href="hizmet1.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Brülör Servisi -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h3>Brülör Servisi</h3>
+              <p>7/24 acil servis ile brülör arızalarınızı hızlı ve etkili şekilde çözüyoruz.</p>
+              <ul class="service-features">
+                <li>7/24 acil servis</li>
+                <li>Hızlı müdahale</li>
+                <li>Uzman teknik kadro</li>
+                <li>Garantili hizmet</li>
+              </ul>
+              <a href="hizmet-brulor-servisi.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Arıza Giderme -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-bug"></i>
+              </div>
+              <h3>Arıza Giderme</h3>
+              <p>Brülör sistemlerinizdeki arızaları tespit edip hızlı çözümler sunuyoruz.</p>
+              <ul class="service-features">
+                <li>Arıza tespiti</li>
+                <li>Hızlı çözüm</li>
+                <li>Yedek parça değişimi</li>
+                <li>Test ve kontrol</li>
+              </ul>
+              <a href="hizmet2.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- İlk Devreye Alma -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <h3>İlk Devreye Alma</h3>
+              <p>Yeni brülör sistemlerinin ilk devreye alma işlemlerini profesyonel şekilde gerçekleştiriyoruz.</p>
+              <ul class="service-features">
+                <li>Sistem kurulumu</li>
+                <li>İlk çalıştırma</li>
+                <li>Test ve ayarlama</li>
+                <li>Personel eğitimi</li>
+              </ul>
+              <a href="hizmet3.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Enerji Verimliliği -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Enerji Verimliliği</h3>
+              <p>Brülör sistemlerinizin enerji verimliliğini analiz edip optimizasyon önerileri sunuyoruz.</p>
+              <ul class="service-features">
+                <li>Verimlilik analizi</li>
+                <li>Enerji tasarrufu</li>
+                <li>Maliyet optimizasyonu</li>
+                <li>Çevre dostu çözümler</li>
+              </ul>
+              <a href="hizmet4.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Otomasyon Sistemleri -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>Otomasyon Sistemleri</h3>
+              <p>Brülör sistemleriniz için modern otomasyon çözümleri geliştiriyoruz.</p>
+              <ul class="service-features">
+                <li>PLC programlama</li>
+                <li>SCADA sistemleri</li>
+                <li>Uzaktan izleme</li>
+                <li>Akıllı kontrol</li>
+              </ul>
+              <a href="hizmet5.html" class="service-link">Detayları İncele <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  
+  <!-- Load JavaScript Modules -->
+  <script src="js/modules/navbar.js" defer></script>
+  <script src="js/components.js" defer></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta Tags -->
+  <title>⚙️ Valf Aktüatörü | Endüstriyel Otomasyon Çözümleri - Brülör Teknik Hizmetler</title>
+  <meta name="title" content="⚙️ Valf Aktüatörü | Endüstriyel Otomasyon Çözümleri - Brülör Teknik Hizmetler" />
+  <meta name="description" content="🚀 Valf Aktüatörü: Endüstriyel gaz ve sıvı sistemlerinde valf kontrolünü uzaktan sağlayan elektrikli/pnömatik tahrikli hareket ettiriciler. Yüksek tork, hassas konumlandırma, çeşitli kontrol seçenekleri."/>
+  <meta name="keywords" content="valf aktüatörü, elektrikli aktüatör, pnömatik aktüatör, endüstriyel otomasyon, valf kontrolü, motorlu valf, İstanbul, Türkiye, uzaktan kontrol"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="TR" />
+  <meta name="geo.placename" content="İstanbul, Türkiye" />
+  <meta name="geo.position" content="41.0082;28.9784" />
+  <meta name="ICBM" content="41.0082, 28.9784" />
+  
+  <!-- Business Contact Data -->
+  <meta name="business:contact_data:street_address" content="Endüstriyel Bölge" />
+  <meta name="business:contact_data:locality" content="İstanbul" />
+  <meta name="business:contact_data:postal_code" content="34000" />
+  <meta name="business:contact_data:country_name" content="Türkiye" />
+  <meta name="business:contact_data:phone_number" content="+90 531 625 06 94" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/valf-aktuatoru.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/valf-aktuatoru.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/valve-actuator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.brulorteknik.com/valf-aktuatoru.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://www.brulorteknik.com/valf-aktuatoru.html" />
+  <meta property="og:title" content="⚙️ Valf Aktüatörü | Endüstriyel Otomasyon Çözümleri" />
+  <meta property="og:description" content="🚀 Endüstriyel gaz ve sıvı sistemlerinde valf kontrolünü uzaktan sağlayan elektrikli/pnömatik tahrikli hareket ettiriciler. Yüksek tork, hassas konumlandırma." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/product88.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Valf Aktüatörü - Endüstriyel Otomasyon Çözümleri" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" />
+  
+  <!-- X (Twitter) Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@brulorteknik" />
+  <meta name="twitter:creator" content="@brulorteknik" />
+  <meta name="twitter:url" content="https://www.brulorteknik.com/valf-aktuatoru.html" />
+  <meta name="twitter:title" content="⚙️ Valf Aktüatörü | Endüstriyel Otomasyon Çözümleri" />
+  <meta name="twitter:description" content="🚀 Endüstriyel gaz ve sıvı sistemlerinde valf kontrolünü uzaktan sağlayan elektrikli/pnömatik tahrikli hareket ettiriciler. Yüksek tork, hassas konumlandırma." />
+  <meta name="twitter:image" content="https://www.brulorteknik.com/images/product88.webp" />
+  <meta name="twitter:image:alt" content="Valf Aktüatörü - Endüstriyel Otomasyon Çözümleri" />
+  
+  <!-- LinkedIn -->
+  <meta property="og:image:secure_url" content="https://www.brulorteknik.com/images/product88.webp" />
+  <meta name="linkedin:owner" content="brulor-teknik-hizmetler" />
+  
+  <!-- Pinterest -->
+  <meta name="pinterest-rich-pin" content="true" />
+  <meta property="og:see_also" content="https://www.brulorteknik.com/products.html" />
+  
+  <!-- WhatsApp -->
+  <meta property="og:image:type" content="image/webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#667eea" />
+  <meta name="msapplication-TileColor" content="#667eea" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Brülör Teknik" />
+  <meta name="application-name" content="Brülör Teknik Hizmetler" />
+  <meta name="msapplication-tooltip" content="Brülör Teknik Hizmetler - Valf Aktüatörü" />
+  <meta name="msapplication-starturl" content="/" />
+  <meta name="format-detection" content="telephone=yes" />
+  
+  <!-- Icons & Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="images/favicon.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  
+  <!-- Preload kritik kaynaklar -->
+  <link rel="preload" href="images/product88.webp" as="image" />
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  
+  <!-- Modular CSS System -->
+  <!-- Navbar CSS - Doğrudan yükle -->
+  
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --primary-color: #667eea;
+      --secondary-color: #764ba2;
+      --success-color: #28a745;
+      --info-color: #17a2b8;
+      --warning-color: #ffc107;
+      --danger-color: #dc3545;
+      --light-color: #f8f9fa;
+      --dark-color: #343a40;
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-dark: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+      --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+      --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    
+    .container, .container-fluid, .row, .content-section, .card, .universal-card {
+      overflow: visible !important;
+      box-sizing: border-box;
+    }
+
+    .gradient-bg {
+      background: var(--gradient-primary);
+      min-height: 100vh;
+    }
+
+    .universal-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: var(--transition);
+    }
+
+    .universal-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .section-title {
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
+
+    .feature-item:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateX(5px);
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .feature-content h4 {
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-content p {
+      color: #6c757d;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .btn-primary-custom {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: white;
+    }
+
+    .breadcrumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .breadcrumb-item a {
+      color: rgba(255, 255, 255, 0.8) !important;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .breadcrumb-item a:hover {
+      color: white !important;
+    }
+
+    .sticky-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .sticky-whatsapp a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .sticky-whatsapp a:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-lg);
+      color: white;
+    }
+
+    .sticky-whatsapp i {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-whatsapp .whatsapp-text {
+        display: none;
+      }
+      
+      .sticky-whatsapp a {
+        padding: 12px;
+        border-radius: 50%;
+      }
+    }
+  </style>
+
+  <!-- Schema.org Product mikro veri -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Valf Aktüatörü",
+    "image": [
+      "https://www.brulorteknik.com/images/product88.webp"
+    ],
+    "description": "Endüstriyel gaz ve sıvı sistemlerinde valf kontrolünü uzaktan sağlayan elektrikli/pnömatik tahrikli hareket ettiriciler. Yüksek tork kapasitesi ve hassas konumlandırma özellikli.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Brülör Teknik Hizmetler"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Brülör Teknik Hizmetler",
+      "url": "https://www.brulorteknik.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.brulorteknik.com/valf-aktuatoru.html",
+      "priceCurrency": "TRY",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "name": "Brülör Teknik Hizmetler"
+      }
+    },
+    "category": "Endüstriyel Otomasyon Ekipmanları",
+    "sku": "VA200-EX",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Kontrol Tipi",
+        "value": "Elektrikli ve Pnömatik"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Tork Kapasitesi",
+        "value": "Yüksek tork çıkışı"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Konumlandırma",
+        "value": "Hassas konumlandırma"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="gradient-bg">
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- Breadcrumb & Back Button -->
+  <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-white-50">🏠 Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="products.html" class="text-white-50">📦 Ürünler</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">⚙️ Valf Aktüatörü</li>
+      </ol>
+    </nav>
+    <a href="products.html" class="btn btn-outline-light mb-4">
+      <i class="fas fa-arrow-left me-2"></i>📦 Ürünlerimize Geri Dön
+    </a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-section">
+    <div class="container">
+      <div class="row">
+        <!-- ÜRÜN AÇIKLAMA KARTI -->
+        <div class="col-lg-8 mb-4" data-aos="fade-up">
+          <div class="universal-card">
+            <div class="card-body">
+              <h1 class="section-title">
+                <i class="fas fa-cogs text-primary me-2"></i>
+                ⚙️ Valf Aktüatörü
+              </h1>
+              <p class="lead mb-4">
+                🚀 Endüstriyel gaz ve sıvı sistemlerinde valf kontrolünü uzaktan sağlayan elektrikli/pnömatik tahrikli hareket ettiriciler.
+              </p>
+              <p class="mb-4">
+                Valf aktüatörleri, endüstriyel otomasyon sistemlerinde valflerin uzaktan kontrolünü sağlayan kritik ekipmanlardır. Elektrikli ve pnömatik seçenekleri ile yüksek tork kapasitesi, hassas konumlandırma ve güvenilir çalışma özellikleri sunar.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="h5 mb-3"><i class="fas fa-check-circle text-success me-2"></i>✅ Ana Özellikler</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>⚡ Elektrikli ve pnömatik seçenekler</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>🔧 Yüksek tork kapasitesi</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>🎯 Hassas konumlandırma</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>🛡️ Güvenilir çalışma</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="h5 mb-3"><i class="fas fa-tools text-info me-2"></i>⚡ Avantajlar</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>📱 Uzaktan kontrol</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>⚙️ Otomatik çalışma</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>💰 Enerji tasarrufu</li>
+                    <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>🔧 Kolay bakım</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ÜRÜN GÖRSELİ -->
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="universal-card">
+            <div class="card-body text-center">
+              <img src="images/product88.webp"
+                   class="img-fluid rounded-3 shadow"
+                   loading="lazy"
+                   width="400" height="320"
+                   alt="Valf Aktüatörü | Brülör Teknik"
+                   style="max-width: 100%; height: auto;">
+              <h4 class="mt-3 mb-2">⚙️ Valf Aktüatörü</h4>
+              <p class="text-muted small">🚀 Endüstriyel Otomasyon Çözümü</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEKNİK ÖZELLİKLER -->
+      <div class="row mb-5">
+        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="universal-card">
+            <div class="card-body">
+              <h2 class="section-title">
+                <i class="fas fa-cogs text-info me-2"></i>
+                ⚙️ Teknik Özellikler ve Avantajlar
+              </h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="feature-item mb-4">
+                    <div class="feature-icon">
+                      <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h4>⚡ Elektrikli Aktüatör</h4>
+                      <p>24V DC veya 230V AC elektrik beslemesi ile hassas kontrol ve yüksek tork çıkışı.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item mb-4">
+                    <div class="feature-icon">
+                      <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h4>💨 Pnömatik Aktüatör</h4>
+                      <p>5-7 bar hava basıncı ile çalışan, patlama korumalı güvenli çözümler.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-4">
+                    <div class="feature-icon">
+                      <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h4>🎯 Hassas Kontrol</h4>
+                      <p>0-90° açı aralığında hassas konumlandırma ve geri bildirim sistemi.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item mb-4">
+                    <div class="feature-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h4>🛡️ Güvenlik Özellikleri</h4>
+                      <p>IP67 koruma sınıfı, aşırı yük koruması ve acil durum pozisyonlama.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KULLANIM ALANLARI -->
+      <div class="row">
+        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="universal-card">
+            <div class="card-body">
+              <h2 class="section-title">
+                <i class="fas fa-industry text-success me-2"></i>
+                🏭 Kullanım Alanları
+              </h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>🏭 Doğalgaz ve LPG dağıtım sistemleri</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>⚙️ Endüstriyel ve ticari proses hatları</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>🧪 Kimya, petrokimya ve rafineri tesisleri</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>💧 Su arıtma ve atık su yönetimi</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>🌡️ HVAC ve otomasyon uygulamaları</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>⚡ Enerji santralleri ve kazan daireleri</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <a class="btn btn-primary-custom btn-lg" href="contact.html">
+                  <i class="fas fa-paper-plane me-2"></i>📞 Teklif Al / Bilgi İste
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, valf aktüatörü hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  
+  
+  <script src="js/components.js" defer></script><!-- Main Application -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Ensure navbar module is loaded -->
+  <script>
+    // Wait for navbar module to be available
+    function waitForNavbar() {
+      return new Promise((resolve) => {
+        if (window.Navbar && typeof window.Navbar.init === 'function') {
+          resolve();
+        } else {
+          const checkInterval = setInterval(() => {
+            if (window.Navbar && typeof window.Navbar.init === 'function') {
+              clearInterval(checkInterval);
+              resolve();
+            }
+          }, 50);
+        }
+      });
+    }
+  </script>
+  
+  <script>
+</body>
+</html>
+
+
+

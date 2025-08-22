@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8"/>
@@ -47,12 +47,10 @@
 
   <!-- Modern CSS Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>`n  <link rel="stylesheet" href="css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <!-- Modular CSS System -->
-  <link rel="stylesheet" href="css/main.css">
-
   <!-- Schema.org FAQ mikro veri -->
   <script type="application/ld+json">
   {
@@ -487,7 +485,7 @@
                 <i class="fas fa-headset me-2"></i>Teknik Destek Al
               </a>
               <a href="tel:+902125551234" class="btn btn-outline-light btn-lg">
-                <i class="fas fa-phone me-2"></i>Hemen Arayın
+                <i class="fas fa-phone me-2"></i>Hemen Arayı
               </a>
             </div>
           </div>
@@ -512,72 +510,12 @@
   <!-- Load JavaScript Modules First -->
   <script src="js/modules/core.js"></script>
   <script src="js/modules/navbar.js"></script>
-  
-  
-  <!-- Main Application -->
+
+  <script src="js/components.js" defer></script><!-- Main Application -->
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Load navbar and footer
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-          // Navbar module will auto-initialize when elements are available
-        })
-        .catch(error => console.error('Navbar yüklenirken hata:', error));
-      
-      // Load footer
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-          // Re-initialize footer after loading
-          setTimeout(() => {
-            if (window.Footer && typeof window.Footer.init === 'function') {
-              window.Footer.init();
-            } else if (window.App && window.App.modules && window.App.modules.footer) {
-              window.App.modules.footer.init();
-            } else {
-              console.log('Footer modülü henüz yüklenmedi, tekrar deneniyor...');
-              // Retry after a short delay
-              setTimeout(() => {
-                if (window.Footer && typeof window.Footer.init === 'function') {
-                  window.Footer.init();
-                }
-              }, 500);
-            }
-          }, 100);
-        })
-        .catch(error => console.error('Footer yüklenirken hata:', error));
-    });
-
-    // AOS Animasyonlarını Başlat
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100
-    });
-    // Scroll to top button (sticky-wp.html için)
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollBtn = document.getElementById('scrollTopBtn');
-      if(scrollBtn) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 300) {
-            scrollBtn.classList.add('show');
-          } else {
-            scrollBtn.classList.remove('show');
-          }
-        });
-        scrollBtn.addEventListener('click', function() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-    });
-  </script>
 </body>
 </html>
 

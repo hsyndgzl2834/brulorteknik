@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+
+  <!-- Enhanced Primary Meta Tags - MODERN SEO -->
+  <title>🔧 Brülör Arıza Tespiti ve Onarımı | 7/24 Acil Servis İstanbul | Brülör Teknik</title>
+  <meta name="description" content="⚡ Profesyonel brülör arıza tespiti ve onarım hizmeti | ✅ 7/24 acil servis ✅ Hızlı müdahale ✅ Uzman teknisyen ✅ Kaliteli yedek parça ✅ İstanbul geneli servis"/>
+  <meta name="keywords" content="brülör arızası istanbul, acil brülör servisi, brülör onarımı, 7/24 brülör servisi, brülör tamiri istanbul, arıza tespiti, endüstriyel brülör tamiri, acil teknik servis istanbul"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Geographic & Business SEO -->
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="İstanbul" />
+  <meta name="geo.position" content="41.0851;28.9784" />
+  <meta name="ICBM" content="41.0851, 28.9784" />
+  <meta name="business:contact_data:locality" content="İstanbul" />
+  <meta name="business:contact_data:region" content="Türkiye" />
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/hizmet3.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/hizmet3.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/hizmet3.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.brulorteknik.com/hizmet3.html" />
+  <meta property="og:title" content="Brülör Arıza Tespiti ve Onarımı | Brülör Teknik Hizmetler - 7/24 Acil Servis" />
+  <meta property="og:description" content="Profesyonel brülör arıza tespiti ve onarım hizmeti. 7/24 acil servis, hızlı müdahale, uzman teknisyen kadrosu ve kaliteli yedek parçalarla hizmetinizdeyiz." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/hizmet3.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/hizmet3.html" />
+  <meta property="twitter:title" content="Brülör Arıza Tespiti ve Onarımı | Brülör Teknik Hizmetler - 7/24 Acil Servis" />
+  <meta property="twitter:description" content="Profesyonel brülör arıza tespiti ve onarım hizmeti. 7/24 acil servis, hızlı müdahale, uzman teknisyen kadrosu ve kaliteli yedek parçalarla hizmetinizdeyiz." />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/hizmet3.webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="images/hizmet3.webp" as="image" />
+
+  <!-- Modern CSS Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <!-- Modular CSS System -->
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --dark-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+      --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    .hero-section {
+      background: var(--primary-gradient);
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: visible;
+      margin-top: 80px; /* Navbar için üst boşluk */
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 0,0 1000,0"/></svg>');
+      background-size: cover;
+    }
+    
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .modern-btn {
+      background: var(--secondary-gradient);
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: visible;
+    }
+    
+    .modern-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .modern-btn:hover::before {
+      left: 100%;
+    }
+    
+    .modern-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .contact-cta-section {
+      background: var(--dark-gradient);
+      border-radius: 30px 30px 0 0;
+      margin-top: 80px;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+    
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title { font-size: 2.5rem; }
+      .hero-section { padding: 60px 0 40px; }
+      .contact-cta-section { margin-top: 60px; padding: 40px 0; }
+    }
+    
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+    }
+    .container, .container-fluid, .row, .content-section, .card, .universal-card {
+      overflow: visible !important;
+      box-sizing: border-box;
+    }
+  </style>
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Brülör Arıza Tespiti ve Onarımı",
+    "provider": {
+      "@type": "Organization",
+      "name": "Brülör Teknik Hizmetler",
+      "url": "https://www.brulorteknik.com"
+    },
+    "areaServed": "Türkiye",
+    "serviceType": "Brülör Arıza Onarımı ve Acil Servis",
+    "description": "7/24 brülör arıza tespiti ve onarım hizmeti, acil servis desteği.",
+    "image": "https://www.brulorteknik.com/images/hizmet3.webp",
+    "telephone": "+90 531 625 06 94",
+    "email": "info@brulorteknik.com"
+  }
+  </script>
+</head>
+<body class="page-wrapper">
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-white" data-aos="fade-up">
+          <h1 class="page-title mb-3">Brülör Arıza Tespiti ve Onarımı</h1>
+          <p class="page-subtitle">7/24 acil servis hizmeti ile hızlı arıza tespiti ve profesyonel onarım çözümleri</p>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center" data-aos="fade-left">
+          <a href="hizmetler.html" class="btn btn-light btn-lg fw-bold rounded-pill px-4">
+            <i class="fas fa-arrow-left me-2"></i> Geri Dön
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+    <div class="container">
+      <div class="content-section">
+        <div class="row g-4">
+          <!-- Service Image -->
+          <div class="col-lg-6 mb-4" data-aos="fade-right">
+            <div class="position-relative">
+              <img
+                src="images/hizmet3.webp"
+                alt="Brülör Arıza Tespiti ve Onarımı - 7/24 acil servis hizmeti"
+                class="img-fluid rounded-4 shadow-lg"
+                style="max-width:100%;height:auto;"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Service Summary Card -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="glass-card p-4 h-100">
+              <div class="feature-icon">
+                <i class="fas fa-tools fa-2x text-white"></i>
+              </div>
+              <h2 class="section-title">Acil Servis</h2>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-clock text-danger me-3"></i>
+                    <span class="fw-semibold">7/24 Acil Müdahale</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-search text-info me-3"></i>
+                    <span class="fw-semibold">Hızlı Arıza Tespiti</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-wrench text-warning me-3"></i>
+                    <span class="fw-semibold">Profesyonel Onarım</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-shipping-fast text-success me-3"></i>
+                    <span class="fw-semibold">Hızlı Yedek Parça</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-shield-alt text-primary me-3"></i>
+                    <span class="fw-semibold">Onarım Garantisi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Content -->
+        <div class="row g-4 mt-4">
+          <div class="col-12" data-aos="fade-up">
+            <div class="glass-card p-5">
+              <h2 class="section-title">Arıza Onarım Süreci</h2>
+              <p class="lead text-muted mb-4">
+                Brülör sisteminizde yaşanan herhangi bir arızada, deneyimli teknisyen kadromuz ile 7/24 hizmetinizdeyiz. Hızlı müdahale, doğru teşhis ve kaliteli onarım ile sisteminizi en kısa sürede çalışır duruma getiriyoruz.
+              </p>
+
+              <h3 class="fw-bold mb-4">Arıza Müdahale Adımları:</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <span class="fw-bold">1</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="fw-bold">Acil Çağrı</h5>
+                      <p class="text-muted mb-0">7/24 hizmet hattımızdan arıza bildirimi alınması ve hızlı müdahale planlaması.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <span class="fw-bold">2</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="fw-bold">Hızlı Müdahale</h5>
+                      <p class="text-muted mb-0">Teknisyen ekibimizin lokasyonunuza en kısa sürede ulaşması ve ilk tetkik.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <span class="fw-bold">3</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="fw-bold">Arıza Tespiti</h5>
+                      <p class="text-muted mb-0">Modern test cihazları ile detaylı arıza analizi ve kök neden tespiti.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <span class="fw-bold">4</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="fw-bold">Onarım</h5>
+                      <p class="text-muted mb-0">Orijinal yedek parçalar ile profesyonel onarım ve sistem optimizasyonu.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <span class="fw-bold">5</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="fw-bold">Test ve Teslim</h5>
+                      <p class="text-muted mb-0">Sistem testleri, garanti belgesi ve preventif bakım önerileri ile teslim.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="row g-4 mt-4">
+          <div class="col-12" data-aos="fade-up">
+            <div class="glass-card p-5">
+              <h3 class="fw-bold mb-4">Acil Servis Avantajlarımız:</h3>
+              <div class="row g-3">
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-clock text-danger me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">7/24 Hizmet</h6>
+                      <p class="text-muted mb-0 small">Hafta sonu ve tatil günleri dahil 24 saat acil müdahale</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-tachometer-alt text-info me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Hızlı Müdahale</h6>
+                      <p class="text-muted mb-0 small">İstanbul genelinde maksimum 2 saat içinde müdahale</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-user-graduate text-warning me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Uzman Teknisyen</h6>
+                      <p class="text-muted mb-0 small">Sertifikalı ve deneyimli teknisyen kadrosu</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-tools text-success me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Tam Donanımlı</h6>
+                      <p class="text-muted mb-0 small">Modern test cihazları ve yedek parça stoğu</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-shield-alt text-primary me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Onarım Garantisi</h6>
+                      <p class="text-muted mb-0 small">Yapılan onarımlar için 6 ay garanti</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-handshake text-secondary me-3 mt-1"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Şeffaf Fiyat</h6>
+                      <p class="text-muted mb-0 small">Önceden belirtilen sabit fiyatlar, gizli maliyet yok</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Emergency Contact -->
+              <div class="mt-4 pt-4 border-top">
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                  <i class="fas fa-exclamation-triangle me-3"></i>
+                  <div>
+                    <h5 class="alert-heading fw-bold mb-1">Acil Durum?</h5>
+                    <p class="mb-0">Brülör sisteminizde acil arıza için hemen arayın: <strong>+90 531 625 06 94</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODERN CONTACT CTA SECTION -->
+  <section class="contact-cta-section position-relative">
+    <div class="container position-relative z-index-2">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8 text-white">
+          <h3 class="display-6 fw-bold mb-3" style="letter-spacing: -0.02em;">
+            Acil arıza onarımı için hemen arayın
+          </h3>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-phone-alt text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">Acil Hat</small>
+                  <a href="tel:+905316250694" class="text-white fw-semibold text-decoration-none">
+                    +90 531 625 06 94
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">E-posta</small>
+                  <a href="mailto:info@brulorteknik.com" class="text-white fw-semibold text-decoration-none">
+                    info@brulorteknik.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <div class="feature-icon me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <small class="opacity-75 d-block">Hizmet Saatleri</small>
+                  <span class="fw-semibold">7/24 Acil Servis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center">
+          <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-center justify-content-lg-end">
+            <a href="https://wa.me/905316250694" target="_blank" class="modern-btn text-white text-decoration-none d-inline-flex align-items-center justify-content-center">
+              <i class="fab fa-whatsapp me-2"></i> WhatsApp Acil
+            </a>
+            <a href="tel:+905316250694" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">
+              <i class="fas fa-phone-alt me-2"></i> Hemen Ara
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <!-- Sticky WhatsApp Button -->
+  <div class="sticky-whatsapp">
+    <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum." 
+       target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  <script src="js/components.js" defer></script>
+
+  <!-- Main Application -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
+
+
+

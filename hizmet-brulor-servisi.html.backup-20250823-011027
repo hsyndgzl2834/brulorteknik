@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta Tags -->
+  <title>Brülör Servis ve Bakım | Brülör Teknik Hizmetler - Uzman Bakım Ekibi</title>
+  <meta name="description" content="Endüstriyel ve ticari brülörler için uzman servis, periyodik bakım, arıza tespiti ve acil müdahale hizmeti. Türkiye genelinde hızlı ve güvenli teknik destek."/>
+  <meta name="keywords" content="brülör servisi, brülör bakım, endüstriyel brülör, acil brülör onarım, brülör teknik destek, preventif bakım, İstanbul"/>
+  <meta name="author" content="Brülör Teknik Hizmetler"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.brulorteknik.com/hizmet-brulor-servisi.html" />
+  <link rel="alternate" hreflang="tr" href="https://www.brulorteknik.com/hizmet-brulor-servisi.html" />
+  <link rel="alternate" hreflang="en" href="https://www.brulorteknik.com/en/hizmet-brulor-servisi.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.brulorteknik.com/hizmet-brulor-servisi.html" />
+  <meta property="og:title" content="Brülör Servis ve Bakım | Brülör Teknik Hizmetler - Uzman Bakım Ekibi" />
+  <meta property="og:description" content="Endüstriyel ve ticari brülörler için uzman servis, periyodik bakım, arıza tespiti ve acil müdahale hizmeti. Türkiye genelinde hızlı ve güvenli teknik destek." />
+  <meta property="og:image" content="https://www.brulorteknik.com/images/burner-service.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Brülör Teknik Hizmetler" />
+  <meta property="og:locale" content="tr_TR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.brulorteknik.com/hizmet-brulor-servisi.html" />
+  <meta property="twitter:title" content="Brülör Servis ve Bakım | Brülör Teknik Hizmetler - Uzman Bakım Ekibi" />
+  <meta property="twitter:description" content="Endüstriyel ve ticari brülörler için uzman servis, periyodik bakım, arıza tespiti ve acil müdahale hizmeti. Türkiye genelinde hızlı ve güvenli teknik destek." />
+  <meta property="twitter:image" content="https://www.brulorteknik.com/images/burner-service.webp" />
+  
+  <!-- Additional Meta -->
+  <meta name="theme-color" content="#667eea" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Modern CSS Libraries & Custom Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />`n  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="page-wrapper">
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <main class="page-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="page-title" data-aos="fade-up">Brülör Servis ve Bakım</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+              Endüstriyel ve ticari brülörler için <strong>uzman servis</strong>, <strong>preventif bakım</strong> ve <strong>acil müdahale</strong> hizmeti. Türkiye genelinde hızlı ve güvenli teknik destek.
+            </p>
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+              <a href="hizmetler.html" class="btn-secondary-custom">
+                <i class="fas fa-arrow-left me-2"></i>Hizmetlerimize Geri Dön
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Details Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-right">
+              <div class="card-image">
+                <img src="images/hero2.webp" alt="Brülör Servis ve Bakım - Uzman teknisyen ekibi" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="universal-card" data-aos="fade-left">
+              <div class="card-content">
+                <h2 class="section-title">Servis Hizmetlerimiz</h2>
+                <ul class="feature-list">
+                  <li>
+                    <i class="fas fa-calendar-check text-success me-2"></i>
+                    <strong>Preventif Bakım:</strong> Planlı bakım programları
+                  </li>
+                  <li>
+                    <i class="fas fa-bolt text-warning me-2"></i>
+                    <strong>Acil Müdahale:</strong> 7/24 acil servis hizmeti
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate text-primary me-2"></i>
+                    <strong>Uzman Teknisyen:</strong> Sertifikalı teknisyen kadrosu
+                  </li>
+                  <li>
+                    <i class="fas fa-cogs text-info me-2"></i>
+                    <strong>Orijinal Yedek Parça:</strong> Kaliteli onarım hizmeti
+                  </li>
+                  <li>
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <strong>Servis Garantisi:</strong> Güvenilir hizmet kalitesi
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Process Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="universal-card" data-aos="fade-up">
+          <div class="card-content">
+            <h2 class="section-title">Kapsamlı Servis Hizmeti</h2>
+            <p class="mb-4">
+              Brülör Teknik Hizmetler olarak, tüm marka brülörler için <strong>kapsamlı servis</strong> ve <strong>bakım hizmeti</strong> sunuyoruz. Uzman teknisyen kadromuz ve modern ekipmanlarımızla sisteminizin verimli çalışmasını sağlıyoruz.
+            </p>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-icon">
+                    <i class="fas fa-calendar-check text-primary"></i>
+                  </div>
+                  <h4>Preventif Bakım</h4>
+                  <p>Planlı bakım programları ile arızaları önceden önleyin ve sistem ömrünü uzatın.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-icon">
+                    <i class="fas fa-bolt text-danger"></i>
+                  </div>
+                  <h4>Acil Müdahale</h4>
+                  <p>7/24 acil servis hizmeti ile kritik durumlarda hızlı müdahale sağlıyoruz.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-icon">
+                    <i class="fas fa-user-graduate text-success"></i>
+                  </div>
+                  <h4>Uzman Kadro</h4>
+                  <p>Sertifikalı ve deneyimli teknisyenlerimiz ile kaliteli hizmet garantisi.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="process-step">
+                  <div class="step-icon">
+                    <i class="fas fa-cogs text-warning"></i>
+                  </div>
+                  <h4>Orijinal Parça</h4>
+                  <p>Tüm markaların orijinal yedek parçaları ile kaliteli onarım hizmeti.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Brands Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="universal-card" data-aos="fade-up">
+          <div class="card-content">
+            <h3 class="section-title">Servis Verdiğimiz Markalar</h3>
+            <div class="row g-4">
+              <div class="col-lg-3 col-md-4 col-6">
+                <div class="brand-card">
+                  <i class="fas fa-fire text-primary"></i>
+                  <h6>Riello</h6>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <div class="brand-card">
+                  <i class="fas fa-flame text-warning"></i>
+                  <h6>Weishaupt</h6>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <div class="brand-card">
+                  <i class="fas fa-burn text-danger"></i>
+                  <h6>Baltur</h6>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <div class="brand-card">
+                  <i class="fas fa-fire-alt text-success"></i>
+                  <h6>Diğer Markalar</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section">
+      <div class="container text-center">
+        <div class="universal-card" data-aos="fade-up">
+          <div class="card-content">
+            <h2 class="section-title">Brülör Servis İhtiyacınız İçin İletişime Geçin</h2>
+            <p class="mb-4">Uzman teknisyen ekibimiz size en kaliteli servis hizmetini sunmaya hazır.</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="https://wa.me/905316250694" target="_blank" class="btn-primary-custom">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp Servis
+              </a>
+              <a href="contact.html" class="btn-secondary-custom">
+                <i class="fas fa-calendar-check me-2"></i>Randevu Al
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <!-- Load JavaScript Modules First -->
+  <script src="js/modules/core.js"></script>
+  <script src="js/modules/navbar.js"></script>
+  <script src="js/components.js" defer></script>
+
+  <!-- Main Application -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
+
+
+

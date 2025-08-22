@@ -1,71 +1,140 @@
-<!-- Modern Navbar - Mobile First -->
-<nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Ana navigasyon">
+﻿<!-- ============================================================================
+     🚀 MODERN PROFESSIONAL NAVBAR - RESPONSIVE & ACCESSIBLE
+     ============================================================================ -->
+<nav class="navbar navbar-expand-lg navbar-professional fixed-top" role="navigation" aria-label="Ana navigasyon">
   <div class="container">
-    <!-- Brand -->
-    <a class="navbar-brand" href="index.html" aria-label="Ana sayfaya git">
-      <div class="brand-wrapper">
-        <img src="images/logo.webp" alt="Brülör Teknik Logo" loading="eager" width="40" height="40" class="brand-logo">
+    <!-- Brand Section -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Brülör Teknik Ana Sayfa">
+      <div class="brand-container">
+        <img src="images/logo.webp" alt="Brülör Teknik Logo" loading="eager" width="45" height="45" class="brand-logo me-3">
         <div class="brand-text">
-          <span class="brand-name">Brülör Teknik</span>
-          <span class="brand-subtitle">Endüstriyel Çözümler</span>
+          <h1 class="brand-name mb-0">Brülör Teknik</h1>
+          <small class="brand-subtitle">Endüstriyel Çözümler</small>
         </div>
       </div>
     </a>
     
-    <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Mobile Menu Toggle -->
+    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Navigasyon menüsünü aç/kapat">
+      <span class="toggler-line"></span>
+      <span class="toggler-line"></span>
+      <span class="toggler-line"></span>
     </button>
     
-    <!-- Navigation Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
+    <!-- Navigation Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Main Navigation -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.html" role="menuitem" aria-current="page">
-            <i class="fas fa-home" aria-hidden="true"></i>
-            <span>Ana Sayfa</span>
+          <a class="nav-link active" href="index.html" role="menuitem">
+            <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">Ana Sayfa</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html" role="menuitem">
-            <i class="fas fa-info-circle" aria-hidden="true"></i>
-            <span>Hakkımızda</span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-info-circle nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">Kurumsal</span>
           </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">
+              <i class="fas fa-building me-2"></i>Hakkımızda
+            </a></li>
+            <li><a class="dropdown-item" href="brulor-hakkinda.html">
+              <i class="fas fa-fire me-2"></i>Brülör Hakkında
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="privacy.html">
+              <i class="fas fa-shield-alt me-2"></i>Gizlilik Politikası
+            </a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="hizmetler.html" role="menuitem">
-            <i class="fas fa-cogs" aria-hidden="true"></i>
-            <span>Hizmetler</span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-cogs nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">Hizmetler</span>
           </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="hizmetler.html">
+              <i class="fas fa-list me-2"></i>Tüm Hizmetler
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="hizmet1.html">
+              <i class="fas fa-wrench me-2"></i>Bakım & Onarım
+            </a></li>
+            <li><a class="dropdown-item" href="hizmet2.html">
+              <i class="fas fa-tools me-2"></i>Montaj Hizmeti
+            </a></li>
+            <li><a class="dropdown-item" href="hizmet3.html">
+              <i class="fas fa-search me-2"></i>Arıza Tespiti
+            </a></li>
+            <li><a class="dropdown-item" href="hizmet4.html">
+              <i class="fas fa-microscope me-2"></i>Analiz Hizmeti
+            </a></li>
+            <li><a class="dropdown-item" href="hizmet5.html">
+              <i class="fas fa-phone-alt me-2"></i>Danışmanlık
+            </a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="products.html" role="menuitem">
-            <i class="fas fa-box" aria-hidden="true"></i>
-            <span>Ürünler</span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-box nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">Ürünler</span>
           </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="products.html">
+              <i class="fas fa-th-large me-2"></i>Tüm Ürünler
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="duoblok.html">
+              <i class="fas fa-fire me-2"></i>Duoblok Brülör
+            </a></li>
+            <li><a class="dropdown-item" href="monoblok.html">
+              <i class="fas fa-fire me-2"></i>Monoblok Brülör
+            </a></li>
+            <li><a class="dropdown-item" href="multiblok.html">
+              <i class="fas fa-fire me-2"></i>Multiblok Brülör
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="emniyet-valfi.html">
+              <i class="fas fa-shield-alt me-2"></i>Emniyet Valfi
+            </a></li>
+            <li><a class="dropdown-item" href="filtre.html">
+              <i class="fas fa-filter me-2"></i>Gaz Filtresi
+            </a></li>
+            <li><a class="dropdown-item" href="gaz-basinç-regulatoru.html">
+              <i class="fas fa-gauge me-2"></i>Basınç Regülatörü
+            </a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html" role="menuitem">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <span>İletişim</span>
+            <i class="fas fa-envelope nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">İletişim</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="faq.html" role="menuitem">
-            <i class="fas fa-question-circle" aria-hidden="true"></i>
-            <span>SSS</span>
+            <i class="fas fa-question-circle nav-icon" aria-hidden="true"></i>
+            <span class="nav-text">SSS</span>
           </a>
         </li>
       </ul>
       
-      <div class="navbar-actions">
-        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum."
-           class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
-          <span>WhatsApp</span>
+      <!-- Action Buttons -->
+      <div class="navbar-actions d-flex align-items-center">
+        <a href="tel:+905316250694" class="btn btn-outline-primary me-2 d-none d-lg-inline-flex" aria-label="Telefon ile ara">
+          <i class="fas fa-phone me-2" aria-hidden="true"></i>
+          <span>0531 625 0694</span>
         </a>
-        <a href="contact.html" class="btn btn-quote" aria-label="Teklif al">
-          <i class="fas fa-calculator" aria-hidden="true"></i>
+        <a href="https://wa.me/905316250694?text=Merhaba, brülör hizmetleriniz hakkında bilgi almak istiyorum."
+           class="btn btn-whatsapp me-2" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim kurun">
+          <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+          <span class="d-none d-md-inline">WhatsApp</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary" aria-label="Hemen teklif alın">
+          <i class="fas fa-calculator me-2" aria-hidden="true"></i>
           <span>Teklif Al</span>
         </a>
       </div>
@@ -73,4 +142,5 @@
   </div>
 </nav>
 
-
+<!-- Navbar Spacer (Fixed navbar için) -->
+<div class="navbar-spacer" style="height: 65px;"></div>
