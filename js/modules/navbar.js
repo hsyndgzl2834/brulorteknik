@@ -71,9 +71,9 @@ window.Navbar = {
         e.preventDefault();
         this.toggleMobileMenu();
       });
-      console.log('✅ Navbar toggler event bound');
+      console.log('✅ Navbar toggler event bound (mobile)');
     } else {
-      console.log('❌ Navbar toggler element not found!');
+      console.log('ℹ️ Navbar toggler not found (desktop view - normal)');
     }
 
     // Close menu on link click (mobile)
