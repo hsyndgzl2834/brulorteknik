@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 2.1.1 - Redirect Fix
+// Version: 2.2.0 - Network First with Redirect Fix
 
-const CACHE_NAME = 'brulor-teknik-v2.1.2';
-const STATIC_CACHE = 'brulor-static-v2.1.2';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.2';
+const CACHE_NAME = 'brulor-teknik-v2.2.0';
+const STATIC_CACHE = 'brulor-static-v2.2.0';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.2.0';
 
 const STATIC_ASSETS = [
   '/',
@@ -91,7 +91,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch Event - Cache First Strategy with Error Handling
+// Fetch Event - Network First Strategy with Redirect Fix
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
@@ -106,115 +106,111 @@ self.addEventListener('fetch', event => {
     return;
   }
   
+  // Skip service worker itself and manifest
+  if (url.pathname.includes('sw.js') || url.pathname.includes('manifest.json')) {
+    return;
+  }
+  
   event.respondWith(
-    caches.match(request)
-      .then(cachedResponse => {
-        if (cachedResponse) {
-          console.log('📦 Serving from cache:', request.url);
-          return cachedResponse;
-        }
-        
-        return fetch(request, { 
-            redirect: 'follow',
-            mode: 'cors',
-            credentials: 'same-origin'
-          })
-          .then(response => {
-            // Check if response is valid
-            if (!response) {
-              throw new Error('No response received');
-            }
-            
-            // Handle redirected responses properly
-            if (response.redirected && response.url !== request.url) {
-              console.log('🔄 Handling redirected response from:', request.url, 'to:', response.url);
-              // Create a new request for the redirected URL
-              const redirectedRequest = new Request(response.url, {
-                method: request.method,
-                headers: request.headers,
-                mode: 'cors',
-                credentials: 'same-origin',
-                redirect: 'follow'
-              });
-              
-              // Return the response as-is for redirected responses
-              return response;
-            }
-            
-            // Don't cache non-successful responses or opaque responses
-            if (response.status < 200 || response.status >= 300) {
-              return response;
-            }
-            
-            // Only cache basic and cors responses that are successful
-            if (response.type === 'basic' || response.type === 'cors') {
-              // Clone the response before caching
-              const responseToCache = response.clone();
-              
-              // Cache the response with error handling
-              caches.open(DYNAMIC_CACHE)
-                .then(cache => {
-                  console.log('💾 Caching new resource:', request.url);
-                  return cache.put(request, responseToCache);
-                })
-                .catch(error => {
-                  console.warn('⚠️ Failed to cache response:', request.url, error);
-                });
-            }
-            
-            return response;
+    // Try network first to handle redirects properly
+    fetch(request.clone(), { 
+      redirect: 'follow',
+      mode: 'same-origin',
+      credentials: 'same-origin'
+    })
+    .then(response => {
+      // Check if response is valid
+      if (!response || !response.ok) {
+        throw new Error(`Network response was not ok: ${response.status}`);
+      }
+      
+      console.log('🌐 Network fetch successful:', request.url);
+      
+      // Clone response for caching
+      const responseToCache = response.clone();
+      
+      // Cache successful responses
+      if (response.status >= 200 && response.status < 300) {
+        caches.open(DYNAMIC_CACHE)
+          .then(cache => {
+            // Use the final URL after redirects for caching
+            const finalUrl = response.url || request.url;
+            console.log('💾 Caching response:', finalUrl);
+            cache.put(request, responseToCache);
           })
           .catch(error => {
-            console.log('❌ Fetch failed:', request.url, error);
-            
-            // Return offline page for navigation requests
-            if (request.destination === 'document') {
-              return caches.match('/offline.html').catch(() => {
-                return new Response(`
-                  <!DOCTYPE html>
-                  <html lang="tr">
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Offline - Brülör Teknik</title>
-                    <style>
-                      body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-                      .offline-message { max-width: 500px; margin: 0 auto; }
-                      .retry-btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
-                    </style>
-                  </head>
-                  <body>
-                    <div class="offline-message">
-                      <h1>🔌 Bağlantı Yok</h1>
-                      <p>İnternet bağlantınızı kontrol edin ve tekrar deneyin.</p>
-                      <button class="retry-btn" onclick="window.location.reload()">Tekrar Dene</button>
-                    </div>
-                  </body>
-                  </html>
-                `, {
-                  status: 503,
-                  statusText: 'Service Unavailable',
-                  headers: { 'Content-Type': 'text/html; charset=utf-8' }
-                });
-              });
-            }
-            
-            // For other resources, return a simple error response
-            return new Response('Network error', {
-              status: 503,
-              statusText: 'Service Unavailable',
-              headers: { 'Content-Type': 'text/plain; charset=utf-8' }
-            });
+            console.warn('⚠️ Failed to cache response:', error);
           });
-      })
-      .catch(error => {
-        console.error('❌ Cache match failed:', error);
-        return new Response('Cache error', {
-          status: 503,
-          statusText: 'Service Unavailable',
-          headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+      }
+      
+      return response;
+    })
+    .catch(error => {
+      console.log('❌ Network failed, trying cache:', request.url, error);
+      
+      // Fallback to cache when network fails
+      return caches.match(request)
+        .then(cachedResponse => {
+          if (cachedResponse) {
+            console.log('📦 Serving from cache:', request.url);
+            return cachedResponse;
+          }
+          
+          // If it's a navigation request, try to match without .html extension
+          if (request.destination === 'document') {
+            const urlWithoutHtml = request.url.replace(/\.html$/, '');
+            const urlWithHtml = request.url.endsWith('.html') ? request.url : request.url + '.html';
+            
+            return Promise.all([
+              caches.match(urlWithoutHtml),
+              caches.match(urlWithHtml),
+              caches.match('/index.html') // Fallback to home
+            ]).then(responses => {
+              const validResponse = responses.find(resp => resp);
+              if (validResponse) {
+                console.log('📦 Serving alternative match from cache');
+                return validResponse;
+              }
+              
+              // Return offline page
+              return new Response(`
+                <!DOCTYPE html>
+                <html lang="tr">
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Offline - Brülör Teknik</title>
+                  <style>
+                    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f8f9fa; }
+                    .offline-message { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+                    .retry-btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+                    .retry-btn:hover { background: #0056b3; }
+                  </style>
+                </head>
+                <body>
+                  <div class="offline-message">
+                    <h1>🔌 Bağlantı Yok</h1>
+                    <p>İnternet bağlantınızı kontrol edin ve tekrar deneyin.</p>
+                    <button class="retry-btn" onclick="window.location.reload()">Tekrar Dene</button>
+                  </div>
+                </body>
+                </html>
+              `, {
+                status: 503,
+                statusText: 'Service Unavailable',
+                headers: { 'Content-Type': 'text/html; charset=utf-8' }
+              });
+            });
+          }
+          
+          // For other resources, return error
+          return new Response('Network error - resource unavailable', {
+            status: 503,
+            statusText: 'Service Unavailable',
+            headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+          });
         });
-      })
+    })
   );
 });
 
