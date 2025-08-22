@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 1.0.5 - Response Error Fix
+// Version: 2.0.0 - Mobile-First Update
 
-const CACHE_NAME = 'brulor-teknik-v2.0.2';
-const STATIC_CACHE = 'brulor-static-v2.0.2';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.0.2';
+const CACHE_NAME = 'brulor-teknik-v2.1.0';
+const STATIC_CACHE = 'brulor-static-v2.1.0';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.0';
 
 const STATIC_ASSETS = [
   '/',
@@ -13,15 +13,8 @@ const STATIC_ASSETS = [
   '/products.html',
   '/hizmetler.html',
   '/css/main.css',
-  '/css/modules/base.css',
-  '/css/modules/navbar.css',
-  '/css/modules/footer.css',
-  '/css/modules/hero.css',
-  '/css/modules/components.css',
-  '/js/main.js',
-  '/js/modules/core.js',
+  '/js/components.js',
   '/js/modules/navbar.js',
-  '/js/modules/footer.js',
   '/navbar.html',
   '/footer.html',
   '/images/hero1.webp',
