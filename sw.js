@@ -1,9 +1,9 @@
 // Service Worker for Brülör Teknik - Mobile Optimized
-// Version: 2.0.0 - Mobile-First Update
+// Version: 2.1.0 - Redirect Fix
 
-const CACHE_NAME = 'brulor-teknik-v2.1.0';
-const STATIC_CACHE = 'brulor-static-v2.1.0';
-const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.0';
+const CACHE_NAME = 'brulor-teknik-v2.1.1';
+const STATIC_CACHE = 'brulor-static-v2.1.1';
+const DYNAMIC_CACHE = 'brulor-dynamic-v2.1.1';
 
 const STATIC_ASSETS = [
   '/',
@@ -114,7 +114,7 @@ self.addEventListener('fetch', event => {
           return cachedResponse;
         }
         
-        return fetch(request)
+        return fetch(request, { redirect: 'follow' })
           .then(response => {
             // Check if response is valid
             if (!response) {
