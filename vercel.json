@@ -63,10 +63,5 @@
       "source": "/robots.txt",
       "destination": "/Robots.Txt"
     }
-  ],
-  "functions": {
-    "app/**/*.js": {
-      "runtime": "@vercel/node@18"
-    }
-  }
+  ]
 }
