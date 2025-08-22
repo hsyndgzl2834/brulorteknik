@@ -547,44 +547,13 @@
   <!-- Load JavaScript Modules First -->
   <script src="js/modules/core.js"></script>
   <script src="js/modules/navbar.js"></script>
-  
-  
+  <script src="js/components.js" defer></script>
+
   <!-- Main Application -->
   <script src="js/main.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Load navbar and footer
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-          
-          console.log('Navbar HTML loaded, inserting...');
-          
-          // Initialize navbar module after HTML is loaded
-          setTimeout(() => {
-            if (window.Navbar && typeof window.Navbar.init === 'function') {
-              console.log('Initializing navbar module...');
-              window.Navbar.init();
-            } else {
-              console.error('Navbar module not found');
-            }
-          }, 100);
-        })
-        .catch(error => console.error('Navbar yüklenirken hata:', error));
-      
-      // Load footer
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => console.error('Footer yüklenirken hata:', error));
-    });
-
     // Initialize AOS
     AOS.init({
       duration: 800,
